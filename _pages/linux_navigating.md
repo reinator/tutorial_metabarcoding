@@ -1,5 +1,7 @@
----  
-
+---
+title: "Linux: navigating the system"
+layout: archive
+permalink: /linux_navigation/
 ---
 
 # 2. Navigating the system  <a name="navigating-the-system"></a> 
