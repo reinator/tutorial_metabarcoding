@@ -1,3 +1,9 @@
+---
+title: "Linux: Basic concepts"
+layout: archive
+permalink: /linux_basics/
+---  
+
 # 1. Basic concepts <a name="basic-concepts"></a>  
 ## 1.1 The terminal <a name="the-terminal"></a> 
 The terminal, or command line, is an interface that allows you to interact with the system through text. It allows the user to run functions or programs, open and browse through directories, see the processes that are currently running, among other things.  
