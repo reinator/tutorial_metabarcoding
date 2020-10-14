@@ -4,15 +4,15 @@ layout: archive
 permalink: /linux_navigation/
 ---
 
-# 2. Navigating the system  <a name="navigating-the-system"></a> 
-## 2.1 Where are we?  <a name="where-are-we?"></a> 
+# Navigating the system  <a name="navigating-the-system"></a> 
+## Where are we?  <a name="where-are-we?"></a> 
 The command **pwd** stands for *Print Working Directory* and it will print the complete path to our current directory:  
 ```console  
 username@bash:~$ pwd  
 /home/username
 ```  
 
-## 2.2 What's in our current directory?  <a name="what's-in-our-current-directory?"></a> 
+## What's in our current directory?  <a name="what's-in-our-current-directory?"></a> 
 The command **ls** will print all files and folders located in our current directory:  
 ```console  
 username@bash:~$ ls  
@@ -44,7 +44,7 @@ username@bash:~$ man ls
 ```  
 The command will print pretty useful information, such as how to execute the command, what are the options available and the arguments required (if any). 
 
-## 2.3 Moving around  <a name="moving-around"></a> 
+## Moving around  <a name="moving-around"></a> 
 The command **cd** (which stands for *Change Directory*) allows us to move to another directory. Its syntax is straigh-forward since it only takes one argument, which is the target directory we want to move to:  
 ```console  
 username@bash:~$ cd Documents  
@@ -58,7 +58,7 @@ username@bash:~$ pwd
 /home/username/Documents
 ``` 
 
-## 2.4 Shortcuts <a name="shortcuts"></a> 
+## Shortcuts <a name="shortcuts"></a> 
 If you want to go back to the previous (parent) directory, you don't need to specify its complete path. The shortcut **..** will do that for you:  
 ```console  
 username@bash:~$ cd ..  
@@ -86,7 +86,7 @@ username@bash:~$ ls ~
 Documents public_html
 ```  
 
-## 2.5 The tab completion trick <a name="the-tab-completion-trick"></a>  
+## The tab completion trick <a name="the-tab-completion-trick"></a>  
 Typing out long paths can be tedious and slow, without mentioning the chances of typing errors (typos). However, the command line have a powerfull mechanism to help us with that: it's called **tab completion**.  
 
 The idea is that whenever you start typing a path, if you hit the Tab key on your keyboard the command line will invoke an autocompletion action. It nothing happens, it means there are several possibilities for autocompletion. In that case you should hit Tab again to show all the possibilites, continue typing and then hit Tab again to continue the autocompletion process. Try it yourself to seed the power of tab completion!
