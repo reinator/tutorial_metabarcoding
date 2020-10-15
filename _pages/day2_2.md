@@ -92,4 +92,53 @@ Am I in the hifiasm folder? If not, then I need to change there
 Among the results hifiasm produced, you will find the **.p_ctg.gpa** file. This is our assembly output file. Hifiasm gives us the [assembly graph](http://gfa-spec.github.io/GFA-spec/GFA1.html) as an output. This means we need to  convert the graph into a fasta file. For that, we have a awk script:
 
 
+```console  
+gfa2fa *.p_ctg.gpa > *.p_ctg.fa
+
+```
+
+Right. So now, what to do with the assembly file?
+Well, first we should have a look at the statistics for this assembly. Let’s run out asmstats script on it
+
+```console  
+asmstats *.p_ctg.fa > *.p_ctg.fa.stats
+
+```
+
+2-) Hicanu
+
+Now, let’s move to the hicanu folder and let’s have a look at the results.
+
+
+```console  
+pwd
+ls -ltrh
+
+```
+
+Differently than Hifiasm, Hicanu is going to give you a fasta file at the end. It’s called * *.contigs.fasta.* So, go on and generate the statistics for this result:
+
+```console  
+
+asmstats *.contigs.fasta > *.contigs.fasta.stats
+
+```
+
+## WELL DONE!
+You have just done eukaryotic genome assembly using PacBio HiFi reads and two different assemblers! **That is fantastic!**
+
+Before you go back to the group, I want you to gather the statistics results of different files:
+1-) The statistics of the raw reads you have used as input for your assembly.
+a- How many reads are there?
+b- What is their average length?
+
+OBS: remember you already have these results as we have generated them in the previous Hands On session.
+
+2-) The statistics of Hicanu and Hifiasm assembled files.
+a-) Have both assemblers assembled exactly the same number of contigs?
+b-) What are the assembly statistics: N50, total assembled size, contig counts ...
+
+Now that you have gathered all these results, let’s go to the larger group and let’s discuss them together!
+
+
 
