@@ -4,7 +4,7 @@ layout: archive
 permalink: /day2_1/
 ---  
 
-## Kmer analysis: running jellyfish <a name="where-are-we?"></a> 
+# Kmer analysis: running jellyfish <a name="where-are-we?"></a> 
 
 Go to the folder with the data you have chosen to assemble
   
@@ -33,7 +33,7 @@ jellyfish histo -C -m 31 -s 1000 -t 1 -o <species>.jf <species>.fasta
 
 In the command line above you see \<species\>.fasta. This needs to be replaced by the fasta file of the species you have chosen. This is just a generic way to point out that a fasta file must be imputed in that position in that command line above. The same with the \<species\>.jf. If your species is Vanessa atalanta, you can choose to have the output (-o) called v_atalanta.jf and this will be your output name.
 
-# More
+### More
 
 Please try 
 
