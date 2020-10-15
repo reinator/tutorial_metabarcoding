@@ -1,7 +1,7 @@
 ---
 title: "Hands On"
 layout: archive
-permalink: /day2_1/
+permalink: /handsOn_1/
 ---  
 
 # Kmer analysis: running jellyfish <a name="where-are-we?"></a> 
