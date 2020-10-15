@@ -54,4 +54,39 @@ cp data/<species>.fasta .
 
 ```
 
-Note: because we have a small dataset, we can copy the reads file to different folders. But if you had a large file, it would be better to create a [symbolic link](https://kb.iu.edu/d/abbe) or giving assembler the whole PATH to the files data folder.
+Note: because we have a small dataset, we can copy the reads file to different folders. But if you had a large file, it would be better to create a [symbolic link](https://kb.iu.edu/d/abbe) or give the assemblers the whole PATH to the files.
+
+Now let’s call hifiasm and have a look at the parameters it prints:
+
+
+```console  
+hifiasm
+
+```
+And this is the line we will run:
+
+
+```console  
+hifiasm -t1 -o <species>.hifiasm <species.fasta>
+
+```
+
+Let’s wait a few minutes for both assemblers to run.
+
+## Interpreting our results
+
+Each assembler will output different intermediate files together with the final assembly result. 
+
+1-) Hifiasm
+
+Let’s look at the Hifiasm result first:
+
+
+```console  
+pwd
+# Am I in the hifiasm folder? If not, then I need to change there
+ls -ltrh
+```
+
+
+
