@@ -60,4 +60,5 @@ jellyfish histo <species>.jf > <species>.jf.histo
 
 Note in the command above we have used the symbol “>” before the output. This is a command line symbol that will redirect your output to a file instead of printing it to the screen.
 
+Note that the input for your command **jellyfish histo** is the output from your previous command, which was **jellyfish count**. Now you have the necessary result  to plot a histogram on genomescope and have a look at the distribution of your genome kmers. But before you plot this result, I want you to plot a genomescope plot for another file. 
 
