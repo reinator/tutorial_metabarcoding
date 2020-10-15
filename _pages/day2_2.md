@@ -42,3 +42,16 @@ canu -d <species_subset> -p <species_id> genomeSize=16000 -pacbio-hifi <species>
   ### Attention :grey_exclamation: 
 
 For the copy line you need to give the whole path to the ‘data’ folder. I just wrote *data/\<species>\.fasta* to make it short. If you are unsure about the whole PATH to 'data', go back to ‘data’ and run **pwd** on your commandline. This will print you the whole path for the folder you are currently at. Then copy this PATH and go back to the folder ‘hicanu’. And now type your command: *cp whole_path_of_data/\<species>\.fasta .* This line basically means: I’m copying the \<species>\.fasta file all the way from the data folder to here (here is represented by the dot).
+
+
+Right, so let’s wait for Hicanu to run. While we do that, let’s put hifiasm to run!
+
+In a second tab, let’s change to the hifiasm folder and copy our data there:
+
+```console  
+cd hifiasm
+cp data/<species>.fasta .
+
+```
+
+Note: because we have a small dataset, we can copy the reads file to different folders. But if you had a large file, it would be better to create a [symbolic link](https://kb.iu.edu/d/abbe) or giving assembler the whole PATH to the files data folder.
