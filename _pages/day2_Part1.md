@@ -1,5 +1,5 @@
 ---
-title: "Linux: navigating the system"
+title: "HandsOn"
 layout: archive
 permalink: /day2_1/
 ---  
