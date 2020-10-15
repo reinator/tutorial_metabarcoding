@@ -16,3 +16,10 @@ pages:
         url: /linux_navigation/
       - title: "- Manipulating files"
         url: /linux_file_manipulation/
+       
+- title: "Day 2"
+    children:
+      - title: "Part 1"
+        url: /day2_1/
+      - title: "Part 2"
+        url: /day2_2/
