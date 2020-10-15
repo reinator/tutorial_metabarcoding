@@ -101,3 +101,18 @@ c- What is the estimated repeat content?
 
 d- How much coverage -  in base pairs (bp) - we have taken into consideration to estimate the genome size and the reads statistics?
 
+
+Now, 
+
+I want you to go back to the *.histo* file you have generated today, download it to your local machine and plot it on genomescope. Also, I want you to run asmstats on the fasta file you used to count kmers. 
+
+e- What genomescope tells you when you try to plot a kmer histogram for just a handful of sequences? 
+f- Looking at the asmstats result for this smaller file, how much coverage of the genome you have in this file giving the estimated genome size?
+
+Great. Now let’s look at it all together: considering the kmer plot of the large file and its statistics, we can have a good look at the kmer composition of the genome and we can see that our two peak diploid distribution seems regular. It seems like we have a good data set for assembly!!
+
+Well, 
+
+it would be nice to check one more thing: the size distribution of our reads!
+
+••Imagine if we have a good genome coverage but our reads are all small? It would not be very useful to assemble across repeats.•• 
