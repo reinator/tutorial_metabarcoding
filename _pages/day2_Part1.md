@@ -93,11 +93,11 @@ less <species>.total.fasta.stats
 You have now generated the kmer plot and reads statistics for your complete PacBio HiFi read set. Which conclusions can you now draw from these results?
 
 
-> What is the expected genome size?
+a- What is the expected genome size?
 
-> What is the estimated heterozygosity?
+b- What is the estimated heterozygosity?
 
-> What is the estimated repeat content?
+c- What is the estimated repeat content?
 
-> How much coverage -  in base pairs (bp) - we have taken into consideration to estimate the genome size and the reads statistics?
+d- How much coverage -  in base pairs (bp) - we have taken into consideration to estimate the genome size and the reads statistics?
 
