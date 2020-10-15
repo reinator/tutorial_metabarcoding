@@ -38,3 +38,8 @@ cp data/<species>.fasta .
 canu -d <species_subset> -p <species_id> genomeSize=16000 -pacbio-hifi <species>.fasta useGrid=false
 
 ```  
+
+Attention: for the copy line you need to give the whole path to the ‘data’ folder. I just wrote data/file to make it short. If you are unsure about the whole path to data, go back to ‘data’ and run pwd on your command line. This will print you the whole path for the folder you are currently at, which is ‘data’. Then copy this path and go back to the folder ‘hicanu’. And now type your command: *cp whole_path_of_data/\<species>\.fasta .* This line basically means: I’m copying the \<species>\.fasta file all the way from the data folder to here (here is represented by the dot).
+  
+  ### Attention :grey_exclamation: 
+
