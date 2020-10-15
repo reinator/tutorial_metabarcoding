@@ -44,6 +44,8 @@ jellyfish count --help
 
 on your command line to understand what are the parameters we have imputed in the above line. Help messages are a useful way for you to understand what you are running, and to see if you would like to add any other parameter for your specific case. Also remember that beyond this course, the internet is always on your side. If you google ‘jellyfish user guide’, for example, you will find [JellyfishUserGuide]( http://www.genome.umd.edu/docs/JellyfishUserGuide.pdf)
 
+### Back
+
 2-) Jellyfish histo
 
 Now that we have counted our 31 letters kmers, we want to transform it to a histogram file so we can plot it. Then we have our second command:
@@ -54,5 +56,8 @@ jellyfish histo <species>.jf > <species>.jf.histo
 
 ```
 
+### Attention :grey_exclamation: 
+
+Note in the command above we have used the symbol “>” before the output. This is a command line symbol that will redirect your output to a file instead of printing it to the screen.
 
 
