@@ -19,7 +19,7 @@ pages:
        
   - title: "Day 2"
     children:
-      - title: "Part 1"
+      - title: "Part 1 - Kmer analysis"
         url: /day2_1/
       - title: "Part 2"
         url: /day2_2/
