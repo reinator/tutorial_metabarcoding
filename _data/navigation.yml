@@ -17,9 +17,13 @@ pages:
       - title: "- Manipulating files"
         url: /linux_file_manipulation/
        
-  - title: "Day 2"
+  - title: "Hands On"
     children:
       - title: "Part 1 - Kmer analysis"
+        url: /handsOn_1/
+      - title: "Part 2 - Assembly"
+        url: /handsOn_2/
+         - title: "Part 3 - BLAST"
         url: /day2_1/
-      - title: "Part 2"
-        url: /day2_2/
+      - title: "Part 2 - Assembly"
+        url: /handsOn_3/
