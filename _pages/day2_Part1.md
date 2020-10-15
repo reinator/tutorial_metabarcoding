@@ -31,4 +31,17 @@ jellyfish histo -C -m 31 -s 1000 -t 1 -o <species>.jf <species>.fasta
 
 ### Attention :grey_exclamation: 
 
-In the command line above you see \<species\>.fasta. This needs to be replaced by the fasta file of the species you have chosen. This is just a generic way to point out that a fasta file must be imputed in that position in that command line above. The same with the \<species\>.jf. If your species is Vanessa atalanta, you can choose to have the output (-o) called v_atalanta.jf and this will be your output name. .
+In the command line above you see \<species\>.fasta. This needs to be replaced by the fasta file of the species you have chosen. This is just a generic way to point out that a fasta file must be imputed in that position in that command line above. The same with the \<species\>.jf. If your species is Vanessa atalanta, you can choose to have the output (-o) called v_atalanta.jf and this will be your output name.
+
+# More
+
+Please try 
+
+```console  
+jellyfish count --help 
+```
+
+on your command line to understand what are the parameters we have imputed in the above line. Help messages are a useful way for you to understand what you are running, and to see if you would like to add any other parameter for your specific case. Also remember that beyond this course, the internet is always on your side. If you google ‘jellyfish user guide’, for example, you will find it
+
+
+
