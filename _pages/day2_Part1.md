@@ -70,3 +70,31 @@ In the data folder for the species you have chosen, you are going to find two fi
 ```
 
 Download the file \<species\>.total.histo to your local machine (as Joāo has shown us yesterday), go to the [Genomescope] http://qb.cshl.edu/genomescope/ page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot.
+
+Sabe the image of both versions of the plot - normal and log scale - somewhere in your computer.
+
+Cool, you have plotted the kmer distribution of the \<species\>.total.histo file, and the model of genome scope has calculated for your (i) the estimated genome size, (ii) the heterozygosity and (iii) the percentage of repeats of your genome. 
+
+Now, take the file \<species\>.total.fasta and run the command:
+
+
+```console  
+asmstats <species>.total.fasta > <species>.total.fasta.stats
+```
+
+Note: We are calling your output file \<species\>.total.fasta.stats
+
+Once the command finishes to run, have a look at the output:
+
+```console  
+less <species>.total.fasta.stats
+```
+
+You have now generated the kmer plot and reads statistics for your complete PacBio HiFi read set. Which conclusions can you now draw from these results?
+
+
+> What is the expected genome size?
+> What is the estimated heterozygosity?
+> What is the estimated repeat content?
+> How much coverage -  in base pairs (bp) - we have taken into consideration to estimate the genome size and the reads statistics?
+
