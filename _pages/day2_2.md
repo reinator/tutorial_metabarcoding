@@ -10,6 +10,7 @@ Right, so here we are! Let’s assemble the species you have chosen. You are goi
 
 Have a look at their websites:
 [Hicanu](https://github.com/marbl/canu/releases/tag/v2.1)
+
 [Hifiasm](https://github.com/chhylp123/hifiasm)
 
 Now let’s run the assembly on our subsamples:
@@ -129,13 +130,17 @@ You have just done eukaryotic genome assembly using PacBio HiFi reads and two di
 
 Before you go back to the group, I want you to gather the statistics results of different files:
 1-) The statistics of the raw reads you have used as input for your assembly.
+
 a- How many reads are there?
+
 b- What is their average length?
 
 OBS: remember you already have these results as we have generated them in the previous Hands On session.
 
 2-) The statistics of Hicanu and Hifiasm assembled files.
+
 a-) Have both assemblers assembled exactly the same number of contigs?
+
 b-) What are the assembly statistics: N50, total assembled size, contig counts ...
 
 Now that you have gathered all these results, let’s go to the larger group and let’s discuss them together!
