@@ -69,7 +69,7 @@ In the data folder for the species you have chosen, you are going to find two fi
 <species>.total.histo
 ```
 
-Download the file \<species\>.total.histo to your local machine (as Joāo has shown us yesterday), go to the [Genomescope] http://qb.cshl.edu/genomescope/ page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot.
+Download the file \<species\>.total.histo to your local machine (as Joāo has shown us yesterday), go to the [Genomescope]http://qb.cshl.edu/genomescope/ page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot.
 
 Sabe the image of both versions of the plot - normal and log scale - somewhere in your computer.
 
@@ -94,7 +94,10 @@ You have now generated the kmer plot and reads statistics for your complete PacB
 
 
 > What is the expected genome size?
+
 > What is the estimated heterozygosity?
+
 > What is the estimated repeat content?
+
 > How much coverage -  in base pairs (bp) - we have taken into consideration to estimate the genome size and the reads statistics?
 
