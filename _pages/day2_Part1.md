@@ -1,5 +1,5 @@
 ---
-title: "HandsOn"
+title: "Hands On"
 layout: archive
 permalink: /day2_1/
 ---  
