@@ -17,7 +17,7 @@ pages:
       - title: "- Manipulating files"
         url: /linux_file_manipulation/
        
-- title: "Day 2"
+  - title: "Day 2"
     children:
       - title: "Part 1"
         url: /day2_1/
