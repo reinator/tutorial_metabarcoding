@@ -84,9 +84,12 @@ Let’s look at the Hifiasm result first:
 
 ```console  
 pwd
-# Am I in the hifiasm folder? If not, then I need to change there
 ls -ltrh
 ```
+
+Am I in the hifiasm folder? If not, then I need to change there
+
+Among the results hifiasm produced, you will find the **.p_ctg.gpa** file. This is our assembly output file. Hifiasm gives us the [assembly graph](http://gfa-spec.github.io/GFA-spec/GFA1.html) as an output. This means we need to  convert the graph into a fasta file. For that, we have a awk script:
 
 
 
