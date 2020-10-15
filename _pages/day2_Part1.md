@@ -115,4 +115,4 @@ Well,
 
 it would be nice to check one more thing: the size distribution of our reads!
 
-••Imagine if we have a good genome coverage but our reads are all small? It would not be very useful to assemble across repeats.•• 
+**Imagine if we have a good genome coverage but our reads are all small? It would not be very useful to assemble across repeats.•• 
