@@ -62,3 +62,11 @@ Note in the command above we have used the symbol “>” before the output. Thi
 
 Note that the input for your command **jellyfish histo** is the output from your previous command, which was **jellyfish count**. Now you have the necessary result  to plot a histogram on genomescope and have a look at the distribution of your genome kmers. But before you plot this result, I want you to plot a genomescope plot for another file. 
 
+In the data folder for the species you have chosen, you are going to find two files called:
+
+```console  
+<species>.total.fasta
+<species>.total.histo
+```
+
+Download the file \<species\>.total.histo to your local machine (as Joāo has shown us yesterday), go to the [Genomescope] http://qb.cshl.edu/genomescope/ page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot.
