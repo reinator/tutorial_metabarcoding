@@ -9,6 +9,7 @@ permalink: /day2_2/
 Right, so here we are! Let’s assemble the species you have chosen. You are going to run two assemblers for Pacbio HiFi data: Hicanu and Hifiasm.
 
 Have a look at their websites:
+
 [Hicanu](https://github.com/marbl/canu/releases/tag/v2.1)
 
 [Hifiasm](https://github.com/chhylp123/hifiasm)
@@ -129,6 +130,7 @@ asmstats *.contigs.fasta > *.contigs.fasta.stats
 You have just done eukaryotic genome assembly using PacBio HiFi reads and two different assemblers! **That is fantastic!**
 
 Before you go back to the group, I want you to gather the statistics results of different files:
+
 1-) The statistics of the raw reads you have used as input for your assembly.
 
 a- How many reads are there?
