@@ -16,7 +16,6 @@ pages:
         url: /linux_navigation/
       - title: "- Manipulating files"
         url: /linux_file_manipulation/
-       
   - title: "Hands On"
     children:
       - title: "Part 1 - Kmer analysis"
@@ -27,3 +26,7 @@ pages:
         url: /handsOn_3/
       - title: "Part 4 - Mapping"
         url: /handsOn_4/
+  - title: "References"
+    children:
+      - title: "Materials"
+        url: /further_reading/
