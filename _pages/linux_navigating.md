@@ -37,12 +37,6 @@ username@bash:~$ ls -lh /etc
 drwxr-xr-x  2 ryan users 4,1K May 05 17:25 alsa.d
 ```  
 
-If you want more information on the **ls** command (and any other command of the system), use the command **man**:  
-```console  
-username@bash:~$ man ls
-```  
-The command will print pretty useful information, such as how to execute the command, what are the options available and the arguments required (if any). 
-
 ## Moving around  <a name="moving-around"></a> 
 The command **cd** (which stands for *Change Directory*) allows us to move to another directory. Its syntax is straigh-forward since it only takes one argument, which is the target directory we want to move to:  
 ```console  
