@@ -39,5 +39,12 @@ Lines 2-4 show the output of the command. Don't worry about understanding it now
 
 Finally, line 5 presents the user with the prompt again. That means the command execution is done and the terminal is ready to run another command.  
 
+## Getting instructions with *man*  
+If you want more information on the **ls** command or any other command of the system, use the command **man**:  
+```console  
+username@bash:~$ man ls
+```  
+The command will print pretty useful information, such as how to execute the command, what are the options available and the arguments required (if any). 
+
 ## The shell  <a name="the-shell"></a> 
 Whenever we run a command in the terminal, the command is processed by a program called *shell*, which will interpret the command and send back the output to the terminal. There are various shells available but the most common one is called *bash*, which stands for Bourne again shell. Bash is the most popular flavour of shell in Linux systems, and it also is the default shell on macOS. Over our course it is the shell we will be using.    
