@@ -30,7 +30,9 @@ username@bash:~$
 ```  
 
 The first line is the command execution. Here we are running the command **ls**, which lists all files and directories in the present working directory. This is probably one of the commands you will use the most, and we will discuss it in more detail later.  
+
 Right after *ls* we see the option **-l**, which modifies the default behaviour of *ls* and forces it to print the output in long format, which displays more information about each object of the directory.  
+
 The last element of the first line is the argument that is given to the command, which in this case is the path of the directory (**/home/user**) whose content we want to inspect.  
 
 Lines 2-4 show the output of the command. Don't worry about understanding it now, since we will discuss the command *ls* in more detail later. Also notice that not every command returns an output. Some just do their job quietly and only display a message if an error has occurred.  
