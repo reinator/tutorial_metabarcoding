@@ -25,7 +25,7 @@ user@bash:~$ cd 'Spaced Directory'
 user@bash:~$ pwd  
 /home/username/Spaced Directory
 ```  
-Another option that works is escaping (i.e., inserting a backslash (*\*)) *Spaced Directory*:  
+Another option that works is escaping (i.e., inserting a backslash (\)) *Spaced Directory*:  
 ```console  
 user@bash:~$ cd Spaced\ Directory  
 user@bash:~$ pwd  
