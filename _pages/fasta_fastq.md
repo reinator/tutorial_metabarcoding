@@ -19,9 +19,9 @@ In the image about you see two DNA sequences in a multifasta file. A fasta seque
 
 # Fastq format
 
-A fastq sequence starts with an ID line that starts with "@". 
+The frist line of a fastq sequence starts with "@" followed by the ID. On the second line you have your nucleotide sequence. A third line you have a "+" followed by a fourth line which represents base pair [quality](https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/QualityScoreEncoding_swBS.htm).  
 
-
+![Figure 2](/images/fastq.jpg)
 
 
 ### Attention :grey_exclamation: 
@@ -29,6 +29,10 @@ A fastq sequence starts with an ID line that starts with "@".
 Fasta and fastq IDs can be as long as you like. But be careful with length: many algorithms crash with long-read-IDs. Secondly, differently than the image above tha ilustrates a fasta sequence, you should avoid spaces in IDs before you have a unique pattern in the ID. We will see examples of why.
 
 
-![Figure 2](/images/fastq.jpg)
 
 
+
+
+# Command line utilities
+
+Because our files 
