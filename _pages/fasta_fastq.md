@@ -33,7 +33,6 @@ Fasta and fastq IDs can be as long as you like. But be careful with length: many
 ACGATGCTAGATGAT
 >Sequence2 H.sapiens
 CCAGTAGATAGATAGAAAAA
-empty_file
 ```  
 
 Unique patterns before any other information, such as "H.sapiens", that you want to have in your ID. We will see examples of why.
@@ -48,14 +47,12 @@ You have a 'Day1.fasta' file in our data folder. Let's copy this file to our Lin
 
 ```console 
 cp <path_to_data_folder>/Day1.fasta .
-empty_file
 ```  
 
 Right, now you can use **less** or **more** to have a look at the file:
 
 ```console 
 less Day1.fasta
-empty_file
 ```  
 
-Right, doing this I can see this is a fasta file. But let's say I want to know how many reads I have in this file. 
+Right, doing this I can see this is a fasta file. But let's say I want to know how many reads I have in this file. 'Lessing' it is not very usefull for such. But we can use [grep]
