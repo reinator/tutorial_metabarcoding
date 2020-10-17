@@ -26,13 +26,36 @@ The frist line of a fastq sequence starts with "@" followed by the ID. On the se
 
 ### Attention :grey_exclamation: 
 
-Fasta and fastq IDs can be as long as you like. But be careful with length: many algorithms crash with long-read-IDs. Secondly, differently than the image above tha ilustrates a fasta sequence, you should avoid spaces in IDs before you have a unique pattern in the ID. We will see examples of why.
+Fasta and fastq IDs can be as long as you like. But be careful with length: many algorithms crash with long-read-IDs. Secondly, differently than the first image above that ilustrates a fasta sequence, you should avoid spaces in IDs before you have a unique pattern in the ID. For example, you should have:
 
+```console 
+> Sequence1 H.sapiens
+ACGATGCTAGATGAT
+>Sequence2 H.sapiens
+CCAGTAGATAGATAGAAAAA
+empty_file
+```  
 
-
-
+Unique patterns before any other information, such as "H.sapiens", that you want to have in your ID. We will see examples of why.
 
 
 # Command line utilities
 
-Because our files 
+Because our files have difined patterns, we can use command line utilities that deal with regular expressions. Let's do it.
+
+You have a 'Day1.fasta' file in our data folder. Let's copy this file to our Linux training folder.
+
+
+```console 
+cp <path_to_data_folder>/Day1.fasta .
+empty_file
+```  
+
+Right, now you can use **less** or **more** to have a look at the file:
+
+```console 
+less Day1.fasta
+empty_file
+```  
+
+Right, doing this I can see this is a fasta file. But let's say I want to know how many reads I have in this file. 
