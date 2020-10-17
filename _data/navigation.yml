@@ -19,8 +19,10 @@ pages:
       - title: "- Other things you should know"  
         url: /linux_other_things/
       - title: "- Fasta and Fastq sequences"
-        url: /fasta_fastq/
-        
+        url: /fasta_fastq/  
+      - title: "- Text editor: nano"  
+        url: /nano/
+      
   - title: "Hands On"
     children:
       - title: "Part 1 - Kmer analysis"
