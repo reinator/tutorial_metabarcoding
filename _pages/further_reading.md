@@ -17,3 +17,7 @@ First human genome
 
 * https://science.sciencemag.org/content/338/6108/758
 
+# Assembly Graphs
+
+* https://link.springer.com/article/10.1007/s40484-019-0181-x
+
