@@ -29,6 +29,6 @@ A fastq sequence starts with an ID line that starts with "@".
 Fasta and fastq IDs can be as long as you like. But be careful with length: many algorithms crash with long-read-IDs. Secondly, differently than the image above tha ilustrates a fasta sequence, you should avoid spaces in IDs before you have a unique pattern in the ID. We will see examples of why.
 
 
-![Figure 2(/images/fastq.jpg)
+![Figure 2](/images/fastq.jpg)
 
 
