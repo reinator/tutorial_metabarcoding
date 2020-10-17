@@ -13,6 +13,7 @@ First human genome
 * Science - 2001 https://www.nature.com/scitable/content/Initial-sequencing-and-analysis-of-the-human-16729/
 
 * T2T Human chromosome X https://www.nature.com/articles/s41586-020-2547-7
+* [The (near) complete sequence of a human genome]https://genomeinformatics.github.io
 
 # Repeats
 
