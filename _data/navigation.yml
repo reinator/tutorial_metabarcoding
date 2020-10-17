@@ -18,6 +18,7 @@ pages:
         url: /linux_file_manipulation/  
       - title: "- Other things you should know"  
         url: /linux_other_things/
+      - title: "- Fasta and Fastq sequences"
   - title: "Hands On"
     children:
       - title: "Part 1 - Kmer analysis"
