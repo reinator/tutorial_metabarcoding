@@ -25,3 +25,8 @@ First human genome
 
 * https://academic.oup.com/bfg/article/11/1/25/191455 
 
+# Kmer analysis
+
+* Merqury https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02134-9
+* KAT https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5408915/pdf/btw663.pdf
+* Genomescope https://www.nature.com/articles/s41467-020-14998-3 
