@@ -4,7 +4,9 @@ layout: archive
 permalink: /handsOn_plotReadLength/
 ---  
 
-it would be nice to check one more thing: the size distribution of our reads!
+In our previous tutorial we have generated a k=31 kmer distribution for a subset of reads, and we have analyse the same k=31 kmer distribution for the total reads sequenced for our chosen species. With the genomescope of our total results, we have estimated genome size, heterozygosity and repeat content. Now, we are ready to go and assembled those reads. 
+
+Well, it would be nice to check one more thing: the size distribution of our reads!
 
 **Imagine if we have a good genome coverage but our reads are all small? It would not be very useful to assemble across repeats**
 
@@ -19,7 +21,7 @@ This might take a bit of time…
 Note: my script plot_reads_length.py and also Shane’s script asmstats are two of many options you can use to plot fasta lengths and generate statistics. Remember, internet is on your side in this journey. While you wait the script to run, have a look at other options: [like this one](https://bioinformatics.stackexchange.com/questions/45/read-length-distribution-from-fasta-file) or the stats from [BBMap](https://github.com/BioInfoTools/BBMap)
 
 Once you have plotted the reads length distribution, download it to your local computer and have a look.
-g- How does the reads distribution look like?
-h- Which length most of the reads have?
+a- How does the reads distribution look like?
+b- Which length most of the reads have?
 
 Now, gather all the results you have so far and let’s discuss them as a group!!
