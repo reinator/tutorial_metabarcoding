@@ -11,13 +11,24 @@ Go to the folder with the data you have chosen to assemble
 ```console  
 ls -ltrh
 ```  
-Do you see all your files there? Great! Now call Jellyfish:
+Do you see all your files there? Great! Now let's make a folder for your project. My suggestion would be to create a folder with your specied name and inside that folder, other folders to structure your analysis. Let's say, one folder called 'data' and another called 'kmer_analysis'. Like this:
+
+
+```console  
+mkdir vanessa_atalanta
+cd vanessa_atalanta
+mkdir data
+mkdir kmer_analysis
+``` 
+This way, everytime you have to use your species data, you refer to the folder data. 
+
+Now that you have all your data in place, try to call Jellyfish:
 
 ```console  
 jellyfish
 ``` 
 
-Do you see the help message? Great! If not, call Joāo!
+Do you see the help message? Great! (If not, call Joāo!)
 
 Jellyfish has many steps. The first one we want to run is the *count* to count our genome reads kmers. The kmer size we are going to use is 31. 
 
@@ -32,7 +43,7 @@ jellyfish count -C -m 31 -s 1000 -t 1 -o <species>.jf <species>.fasta
 
 ### Attention :grey_exclamation: 
 
-In the command line above you see \<species\>.fasta. This needs to be replaced by the fasta file of the species you have chosen. This is just a generic way to point out that a fasta file must be imputed in that position in that command line above. The same with the \<species\>.jf. If your species is Vanessa atalanta, you can choose to have the output (-o) called v_atalanta.jf and this will be your output name.
+In the command line above you see \<species\>.fasta. This needs to be replaced by the fasta file of the species you have chosen. This is just a generic way to point out that a fasta file must be imputed in that position in the command line above. The same with the \<species\>.jf. If your species is Vanessa atalanta, you can choose to have the output (-o) called v_atalanta.jf and this will be your output name.
 
 ### More
 
@@ -42,13 +53,13 @@ Please try
 jellyfish count --help 
 ```
 
-on your command line to understand what are the parameters we have imputed in the above line. Help messages are a useful way for you to understand what you are running, and to see if you would like to add any other parameter for your specific case. Also remember that beyond this course, the internet is always on your side. If you google ‘jellyfish user guide’, for example, you will find [JellyfishUserGuide]( http://www.genome.umd.edu/docs/JellyfishUserGuide.pdf)
+on your command line to understand what are the parameters you have imputed in the above line. Help messages are a useful way for you to understand what you are running, and to see if you would like to add any other parameter for your specific analysis case. Also remember that beyond this course, the internet is always on your side. If you google ‘jellyfish user guide’, for example, you will find [JellyfishUserGuide]( http://www.genome.umd.edu/docs/JellyfishUserGuide.pdf)
 
 ### Back
 
 2-) Jellyfish histo
 
-Now that we have counted our 31 letters kmers, we want to transform it to a histogram file so we can plot it. Then we have our second command:
+Now that you have counted our 31 letters kmers, we want to transform it to a histogram file so we can plot it. Then we have our second command:
 
 
 ```console  
@@ -60,7 +71,7 @@ jellyfish histo <species>.jf > <species>.jf.histo
 
 Note in the command above we have used the symbol “>” before the output. This is a command line symbol that will redirect your output to a file instead of printing it to the screen.
 
-Note that the input for your command **jellyfish histo** is the output from your previous command, which was **jellyfish count**. Now you have the necessary result  to plot a histogram on genomescope and have a look at the distribution of your genome kmers. But before you plot this result, I want you to plot a genomescope plot for another file. 
+Note that the input for your command **jellyfish histo** is the output from your previous command, which was **jellyfish count**. Now you have the necessary result to plot a histogram on genomescope and have a look at the distribution of your genome kmers. But before you plot this result, I want you to plot a genomescope plot for another file FIRST!! 
 
 In the data folder for the species you have chosen, you are going to find two files called:
 
@@ -69,9 +80,9 @@ In the data folder for the species you have chosen, you are going to find two fi
 <species>.total.histo
 ```
 
-Download the file \<species\>.total.histo to your local machine (as Joāo has shown us yesterday), go to the [Genomescope]http://qb.cshl.edu/genomescope/ page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot.
+Download the file \<species\>.total.histo to your local machine (as you learned yesterday), go to the [Genomescope]http://qb.cshl.edu/genomescope/ page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot.
 
-Sabe the image of both versions of the plot - normal and log scale - somewhere in your computer.
+Save the image of both versions of the plot - normal and log scale - somewhere in your computer.
 
 Cool, you have plotted the kmer distribution of the \<species\>.total.histo file, and the model of genome scope has calculated for your (i) the estimated genome size, (ii) the heterozygosity and (iii) the percentage of repeats of your genome. 
 
@@ -99,36 +110,16 @@ b- What is the estimated heterozygosity?
 
 c- What is the estimated repeat content?
 
-d- How much coverage -  in base pairs (bp) - we have taken into consideration to estimate the genome size and the reads statistics?
+d- Taking into consideration the estimated genome size, and the statistics of the total reads you have just generated, how much reads coverage you have to assemble this genome?
 
 
 Now, 
 
-I want you to go back to the *.histo* file you have generated today, download it to your local machine and plot it on genomescope. Also, I want you to run asmstats on the fasta file you used to count kmers. 
+I want you to go back to the *.histo* file you have generated today, download it to your local machine and plot it on genomescope. Also, I want you to run asmstats on the fasta file (the 600 subset) you imputed to jellyfish. 
 
 e- What genomescope tells you when you try to plot a kmer histogram for just a handful of sequences? 
 f- Looking at the asmstats result for this smaller file, how much coverage of the genome you have in this file giving the estimated genome size?
 
-Great. Now let’s look at it all together: considering the kmer plot of the large file and its statistics, we can have a good look at the kmer composition of the genome and we can see that our two peak diploid distribution seems regular. It seems like we have a good data set for assembly!!
-
-Well, 
-
-it would be nice to check one more thing: the size distribution of our reads!
-
-**Imagine if we have a good genome coverage but our reads are all small? It would not be very useful to assemble across repeats**
-
-So let’s plot the size distribution of our <species>.total.fasta file then:
+Great. Now let’s look at it all together: considering the kmer plot of the total file and its statistics, we can have a good look at the kmer composition of the DNA in the genome. How does it look? Discuss with your partners and then later in the big group.  
 
 
-```console  
-python plot_fasta_length.py <species>.total.fasta <species>.total.fasta.length.png
-```
-This might take a bit of time…
-
-Note: my script plot_reads_length.py and also Shane’s script asmstats are two of many options you can use to plot fasta lengths and generate statistics. Remember, internet is on your side in this journey. While you wait the script to run, have a look at other options: [like this one](https://bioinformatics.stackexchange.com/questions/45/read-length-distribution-from-fasta-file) or the stats from [BBMap](https://github.com/BioInfoTools/BBMap)
-
-Once you have plotted the reads length distribution, download it to your local computer and have a look.
-g- How does the reads distribution look like?
-h- Which length most of the reads have?
-
-Now, gather all the results you have so far and let’s discuss it as a group!!
