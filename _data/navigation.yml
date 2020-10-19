@@ -27,6 +27,9 @@ pages:
     children:
       - title: "Part 1 - Kmer analysis"
         url: /handsOn_1/
+      - title: "Part 1 - Plot Reads Length"
+        url: /handsOn_plotReadLength/
+        
       - title: "Part 2 - Assembly"
         url: /handsOn_2/
       - title: "Part 3 - BLAST"
