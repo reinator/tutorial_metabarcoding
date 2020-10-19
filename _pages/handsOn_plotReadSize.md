@@ -1,7 +1,7 @@
 ---
 title: "Hands On"
 layout: archive
-permalink: /handsOn_plotReadSize/
+permalink: /handsOn_plotReadLength/
 ---  
 
 it would be nice to check one more thing: the size distribution of our reads!
