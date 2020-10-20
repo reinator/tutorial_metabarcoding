@@ -153,6 +153,7 @@ As you know, because of time and computer resources, we have assembled only a su
   
   1-) What is the assembled size, number of contigs and N50 for the hicanu assembly? 
   1a-) Is the Hicanu result close to the estimated genome size? Why?
+  
   2-) Hifiasm generates two files, *p*.contigs.fasta and *a*.contigs.fasta. Why? What are the assembly metrics for these two files?
   
 
