@@ -4,7 +4,8 @@ layout: archive
 permalink: /logging_on/
 ---
 
-Although Mac and Linux computers have a Unix basis, typically when working in bioinformatics we would log into a computing cluster such as the one we have prepared for this course. When you are back in your home institutions, you can also likely use a similar method to log into the computing nodes there. How do we log in for the course?
+Typically when working in bioinformatics we would log into a computing cluster such as the one we have prepared for this course. Those clusters provide computational resources  much more powerful than the average personal computers, allowing us to run highly complex computational tasks required by some bioinformatics analyses. When you are back in your home institutions, you can also likely use a similar method to log into the computing nodes there. How do we log in for this course? 
+
 
 ### Mac OS X and Linux users
 
