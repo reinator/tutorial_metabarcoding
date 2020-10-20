@@ -31,3 +31,9 @@ First human genome
 * KAT https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5408915/pdf/btw663.pdf
 * Genomescope https://www.nature.com/articles/s41467-020-14998-3 
 * Bernardo Cavijo's post https://bioinfologics.github.io/post/2018/09/17/k-mer-counting-part-i-introduction/ 
+
+
+# Assemblers
+
+* Hicanu https://genome.cshlp.org/content/early/2020/08/14/gr.263566.120
+* Hifiasm preprint https://arxiv.org/pdf/2008.01237.pdf
