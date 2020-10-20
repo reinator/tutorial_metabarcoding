@@ -36,3 +36,4 @@ First human genome
 * Hifiasm preprint https://arxiv.org/pdf/2008.01237.pdf
 * Trio Binning https://www.nature.com/articles/nbt.4277
 * Falcon and Falcon-Unzip https://www.nature.com/articles/nmeth.4035 
+* HiFi Reads https://www.nature.com/articles/s41587-019-0217-9 
