@@ -63,3 +63,59 @@ Now, let’s run our script which will extract that contig from our assembly res
 python filterfasta.py -i contig_id your_contigs.here.fasta > *ID.fasta
 ```  
 
+Right. Now give a less to the file *ID.fasta
+
+```console  
+less *ID.fasta
+```  
+
+If you list your directory, do you see a *ID.fasta.fai file there as well? Great!
+
+Extract a bam file only for this contig and create a index for it
+
+```console  
+samtools view -b -h outputname_you_chose.sorted.bam “*ID.fasta” > *ID.fasta.bam
+samtools index *ID.fasta.bam
+``` 
+
+Now you have four files you must download to your local machine to open them on IGV
+
+Your contig fasta file
+Your contig fasta.fai file
+Your contig bam file
+Your contig bam.bai file
+
+Take your time…
+
+On IGV, on the top, click ‘Genomes’ and add your fasta file. Then on ‘File’, “Learn from file’ include your bam file. And… you are done!!!
+
+Let’s discuss IGV as a group. 
+
+# Further
+
+But, how can I see how many reads have mapped to all my contigs? 
+A few ways.
+Minimap2 would have printed you some log files containing that info
+You can also run samtools flagstat.
+
+```console  
+samtools flagstat outputname_you_chose.sorted.bam
+samtools flagstat *ID.fasta.bam
+``` 
+
+# GOOD!
+
+
+Now that you know all about how to open bam files on IGV, I would like you to open another contig. This is a bam file for the mitogenome of another Lepidoptera, but it was produced with PacBio CLR data. Download to your local computer:
+
+iHemFuc1_MT_16012020.fa
+iHemFuc1_MT_16012020.fa.fai
+iHemFuc1_MT.sorted.bam
+iHemFuc1_MT.sorted.bam.bai
+
+Now open it on IGV
+
+What do you see? What is the mean difference in the IGV plots of your PacBio HiFi assembled contig and the CLR assembled contig?
+
+Let’s discuss it!
+
