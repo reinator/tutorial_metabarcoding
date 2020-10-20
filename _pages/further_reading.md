@@ -38,4 +38,4 @@ First human genome
 * Hicanu https://genome.cshlp.org/content/early/2020/08/14/gr.263566.120
 * Hifiasm preprint https://arxiv.org/pdf/2008.01237.pdf
 * Trio Binning https://www.nature.com/articles/nbt.4277
-
+* Falcon and Falcon-Unzip https://www.nature.com/articles/nmeth.4035 
