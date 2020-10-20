@@ -15,7 +15,7 @@ But we will do something even more fun to find out. Let’s do a stand-alone BLA
 We already have BLAST installed in our server. Try it.
 
 ```console  
-blast -h
+blastn -h
 ```  
 
 Right. So now we want to BLAST our contigs to find out what they are. This means we need to blast them against a database of sequences we must think are present in our assembly. I have already created a database for you. It’s called <DB.fasta>. So all you have to do to use it is to create this database in the format blast understands and uses it. So you do:
