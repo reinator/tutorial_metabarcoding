@@ -31,7 +31,7 @@ pages:
         url: /handsOn_plotReadLength/
         
       - title: "Part 2 - Assembly"
-        url: /handsOn_/
+        url: /handsOn_2/
       - title: "Part 3 - BLAST"
         url: /handsOn_3/
       - title: "Part 4 - Mapping"
