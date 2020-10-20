@@ -1,7 +1,7 @@
 ---
 title: "Hands On"
 layout: archive
-permalink: /day2_2/
+permalink: /handsOn_2/
 ---  
 
 # Assembling genomes
