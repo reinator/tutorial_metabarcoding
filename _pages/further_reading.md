@@ -9,9 +9,7 @@ permalink: /further_reading/
 
 First human genome
 * Nature - 2001 https://www.nature.com/articles/35057062
-
 * Science - 2001 https://www.nature.com/scitable/content/Initial-sequencing-and-analysis-of-the-human-16729/
-
 * T2T Human chromosome X https://www.nature.com/articles/s41586-020-2547-7
 * The (near) complete sequence of a human genome https://genomeinformatics.github.io
 
@@ -22,7 +20,6 @@ First human genome
 # Assembly Graphs
 
 * https://link.springer.com/article/10.1007/s40484-019-0181-x
-
 * https://academic.oup.com/bfg/article/11/1/25/191455 
 
 # Kmer analysis
