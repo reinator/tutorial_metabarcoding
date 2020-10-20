@@ -1,6 +1,6 @@
 ---
 title: "Hands On"
 layout: archive
-permalink: /blast/
+permalink: /handsOn_3/
 ---  
 
