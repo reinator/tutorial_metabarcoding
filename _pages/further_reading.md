@@ -41,4 +41,4 @@ First human genome
 # Purging assemblies
 
 * Purge Haplotigs [https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2485-7](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2485-7)
-* Purge Dups 
+* Purge Dups [https://academic.oup.com/bioinformatics/article/36/9/2896/5714742](https://academic.oup.com/bioinformatics/article/36/9/2896/5714742)
