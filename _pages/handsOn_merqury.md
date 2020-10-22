@@ -30,3 +30,5 @@ Once it's copied, let's run merqury! For that, you need to start the conda envir
 source activate eurka....
 
 ```  
+
+
