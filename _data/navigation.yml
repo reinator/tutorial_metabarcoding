@@ -36,6 +36,9 @@ pages:
         url: /handsOn_3/
       - title: "Part 4 - Mapping"
         url: /handsOn_4/
+      - title: "Merqury"
+        url: /handsOn_merqury
+        
   - title: "References"
     children:
       - title: "Materials"
