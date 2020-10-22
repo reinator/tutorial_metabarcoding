@@ -18,6 +18,15 @@ cp /home/unbuntu/Results/purge_dups/<your_species>/*contigs.fasta .
 Right, now that you need to copy the meryl database for the Illumina reads of your species. I have made that database for you, you just need to copy the folder with several files to your folder.
 
 ```console  
-cp -vrn /home/unbuntu/Data/merylDB/<your_species>/
+cp -vrn /home/unbuntu/Data/merylDB/<your_species>/*OUTPUT.21.meryl
+
+```  
+
+It will take a few minutes to copy the database...
+
+Once it's copied, let's run merqury! For that, you need to start the conda enviromment
+
+```console  
+source activate eurka....
 
 ```  
