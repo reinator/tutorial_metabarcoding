@@ -53,3 +53,6 @@ This will take a while to run, so we will go back to the wider group, run anothe
 (...) One hour later...
 
 Hello back here!
+
+
+Right, once you are back here merqury should have finished. 
