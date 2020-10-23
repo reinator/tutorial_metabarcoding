@@ -68,7 +68,7 @@ username@bash:~$ pwd
 /home/username/linux_tutorial
 ``` 
 
-Attention :exclamation:  
+Attention:exclamation:  
 The **cd** command was used as an example to explain the concept behind relative paths. However, **any other command** in the terminal should understand them.  
 
 ## Shortcuts that will make your life easier<a name="shortcuts"></a> 
@@ -93,7 +93,8 @@ username@bash:~$ pwd
 /home/username
 ```  
 
-**Cool fact**: the shortcuts **..** and **~** with any other commands (not only **cd**):  
+Attention 2:exclamation: 
+The shortcuts **..** and **~** with any other commands (not only **cd**):    
 ```console  
 username@bash:~$ ls ~  
 linux_tutorial
