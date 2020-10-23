@@ -152,6 +152,7 @@ b-) What are the assembly statistics: N50, total assembled size, contig counts .
 As you know, because of time and computer resources, we have assembled only a subset of reads for the species you have chosen. But I have generated previous assemblies for the complete set of reads, and I would like you to generate assembly statistics for those assemblies. The files will be on the species folder and will be called <species>.hicanu.total.contigs.fasta and <species>.hifiasm.total.fasta. Copy the files to your directory and run asmstats on them. Then answer:
   
   1-) What is the assembled size, number of contigs and N50 for the hicanu assembly? 
+  
   1a-) Is the Hicanu result close to the estimated genome size? Why?
   
   2-) Hifiasm generates two files, *p*.contigs.fasta and *a*.contigs.fasta. Why? What are the assembly metrics for these two files?
