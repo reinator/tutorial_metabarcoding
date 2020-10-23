@@ -11,7 +11,9 @@ pages:
   - title: "Linux Tutorial"
     children:
       - title: "- Basic concepts"
-        url: /linux_basics/
+        url: /linux_basics/  
+      - title: "- Hands-on"  
+        url: /linux_hands_on/
       - title: "- Navigating the system"
         url: /linux_navigation/
       - title: "- Manipulating files"
