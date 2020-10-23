@@ -112,4 +112,7 @@ Finally, enter the IP address and the user name and when you hit enter, it shoul
 
 ![](/images/putty/fig12.png)
 
-Now you will see the file directory system (folders) on your local computer on the left and your folders on the amazon cloud on the right. You can now just drag and drop files from one side to the other.
+Now you will see the file directory system (folders) on your local computer on the left and your folders on the amazon cloud on the right. You can now just drag and drop files from one side to the other.  
+
+#### Acknowledgements  
+Although we have made some small adjustments, this *log in* tutorial was mainly prepared by Dr. Mark Ravinet and Dr. Joana I. Meier for their Physalia course on Speciation Genomics (https://www.physalia-courses.org/courses-workshops/course37/). We would like to thank both of them for allowing us to use it in this course. 
