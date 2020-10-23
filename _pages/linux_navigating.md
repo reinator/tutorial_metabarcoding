@@ -71,7 +71,7 @@ username@bash:~$ pwd
 Attention :exclamation:  
 The **cd** command was used as an example to explain the concept behind relative paths. However, **any other command** in the terminal should understand them.  
 
-## Shortcuts <a name="shortcuts"></a> 
+## Shortcuts that will make your life easier<a name="shortcuts"></a> 
 If you want to go back to the previous (parent) directory, you don't need to specify its complete path. The shortcut **..** will do that for you:  
 ```console  
 username@bash:~$ cd ..  
@@ -93,10 +93,10 @@ username@bash:~$ pwd
 /home/username
 ```  
 
-**Cool fact**: the shortcuts **..** and **~** also work with other commands besides **cd**:  
+**Cool fact**: the shortcuts **..** and **~** with any other commands (not only **cd**):  
 ```console  
 username@bash:~$ ls ~  
-Documents public_html
+linux_tutorial
 ```  
 
 ## The tab completion trick <a name="the-tab-completion-trick"></a>  
