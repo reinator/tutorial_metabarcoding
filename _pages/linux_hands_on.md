@@ -54,15 +54,22 @@ username@bash:~$ pwd
 /home/username/linux_tutorial
 ``` 
 
-### Absolute vs relative paths
-In the last command we used **cd** to move to the *linux_tutorial* directory. Notice that the *absolute path* to *linux_tutorial* is */home/username/linux_tutorial*. However, we didn't need to inform the whole path to **cd** because it is capable of recognizing what we call *relative paths*. The idea behind it is that **cd** "knows" what our current directory (*/home/username*) and uses it as a reference point.  
+## Absolute vs relative paths
+In the last command we used **cd** to move to the *linux_tutorial* directory. Notice that the **absolute path** to *linux_tutorial* is */home/username/linux_tutorial*. However, we didn't need to inform the whole path to **cd** because it is capable of understanding what we call **relative paths**. 
+
+The idea behind relative paths is that **cd** knows what our current directory is (in this case, we were at */home/username*) and uses it as a reference. Then when we call **cd** informing *linux_tutorial* as a relative path, the command will move to a directory called *linux_tutorial* inside */home/username*. 
+
+While *absolute paths* start with a forward slash (/), *relative paths* don't. 
 
 Of couse the **cd** command would also have worked if we had used an *absolute path* instead: 
 ```console  
 username@bash:~$ cd /home/username/linux_tutorial
 username@bash:~$ pwd  
-/home/username/Documents
+/home/username/linux_tutorial
 ``` 
+
+Attention :exclamation:  
+The **cd** command was used as an example to explain the concept behind relative paths. However, **any other command** in the terminal should understand them.  
 
 ## Shortcuts <a name="shortcuts"></a> 
 If you want to go back to the previous (parent) directory, you don't need to specify its complete path. The shortcut **..** will do that for you:  
