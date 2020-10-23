@@ -64,3 +64,35 @@ username@bash:~$ pwd
 /home/username/Documents
 ``` 
 
+## Shortcuts <a name="shortcuts"></a> 
+If you want to go back to the previous (parent) directory, you don't need to specify its complete path. The shortcut **..** will do that for you:  
+```console  
+username@bash:~$ cd ..  
+username@bash:~$ pwd  
+/home/username
+```  
+You can even concatenate multiple **..**:  
+```console    
+username@bash:~$ cd ../..  
+username@bash:~$ pwd  
+/
+```  
+Now we are in the so called **root** directory. This is the top of the hierarchical structure of the system. All other directories are actually subdirectories of it.  
+
+Another possibly useful shortcut is **~**, which represents the home directory of your user:  
+```console  
+username@bash:~$ cd ~  
+username@bash:~$ pwd  
+/home/username
+```  
+
+**Cool fact**: the shortcuts **..** and **~** also work with other commands besides **cd**:  
+```console  
+username@bash:~$ ls ~  
+Documents public_html
+```  
+
+## The tab completion trick <a name="the-tab-completion-trick"></a>  
+Typing out long paths can be tedious and slow, without mentioning the chances of typing errors (typos). However, the command line have a powerfull mechanism to help us with that: it's called **tab completion**.  
+
+The idea is that whenever you start typing a path, if you hit the Tab key on your keyboard the command line will invoke an autocompletion action. It nothing happens, it means there are several possibilities for autocompletion. In that case you should hit Tab again to show all the possibilites, continue typing and then hit Tab again to continue the autocompletion process. Try it yourself to seed the power of tab completion!
