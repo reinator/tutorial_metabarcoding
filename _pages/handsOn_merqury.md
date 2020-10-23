@@ -63,6 +63,21 @@ Right, once you are back here merqury should have finished. If merqury finished 
 
 # Now
 
-Let's have a look at another merqury folder where I have ran an outputed a merqury evaluation for your species but after I ran purge_dups on it. The results file of this run should be in /home/unbuntu/Data/<your_species>/merqury_purge
+Let's have a look at another merqury folder where I have ran and outputed a merqury evaluation for your species but after I ran purge_dups on it. This means you are going to have plot files for the purged primary assembly, and for the haplotigs assembly. The results file of this run should be in /home/unbuntu/Data/<your_species>/merqury_purge
 
-Take your time 
+Take your time and have a look at it all. Then dicuss with your team and answer in your presentation:
+
+1-) Open the files  \*\spectra-asm.st.png for the purged, the haplotigs and the total hicanu you have produced. What is the biggest difference between those three plots?
+2-) Point on \*\spectra-asm.st.png for the purged and hapltoigs where the kmer errors are.
+3-) Point on \*\spectra-asm.st.png for the purged and hapltoigs where the heterozygous peak is, and where the homzygous peak is?
+
+4-) If you look at \*\spectra-asm.st.png you have generated for the total Hicanu output, in the heterozygous peak you don't see any kmers only present on the reads. On the other hand, if you look at \*\spectra-asm.st.png for the primary and the haplotigs you see kmers present only on the reads and absent from the heterozygous peak. Why is that?
+
+5-) Look at the completeness file for the purged ran I have produced: why is the completeness there different from the one you have generated?
+6-) Look at the .qv file for the purged ran I have produced: why do you think the qvs are different than the one you have generated?
+
+Discuss all of this with your colleagues and make your presentation.
+
+# Then
+
+Finally, now we are going to look into some CLR assemblies merqury outputs. 
