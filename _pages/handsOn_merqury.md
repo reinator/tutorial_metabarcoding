@@ -55,4 +55,14 @@ This will take a while to run, so we will go back to the wider group, run anothe
 Hello back here!
 
 
-Right, once you are back here merqury should have finished. 
+Right, once you are back here merqury should have finished. If merqury finished succesfully, you should have a variety of files produced in your folder: (i) different plots (.png) files, a completeness.stats file and a file that will have the output name you gave (in the example above it was outHicanu) followed by .qv. I want you to analyse all these files and discuss with your partners. Take your time and then produce a presentation with your team showing:
+
+1-) in the hicanu total merqury evaluation, in the plot \*\spectra-asm.st.png, point in the presentation (i) where are the errouneous kmers, (ii) what is the heterozygous peak, (iii) what is the homozygoys peak).
+2-) Have a look at the completeness file and right down in your presentation the kmer completness of this assembly
+3-) Have a look at the .qv file and right down in your presentation what is the QV for this assembly
+
+# Now
+
+Let's have a look at another merqury folder where I have ran an outputed a merqury evaluation for your species but after I ran purge_dups on it. The results file of this run should be in /home/unbuntu/Data/<your_species>/merqury_purge
+
+Take your time 
