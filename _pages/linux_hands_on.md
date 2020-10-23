@@ -1,8 +1,8 @@
----  
-title: "Linux: hands-on"  
-layout: archive 
-permalink: /linux_hands_on/
----  
+---
+title: "Linux: navigating the system"
+layout: archive
+permalink: /linux_navigation/
+---
 
 ## Where are we?  <a name="where-are-we?"></a> 
 The command **pwd** stands for *Print Working Directory* and it will print the complete path to our current directory:  
