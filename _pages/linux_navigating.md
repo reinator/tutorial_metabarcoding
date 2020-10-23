@@ -94,7 +94,7 @@ username@bash:~$ pwd
 ```  
 
 Attention 2:exclamation: 
-The shortcuts **..** and **~** with any other commands (not only **cd**):    
+The shortcuts **..** and **~** work with any other commands (not only **cd**):    
 ```console  
 username@bash:~$ ls ~  
 linux_tutorial
