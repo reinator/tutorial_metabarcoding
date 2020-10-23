@@ -48,7 +48,7 @@ Copying files back on to our local machine is just as straightforward. You can d
 # download to local
 scp -i "~/mark.pem" mark@54.245.175.86:~/test_file ./
 ```
-Where here all we did was use `scp` with cluster address first and the the location (our working directory) second - i.e. `./`
+Where here all we did was use `scp` with cluster address first and the location (our working directory) second - i.e. `./`
 
 #### Making life a bit easier
 
