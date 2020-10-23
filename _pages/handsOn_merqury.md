@@ -69,6 +69,7 @@ Take your time and have a look at it all. Then dicuss with your team and answer 
 
 1-) Open the files  \*\spectra-asm.st.png for the purged, the haplotigs and the total hicanu you have produced. What is the biggest difference between those three plots?
 2-) Point on \*\spectra-asm.st.png for the purged and hapltoigs where the kmer errors are.
+
 3-) Point on \*\spectra-asm.st.png for the purged and hapltoigs where the heterozygous peak is, and where the homzygous peak is?
 
 4-) If you look at \*\spectra-asm.st.png you have generated for the total Hicanu output, in the heterozygous peak you don't see any kmers only present on the reads. On the other hand, if you look at \*\spectra-asm.st.png for the primary and the haplotigs you see kmers present only on the reads and absent from the heterozygous peak. Why is that?
