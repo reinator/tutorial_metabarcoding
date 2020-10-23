@@ -1,0 +1,66 @@
+---  
+title: "Linux: hands-on"  
+layout: archive 
+permalink: /linux_hands_on/
+---  
+
+## Where are we?  <a name="where-are-we?"></a> 
+The command **pwd** stands for *Print Working Directory* and it will print the complete path to our current directory:  
+```console  
+username@bash:~$ pwd  
+/home/username
+```  
+This is your home directory. In Linux systems, each user has its own home directories, where they will be saving their own files.  
+
+## Creating a directory <a name="creating-a-directory"></a>  
+You can create a directory using the command **mkdir** (which stands for *Make Directory*):  
+```console  
+username@bash:~$ mkdir linux_tutorial 
+```  
+By default, the command **mkdir** creates directories inside our current working directory, which in our case is */home/username*. However we can use **mkdir** to create a directory in any other location. 
+
+Let's suppose we wanted to create a directory called *linux_tutorial_subdirectory* inside our *linux_tutorial* directory:  
+```console  
+username@bash:~$ mkdir linux_tutorial/linux_tutorial_subdirectory 
+```  
+
+## What's in our current directory?  <a name="what's-in-our-current-directory?"></a> 
+Now let's inspect the content of our directories. For that we will use the command **ls**, which prints all files and folders located in our current directory:  
+```console  
+username@bash:~$ ls  
+linux_tutorial
+```  
+If we want to print the content of a directory other than our current one, we need to give its path as an argument to **ls**. Let's check what is inside linux_tutorial:  
+```  
+username@bash:~$ ls linux_tutorial  
+linux_tutorial_subdirectory 
+```  
+If we want ls to print more information, we can use some of its options. For instance, option **-l** can print information on user permissions over that object, as well as its size and last modification date:  
+```console  
+username@bash:~$ ls -l linux_tutorial
+drwxrwxr-x 2 bioma bioma 4096 out 23 09:52 linux_tutorial_subdirectory
+```  
+Our last command has printed file sizes in bytes. For most cases we will want that in a human-readable format, what can be achieved by adding the **-h** option:  
+```console  
+username@bash:~$ ls -lh linux_tutorial
+drwxrwxr-x 2 bioma bioma 4,0K out 23 09:52 linux_tutorial_subdirectory
+```  
+
+## Moving around  <a name="moving-around"></a> 
+The command **cd** (which stands for *Change Directory*) allows us to move to another directory. Its syntax is straightforward since it only takes one argument, which is the target directory we want to move to:  
+```console  
+username@bash:~$ cd linux_tutorial  
+username@bash:~$ pwd  
+/home/username/linux_tutorial
+``` 
+
+### Absolute vs relative paths
+In the last command we used **cd** to move to the *linux_tutorial* directory. Notice that the *absolute path* to *linux_tutorial* is */home/username/linux_tutorial*. However, we didn't need to inform the whole path to **cd** because it is capable of recognizing what we call *relative paths*. The idea behind it is that **cd** "knows" what our current directory (*/home/username*) and uses it as a reference point.  
+
+Of couse the **cd** command would also have worked if we had used an *absolute path* instead: 
+```console  
+username@bash:~$ cd /home/username/linux_tutorial
+username@bash:~$ pwd  
+/home/username/Documents
+``` 
+
