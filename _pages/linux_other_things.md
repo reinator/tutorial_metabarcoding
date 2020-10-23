@@ -32,3 +32,5 @@ user@bash:~$ pwd
 /home/username/Spaced Directory
 ```  
 
+# Further reading <a name="additional-references"></a>  
+This tutorial was inspired by the great [Ryan Chadwick's webpage](https://ryanstutorials.net/linuxtutorial/) on Linux. If you want to deepen your understanding on Linux, I highly recommend you to browse through Ryan's tutorial, which includes exercises and some other interesting topics not coverede here due to time constraints.
