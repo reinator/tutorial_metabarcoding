@@ -80,14 +80,19 @@ Take your time and have a look at it all. Then dicuss with your team and answer 
 7-) If you look at \*spectra-asm.st.png you have generated for the total Hicanu output, in the heterozygous peak you don't see any kmers only present on the reads. On the other hand, if you look at \*\spectra-asm.st.png for the primary and the haplotigs you see kmers present only on the reads and absent from the heterozygous peak. Why is that?
 
 8-) Look at the completeness file for the purged ran I have produced: why is the completeness there different from the one you have generated for total hicanu?
+
 9-) Look at the .qv file for the purged ran I have produced: why do you think the qvs are different from the one you have generated for the total hicanu?
 
 Finally, we have discussed that another way of evaluating assemblies is at looking at BUSCO runs for the assemblies. I have generated BUSCO rans for the total Hicanu output, the primary purged assembly and the haplotigs purged assembly. You will find the BUSCO result folders in /home/unbuntu/Data/<your_species>/BUSCO_runs . You don't need to copy the whole busco folders, but I want you to go inside each BUSCO run and analyse the short_output*.txt file for each and answer:
 
 10-) Against which set of protein ortologs have I ran the BUSCO analysis? How many single copy ortholog genes were searched?
+
 11-) What is the general statistics for the total Hicanu BUSCO ran?
+
 12-) What is the general statistics for the total primary purged BUSCO ran?
+
 13-) What is the general statistics for the total haplotigs purged Hicanu BUSCO ran?
+
 14-) What is the biggest BUSCO difference between the total Hicanu run and the purged assembly?
 
 Discuss all of this with your colleagues and make your presentation.
@@ -99,13 +104,17 @@ Finally, now we are going to look into merqury outpus for *Hemaris fuciformis* C
 Look at all the files (take your time), discuss with your team and write down on your presentation:
 
 15a-) in the Falcon and Falcon Unzip merqury evaluation, look at the cns.p and cns.h \*\spectra-asm.st.png plots. Point in the presentation: (i) where are the assembly erroneous kmers, (ii) what is the heterozygous peak, (iii) what is the homozygoys peak.
+
 16a-) Have a look at the completeness file and write down in your presentation the kmer completness of the primary and alternate assemblies.
+
 17b-) Have a look at the .qv file and write down in your presentation what is the QV for the primary and alternate assemblies.
 
 Now, open the merqury run for the purged versions of *H. fuciformis* and answer the same questions as above:
 
 15b)
+
 16b)
+
 17b)
 
 Then, have a look at the BUSCO results for the Falcon and Falcon Unzip and the purging results and answer the same questions 10, 11, 12, 13 and 14 comparing the Falcon/Falcon Unzip BUSCO run with the purged BUSCO run.
@@ -115,6 +124,7 @@ Then, have a look at the BUSCO results for the Falcon and Falcon Unzip and the p
 Now, I would like you to evaluate the difference in the merqury results for the Hicanu purged run for your species, and for the merqury run for the purged *H. fuciforms*. Of course they are different species, and therefore results will be different. But there is more. Evaluate kmer completeness, QVs, erroneous kmer levels, BUSCO outpus and answer:
 
 18-) Which assemblies seem to be better taking into consideration the different metrics?
+
 19-) Why error rates, QVs and completeness vary between these species assemblies?
 
 
