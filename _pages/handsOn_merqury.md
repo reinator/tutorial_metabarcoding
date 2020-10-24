@@ -4,7 +4,7 @@ layout: archive
 permalink: /handsOn_merqury/
 ---  
 
-# Merqury - evaluating purging and assembly quality
+# Part 5 - Merqury - evaluating purging and assembly quality
 
 Ok, today you have heard of Purge Dups and purging assemblies. You also have learned that Hicanu outputs an assembly that is double the expected haploid genome size, and then you have to use a tool such as Purge Dups to separated the haplotips of the assembly. Later, you learned about how to evaluated assembly completeness and quality having a look at the shared kmers between the kmers present in the assembly, and kmers in high-quality reads - such as Illumina. Now you are going to run merqury to evaluate assemblies for your species!!
 
