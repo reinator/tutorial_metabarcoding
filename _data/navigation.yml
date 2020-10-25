@@ -36,8 +36,10 @@ pages:
         url: /handsOn_3/
       - title: "Part 4 - Mapping"
         url: /handsOn_4/
-      - title: "Merqury"
-        url: /handsOn_merqury
+      - title: "Part 5 - Merqury"
+        url: /handsOn_merqury/
+      - title: "Part 6 - SALSA2 scaffolding"
+        url: /salsa
         
   - title: "References"
     children:
