@@ -42,3 +42,8 @@ First human genome
 
 * Purge Haplotigs [https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2485-7](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2485-7)
 * Purge Dups [https://academic.oup.com/bioinformatics/article/36/9/2896/5714742](https://academic.oup.com/bioinformatics/article/36/9/2896/5714742)
+
+# Hi-C
+
+* Hi-C is invented [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2858594/pdf/nihms-194459.pdf](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2858594/pdf/nihms-194459.pdf)
+* SALSA2 [https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007273](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007273)
