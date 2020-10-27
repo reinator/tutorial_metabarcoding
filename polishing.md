@@ -36,7 +36,7 @@ To have a look at what we have just ran above (what -r, -k2 and -n mean?)
 
 Ok, so now that you have the \*sizes file sorted, I would like you to calculate how much of the base pairs of this assembly are in the expected karyotype of the species. How to do that?
 
-- search only to see if you find any research that has described the karyotype of *H. fuciforms*. If you find it, what is the expected karyotype?
+- search online to see if you find any research that has described the karyotype of *H. fuciforms*. If you find it, what is the expected karyotype?
 
 Now, sum up the bases in the first largestes scaffolds that correspod to the karyotype:
 5-) How many assembled bases are inside the expected karyotype?
