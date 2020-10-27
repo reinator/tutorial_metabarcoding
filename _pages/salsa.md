@@ -1,7 +1,7 @@
 ---
 title: "Part 5 - SALSA2 Scaffolding"
 layout: archive
-permalink: /further_reading/
+permalink: /salsa/
 ---
 
 
