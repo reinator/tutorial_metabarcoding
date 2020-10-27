@@ -39,7 +39,9 @@ pages:
       - title: "Part 5 - Merqury"
         url: /handsOn_merqury/
       - title: "Part 6 - SALSA2 scaffolding"
-        url: /salsa
+        url: /salsa/
+      - title: "Part 7 - Polishing and final checks"
+        url: /polishing/
         
   - title: "References"
     children:
