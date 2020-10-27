@@ -1,5 +1,5 @@
 ---
-title: "Materils"
+title: "Further study"
 layout: archive
 permalink: /further_reading/
 ---
