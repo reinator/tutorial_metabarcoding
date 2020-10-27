@@ -28,12 +28,20 @@ Great, now you need to go and copy the working data for your species. The data w
 cd /home/ubuntu/Data
 ls -ltr
 ```  
-Do you see the 3 species folder? if you do, then copy the 
+Do you see the 3 species folder? If you do, then go inside your species folder and inside 'kmers' and copy the file that contains \*600.fasta on its name to your kmer folder. One example:
 
 
-This way, everytime you have to use your species data, you refer to the folder data. 
+```console  
+cp /home/ubuntu/Data/v_atalanta/kmers/ilVanAtal1.600.fasta <Path_to_your_folders>/v_atalanta/kmer/
+ls -ltr
+```  
 
-Now that you have all your data in place, try to call Jellyfish:
+### Attention :grey_exclamation: 
+
+Each species data will have a code on it's name representing each of the 4 species we will work on during this week: 
+
+
+Now that you have the reads in place, try calling Jellyfish:
 
 ```console  
 jellyfish
