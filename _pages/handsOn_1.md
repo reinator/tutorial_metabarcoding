@@ -6,20 +6,31 @@ permalink: /handsOn_1/
 
 # Kmer analysis: running jellyfish <a name="where-are-we?"></a> 
 
-Go to the folder with the data you have chosen to assemble
+Right, so today you have heard about how to analyse kmer composition of your genome sequenced reads! Now you are going to put Hands On and will yourself count and analyse kmers.
+You have to chose between the species: (i) *Vanessa atalanta*, (ii) *Pieris rapae* and (iii) *Notonda dromedarius* and you will analyse the reads and genome of your chosen species until the end of the week. Once you have chosen it, create a folder where you will run your analysis. My suggestion would be to create a folder with your species name and inside it, a series of other folders to structure your analysis. For example:
+
+v_atalanta/
+  kmers/
+  assembly/
   
-```console  
-ls -ltrh
+ The above basically means you have created a folder called 'v_atanta' (if you chose vanessa atalanta as your working species) and inside it you have created two other folders side by side called 'kmers' and 'assembly'. If you would like to do that, then do:
+ 
+ ```console  
+mkdir <species_folder>
+cd <species_folder>
+mkdir kmers
+mkdir assembly
 ```  
-Do you see all your files there? Great! Now let's make a folder for your project. My suggestion would be to create a folder with your specied name and inside that folder, other folders to structure your analysis. Let's say, one folder called 'data' and another called 'kmer_analysis'. Like this:
-
+ 
+Great, now you need to go and copy the working data for your species. The data will be inside /home/ubuntu/Data
 
 ```console  
-mkdir vanessa_atalanta
-cd vanessa_atalanta
-mkdir data
-mkdir kmer_analysis
-``` 
+cd /home/ubuntu/Data
+ls -ltr
+```  
+Do you see the 3 species folder? if you do, then copy the 
+
+
 This way, everytime you have to use your species data, you refer to the folder data. 
 
 Now that you have all your data in place, try to call Jellyfish:
