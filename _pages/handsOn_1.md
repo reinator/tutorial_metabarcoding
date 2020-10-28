@@ -148,6 +148,7 @@ Now,
 I want you to go back to the *.histo* file you have generated today, download it to your local machine and plot it on genomescope. Also, I want you to run asmstats on the fasta file (the 600 subset) you imputed to jellyfish. 
 
 e- What genomescope tells you when you try to plot a kmer histogram for just a handful of sequences? 
+
 f- Looking at the asmstats result for this smaller file, how much coverage of the genome you have in this file giving the estimated genome size?
 
 Great. Now let’s look at it all together: considering the kmer plot of the total file and its statistics, we can have a good look at the kmer composition of the DNA in the genome. How does it look? Discuss with your partners and then later in the big group.  
