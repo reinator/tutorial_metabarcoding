@@ -6,7 +6,7 @@ permalink: /handsOn_1/
 
 # Kmer analysis: running jellyfish <a name="where-are-we?"></a> 
 
-Right, so today you have heard about how to analyse kmer composition of your genome sequenced reads! Now you are going to put your Hands On data and will, yourself, count and analyse kmers.
+Right, so today you have heard about how to analyse kmer composition of your genome sequenced reads! Now you are going to put your 'Hands On' data and will, yourself, count and analyse kmers.
 You have to chose between the species: (i) *Vanessa atalanta*, (ii) *Pieris rapae* and (iii) *Notonda dromedarius* to work on until the end of the week. Once you have chosen it, create a folder where you will run your analysis. My suggestion would be to create a folder with your species name and inside it, a series of other folders to structure your analysis. For example:
 
 v_atalanta/
@@ -28,7 +28,7 @@ Great, now you need to go and copy the working data for your species. The data w
 cd /home/ubuntu/Data
 ls -ltr
 ```  
-Do you see the 3 species folder? If you do, then go inside your species folder and inside 'kmers' and copy the file that contains \*600.fasta on its name to your kmer folder. One example:
+Do you see the 3 species folders? If you do, then go inside your species folder and inside 'kmers' and copy the file that contains \*600.fasta on its name to your kmer folder. One example:
 
 
 ```console  
@@ -38,8 +38,14 @@ ls -ltr
 
 ### Attention :grey_exclamation: 
 
-Each species data will have a code on it's name representing each of the 4 species we will work on during this week: 
+Each species data will have a code on it's name representing each of the 4 species we will work on during this week, this is the code they have at the Darwin Tree of Life Project. The codes are:
 
+ilVanAtal1 - *Vanessa atalanta*
+ilPieRapa1 - *Pieris rapae*
+ilNotDrom1 - *Notodonta dromedarius*
+iHemFuc1 - *Hemaris fuciformis* (we are not going to use this species in the current analysis)
+
+Keep these codes in mind as the files will most likely to be named after them.
 
 Now that you have the reads in place, try calling Jellyfish:
 
@@ -66,23 +72,23 @@ In the command line above you see \<species\>.fasta. This needs to be replaced b
 
 ### More
 
-Please try 
+Please try:
 
 ```console  
 jellyfish count --help 
 ```
 
-on your command line to understand what are the parameters you have imputed in the above line. Help messages are a useful way for you to understand what you are running, and to see if you would like to add any other parameter for your specific analysis case. Also remember that beyond this course, the internet is always on your side. If you google ‘jellyfish user guide’, for example, you will find [JellyfishUserGuide]( http://www.genome.umd.edu/docs/JellyfishUserGuide.pdf)
+on your command line to understand what are the parameters you have imputed in the previous line. Help messages are a useful way for you to understand what you are running, and to see if you would like to add any other parameter for your specific analysis case. Also remember that beyond this course, the internet is always on your side. If you google ‘jellyfish user guide’, for example, you will find [JellyfishUserGuide]( http://www.genome.umd.edu/docs/JellyfishUserGuide.pdf)
 
 ### Back
 
 2-) Jellyfish histo
 
-Now that you have counted our 31 letters kmers, we want to transform it to a histogram file so we can plot it. Then we have our second command:
+Now that you have counted your 31-letters kmers, we want to transform it to a histogram file so you can plot it. Then you have you second command:
 
 
 ```console  
-jellyfish histo <species>.jf > <species>.jf.histo
+jellyfish histo <species>.jf > <species>.histo
 
 ```
 
@@ -90,7 +96,11 @@ jellyfish histo <species>.jf > <species>.jf.histo
 
 Note in the command above we have used the symbol “>” before the output. This is a command line symbol that will redirect your output to a file instead of printing it to the screen.
 
-Note that the input for your command **jellyfish histo** is the output from your previous command, which was **jellyfish count**. Now you have the necessary result to plot a histogram on genomescope and have a look at the distribution of your genome kmers. But before you plot this result, I want you to plot a genomescope plot for another file FIRST!! 
+Note that the input for your command **jellyfish histo** is the output from your previous command, that was **jellyfish count**. Now you have the necessary result to plot a histogram on genomescope and have a look at the distribution of your genome kmers. BUT STOP!
+
+...
+
+Before you plot this result, I want you to plot a genomescope plot for another file FIRST!! 
 
 In the data folder for the species you have chosen, you are going to find two files called:
 
@@ -103,10 +113,11 @@ Download the file \<species\>.total.histo to your local machine (as you learned 
 
 Save the image of both versions of the plot - normal and log scale - somewhere in your computer.
 
-Cool, you have plotted the kmer distribution of the \<species\>.total.histo file, and the model of genome scope has calculated for your (i) the estimated genome size, (ii) the heterozygosity and (iii) the percentage of repeats of your genome. 
+Cool, you have plotted the kmer distribution of the \<species\>.total.histo file, and genomescope has calculated for your (i) the estimated genome size, (ii) the heterozygosity and (iii) the percentage of repeats of your species genome. 
 
-Now, take the file \<species\>.total.fasta and run the command:
+The histogram you have just plotted is for a jellyfish count of the total PacBio HiFi reads sequenced to assemble your species. I have generated it for you because it takes time (but to generate it outside this course you would run the same commands you ran for the subsample set).
 
+Now, I would like to you generate statistics for the \*.total.fasta reads. I have a script for you to do that. It's called asmstats
 
 ```console  
 asmstats <species>.total.fasta > <species>.total.fasta.stats
