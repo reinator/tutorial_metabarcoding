@@ -102,7 +102,7 @@ Note that the input for your command **jellyfish histo** is the output from your
 
 Before you plot this result, I want you to plot a genomescope plot for another file FIRST!! 
 
-In the data folder for the species you have chosen, you are going to find two files called:
+Inside the 'assembly' folder for your species, you are going to find two files called:
 
 ```console  
 <species>.total.fasta
