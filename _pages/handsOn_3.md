@@ -53,8 +53,10 @@ The blast database files and the contigs must be in the same folder. If they are
 
 So now let’s have a look at our outputs!
 1-) Based on your blast results, what have you assembled? (If you don't understand the subject ID, search it on NCBI).
+
 2-) Let’s inspect the differences between the two outputs
-3-) What each columns on the output *.contigs.DB.blastn6 mean? (Internet is your friend!)
+
+3-) What each column on the output *.contigs.DB.blastn6 mean? (Internet is your friend!)
 
 Discuss this with your colleages and then let's discuss this as a group!
 
