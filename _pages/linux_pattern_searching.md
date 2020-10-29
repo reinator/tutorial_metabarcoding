@@ -86,3 +86,15 @@ username@bash:~/grep_test$ cat grep_test.txt
 n0_v0g@l_l!n3
 line_contains_vogals
 ```
+
+Now we can use the command `grep` to search for the lines that contain the at sign (@):  
+```bash  
+username@bash:~/grep_test$ grep @ grep_test.txt  
+n0_v0g@l_l!n3
+```  
+
+Or combine wildcards and `grep` to find the lines that contain vogal characters:  
+```bash  
+username@bash:~/grep_test$ grep [aeiou] grep_test.txt  
+line_contains_vogals
+```
