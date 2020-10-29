@@ -63,13 +63,13 @@ Take your time and then produce a presentation with your team showing and explan
  
 1-) in your hicanu total merqury evaluation, in the plot \*\spectra-asm.st.png, point in the presentation: (i) where are the assembly erroneous kmers, (ii) what is the heterozygous peak, (iii) what is the homozygoys peak.
 
-2-) Have a look at the completeness file and write down in your presentation the kmer completness of this assembly. 
+2-) Have a look at the completeness file and write down in your presentation the kmer completeness of this assembly. 
 
 3-) Have a look at the .qv file and write down in your presentation what is the QV for this assembly.
 
 # Now
 
-Let's have a look at another merqury folder where I have ran a merqury evaluation for your species but after I ran purge_dups on it. This means you are going to have plot files for the purged primary assembly, and for the haplotigs assembly. The results file of this run should be in /home/unbuntu/Data/<your_species>/merqury_purge
+Let's have a look at another merqury folder where I have ran a merqury evaluation for your species but after I ran purge_dups on it. This means you are going to have plot files for the purged primary assembly, and for the haplotigs assembly. The results file of this run should be in /home/unbuntu/Data/<your_species>/merqury_purged
 
 Take your time and have a look at it all. Then dicuss with your team and answer in your presentation:
 
