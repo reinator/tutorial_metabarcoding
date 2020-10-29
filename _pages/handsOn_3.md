@@ -8,7 +8,7 @@ permalink: /handsOn_3/
 
 Last but not least!
 
-I know you have chosen a specific species and you have assembled a partial set of Pacbio HiFi reads for it. Do you think you have just assembled some portions of you species nuclear genome? Or something special? Aren’t you curious? Well, the parameter ‘genomeSize=’ you have used for Hicanu already gives you a hint about what you have assembled. 
+I know you have chosen a specific species and you have assembled a partial set of Pacbio HiFi reads for it. Do you think you have just assembled some portions of your species nuclear genome? Or something special? Aren’t you curious? Well, the parameter ‘genomeSize=’ you have used for Hicanu already gives you a hint about what you have assembled. 
 
 But we will do something even more fun to find out. Let’s do a stand-alone BLAST of our assembled contigs (choose one or run for both, as you wish!).
 
