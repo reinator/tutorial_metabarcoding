@@ -18,6 +18,8 @@ pages:
         url: /linux_file_manipulation/  
       - title: "- Wildcards and pattern search"  
         url: /linux_pattern_searching/
+      - title: "- Piping and redirection" 
+        url: /linux_pipe/
       - title: "- Other things you should know"  
         url: /linux_other_things/
       - title: "- Fasta and Fastq sequences"
