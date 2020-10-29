@@ -45,7 +45,7 @@ pages:
       - title: "Part 7 - Polishing and final checks"
         url: /polishing/
         
-    - title: "References"
+  - title: "References"
     children:
       - title: "Papers"
         url: /further_reading/     
