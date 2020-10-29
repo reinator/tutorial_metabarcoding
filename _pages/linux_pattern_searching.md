@@ -71,3 +71,5 @@ Or to list all files that contain a numeric character:
 username@bash:~/wildcards_test$ ls *[0-9]*   
 number2file
 ``` 
+
+## Searching inside files with `grep`  
