@@ -99,7 +99,7 @@ username@bash:~/grep_test$ grep [aeiou] grep_test.txt
 line_contains_vogals
 ```
 
-Interestingly, you can use the option `-v` to search for negative patterns. For instance, to find all the lines that do not contain any vogals:  
+Interestingly, you can use the option `-v` to search for opposite patterns. For instance, to find all the lines that do **not** contain any vogals:  
 ```bash  
 username@bash:~/grep_test$ grep -v [aeiou] grep_test.txt  
 n0_v0g@l_l!n3
