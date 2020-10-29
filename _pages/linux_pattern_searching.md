@@ -19,19 +19,19 @@ username@bash:~$ cd wildcards_test
 
 Now create five empty files:  
 ```bash  
-username@bash:~/wildcards_test$ touch barry.txt blah.txt example.png firstfile.txt  
+username@bash:~/wildcards_test$ touch carol.txt blah.txt example.png firstfile.txt number2file 
 ```  
 
 Now we can use the wildcard `*` to list only the files that begin with the letter *b*:  
 ```bash  
 username@bash:~/wildcards_test$ ls b*  
-barry.txt  blah.txt
+blah.txt
 ```
 
 What if we wanted to list all the files that end with *.txt*?  
 ```bash  
 username@bash:~/wildcards_test$ ls *.txt  
-barry.txt  blah.txt  firstfile.txt 
+carol.txt  blah.txt  firstfile.txt 
 ```
 
 ### Under the hood  
@@ -49,12 +49,25 @@ example.png
 The `?` wildcard represents a single character. For example, it can be used to list all files whose second letter is *a*:  
 ```bash  
 username@bash:~/wildcards_test$ ls ?a*   
-barry.txt
+carol.txt
 ``` 
 Or even to list all files whose extension have three characters:  
 ```bash  
 username@bash:~/wildcards_test$ ls *.???   
-barry.txt blah.txt firstfile.txt
+carol.txt blah.txt firstfile.txt
 ```  
 
 ### The `[]` wildcard 
+Finally, as opposed to `*` and `?`, which refer to **any** character, the range operator `[]` allows us to search for a specific subset of characters.  
+
+For instance, if we wanted to list all files that begin the the letter *c* or *f*:  
+```bash  
+username@bash:~/wildcards_test$ ls [cf]*   
+carol.txt firstfile.txt
+``` 
+
+Or to list all files that contain a numeric character:  
+```bash  
+username@bash:~/wildcards_test$ ls *[0-9]*   
+number2file
+``` 
