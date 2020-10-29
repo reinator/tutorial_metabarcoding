@@ -7,7 +7,9 @@ permalink: /linux_pattern_searching/
 ## Wildcards  
 The command line is capable of understanding patterns of strings (which we will call here *wildcards*), which allows us to simultaneously run commands for multiple files/directories using only a few characters.  
 
-The most common wildcard is `*`, which represents zero or more characters. Let's see how it works with a real example:  
+### The `*` wildcard
+
+The most frequently used wildcard is `*`, which represents zero or more characters. Let's see how it works with a real example:  
 
 First create a folder named `wildcards_test` and move to it:
 ```bash  
@@ -42,3 +44,17 @@ username@bash:~/wildcards_test$ mv *.png images/
 username@bash:~/wildcards_test$ ls images/ 
 example.png
 ```
+
+### The `?` wildcard  
+The `?` wildcard represents a single character. For example, it can be used to list all files whose second letter is *a*:  
+```bash  
+username@bash:~/wildcards_test$ ls ?a*   
+barry.txt
+``` 
+Or even to list all files whose extension have three characters:  
+```bash  
+username@bash:~/wildcards_test$ ls *.???   
+barry.txt blah.txt firstfile.txt
+```  
+
+### The `[]` wildcard 
