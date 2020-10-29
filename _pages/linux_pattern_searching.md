@@ -73,3 +73,16 @@ number2file
 ``` 
 
 ## Searching inside files with `grep`  
+The command `grep` is used to search for patterns inside files, iterating over each line of it. Before start playing with it, let's create a directory named *grep_test* in our *home*, move from our current working directory (*wildcards_test*) to there and copy an example file called *grep_test.txt* to *grep_test*:  
+```bash  
+username@bash:~/wildcards_test$ mkdir ~/grep_test  
+username@bash:~/wildcards_test$ cd ~/grep_test  
+username@bash:~/grep_test$ cp ~/Share/linux_tutorial/grep_test.txt .  
+```  
+
+If you are curious about it, you can print the content of the file `grep_test.txt` using the `cat` command:  
+```bash  
+username@bash:~/grep_test$ cat grep_test.txt  
+n0_v0g@l_l!n3
+line_contains_vogals
+```
