@@ -96,7 +96,9 @@ jellyfish histo <species>.jf > <species>.histo
 
 Note in the command above we have used the symbol “>” before the output. This is a command line symbol that will redirect your output to a file instead of printing it to the screen.
 
-Note that the input for your command **jellyfish histo** is the output from your previous command, that was **jellyfish count**. Now you have the necessary result to plot a histogram on genomescope and have a look at the distribution of your genome kmers. BUT STOP!
+Note that the input for your command **jellyfish histo** is the output from your previous command, that was **jellyfish count**. Now you have the necessary result to plot a histogram on genomescope and have a look at the distribution of your genome kmers. 
+
+# BUT STOP!
 
 ...
 
@@ -105,7 +107,7 @@ Before you plot this result, I want you to plot a genomescope plot for another f
 Inside the 'assembly' folder for your species, you are going to find two files called:
 
 ```console  
-<species>.total.fasta
+<species>.ccs.total.fasta.gz
 <species>.total.histo
 ```
 
@@ -120,7 +122,7 @@ The histogram you have just plotted is for a jellyfish count of the total PacBio
 Now, I would like to you generate statistics for the \*.total.fasta reads. I have a script for you to do that. It's called asmstats
 
 ```console  
-asmstats <species>.total.fasta > <species>.total.fasta.stats
+asmstats <species>.ccs.total.fasta.gz > <species>.total.fasta.stats
 ```
 
 Note: We are calling your output file \<species\>.total.fasta.stats
@@ -133,7 +135,7 @@ less <species>.total.fasta.stats
 
 Also: use this tutorial to plot your reads length distribution: [Plot reads](https://github.com/eukaryotic-genome-assembly/eukaryotic-genome-assembly.github.io/blob/master/_pages/handsOn_plotReadLength.md)
 
-You have now generated the kmer plot and reads statistics for your complete PacBio HiFi read set. Which conclusions can you now draw from these results?
+You have now generated the kmer plot, reads statistics and reads plot distribution for your complete PacBio HiFi read set. Which conclusions can you now draw from these results?
 
 
 a- What is the expected genome size?
