@@ -41,9 +41,13 @@ ls -ltr
 Each species data will have a code on it's name representing each of the 4 species we will work on during this week, this is the code they have at the Darwin Tree of Life Project. The codes are:
 
 ilVanAtal1 - *Vanessa atalanta*
+
 ilPieRapa1 - *Pieris rapae*
+
 ilNotDrom1 - *Notodonta dromedarius*
+
 iHemFuc1 - *Hemaris fuciformis* (we are not going to use this species in the current analysis)
+
 
 Keep these codes in mind as the files will most likely to be named after them.
 
