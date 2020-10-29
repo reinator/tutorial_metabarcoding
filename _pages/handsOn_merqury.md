@@ -6,9 +6,9 @@ permalink: /handsOn_merqury/
 
 # Part 5 - Merqury - evaluating purging and assembly quality
 
-Ok, today you have heard of Purge Dups and purging assemblies. You also have learned that Hicanu outputs an assembly that is double the expected haploid genome size, and then you have to use a tool such as Purge Dups to separated the haplotips of the assembly. Later, you learned about how to evaluated assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads - such as ilumina - kmers. Now you are going to run merqury to evaluate assemblies for your species!
+Ok, today you leanerd about Purge Dups and purging assemblies. You also learned that Hicanu outputs an assembly that is the double of the expected haploid genome size, and that you have to use a tool such as Purge Dups to separate the haplotips of the assembly. Later, you learned how to evaluated assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads kmers, such as Illumina. Now you are going to run merqury to evaluate assemblies for your species!
 
-All right, remember yesterday you have assembled a subset of reads for your species, but you have generated statistics for a total-assembly run I have generated previously? This is the file you are going to work on, the total assembly of Hincanu for your species, it will be called something like \*\.hicanu.total.contigs.fasta. So I would like you to create a folder called merqury_hicanu_eval and copy or sym link your \*\.hicanu.total.contigs.fasta total contigs there. Such as:
+All right, remember yesterday you have assembled a subset of reads for your species, but you have generated statistics for a total-assembly run I have generated previously? This is the file you are going to work on, the total assembly of Hincanu for your species, it will be called something like \*\.hicanu.total.contigs.fasta inside <your_species>/assembly/hicanu.total/. So I would like you to create a folder called merqury_hicanu_eval and copy or sym link your \*\.hicanu.total.contigs.fasta there. Such as:
 
 ```console  
 mkdir merqury_hicanu_eval
@@ -16,7 +16,7 @@ cp <path_to_file>/*.hicanu.total.contigs.fasta merqury_hicanu_eval
 
 ```  
 
-Right, so in order to run merqury, you need a meryl datase of the reads you want to compare kmers with kmers in your assembly. In our case, I have created meryl databases for 10X reads (illumina linked-reads) for your species, and you just need to copy the meryl db folder to your execution folder. So you do:
+Right, so in order to run merqury, you need a meryl datase of the reads you want to compare kmers with the kmers in your assembly. In our case, I have created meryl databases for 10X reads (illumina linked-reads) for your species, and you just need to copy the meryl db folder to your execution folder. So you do:
 
 ```console  
 cp -vrn /home/unbuntu/Data/merylDB/<your_species>/*OUTPUT.21.meryl merqury_hicanu_eval
@@ -38,7 +38,7 @@ Right, as soon as you see it's activated, try:
 ./merqury.sh
 ```  
 
-The help message should show you that in order to run merqury, you need (i) the meryl databse (ii) your assembly (one or two, if you have primary and haplotigs. In our case it only one) (iii) an output name. So inside your merqury_hicanu_eval directory, you will do:
+The help message should show you that in order to run merqury, you need (i) the meryl database (ii) your assembly (one or two, if you have primary and haplotigs. In our case its only one) and (iii) an output name. So inside your merqury_hicanu_eval directory, you will do:
 
 ```console  
 ./merqury.sh *OUTPUT.21.meryl *.hicanu.total.contigs.fasta outHicanu
@@ -55,7 +55,7 @@ This will take a while to run, so we will go back to the wider group, run anothe
 Hello back here!
 
 
-Right, once you are back here merqury should have finished. If merqury finished succesfully, you should have a variety of files produced in your folder: (i) different plot (.png) files, a <outname>.completeness.stats file and a <outputname>.qv file. I want you to analyse all these files and discuss with your partners. We have seen the theory of merqury kmer analysis in our class today. But it can be a lot to take in the first time. So, in order to investigate your results and answer the exercize questions, have a look here on points 1, 2 and 3 of the reference free QV estimation https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation.
+Right, once you are back here merqury should have finished. If merqury finished succesfully, you should have a variety of files produced in your folder: (i) different plot (.png) files, a <outname>.completeness.stats file and a <outputname>.qv file. I want you to analyse all these files and discuss with your partners. We have seen the theory of merqury kmer analysis in our class today. But it can be a lot to take at the first time. So, in order to investigate your results and answer the exercise questions, have a look here on points 1, 2 and 3 of the reference free QV estimation https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation.
   
   
 Take your time and then produce a presentation with your team showing and explaning: 
@@ -63,7 +63,7 @@ Take your time and then produce a presentation with your team showing and explan
  
 1-) in your hicanu total merqury evaluation, in the plot \*\spectra-asm.st.png, point in the presentation: (i) where are the assembly erroneous kmers, (ii) what is the heterozygous peak, (iii) what is the homozygoys peak.
 2-) Have a look at the completeness file and write down in your presentation the kmer completness of this assembly. 
-3-) Have a look at the .qv file and wirte down in your presentation what is the QV for this assembly.
+3-) Have a look at the .qv file and write down in your presentation what is the QV for this assembly.
 
 # Now
 
