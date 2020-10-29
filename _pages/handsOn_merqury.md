@@ -62,7 +62,9 @@ Take your time and then produce a presentation with your team showing and explan
  
  
 1-) in your hicanu total merqury evaluation, in the plot \*\spectra-asm.st.png, point in the presentation: (i) where are the assembly erroneous kmers, (ii) what is the heterozygous peak, (iii) what is the homozygoys peak.
+
 2-) Have a look at the completeness file and write down in your presentation the kmer completness of this assembly. 
+
 3-) Have a look at the .qv file and write down in your presentation what is the QV for this assembly.
 
 # Now
