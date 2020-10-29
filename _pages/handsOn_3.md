@@ -52,6 +52,7 @@ The blast database files and the contigs must be in the same folder. If they are
 # Good! 
 
 So now let’s have a look at our outputs!
+
 1-) Based on your blast results, what have you assembled? (If you don't understand the subject ID, search it on NCBI).
 
 2-) Let’s inspect the differences between the two outputs
