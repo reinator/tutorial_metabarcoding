@@ -16,7 +16,7 @@ pages:
         url: /linux_navigation/
       - title: "- Manipulating files"
         url: /linux_file_manipulation/  
-      - title: "- Pattern searching and wildcards"  
+      - title: "- Wildcards and pattern search"  
         url: /linux_pattern_searching/
       - title: "- Other things you should know"  
         url: /linux_other_things/
