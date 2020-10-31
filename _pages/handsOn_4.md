@@ -52,9 +52,9 @@ grep “>” your_contigs.here.fasta
 
 This will print to the screen the names of all your assembled contigs. Choose one and create a file with it's ID. Let’s say my grep result looks like this:
 
-\>\Contig1
+\>Contig1
 
-\>\Contig2
+\>Contig2
 
 So here I’ll choose ‘Contig1’. To create a text file with this ID. I can use nano. I need a text file with the ID because the next script we are going to use to extract the contig needs this as an input. 
 
