@@ -56,5 +56,9 @@ WELL DONE!
 
 You have a robust knowlegde and skill set to perform eukaryotic genome assembly using Pacbio HiFi and Hi-C. Looking at kmer profiles and Hi-C heatmaps takes practice and time. So, just keep doing it and you will become more confident with time. 
 
-Gather all your results, discuss with your team and make your final presentation for our last discussion. Grab your beer! =)
+
+# Right, 
+
+So during this week you have also evaluated a genome what was assembled with Pacbio CLR reads. 
+
 
