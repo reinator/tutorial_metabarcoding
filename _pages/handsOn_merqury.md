@@ -6,9 +6,9 @@ permalink: /handsOn_merqury/
 
 # Part 5 - Merqury - evaluating purging and assembly quality
 
-Ok, today you leanerd about Purge Dups and purging assemblies. You also learned that Hicanu outputs an assembly that is the double of the expected haploid genome size, and that you have to use a tool such as Purge Dups to separate the haplotips of the assembly. Later, you learned how to evaluated assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads kmers, such as Illumina. Now you are going to run merqury to evaluate assemblies for your species!
+Ok, today you leanerd about Purge Dups and purging assemblies. You also learned that Hicanu outputs an assembly that is the double of the expected haploid genome size, and that you have to use a tool such as Purge Dups to separate the haplotypes of the assembly. Later, you learned how to evaluate assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads kmers, such as Illumina. Now you are going to run merqury to evaluate assemblies for your species!
 
-All right, remember yesterday you have assembled a subset of reads for your species, but you have generated statistics for a total-assembly run I have generated previously? This is the file you are going to work on, the total assembly of Hincanu for your species, it will be called something like \*\.hicanu.total.contigs.fasta inside <your_species>/assembly/hicanu.total/. So I would like you to create a folder called merqury_hicanu_eval and copy or sym link your \*\.hicanu.total.contigs.fasta there. Such as:
+All right, remember yesterday you have assembled a subset of reads for your species, but you have generated statistics for a total-assembly run I have generated previously? This is the file you are going to work on; the total assembly of Hincanu for your species, it will be called something like \*\.hicanu.total.contigs.fasta inside <your_species>/assembly/hicanu.total/. So I would like you to create a folder called merqury_hicanu_eval and copy or sym link your \*\.hicanu.total.contigs.fasta there. Such as:
 
 ```console  
 mkdir merqury_hicanu_eval
