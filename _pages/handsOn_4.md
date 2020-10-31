@@ -92,16 +92,16 @@ samtools index *ID.fasta.bam
 
 Now you have four files you must download to your local machine to open them on IGV
 
-Your contig fasta file
-Your contig fasta.fai file
-Your contig bam file
-Your contig bam.bai file
+* Your contig fasta file
+* Your contig fasta.fai file
+* Your contig bam file
+* Your contig bam.bai file
 
 Take your time…
 
-On IGV, on the top, click ‘Genomes’ and add your fasta file. Then on ‘File’, “Learn from file’ include your bam file. And… you are done!!!
+On IGV, on the top, click ‘Genomes’ and add your fasta file. Then on ‘File’, “Load from file’ include your bam file. And… you are done!!!
 
-Let’s discuss IGV as a group. 
+Let's play with IGV a bit (alone and as a group).
 
 # Further
 
@@ -118,7 +118,7 @@ samtools flagstat *ID.fasta.bam
 # GOOD!
 
 
-Now that you know all about how to open bam files on IGV, I would like you to open another contig. This is a bam file for the mitogenome of another Lepidoptera, but it was produced with PacBio CLR data. Download to your local computer:
+Now that you know all about how to open bam files on IGV, I would like you to open another contig. This is a bam file for the mitogenome of another Lepidoptera, the moth *H. fuciforms* but it was produced with PacBio CLR data. Download to your local computer:
 
 iHemFuc1_MT_16012020.fa
 iHemFuc1_MT_16012020.fa.fai
@@ -127,7 +127,7 @@ iHemFuc1_MT.sorted.bam.bai
 
 Now open it on IGV
 
-What do you see? What is the mean difference in the IGV plots of your PacBio HiFi assembled contig and the CLR assembled contig?
+What do you see? What is the main difference in the IGV plots of your PacBio HiFi assembled contig and the CLR assembled contig?
 
 Let’s discuss it!
 
