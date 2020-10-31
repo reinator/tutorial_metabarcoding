@@ -16,6 +16,8 @@ Ok, so today you learned about the necessity of polishing genomes, specially if 
 
 4-) Has BUSCO changed pre, post-polishing and after curation?
 
+5-) How does the Hi-C heatmaps look after scaffolding and after curation?
+
 # Finally
 
 Considering the curated assembly. I would like you to count the size of each scaffold. You can use my python script for such:
@@ -42,10 +44,10 @@ Ok, so now that you have the \*sizes file sorted, I would like you to calculate 
 
 Now, sum up the bases in the first largestes scaffolds that correspod to the karyotype:
 
-5-) How many assembled bases are inside the expected karyotype?
+6-) How many assembled bases are inside the expected karyotype?
 
-6-) How many bases were not asigned to chromosomes?
+7-) How many bases were not asigned to chromosomes?
 
-7-) Do you have any large scaffolds outside the expected number of chromosomes?
+8-) Do you have any large scaffolds outside the expected number of chromosomes?
 
 Look at all of this, discuss with your team and go back to the wider group.
