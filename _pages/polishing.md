@@ -9,8 +9,11 @@ permalink: /polishing/
 Ok, so today you learned about the necessity of polishing genomes, specially if they are produced with Pacbio CLR reads, that can have up to 15% of errors. Now, you are going to investigate the impacts of polishing on the *H. fuciforms genome*, that was assembled with Pacbio CLR reads. For such, you are going to compare the (i) general statistics, (ii) BUSCO, (iii) merqury completeness, qv and plots and the (iv) Hi-C heatmap of *H. fuciforms* before polishing, after polishing and after manual curation done by the Grit Team at the Sanger Institute. All these results are inside /home/ubuntu/Data/H_fuciforms/polishing folder. Within this folder you are going to find the folders for pre-polishing, after-polishing and curation with all the results you need. Look at all the results and answer:
 
 1-) What were the general statistics (number of scaffolds, total assembled size, N50) for pre, post polishing and after curation?
+
 2-) Has the QVs improved with polishing?
+
 3-) Has QV improved with curation?
+
 4-) Has BUSCO changed pre, post-polishing and after curation?
 
 # Finally
