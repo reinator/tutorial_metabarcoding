@@ -41,9 +41,13 @@ Ok, so you have to download both heatmaps to your local computer, and then you o
 Now, analyze all the results, discuss with your team and answer the questions in your presentation:
 
 1-) What are the assembly statistics before scaffolding?
+
 2-) What are the assembly statistics after scaffolding?
+
 3-) Looking at the final agp file: what scaffolds were scaffolded with more than one component (a contig of a piece of a contig)? And what scaffolds are unchanged in relation to the contigs?
+
 4-) How do the Hi-C maps look prior and after scaffolding?
+
 5-) Do you think you see a sex chromosome on the Hi-C heatmap? If so, point to it in your presentation.
 
 After that, come back to the wider group.
