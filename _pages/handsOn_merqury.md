@@ -105,6 +105,8 @@ Finally, now we are going to look into merqury outpus for *Hemaris fuciformis* C
 
 Look at all the files (take your time), discuss with your team and write down on your presentation:
 
+- First plot a Illumina kmer profile distribution for your species. I have prepared the .histo file for you. Remember that with PacBio CLR reads you cannot plot kmer distributions because of the high error rate of the reads. But we have some linked chromium 10X reads (illumina) and I have produced the histogram file from them. What is the expected genome size, heterozygosity and repeat content? Analyse this plot and correlate with the results you will look into in the next questions.
+
 15a-) in the Falcon and Falcon Unzip merqury evaluation, look at the cns.p and cns.h \*\spectra-asm.st.png plots. Point in the presentation: (i) where are the assembly erroneous kmers, (ii) what is the heterozygous peak, (iii) what is the homozygoys peak.
 
 16a-) Have a look at the completeness file and write down in your presentation the kmer completness of the primary and alternate assemblies.
