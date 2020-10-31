@@ -26,5 +26,32 @@ Look at that? Thats is A LOT! WELL DONE!
 
 This material will be always here for you to come back to it and consolidate your knowlegde, and you can ALWAYS email me with questions; it will be lovely to hear from you.
 
+# Now,
 
+It's time for you and your team to gather all the results and make a final presentation. I have a final material for your species: it's the final curated primary assembly its haplotypes (not curated). So we have the curated results and a merqury and BUSCO ran for it and the final curated Hi-C heatmap. So I want you to gather ALL the results for your species and make a final presentation answering all the questions bellow:
+
+1-) What is the name of your species? And what else have you learned online for it (do a small search to find a picture and maybe some interesting evolutionary facts about it)?
+
+2-) What is the genomescope plot for the total Pacbio Hifi reads histogram? What is the expected genome size? What is the expected heterozygosity? What is the repeat content?
+
+3-) How does the reads plot length distribution looks like? What is the average read length that was assembled?
+
+4-) What are the total statistics for the Hicanu total reads output? How do the merqury plots look like? What is the qv? The completeness? How does busco looks like?
+
+5-) What are the statistics for the purged results for primary and haplotigs? How do the merqury plots look like? What are the qvs? Completeness? How does busco looks like for the primary assembly?
+
+Now, let's go to the scaffolding part. One note: in the official Darwin Tree of Life Pipeline, we have ran one round of Illumina polishing after purging the assembly and before running salsa on it. This is why maybe you are going to find a slightly different number of bases in the statistics of the assembly after purging, and just before salsa (which is file ref.fa).
+
+6-) What is the primary genone statistics just before salsa scaffolding? How does the Hi-C heat map looks like?
+7-) What is the primary genone statistics after salsa scaffolding? How does the Hi-C heat map looks like?
+7-) What is the primary genone statistics after manual curation? How does the Hi-C heat map looks like? Has BUSCO changed at all?
+
+8-) For the subset of reads you have assembled for your species. Which kind of reads were they? Have have you assembled there?
+9-) What were the mapping statiscs when you mapped the 600 reads back to the assembly?
+
+WELL DONE!
+
+You have a robust knowlegde and skill set to perform eukaryotic genome assembly using Pacbio HiFi and Hi-C. Looking at kmer profiles and Hi-C heatmaps takes practice and time. So, just keep doing it and you will become more confident with time. 
+
+Gather all your results, discuss with your team and make your final presentation for our last discussion. Grab your beer! =)
 
