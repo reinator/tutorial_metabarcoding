@@ -43,11 +43,14 @@ It's time for you and your team to gather all the results and make a final prese
 Now, let's go to the scaffolding part. One note: in the official Darwin Tree of Life Pipeline, we have ran one round of Illumina polishing after purging the assembly and before running salsa on it. This is why maybe you are going to find a slightly different number of bases in the statistics of the assembly after purging, and just before salsa (which is file ref.fa).
 
 6-) What is the primary genone statistics just before salsa scaffolding? How does the Hi-C heat map looks like?
-7-) What is the primary genone statistics after salsa scaffolding? How does the Hi-C heat map looks like?
-7-) What is the primary genone statistics after manual curation? How does the Hi-C heat map looks like? Has BUSCO changed at all?
 
-8-) For the subset of reads you have assembled for your species. Which kind of reads were they? Have have you assembled there?
-9-) What were the mapping statiscs when you mapped the 600 reads back to the assembly?
+7-) What is the primary genone statistics after salsa scaffolding? How does the Hi-C heat map looks like?
+
+8-) What is the primary genone statistics after manual curation? How does the Hi-C heat map looks like? Has BUSCO changed at all?
+
+9-) For the subset of reads you have assembled for your species. Which kind of reads were they? Have have you assembled there?
+
+10-) What were the mapping statiscs when you mapped the 600 reads back to the assembly?
 
 WELL DONE!
 
