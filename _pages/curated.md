@@ -2,6 +2,7 @@
 title: "Hands On"
 layout: archive
 permalink: /curated/
+---
 
 # Final results
 
