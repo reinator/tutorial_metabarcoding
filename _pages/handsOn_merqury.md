@@ -134,7 +134,7 @@ Now, I would like you to evaluate the difference in the merqury results for the 
 
 # Well done.
 
-You've got to the end of your Purging and assembly evaluatiom Hands On. Now go back to the wider group with your presentation and let's discuss all the results together. 
+You've got to the end of your 'Purging and assembly evaluation' Hands On. Now go back to the wider group with your presentation and let's discuss all the results together. 
 
 
 
