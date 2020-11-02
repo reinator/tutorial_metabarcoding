@@ -47,3 +47,4 @@ First human genome
 
 * Hi-C is invented [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2858594/pdf/nihms-194459.pdf](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2858594/pdf/nihms-194459.pdf)
 * SALSA2 [https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007273](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007273)
+* Hi-C [https://reader.elsevier.com/reader/sd/pii/S1046202312001168?token=C36137BEEF8DCCCDCD9B420C93792FDDAB5E9BF0C5EF53500C1139D218DD8546FEDD6DFCB02C6A593222965AC2564A6F](https://reader.elsevier.com/reader/sd/pii/S1046202312001168?token=C36137BEEF8DCCCDCD9B420C93792FDDAB5E9BF0C5EF53500C1139D218DD8546FEDD6DFCB02C6A593222965AC2564A6F)
