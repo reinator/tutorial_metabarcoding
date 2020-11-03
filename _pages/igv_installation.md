@@ -1,7 +1,7 @@
 ---
 title: "IGV Installation"
 layout: archive
-permalink: /igv_instalattion/
+permalink: /igv_installation/
 ---  
 
 ### IGV 
