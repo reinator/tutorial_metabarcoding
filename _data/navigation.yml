@@ -29,7 +29,7 @@ pages:
   
   - title: "Setting up the environment"
     children:
-      - title: "Installing IGV"
+      - title: "- Installing IGV"
         url: /igv_installation/
         
   - title: "Hands On"
