@@ -46,5 +46,17 @@ There are some shortcuts that can significantly speed up the process of navigati
 |Ctrl+V|Moves to the end of file|  
 
 ### Copying and pasting  
-In Nano, the first step before copying a text is to enter the Mark mode, which is the mode where you will highlight the text to be copied. Use the shortcut `Ctrl+^` to turn on the Mark mode, which will be informed by Nano with a "Mark Set" message:  
+In Nano, the first step before copying a text is to enter the Mark mode, which is the mode where you will highlight the text to be copied. Use the shortcut `Ctrl+^` to turn on/off the Mark mode, which will be informed by Nano with a "Mark Set"/"Mark Unset" message:  
 ![](/images/nano_05.PNG)
+
+Once Mark mode is on, you can highlight the text to be copied. Notice that the last character of the selection, which is highlighted in green, will **not** be copied. 
+![](/images/nano_06.PNG)
+
+Then, to copy the marked text, use the shortcut `Meta + ^` or `Meta + 6`, where *Meta* usually is the `Alt` key on most keyboards. If otherwise you want to cut the marked text, use the shortcut `Ctrl + K`
+
+Finally, use the shortcut `Ctrl + U` to paste the text: 
+![](/images/nano_07.PNG)
+
+### Searching  
+Use the shortcut `Ctrl + W` to search for a string. It will open a Search box where you can type the string and then hit the Return key to search for it across the file. 
+![](/images/nano_08.PNG)
