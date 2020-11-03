@@ -52,7 +52,10 @@ pages:
         url: /miss-assembly/
       - title: "Part 10 - MitoHifi"
         url: /mitohifi/
- 
+  - title: "Settin up environment"
+    children:
+      - title: "Installing IGV"
+      url: /igv_installation/
   - title: "References"
     children:
       - title: "Papers"
