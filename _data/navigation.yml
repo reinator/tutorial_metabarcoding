@@ -46,7 +46,13 @@ pages:
         url: /salsa/
       - title: "Part 7 - Polishing and final checks"
         url: /polishing/
-        
+      - title: "Part 8 - Curated assembly evaluation"
+        url: /curated/
+      - title: "Part 9 - Miss-asembly evaluation"
+        url: /miss-assembly/
+      - title: "Part 10 - MitoHifi"
+        url: /mitohifi/
+ 
   - title: "References"
     children:
       - title: "Papers"
