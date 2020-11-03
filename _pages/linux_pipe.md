@@ -18,9 +18,9 @@ By default, STDOUT and STDERR are printed in the terminal, so that the user can 
 In order to **redirect** the STDOUT we need to use the operator greater than (>):  
 ```bash  
 ### Creates a directory to practice piping and redirection
-username@bash:~ mkdir pipe_practice  
+username@bash:~$ mkdir pipe_practice  
 ### Moves to the recently created directory
-username@bash:~/pipe_practice$
+username@bash:~$ cd pipe_practice
 ### Create empty files  
 username@bash:~/pipe_practice$ touch file1.txt file2.txt file3.txt
 ### Running ls without redirection  
