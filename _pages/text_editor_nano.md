@@ -53,9 +53,9 @@ In Nano, the first step before copying a text is to enter the Mark mode, which i
 Once Mark mode is on, you can highlight the text to be copied. Notice that the last character of the selection, which is highlighted in green, will **not** be copied:   
 ![](/images/nano_06.PNG)
 
-Then, to copy the marked text, use the shortcut `Meta + ^` or `Meta + 6`, where *Meta* usually is the `Alt` key on most keyboards. If otherwise you want to cut the marked text, use the shortcut `Ctrl+K`
+Then, to copy the marked text, use the shortcut `Meta`+`^` or `Meta`+`6`, where *Meta* usually is the `Alt` key on most keyboards. If otherwise you want to cut the marked text, use the shortcut `Ctrl`+`K`
 
-Finally, use the shortcut `Ctrl+U` to paste the text:  
+Finally, use the shortcut `Ctrl`+`U` to paste the text:  
 ![](/images/nano_07.PNG)
 
 ### Searching and replacing 
