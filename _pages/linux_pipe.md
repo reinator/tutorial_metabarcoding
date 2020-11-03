@@ -70,4 +70,4 @@ file1.txt  file2.txt  file3.txt
 username@bash:~/pipe_practice$ ls f* | wc -l 
 3
 ```  
-What happened in the last command was that first we have executed `ls f*`, which returned the set of files whose name begin with *f*. That output was then given as input to the `wc -l`, which counts the number of lines in the input. Since each file is piped by `ls` in a different line, then `wc -l` will print the number of files returned by `ls f*`, which is 3.   
+What happened in the last command (line 5) was that first we have executed `ls f*`, which returned the set of files whose name begin with *f*. That output was then given as input to the `wc -l`, which counts the number of lines in the input. Since each file is piped by `ls` in a different line, then `wc -l` will print the number of files returned by `ls f*`, which is 3.   
