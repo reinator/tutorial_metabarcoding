@@ -67,5 +67,6 @@ If you want to replace a string by another, use the command `Ctrl + \`. It will 
 Then you will type the string that will replace:  
 ![](/images/nano_10.PNG) 
 
-And then once you hit `↵ Return`, Nano will ask if you want to replace the string that has been found. It will ask you this for every occurrence of the string, unless you choose to replace all the instances of the string by answering *A* to the question *Replace this instance?*:  
+And then once you hit `↵ Return`, Nano will ask if you want to replace the string that has been found. It will ask you this for every occurrence of the string, unless you choose to replace all occurrences of the string by answering *A* to the question *Replace this instance?*
 ![](/images/nano_11.PNG) 
+
