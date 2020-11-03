@@ -1,5 +1,4 @@
 {% if page.author_profile or layout.author_profile or page.sidebar %}
-<body class="layout-reverse">
   <div class="sidebar sticky">
   {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
   {% if page.sidebar %}
@@ -21,6 +20,5 @@
     {% endif %}
   {% endif %}
   </div>
-</body>
 {% endif %}
 
