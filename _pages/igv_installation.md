@@ -15,6 +15,6 @@ Every participant needs to install IGV in its own personal computer. This is one
 2. Once the download is done, you just need to click on the downloaded file and the installation will start. You then need to accept the license agreement:  
     ![](/images/igv_02.PNG)  
 3. And define in which location you wish IGV to be installed:  
-    !(/images/igv_03.PNG) 
+    ![](/images/igv_03.PNG) 
     
 After those steps, the installation is done!      
