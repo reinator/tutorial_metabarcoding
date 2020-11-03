@@ -55,7 +55,7 @@ pages:
   - title: "Setting up environment"
     children:
       - title: "Installing IGV"
-      url: /igv_installation/
+        url: /igv_installation/
   
   - title: "References"
     children:
