@@ -15,7 +15,9 @@ pages:
       - title: "- Navigating the system"
         url: /linux_navigation/
       - title: "- Manipulating files"
-        url: /linux_file_manipulation/  
+        url: /linux_file_manipulation/
+      - title: "- Text editor: nano"  
+        url: /nano/        
       - title: "- Wildcards and pattern search"  
         url: /linux_pattern_searching/
       - title: "- Piping and redirection" 
@@ -24,8 +26,6 @@ pages:
         url: /linux_other_things/
       - title: "- Fasta and Fastq sequences"
         url: /fasta_fastq/  
-      - title: "- Text editor: nano"  
-        url: /nano/
       
   - title: "Hands On"
     children:
