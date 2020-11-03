@@ -24,7 +24,7 @@ When you create a file using **nano**, you will see the following home page:
 * Finally, the **last line** shows some shortcuts that you will probably want to use while editing your file.  
 
 ### Editing the file  
-The process of putting data into the file is pretty straightforward. You just need to type the text you want to include. The `↵ Return` key will skip to the next line. And to delete text, just do like in any other text editor, using either backspace (←) or delete (DEL) keys. To navigate across the file, you can use the arrow keys (↑ ↓ ← →). 
+The process of putting data into the file is pretty straightforward. You just need to type the text you want to include. The <kbd>Enter</kbd>`↵ Return` key will skip to the next line. And to delete text, just do like in any other text editor, using either backspace (←) or delete (DEL) keys. To navigate across the file, you can use the arrow keys (↑ ↓ ← →). 
 
 You can play around and add any text you want to:  
 ![](/images/nano_02.PNG) 
