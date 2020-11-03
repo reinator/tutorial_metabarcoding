@@ -20,7 +20,7 @@ Then, you need to find a close related species mitogenome on NCBI and need to do
 To run MitoHiFi on your Hicanu contigs:
 
 ```console  
-sh run_MitoHiFi.sh -c *contigs.fasta -f <NCBI_closerelatedSpecies>.fasta -g <NCBI_closerelatedSpecies>.gb -t 1-o 5' 
+sh run_MitoHiFi.sh -c *contigs.fasta -f <NCBI_closerelatedSpecies>.fasta -g <NCBI_closerelatedSpecies>.gb -t 1-o 5 
 ```  
 
 To run MitoHiFi on your Hifiasm output, make a new mitogenome folder, and just replace the -c parameter above with your hifiasm contigs.
