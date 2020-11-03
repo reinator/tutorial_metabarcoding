@@ -35,3 +35,4 @@ file2.txt
 file3.txt
 myoutput_1
 ```
+You will notice that myoutput_1 is also returned by the `ls` command. That's because the command line creates a file called *myoutput_1* **before** running the `ls`, so that it can later write the content returned by `ls` to *myoutput_1*. 
