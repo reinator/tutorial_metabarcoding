@@ -37,7 +37,7 @@ myoutput_1
 ```
 You will notice that myoutput_1 itself is also returned by the `ls` command. That's because the command line creates a file called *myoutput_1* **before** running the `ls`, so that it can later write the content returned by `ls` to *myoutput_1*. 
 
-When redirecting to a file that does not exist yet, the command line will first create the file, then execute the command and write its output to the new file. However, when the file receiving the redirection (to the right of the `>` symbol) already exists, the redirection will **replace** the original content of the file by the content that is being redirected. If you want to keep the original content of the file and just **append** the a new content to it, you rather need to use a double greater than symbol (`>>`):  
+When redirecting to a file that does not exist yet, the command line will first create the file, then execute the command and write its output to the new file. However, when the file receiving the redirection (to the right of the `>` symbol) already exists, the redirection will **replace** the original content of the file by the content that is being redirected. If you want to keep the original content of the file and just **append** the new content to it, you rather need to use a double greater than symbol (`>>`):  
 ```bash  
 username@bash:~/pipe_practice$ ls >> myoutput_1  
 username@bash:~/pipe_practice$ cat myoutput_1
