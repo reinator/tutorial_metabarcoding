@@ -30,7 +30,9 @@ pages:
   - title: "Setting up the environment"
     children:
       - title: "- Installing IGV"
-        url: /igv_installation/
+        url: /igv_installation/ 
+      - title: "- Installing PretextView" 
+        url: /pretextView_installation/
         
   - title: "Hands On"
     children:
