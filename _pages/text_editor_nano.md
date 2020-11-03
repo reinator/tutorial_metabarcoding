@@ -57,6 +57,15 @@ Then, to copy the marked text, use the shortcut `Meta + ^` or `Meta + 6`, where 
 Finally, use the shortcut `Ctrl + U` to paste the text:  
 ![](/images/nano_07.PNG)
 
-### Searching  
+### Searching and replacing 
 Use the shortcut `Ctrl + W` to search for a string. It will open a Search box where you can type the string and then hit the Return key to search for it across the file:   
-![](/images/nano_08.PNG)
+![](/images/nano_08.PNG)  
+
+If you want to replace a string by another, use the command `Ctrl + \`. It will first open a box where you need to type in the text that will be replaced:  
+![](/images/nano_09.PNG)  
+
+Then you will type the string that will replace:  
+![](/images/nano_10.PNG) 
+
+And then once you hit `↵ Return`, Nano will ask if you want to replace the string that has been found. It will ask you this for every occurrence of the string, unless you choose to replace all the instances of the string by answering *A* to the question *Replace this instance?*:  
+![](/images/nano_11.PNG) 
