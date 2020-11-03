@@ -38,6 +38,7 @@ After saving the modified version, Nano will return to the first page. If you wa
 
 ### Navigating across the file  
 There are some shortcuts that can significantly speed up the process of navigating through the lines of the file. Play around to better understand their effects:   
+
 |Shortcut|Effect|
 |---|---|
 |Ctrl+A|Moves to the begin of current line|
