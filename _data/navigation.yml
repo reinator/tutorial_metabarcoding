@@ -26,7 +26,12 @@ pages:
         url: /linux_other_things/
       - title: "- Fasta and Fastq sequences"
         url: /fasta_fastq/  
-      
+  
+  - title: "Setting up the environment"
+    children:
+      - title: "Installing IGV"
+        url: /igv_installation/
+        
   - title: "Hands On"
     children:
       - title: "Part 1 - Kmer analysis"
@@ -51,11 +56,6 @@ pages:
         url: /miss-assembly/
       - title: "Part 10 - MitoHifi"
         url: /mitohifi/
-  
-  - title: "Setting up environment"
-    children:
-      - title: "Installing IGV"
-        url: /igv_installation/
   
   - title: "References"
     children:
