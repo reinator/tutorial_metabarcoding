@@ -4,7 +4,13 @@ layout: archive
 permalink: /conda_setup/
 ---
 
-user1@ip-172-31-4-226:~$ conda init
+### Conda  
+Conda is ......
+
+```bash 
+# run "conda init" to initialize conda 
+# this is needed when running conda for the 1st time
+user@bash:~$ conda init
 no change     /home/ubuntu/miniconda3/condabin/conda
 no change     /home/ubuntu/miniconda3/bin/conda
 no change     /home/ubuntu/miniconda3/bin/conda-env
@@ -19,9 +25,14 @@ no change     /home/ubuntu/miniconda3/etc/profile.d/conda.csh
 modified      /home/user1/.bashrc
 
 ==> For changes to take effect, close and re-open your current shell. <==
+```  
 
-
-(base) user1@ip-172-31-4-226:~$
-
-(base) user1@ip-172-31-4-226:~$ conda activate eukaryotic_genome_assembly
-(eukaryotic_genome_assembly) user1@ip-172-31-4-226:~$
+Then as conda asked you, close your session and open it again. When you open it you should see something like:
+```
+(base) user@bash:~$
+``` 
+Indicating you're in the `base` environment of conda. To activate the main conda environment for our course, where most of the programs we'll be using are installed:
+```
+(base) user@bash:~$ conda activate eukaryotic_genome_assembly
+(eukaryotic_genome_assembly) user@bash:~$
+```
