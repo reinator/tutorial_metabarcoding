@@ -55,7 +55,7 @@ So in the command above we've first created a new directory called *empty_direct
 The command **mv** can also be used to rename a file or directory. This is accomplished when the source and destination directories are the same:  
 ```console  
 username@bash:~$ ls linux_tutorial
-empty_file_backup  
+empty_file_backup linux_tutorial_subdirectory 
 username@bash:~$ mv linux_tutorial/empty_file_backup linux_tutorial/empty_file_backup_renamed 
 username@bash:~$ ls linux_tutorial  
 empty_file_backup_renamed linux_tutorial_subdirectory
