@@ -83,24 +83,24 @@ username@bash:~/grep_test$ cp ~/Share/linux_tutorial/grep_test.txt .
 If you are curious about it, you can print the content of the file `grep_test.txt` using the `cat` command:  
 ```bash  
 username@bash:~/grep_test$ cat grep_test.txt  
-n0_v0g@l_l!n3
-line_contains_vogals
+n0_v0w3l_l!n3
+line_contains_vowels
 ```
 
 Now we can use the command `grep` to search for the lines that contain the at sign (@):  
 ```bash  
 username@bash:~/grep_test$ grep @ grep_test.txt  
-n0_v0g@l_l!n3
+n0_v0w3l_l!n3 
 ```  
 
-Or combine wildcards and `grep` to find the lines that contain vogal characters:  
+Or combine wildcards and `grep` to find the lines that contain vowels:  
 ```bash  
 username@bash:~/grep_test$ grep [aeiou] grep_test.txt  
-line_contains_vogals
+line_contains_vowels
 ```
 
-Interestingly, you can use the option `-v` to search for opposite patterns. For instance, to find all the lines that do **not** contain any vogals:  
+Interestingly, you can use the option `-v` to search for opposite patterns. For instance, to find all the lines that do **not** contain any vowels:  
 ```bash  
 username@bash:~/grep_test$ grep -v [aeiou] grep_test.txt  
-n0_v0g@l_l!n3
+n0_v0w3l_l!n3
 ```
