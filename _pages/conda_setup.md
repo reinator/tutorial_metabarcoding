@@ -7,10 +7,13 @@ permalink: /conda_setup/
 ### Conda  
 Conda is ......
 
+Since this is the first time you are running conda with your user, you need to initilize conda:
+
 ```bash 
-# run "conda init" to initialize conda 
-# this is needed when running conda for the 1st time
-user@bash:~$ conda init
+user@bash:~$ conda init  
+```  
+Which should return something like this:  
+```bash
 no change     /home/ubuntu/miniconda3/condabin/conda
 no change     /home/ubuntu/miniconda3/bin/conda
 no change     /home/ubuntu/miniconda3/bin/conda-env
@@ -27,7 +30,7 @@ modified      /home/user1/.bashrc
 ==> For changes to take effect, close and re-open your current shell. <==
 ```  
 
-Then as conda asked you, close your session and open it again. When you open it you should see something like:
+Then, as conda asked you, close your session and open it again. When you open it you should see something like:
 ```
 (base) user@bash:~$
 ``` 
@@ -35,4 +38,6 @@ Indicating you're in the `base` environment of conda. To activate the main conda
 ```
 (base) user@bash:~$ conda activate eukaryotic_genome_assembly
 (eukaryotic_genome_assembly) user@bash:~$
-```
+```  
+
+Now you are set to go :) 
