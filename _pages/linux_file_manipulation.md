@@ -20,7 +20,7 @@ The destination is a path to either a file or a directory. If destination is a d
 ```console  
 username@bash:~$ cp empty_file linux_tutorial 
 username@bash:~$ ls linux_tutorial  
-empty_file
+empty_file linux_tutorial_subdirectory
 ``` 
 However, if the destination is a file, the **cp** command will create a copy of the source file with the new filename specified. This will be necessary when you want the copied file to have a different name:    
 ```console  
