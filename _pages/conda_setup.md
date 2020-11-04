@@ -5,7 +5,11 @@ permalink: /conda_setup/
 ---
 
 ### Conda  
-Conda is ......
+Conda is a package and environment management system. As a package management system, Conda allows us to quickly install, run and update programs and their dependencies. As an environment management, Conda allows us to easily switch and export environments, where one or a set of softwares are installed and ready to be used. 
+
+We encourage you to [read more](https://docs.conda.io/en/latest/) about Conda and use it as a management system for your work besides this course. Here, the only thing you need to know is that the instructors have already set up a Conda environment containing most of the softwares that will be used through this workshop. The job left for you was to initialize conda for your own user and activate the workshop environment.  
+
+### Setting up Conda for this course
 
 Since this is the first time you are running conda with your user, you need to initilize conda:
 
@@ -42,4 +46,4 @@ Indicating you're in the `base` environment of conda. To activate the main conda
 
 Now you are set to go :wink:  
 
-PS: every time you reopen the terminal, you will be at your `base` environment. To move back to our course environment, just run `conda activate eukaryotic_genome_assembly` again.
+PS: every time you re-open the terminal, you will be at your `base` environment. To move back to our course environment, just run `conda activate eukaryotic_genome_assembly` again.
