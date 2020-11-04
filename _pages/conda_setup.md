@@ -1,5 +1,5 @@
 ---
-title: "Setting up conda"
+title: ""
 layout: archive
 permalink: /conda_setup/
 ---
