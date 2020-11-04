@@ -87,9 +87,9 @@ n0_v0w3l_l!n3
 line_contains_vowels
 ```
 
-Now we can use the command `grep` to search for the lines that contain the at sign (@):  
+Now we can use the command `grep` to search for the lines that contain the exclamation mark (`!`):  
 ```bash  
-username@bash:~/grep_test$ grep @ grep_test.txt  
+username@bash:~/grep_test$ grep ! grep_test.txt  
 n0_v0w3l_l!n3 
 ```  
 
