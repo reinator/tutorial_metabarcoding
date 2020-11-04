@@ -4,6 +4,7 @@ layout: archive
 permalink: /conda_setup/
 ---
 
+
 ![](/images/conda_logo.svg)
 
 Conda is a package and environment management system. As a package management system, Conda allows us to quickly install, run and update programs and their dependencies. As an environment management, Conda allows us to easily switch and export environments, where one or a set of softwares are installed and ready to be used. 
