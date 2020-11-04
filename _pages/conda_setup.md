@@ -40,6 +40,6 @@ Indicating you're in the `base` environment of conda. To activate the main conda
 (eukaryotic_genome_assembly) user@bash:~$
 ```  
 
-Now you are set to go :)  
+Now you are set to go :wink:  
 
 PS: every time you reopen the terminal, you will be at your `base` environment. To move back to our course environment, just run `conda activate eukaryotic_genome_assembly` again.
