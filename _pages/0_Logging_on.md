@@ -21,7 +21,7 @@ Firstly, download the keyfile and open a terminal window. Then copy it into your
 cp mark.pem ~
 ```  
 
-Give your user permission to read anda write to the keyfile:  
+Give your user permission to read and write to the keyfile:  
 
 ```shell
 chmod 600 mark.pem 
