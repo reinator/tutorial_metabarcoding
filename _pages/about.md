@@ -12,4 +12,4 @@ Hey guys, I'm a senior bioinformatician at the Wellcome Sanger Institute working
 
 ### João Gabriel Rodinho Nunes Ferreira
 
-João is a PhD student at Federal University of Rio de Janeiro, Brazil. TO BE CONTINUED
+Hi there, I am a PhD student at Federal University of Rio de Janeiro (Brazil), working with genomics of the golden mussel, an invasive species that has been causing a lot of trouble for South American and Asian countries. In my masters I have studied the population genetics of the same species, genetically comparing golden mussels collected from 5 different states of Brazil. I'm passionate about genomes and their power as a tool to better understand the biology of any species. I hope we can exchange some experience and by the end of week you are confident enough to start taking advantage of the whole potential of PacBio and Hi-C data for assemblying great genomes!    
