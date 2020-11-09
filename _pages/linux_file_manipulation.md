@@ -63,7 +63,7 @@ empty_file_backup_renamed linux_tutorial_subdirectory
 ```console  
 username@bash:~$ ls  
 empty_directory  empty_file  linux_tutorial  linux_tutorial_backup
-username@bash:~$ mv empty_directory empty_file_renamed 
+username@bash:~$ mv empty_directory empty_directory_renamed 
 username@bash:~$ ls  
 empty_directory_renamed empty_file linux_tutorial linux_tutorial_backup
 ```  
