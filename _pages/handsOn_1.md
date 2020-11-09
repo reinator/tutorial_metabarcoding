@@ -22,17 +22,17 @@ mkdir kmers
 mkdir assembly
 ```  
  
-Great, now you need to go and copy the working data for your species. The data will be inside /home/ubuntu/Data
+Great, now you need to go and copy the working data for your species. The data will be inside /home/ubuntu/Share/Data
 
 ```console  
-cd /home/ubuntu/Data
+cd /home/ubuntu/Share/Data
 ls -ltr
 ```  
 Do you see the 3 species folders? If you do, then go inside your species folder and inside 'kmers' and copy the file that contains \*600.fasta on its name to your kmer folder. One example:
 
 
 ```console  
-cp /home/ubuntu/Data/v_atalanta/kmers/ilVanAtal1.600.fasta <Path_to_your_folders>/v_atalanta/kmer/
+cp /home/ubuntu/Share/Data/v_atalanta/kmers/ilVanAtal1.600.fasta <Path_to_your_folders>/v_atalanta/kmer/
 ls -ltr
 ```  
 
