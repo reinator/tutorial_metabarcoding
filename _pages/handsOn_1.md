@@ -61,7 +61,7 @@ conda activate eukaryotic_genome_assembly
 
 If the activation has worked, your should see a `(eukaryotic_genome_assembly)` before your prompt. Something like this:  
 ```bash  
-(eukaryotic_genome_assembly) userX@Ip-address:<working>$
+(eukaryotic_genome_assembly) userX@IP-address:working_directory$
 ```
 
 After activating the conda environment, try calling Jellyfish:
