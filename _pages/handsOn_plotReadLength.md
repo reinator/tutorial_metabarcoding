@@ -10,8 +10,13 @@ Well, it would be nice to check one more thing: the size distribution of our rea
 
 **Imagine if we have a good genome coverage but our reads are all small? It would not be very useful to assemble across repeats**
 
-So let’s plot the size distribution of our <species>.total.fasta file then:
+So let’s plot the size distribution of our <species>.total.fasta file using a python script named `plot_fasta_length.py`. First, let's copy the script to our working directory:  
+  
+```bash  
+cp /home/ubuntu/softwares/scripts/plot_fasta_length.py .
+```
 
+Now we can run the script:
 
 ```console  
 python plot_fasta_length.py <species>.total.fasta <species>.total.fasta.length.png
