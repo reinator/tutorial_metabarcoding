@@ -20,7 +20,6 @@ Right, so in order to run merqury, you need a meryl datase of the reads you want
 
 ```console  
 cp -vrn /home/unbuntu/Data/merylDB/<your_species>/*OUTPUT.21.meryl merqury_hicanu_eval
-
 ```  
 
 It will take a few minutes to copy the database...
@@ -29,7 +28,6 @@ Once it's copied, let's run merqury! For that, you need to start our conda envir
 
 ```console  
 conda activate eukaryotic_genome_assembly
-
 ```  
 
 Right, as soon as you see it's activated, try:
