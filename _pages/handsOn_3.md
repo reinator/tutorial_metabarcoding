@@ -12,7 +12,13 @@ I know you have chosen a specific species and you have assembled a partial set o
 
 But we will do something even more fun to find out. Let’s do a stand-alone BLAST of our assembled contigs (choose one or run for both, as you wish!).
 
-We already have BLAST installed in our server. Try it.
+We already have BLAST installed in our `eukaryotic_genome_assembly` conda environment. If you do not have that conda environment activated yet, run:  
+
+```bash  
+conda activate eukaryotic_genome_assembly
+```
+
+If `eukaryotic_genome_assembly` is activated, try:
 
 ```console  
 blastn -h
