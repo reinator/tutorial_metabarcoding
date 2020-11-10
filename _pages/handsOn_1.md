@@ -11,9 +11,9 @@ You have to chose between the species: (i) *Vanessa atalanta*, (ii) *Pieris rapa
 
 v_atalanta/
 
-  kmers/
+ kmers/
   
-  assembly/
+ assembly/
   
  The above basically means you have created a folder called 'v_atanta' (if you choose vanessa atalanta as your working species) and inside it you have created two other folders side by side called 'kmers' and 'assembly'. If you would like to do that, then do:
  
