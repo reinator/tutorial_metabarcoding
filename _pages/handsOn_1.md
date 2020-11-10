@@ -53,7 +53,18 @@ iHemFuc1 - *Hemaris fuciformis* (we are not going to use this species in the cur
 
 Keep these codes in mind as the files will most likely to be named after them.
 
-Now that you have the reads in place, try calling Jellyfish:
+Now that you have the reads in place, let's activate the conda environment `eukaryotic_genome_assembly`, where most of the softwares that we'll use over this workshop have already been installed by your instructors:  
+
+```bash  
+conda activate eukaryotic_genome_assembly
+```
+
+If the activation has worked, your should see a `(eukaryotic_genome_assembly)` before your prompt. Something like this:  
+```bash  
+(eukaryotic_genome_assembly) userX@Ip-address:<working>$
+```
+
+After activating the conda environment, try calling Jellyfish:
 
 ```console  
 jellyfish
@@ -125,7 +136,21 @@ Cool, you have plotted the kmer distribution of the \<species\>.total.histo file
 
 The histogram you have just plotted is for a jellyfish count of the total PacBio HiFi reads sequenced to assemble your species. I have generated it for you because it takes time (but to generate it outside this course you would run the same commands you ran for the subsample set).
 
-Now, I would like to you generate statistics for the \*.total.fasta reads. I have a script for you to do that. It's called asmstats
+Now, I would like to you generate statistics for the \*.total.fasta reads. I have a script for you to do that. It's called asmstats.
+
+Before running asmstats, you need to add the directory where the script is located (`/home/ubuntu/softwares/scripts`) to your environment variable:  
+
+```bash  
+export PATH=$PATH:/home/ubuntu/softwares/scripts
+```  
+
+Then check if the directory has been added to your environment variable:  
+
+```bash  
+echo $PATH
+```
+
+If you can see the `/home/ubuntu/softwares/scripts` in the output of the previous command, you should be ready to run the asmstats script:
 
 ```console  
 asmstats <species>.ccs.total.fasta.gz > <species>.total.fasta.stats
