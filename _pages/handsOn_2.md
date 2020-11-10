@@ -42,7 +42,7 @@ canu -d <species_subset> -p <species_id> genomeSize=16000 -pacbio-hifi <species>
 
 ```  
   
-  ### Attention :grey_exclamation: 
+### Attention :grey_exclamation: 
 
 For the copy line you need to give the whole path to the ‘Data’ folder. I just wrote *Data/\<species>\.fasta* to make it short. If you are unsure about the whole PATH to 'data', go back to ‘data’ and run **pwd** on your commandline. This will print you the whole path for the folder you are currently at. Then copy this PATH and go back to the folder ‘hicanu’. And now type your command: *cp whole_path_of_data/\<species>\.fasta .* This line basically means: I’m copying the \<species>\.fasta file all the way from the data folder to here (here is represented by the dot).
 
