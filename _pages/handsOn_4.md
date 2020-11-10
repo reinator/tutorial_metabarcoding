@@ -35,7 +35,7 @@ Right. As soon as it finishes, we are going to use a tool called samtools to man
 ```console  
 samtools view -h -Sb outputname_you_chose.sam -o outputname_you_chose.bam
 samtools sort outputname_you_chose.bam -o outputname_you_chose.sorted.bam
-Samtools index outputname_you_chose.sorted.bam
+samtools index outputname_you_chose.sorted.bam
 ``` 
 Right. What we did above was to convert the output mapped file from the format sam to bam, then we sorted this file and created an index for it. This will be a standard procedure most of the time that you will be producing and visualizing a mapping: samtools view, sort and index.
 To know more about samtools: https://samtools.github.io
