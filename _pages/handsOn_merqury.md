@@ -28,20 +28,20 @@ It will take a few minutes to copy the database...
 Once it's copied, let's run merqury! For that, you need to start our conda enviroment:
 
 ```console  
-source activate eukaryotic_genome_assembly
+conda activate eukaryotic_genome_assembly
 
 ```  
 
 Right, as soon as you see it's activated, try:
 
 ```console  
-./merqury.sh
+merqury.sh
 ```  
 
 The help message should show you that in order to run merqury, you need (i) the meryl database (ii) your assembly (one or two, if you have primary and haplotigs. In our case its only one) and (iii) an output name. So inside your merqury_hicanu_eval directory, you will do:
 
 ```console  
-./merqury.sh *OUTPUT.21.meryl *.hicanu.total.contigs.fasta outHicanu
+merqury.sh *OUTPUT.21.meryl *.hicanu.total.contigs.fasta outHicanu
 ```  
 
 Great!!
