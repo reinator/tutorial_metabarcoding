@@ -92,11 +92,11 @@ ls -ltrh
 
 Am I in the hifiasm folder? If not, then I need to change there
 
-Among the results hifiasm produce, you will find the **.p_ctg.gpa** file. This is our assembly output file. Hifiasm gives us the [assembly graph](http://gfa-spec.github.io/GFA-spec/GFA1.html) as an output. This means you need to convert the graph into a fasta file. For that, we have a awk script:
+Among the results hifiasm produce, you will find the **.p_ctg.gfa** file. This is our assembly output file. Hifiasm gives us the [assembly graph](http://gfa-spec.github.io/GFA-spec/GFA1.html) as an output. This means you need to convert the graph into a fasta file. For that, we have a awk script:
 
 
 ```console  
-gfa2fa *.p_ctg.gpa > *.p_ctg.fa
+gfa2fa *.p_ctg.gfa > p_ctg.fa
 
 ```
 
@@ -104,7 +104,7 @@ Right. So now, what to do with the assembly file?
 Well, first you should have a look at the statistics for this assembly. Let’s run our asmstats script on it
 
 ```console  
-asmstats *.p_ctg.fa > *.p_ctg.fa.stats
+asmstats p_ctg.fa > *.p_ctg.fa.stats
 
 ```
 
