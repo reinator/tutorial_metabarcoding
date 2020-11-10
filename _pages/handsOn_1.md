@@ -90,7 +90,7 @@ on your command line to understand what are the parameters you have imputed in t
 
 2-) Jellyfish histo
 
-Now that you have counted your 31-letters kmers, we want to transform it to a histogram file so you can plot it. Then you have you second command:
+Now that you have counted your 31-letters kmers, we want to transform it to a histogram file so you can plot it. Then you have your second command:
 
 
 ```console  
