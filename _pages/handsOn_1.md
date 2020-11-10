@@ -117,7 +117,7 @@ Inside the 'assembly' folder for your species, you are going to find two files c
 <species>.total.histo
 ```
 
-Download the file \<species\>.total.histo to your local machine (as you learned yesterday), go to the [Genomescope]http://qb.cshl.edu/genomescope/ page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot.
+Download the file \<species\>.total.histo to your local machine (as you learned yesterday), go to the [Genomescope](http://qb.cshl.edu/genomescope/) page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot.
 
 Save the image of both versions of the plot - normal and log scale - somewhere in your computer.
 
