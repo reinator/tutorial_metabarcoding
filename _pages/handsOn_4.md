@@ -68,7 +68,15 @@ nano contig_id
 
 Nano will open a empty file for you. Inside it type the name of the contig you have chosen, in my case this will be Contig1. Then to close and save the file in a Mac you do Control + O Control + X (control O control X).
 
-Now, let’s run our script that will extract that contig from our assembly result:
+Now, let’s run our script `filterfasta.py`, that will extract that contig from our assembly result. 
+
+First, copy the script to your working directory:  
+
+```bash  
+cp /home/ubuntu/softwares/MitoHiFi/scripts/filterfasta.py .
+```
+
+Then run the it:
 
 ```console  
 python filterfasta.py -i contig_id your_contigs.here.fasta > *ID.fasta
