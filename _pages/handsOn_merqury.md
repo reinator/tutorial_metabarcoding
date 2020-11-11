@@ -78,11 +78,11 @@ Take your time and have a look at it all. Then dicuss with your team and answer 
 
 6-) Point on \*spectra-asm.fl.png for the purged and hapltoigs where the heterozygous peak is, and where the homozygous peak is?
 
-7-) If you look at \*spectra-asm.fl.png you have generated for the total Hicanu output, in the heterozygous peak you don't see any kmers only present on the reads. On the other hand, if you look at \*\spectra-asm.st.png for the purged restuls, the primary or the haplotigs, you see kmers present only on the reads and absent from the heterozygous peak. Why is that?
+7-) If you look at \*spectra-asm.fl.png you have generated for the total Hicanu output, in the heterozygous peak you don't see any kmers only present on the reads. On the other hand, if you look at \*\spectra-asm.st.png for the purged results, the primary or the haplotigs, you see kmers present only on the reads and absent from the heterozygous peak. Why is that?
 
-8-) Look at the completeness file for the purged ran I have produced: why is the completeness there different from the one you have generated for total hicanu?
+8-) Look at the completeness file for the purged run I have produced: why is the completeness there different from the one you have generated for total hicanu?
 
-9-) Look at the .qv file for the purged ran I have produced: why do you think the qvs are different from the one you have generated for the total hicanu?
+9-) Look at the .qv file for the purged run I have produced: why do you think the qvs are different from the one you have generated for the total hicanu?
 
 Finally, we have discussed that another way of evaluating assemblies is at looking at BUSCO runs for the assemblies. I have generated BUSCO rans for the total Hicanu output, the primary purged assembly and the haplotigs purged assembly. You will find the BUSCO result folders in `~/Share/Data/<your_species>/BUSCO/`. You don't need to copy the whole busco folders, but I want you to go inside each BUSCO run and analyse the short_output*.txt file for each and answer:
 
@@ -108,7 +108,7 @@ Look at all the files (take your time), discuss with your team and write down on
 
 Also remember: the merqury analysis was done comparing kmers in the CLR assemblies with kmers in the Illumina reads (Chromium 10X).
 
-Generate the asmstats for the Falcon/Falcon Unzip output assemblies. Primary and haplotigs are within the merqury_falcon folder and are called cns_p_ctg.fasta cns_h_ctg.fasta. Also, generate the asmstats for both after purging. The assemblies are within merqury_purged and are called purged.fa and purged.htigs.fa. Compare the statistics of the assemblies: what happend after purging? Present these results together with the following questions.
+Generate the asmstats for the Falcon/Falcon Unzip output assemblies. Primary and haplotigs are within the merqury_falcon folder and are called cns_p_ctg.fasta cns_h_ctg.fasta. Also, generate the asmstats for both after purging. The assemblies are within merqury_purged and are called purged.fa and purged.htigs.fa. Compare the statistics of the assemblies: what happened after purging? Present these results together with the following questions.
 
 15a-) in the Falcon and Falcon Unzip merqury evaluation, look at the cns.p and cns.h \*spectra-asm.st.png plots. Point in the presentation: (i) where are the assembly erroneous kmers, (ii) what is the heterozygous peak, (iii) what is the homozygoys peak.
 
