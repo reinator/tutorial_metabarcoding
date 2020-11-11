@@ -76,30 +76,30 @@ First, copy the script to your working directory:
 cp /home/ubuntu/softwares/MitoHiFi/scripts/filterfasta.py .
 ```
 
-Then run the it:
+Then run it:
 
 ```console  
-python filterfasta.py -i contig_id your_contigs.here.fasta > *ID.fasta
+python filterfasta.py -i contig_id your_contigs.here.fasta > <contig_ID>.fasta
 ```  
 
-Right. Now give a less to the file *ID.fasta
+Right. Now give a less to the file <contig_ID>.fasta
 
 ```console  
-less *ID.fasta
+less <contig_ID>.fasta
 ``` 
 And let's create an index for our fasta as well
 
 ```console  
-samtools faidx *ID.fasta
+samtools faidx <contig_ID>.fasta
 ``` 
 
-If you list your directory now, do you see a \*ID.fasta.fai file there as well? Great!
+If you list your directory now, do you see a \<contig_ID>.fasta.fai file there as well? Great!
 
 Extract a bam file only for this contig and create a index for it
 
 ```console  
-samtools view -b -h outputname_you_chose.sorted.bam “*ID.fasta” > *ID.fasta.bam
-samtools index *ID.fasta.bam
+samtools view -b -h outputname_you_chose.sorted.bam “<contig_ID>.fasta” > <contig_ID>.fasta.bam
+samtools index <contig_ID>.fasta.bam
 ``` 
 
 Now you have four files you must download to your local machine to open them on IGV
@@ -124,7 +124,7 @@ You can also run samtools flagstat.
 
 ```console  
 samtools flagstat outputname_you_chose.sorted.bam
-samtools flagstat *ID.fasta.bam
+samtools flagstat <contig_ID>.fasta.bam
 ``` 
 
 # GOOD!
