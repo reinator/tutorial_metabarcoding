@@ -15,7 +15,7 @@ mkdir merqury_hicanu_eval
 cp <path_to_file>/<your_species>.hicanu.total.contigs.fasta merqury_hicanu_eval
 ```  
 
-PS: Remember to replace <your_species> with the name of your species! :)
+PS: Remember to replace `<your_species>` with the name of your species! :)
 
 Right, so in order to run merqury, you need a meryl datase of the reads you want to compare kmers with the kmers in your assembly. In our case, I have created meryl databases for 10X reads (illumina linked-reads) for your species, and you just need to copy the meryl db folder to your execution folder. So you do:
 
@@ -70,17 +70,17 @@ Take your time and then produce a presentation with your team showing and explan
 
 # Now
 
-Let's have a look at another merqury folder where I have ran a merqury evaluation for your species but after I ran purge_dups on it. This means you are going to have plot files for the purged primary assembly, and for the haplotigs assembly. The results files of this run should be in `~/Share/Data/<your_species>/merqury/merqury_purged`.
+Let's have a look at another merqury folder where I have ran a merqury evaluation for your species after I had ran purge_dups on it. This means you are going to have plot files for the purged primary assembly, as well as for the haplotigs assembly. The results files of this run should be in `~/Share/Data/<your_species>/merqury/merqury_purged`.
 
 Take your time and have a look at it all. Then dicuss with your team and answer in your presentation:
 
-     4\. Open the files \*spectra-asm.fl.png (or spectra-asm.st or spectra-asm.ln - they are the same result in diferent types of plots) for the purged, the haplotigs and the total hicanu you have produced. What is the biggest difference between those three plots?
+     4\. Open the \*.fl.png files (you can also open the \*.st.png or \*ln.png - they are the same result in diferent types of plots) for the purged, the haplotigs and the total hicanu you have produced. What is the biggest difference between those three plots?
 
-     5\. Point on \*spectra-asm.fl.png for the purged and hapltoigs where the kmer errors are.
+     5\. Point on \*.fl.png for the purged and hapltoigs where the kmer errors are.
 
-     6\. Point on \*spectra-asm.fl.png for the purged and hapltoigs where the heterozygous peak is, and where the homozygous peak is?
+     6\. Point on \*.fl.png for the purged and hapltoigs where the heterozygous peak is, and where the homozygous peak is?
 
-     7\. If you look at \*spectra-asm.fl.png you have generated for the total Hicanu output, in the heterozygous peak you don't see any kmers only present on the reads. On the other hand, if you look at \*\spectra-asm.st.png for the purged results, the primary or the haplotigs, you see kmers present only on the reads and absent from the heterozygous peak. Why is that?
+     7\. If you look at \*.fl.png you have generated for the total Hicanu output, in the heterozygous peak you don't see any kmers only present on the reads. On the other hand, if you look at \*.st.png for the purged results, the primary or the haplotigs, you see kmers present only on the reads and absent from the heterozygous peak. Why is that?
 
      8\. Look at the completeness file for the purged run I have produced: why is the completeness there different from the one you have generated for total hicanu?
 
@@ -112,7 +112,7 @@ Also remember: the merqury analysis was done comparing kmers in the CLR assembli
 
 Generate the asmstats for the Falcon/Falcon Unzip output assemblies. Primary and haplotigs are within the merqury_falcon folder and are called cns_p_ctg.fasta cns_h_ctg.fasta. Also, generate the asmstats for both after purging. The assemblies are within merqury_purged and are called purged.fa and purged.htigs.fa. Compare the statistics of the assemblies: what happened after purging? Present these results together with the following questions.
 
-     15\. in the Falcon and Falcon Unzip merqury evaluation, look at the cns.p and cns.h \*spectra-asm.st.png plots. Point in the presentation: (i) where are the assembly erroneous kmers, (ii) what is the heterozygous peak, (iii) what is the homozygoys peak.
+     15\. in the Falcon and Falcon Unzip merqury evaluation, look at the cns.p and cns.h \*.st.png plots. Point in the presentation: (i) where are the assembly erroneous kmers, (ii) what is the heterozygous peak, (iii) what is the homozygoys peak.
 
      16\. Have a look at the completeness file and write down in your presentation the kmer completness of the primary and alternate assemblies.
 
