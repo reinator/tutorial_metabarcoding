@@ -43,10 +43,10 @@ Ok, so now that you have the \*sizes file sorted, I would like you to calculate 
 
 - search online to see if you find any research that has described the karyotype of *H. fuciforms*. If you find it, what is the expected karyotype?
 
-Now, sum up the bases in the first largestes scaffolds that correspod to the karyotype:
+Now, sum up the bases in the first largestes scaffolds that correspod to the karyotype:  
 
-5\. How many assembled bases are inside the expected karyotype?
+5. How many assembled bases are inside the expected karyotype? 
 
-6\. How many bases were not asigned to chromosomes?
+6. How many bases were not asigned to chromosomes?
 
-7\. Do you have any large scaffolds outside the expected number of chromosomes?
+7. Do you have any large scaffolds outside the expected number of chromosomes?
