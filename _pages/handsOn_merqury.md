@@ -106,6 +106,8 @@ Look at all the files (take your time), discuss with your team and write down on
 
 Also remember: the merqury analysis was done comparing kmers in the CLR assemblies with kmers in the Illumina reads (Chromium 10X).
 
+Generate the asmstats for the Falcon/Falcon Unzip output assemblies. Primary and haplotigs are within the merqury_falcon folder and are called cns_p_ctg.fasta cns_h_ctg.fasta. Also, generate the asmstats for both after purging. The assemblies are within merqury_purged and are called purged.fa and purged.htigs.fa. Compare the statistics of the assemblies: what happend after purging? Present these results together with the following questions.
+
 15a-) in the Falcon and Falcon Unzip merqury evaluation, look at the cns.p and cns.h \*spectra-asm.st.png plots. Point in the presentation: (i) where are the assembly erroneous kmers, (ii) what is the heterozygous peak, (iii) what is the homozygoys peak.
 
 16a-) Have a look at the completeness file and write down in your presentation the kmer completness of the primary and alternate assemblies.
