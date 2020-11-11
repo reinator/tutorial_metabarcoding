@@ -29,7 +29,7 @@ Right. So now we want to BLAST our contigs to find out what they are. This means
 
 ```console  
 cp <path/to/database/DB.fasta yourfolder
-makeblastdb -in DB.fasta -dtype nucl
+makeblastdb -in DB.fasta -dbtype nucl
 ```  
 
 Now, list your directory. Have a look. Do you see different files with the database name but with specific blast file extensions?
