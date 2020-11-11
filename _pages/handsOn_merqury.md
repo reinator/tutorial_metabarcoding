@@ -68,7 +68,7 @@ Take your time and then produce a presentation with your team showing and explan
 
 # Now
 
-Let's have a look at another merqury folder where I have ran a merqury evaluation for your species but after I ran purge_dups on it. This means you are going to have plot files for the purged primary assembly, and for the haplotigs assembly. The results file of this run should be in /home/unbuntu/Shared/Data/<your_species>/merqury_purged
+Let's have a look at another merqury folder where I have ran a merqury evaluation for your species but after I ran purge_dups on it. This means you are going to have plot files for the purged primary assembly, and for the haplotigs assembly. The results files of this run should be in `~/Share/Data/<your_species>/merqury/merqury_purged`.
 
 Take your time and have a look at it all. Then dicuss with your team and answer in your presentation:
 
@@ -84,7 +84,7 @@ Take your time and have a look at it all. Then dicuss with your team and answer 
 
 9-) Look at the .qv file for the purged ran I have produced: why do you think the qvs are different from the one you have generated for the total hicanu?
 
-Finally, we have discussed that another way of evaluating assemblies is at looking at BUSCO runs for the assemblies. I have generated BUSCO rans for the total Hicanu output, the primary purged assembly and the haplotigs purged assembly. You will find the BUSCO result folders in /home/unbuntu/Shared/Data/<your_species>/BUSCO . You don't need to copy the whole busco folders, but I want you to go inside each BUSCO run and analyse the short_output*.txt file for each and answer:
+Finally, we have discussed that another way of evaluating assemblies is at looking at BUSCO runs for the assemblies. I have generated BUSCO rans for the total Hicanu output, the primary purged assembly and the haplotigs purged assembly. You will find the BUSCO result folders in `~/Share/Data/<your_species>/BUSCO/`. You don't need to copy the whole busco folders, but I want you to go inside each BUSCO run and analyse the short_output*.txt file for each and answer:
 
 10-) Against which set of protein ortologs have I ran the BUSCO analysis? How many single copy ortholog genes were searched?
 
@@ -100,7 +100,7 @@ Discuss all of this with your colleagues and make your presentation.
 
 # Then
 
-Finally, now we are going to look into merqury outpus for *Hemaris fuciformis* CLR assembly with FALCON and FALCON-Unzip. Remember that we have discussed that - unlike Hicanu - Falcon and Falcon Unzip will produce straigh away a primary and an alternate assembly. The primary is the most contiguous haplotype, while the haplotigs are only the phased blocks that differ in the second haplotype of the diploid species. I have also produced a merqury evaluation for the purged Falcon/Falcon-Unzip assembly of *H. fuciformis* and BUSCO runs for the Falcon/Falcon Unzip output, as well as the purged outputs. You will find all the files in /home/unbuntu/Shared/Data/h_fuciformis/merqury and /home/unbuntu/Data/H_fuciformis/BUSCO.
+Finally, now we are going to look into merqury outpus for *Hemaris fuciformis* CLR assembly with FALCON and FALCON-Unzip. Remember that we have discussed that - unlike Hicanu - Falcon and Falcon Unzip will produce straigh away a primary and an alternate assembly. The primary is the most contiguous haplotype, while the haplotigs are only the phased blocks that differ in the second haplotype of the diploid species. I have also produced a merqury evaluation for the purged Falcon/Falcon-Unzip assembly of *H. fuciformis* and BUSCO runs for the Falcon/Falcon Unzip output, as well as the purged outputs. You will find all the files in `~/Shared/Data/h_fuciformis/`.
 
 Look at all the files (take your time), discuss with your team and write down on your presentation:
 
