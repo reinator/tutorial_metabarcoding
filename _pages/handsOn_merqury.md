@@ -15,6 +15,8 @@ mkdir merqury_hicanu_eval
 cp <path_to_file>/<your_species>.hicanu.total.contigs.fasta merqury_hicanu_eval
 ```  
 
+PS: Remember to replace <your_species> with the name of your species! :)
+
 Right, so in order to run merqury, you need a meryl datase of the reads you want to compare kmers with the kmers in your assembly. In our case, I have created meryl databases for 10X reads (illumina linked-reads) for your species, and you just need to copy the meryl db folder to your execution folder. So you do:
 
 ```console  
