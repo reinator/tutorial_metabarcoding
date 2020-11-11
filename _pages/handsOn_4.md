@@ -27,23 +27,23 @@ minimap2
 See the help message? Then let’s run it:
 
 ```console  
-minimap2 -t 1 --secondary=no -ax map-pb your_contigs.here.fasta raw.reads.here.fasta -o outputname_you_chose.sam
+minimap2 -t 1 --secondary=no -ax map-pb <your_contigs.here>.fasta <raw.reads.here>.fasta -o <outputname_you_chose>.sam
 ```  
 
 Right. As soon as it finishes, we are going to use a tool called samtools to manipulate the output file:
 
 ```console  
-samtools view -h -Sb outputname_you_chose.sam -o outputname_you_chose.bam
-samtools sort outputname_you_chose.bam -o outputname_you_chose.sorted.bam
-samtools index outputname_you_chose.sorted.bam
+samtools view -h -Sb <outputname_you_chose>.sam -o <outputname_you_chose>.bam
+samtools sort <outputname_you_chose>.bam -o <outputname_you_chose>.sorted.bam
+samtools index <outputname_you_chose>.sorted.bam
 ``` 
 Right. What we did above was to convert the output mapped file from the format sam to bam, then we sorted this file and created an index for it. This will be a standard procedure most of the time that you will be producing and visualizing a mapping: samtools view, sort and index.
-To know more about samtools: https://samtools.github.io
+To know more about samtools, go to its [webpage](https://samtools.github.io)
 
 Now, we want to visualize one contig with the reads mapped to back to it. So we need to extract one contig from the \*.sorted.bam file that contains mappings for all contigs assembled. To use IGV we need to visualize one contig at a time. The steps are:
 
-1-) Extract a bam file for one contig from outputname_you_chose.sorted.bam and make a samtools index for it
-2-) Extract the fasta file for the contig you chosen and make a samtools faidx for it
+     1\. Extract a bam file for one contig from `<outputname_you_chose>.sorted.bam` and make a samtools index for it
+     2\. Extract the fasta file for the contig you have chosen and make a samtools faidx for it
 
 Bellow you see the steps detailed:
 
@@ -51,7 +51,7 @@ Let's get the fasta first:
 So let’s select the pattern common to a fasta file “>” and list the name of our contigs
 
 ```console  
-grep “>” your_contigs.here.fasta 
+grep “>” <your_contigs.here>.fasta 
 ```  
 
 This will print to the screen the names of all your assembled contigs. Choose one and create a file with it's ID. Let’s say my grep result looks like this:
@@ -60,13 +60,13 @@ This will print to the screen the names of all your assembled contigs. Choose on
 
 \>Contig2
 
-So here I’ll choose ‘Contig1’. To create a text file with this ID. I can use nano. I need a text file with the ID because the next script we are going to use to extract the contig needs this as an input. 
+So here I’ll choose ‘Contig1’. To create a text file that contains this ID we can use nano. We need a text file with the ID because the next script we are going to use to extract the contig needs it as an input. 
 
 ```console  
 nano contig_id
 ```  
 
-Nano will open a empty file for you. Inside it type the name of the contig you have chosen, in my case this will be Contig1. Then to close and save the file in a Mac you do Control + O Control + X (control O control X).
+Nano will open a empty file for you. Inside it type the name of the contig you have chosen, in my case this will be Contig1. Then to close and save the file in a Mac you do `Ctrl+O` and then `Ctrl+X`.
 
 Now, let’s run our script `filterfasta.py`, that will extract that contig from our assembly result. 
 
@@ -79,7 +79,7 @@ cp /home/ubuntu/softwares/MitoHiFi/scripts/filterfasta.py .
 Then run it:
 
 ```console  
-python filterfasta.py -i contig_id your_contigs.here.fasta > <contig_ID>.fasta
+python filterfasta.py -i contig_id <your_contigs.here>.fasta > <contig_ID>.fasta
 ```  
 
 Right. Now give a less to the file <contig_ID>.fasta
@@ -93,12 +93,12 @@ And let's create an index for our fasta as well
 samtools faidx <contig_ID>.fasta
 ``` 
 
-If you list your directory now, do you see a \<contig_ID>.fasta.fai file there as well? Great!
+If you list your directory now, do you see a `<contig_ID>.fasta.fai` file there as well? Great!
 
 Extract a bam file only for this contig and create a index for it
 
 ```console  
-samtools view -b -h outputname_you_chose.sorted.bam “<contig_ID>.fasta” > <contig_ID>.fasta.bam
+samtools view -b -h <outputname_you_chose>.sorted.bam “<contig_ID>.fasta” > <contig_ID>.fasta.bam
 samtools index <contig_ID>.fasta.bam
 ``` 
 
@@ -123,7 +123,7 @@ Minimap2 would have printed you some log files containing that info
 You can also run samtools flagstat.
 
 ```console  
-samtools flagstat outputname_you_chose.sorted.bam
+samtools flagstat <outputname_you_chose>.sorted.bam
 samtools flagstat <contig_ID>.fasta.bam
 ``` 
 
