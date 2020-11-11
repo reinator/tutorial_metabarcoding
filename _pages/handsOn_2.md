@@ -104,7 +104,7 @@ Right. So now, what to do with the assembly file?
 Well, first you should have a look at the statistics for this assembly. Let’s run our asmstats script on it
 
 ```console  
-asmstats p_ctg.fa > *.p_ctg.fa.stats
+asmstats p_ctg.fa > p_ctg.fa.stats
 
 ```
 
