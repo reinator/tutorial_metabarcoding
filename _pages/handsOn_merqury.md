@@ -66,23 +66,23 @@ Take your time and then produce a presentation with your team showing and explan
 
 # Now
 
-Let's have a look at another merqury folder where I have ran a merqury evaluation for your species but after I ran purge_dups on it. This means you are going to have plot files for the purged primary assembly, and for the haplotigs assembly. The results file of this run should be in /home/unbuntu/Data/<your_species>/merqury_purged
+Let's have a look at another merqury folder where I have ran a merqury evaluation for your species but after I ran purge_dups on it. This means you are going to have plot files for the purged primary assembly, and for the haplotigs assembly. The results file of this run should be in /home/unbuntu/Shared/Data/<your_species>/merqury_purged
 
 Take your time and have a look at it all. Then dicuss with your team and answer in your presentation:
 
-4-) Open the files \*spectra-asm.st.png for the purged, the haplotigs and the total hicanu you have produced. What is the biggest difference between those three plots?
+4-) Open the files \*spectra-asm.fl.png (or spectra-asm.st or spectra-asm.ln - they are the same result in diferent types of plots) for the purged, the haplotigs and the total hicanu you have produced. What is the biggest difference between those three plots?
 
-5-) Point on \*spectra-asm.st.png for the purged and hapltoigs where the kmer errors are.
+5-) Point on \*spectra-asm.fl.png for the purged and hapltoigs where the kmer errors are.
 
-6-) Point on \*spectra-asm.st.png for the purged and hapltoigs where the heterozygous peak is, and where the homozygous peak is?
+6-) Point on \*spectra-asm.fl.png for the purged and hapltoigs where the heterozygous peak is, and where the homozygous peak is?
 
-7-) If you look at \*spectra-asm.st.png you have generated for the total Hicanu output, in the heterozygous peak you don't see any kmers only present on the reads. On the other hand, if you look at \*\spectra-asm.st.png for the primary and the haplotigs you see kmers present only on the reads and absent from the heterozygous peak. Why is that?
+7-) If you look at \*spectra-asm.fl.png you have generated for the total Hicanu output, in the heterozygous peak you don't see any kmers only present on the reads. On the other hand, if you look at \*\spectra-asm.st.png for the purged restuls, the primary or the haplotigs, you see kmers present only on the reads and absent from the heterozygous peak. Why is that?
 
 8-) Look at the completeness file for the purged ran I have produced: why is the completeness there different from the one you have generated for total hicanu?
 
 9-) Look at the .qv file for the purged ran I have produced: why do you think the qvs are different from the one you have generated for the total hicanu?
 
-Finally, we have discussed that another way of evaluating assemblies is at looking at BUSCO runs for the assemblies. I have generated BUSCO rans for the total Hicanu output, the primary purged assembly and the haplotigs purged assembly. You will find the BUSCO result folders in /home/unbuntu/Data/<your_species>/BUSCO_runs . You don't need to copy the whole busco folders, but I want you to go inside each BUSCO run and analyse the short_output*.txt file for each and answer:
+Finally, we have discussed that another way of evaluating assemblies is at looking at BUSCO runs for the assemblies. I have generated BUSCO rans for the total Hicanu output, the primary purged assembly and the haplotigs purged assembly. You will find the BUSCO result folders in /home/unbuntu/Shared/Data/<your_species>/BUSCO . You don't need to copy the whole busco folders, but I want you to go inside each BUSCO run and analyse the short_output*.txt file for each and answer:
 
 10-) Against which set of protein ortologs have I ran the BUSCO analysis? How many single copy ortholog genes were searched?
 
@@ -98,11 +98,13 @@ Discuss all of this with your colleagues and make your presentation.
 
 # Then
 
-Finally, now we are going to look into merqury outpus for *Hemaris fuciformis* CLR assembly with falcon. Remember that we have discussed that - unlike Hicanu - Falcon and Falcon Unzip will produce straigh away a primary and an alternate assembly. The primary is the most contiguous haplotype, while the haplotigs are only the phased blocks that differ in the second haplotype of the diploid species. I have also produced a merqury evaluation for the purged Falcon/Falcon-Unzip assembly of *H. fuciformis* and BUSCO runs for the Falcon/Falcon Unzip output, as well as the purged outputs. You will find all the files in /home/unbuntu/Data/H_fuciformis/merqury and /home/unbuntu/Data/H_fuciformis/BUSCO.
+Finally, now we are going to look into merqury outpus for *Hemaris fuciformis* CLR assembly with FALCON and FALCON-Unzip. Remember that we have discussed that - unlike Hicanu - Falcon and Falcon Unzip will produce straigh away a primary and an alternate assembly. The primary is the most contiguous haplotype, while the haplotigs are only the phased blocks that differ in the second haplotype of the diploid species. I have also produced a merqury evaluation for the purged Falcon/Falcon-Unzip assembly of *H. fuciformis* and BUSCO runs for the Falcon/Falcon Unzip output, as well as the purged outputs. You will find all the files in /home/unbuntu/Shared/Data/h_fuciformis/merqury and /home/unbuntu/Data/H_fuciformis/BUSCO.
 
 Look at all the files (take your time), discuss with your team and write down on your presentation:
 
-- First plot a Illumina kmer profile distribution for your species. I have prepared the .histo file for you. Remember that with PacBio CLR reads you cannot plot kmer distributions because of the high error rate of the reads. But we have some linked chromium 10X reads (illumina) and I have produced the histogram file from them. What is the expected genome size, heterozygosity and repeat content? Analyse this plot and correlate it with the results you will look into in the next questions.
+- First plot a Illumina kmer profile distribution for your species. I have prepared the .histo file for you (OUTPUT.21.histo). Remember that with PacBio CLR reads you cannot plot kmer distributions because of the high error rate of the reads. But we have some linked chromium 10X reads (illumina) and I have produced the histogram file from them. What is the expected genome size, heterozygosity and repeat content? Analyse this plot and correlate it with the results you will look into in the next questions.
+
+Also remember: the merqury analysis was done comparing kmers in the CLR assemblies with kmers in the Illumina reads (Chromium 10X).
 
 15a-) in the Falcon and Falcon Unzip merqury evaluation, look at the cns.p and cns.h \*spectra-asm.st.png plots. Point in the presentation: (i) where are the assembly erroneous kmers, (ii) what is the heterozygous peak, (iii) what is the homozygoys peak.
 
@@ -124,7 +126,7 @@ Then, have a look at the BUSCO results for the Falcon and Falcon Unzip and the p
 
 Now, I would like you to evaluate the difference in the merqury results for the Hicanu purged run for your species, and for the merqury run for the purged *H. fuciforms*. Of course they are different species, and therefore results will be different. But there is more. Evaluate kmer completeness, QVs, erroneous kmer levels, BUSCO outpus and answer:
 
-18-) Which assemblies seem to be better taking into consideration the different metrics?
+18-) Which assemblies seem to be better taking into consideration the different metrics? Explain.
 
 19-) Why error rates, QVs and completeness vary between these species assemblies?
 
