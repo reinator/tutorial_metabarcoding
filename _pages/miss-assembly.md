@@ -5,7 +5,7 @@ permalink: /miss-assembly/
 ---  
 
 
-Ok, so you have learned a lot of things today aabout Hi-C scaffolding, polishing and genome curation. I want to show you a very likely example of a miss-assembly that we can identify in the Hi-C HeatMap.
+Ok, so you have learned a lot of things today about Hi-C scaffolding, polishing and genome curation. I want to show you a very likely example of a miss-assembly that we can identify in the Hi-C HeatMap.
 
 The name of the guy you are going to be working with is *Eristalis pertinax* (who am I? Check me online and get a picture of me). In the folder `~/Share/Data/Eristalis_pertinax` you are going to find:
 
@@ -17,7 +17,7 @@ The name of the guy you are going to be working with is *Eristalis pertinax* (wh
 
 I want you to download all those files to your local machine.
 
-You don't have the multifasta file that represents the genome that you will look in the HeatMap, but I can give you the statistics for it:
+Notice that you don't have the multifasta file that represents the complete genome that you will look in the HeatMap, but I can give you the statistics for it:
 
 ```console 
 scaff/out.break.salsa/scaffolds_FINAL.fasta
@@ -39,13 +39,13 @@ CONTIG  N100 = 9583, L100 = 572
 GAP     sum = 95500, n = 191, ave = 500, largest = 500, smallest = 500
 ```
 
-Now, I want you to open the Hi-C heat map (`salsa_scaffolds.hic`) on Juice-Box and have a look.
+Now, I want you to open the Hi-C heat map (`salsa_scaffolds.hic`) for the complete genome on Juice-Box and have a look.
 
 The whole plot is not amazing. But do you think you see a miss-assembly on scaffold 1?
 
 Well, I have taken the PacBio reads, mapped them back to the complete genome and extracted only the scaffold_1 for you, so you can have a look at it on IGV.
 
-Make sure you have all scaffold files (\*.fa, \*fa.fai, \*.bam, \*.bai) in the same folder. Then open IGV and load the \*.fa in 'Genomes > Load Genome from File', and load the \*.bam in 'File > Load from File'.
+Make sure you have all scaffold_1 files (\*.fa, \*fa.fai, \*.bam, \*.bai) in the same folder. Then open IGV and load the \*.fa in 'Genomes > Load Genome from File', and load the \*.bam in 'File > Load from File'.
 
 Have a look at the mapping. Zoom in to see reads mapped. Play a little. 
 
@@ -53,6 +53,6 @@ Then, using the 'Go' search bar (like in the image below), go to the position: `
 
 ![](/images/IGV_go_to.png)
 
-Do you see a gap in Pacbio coverage?
+Do you see a gap in the Pacbio coverage?
 
-Aha! If we have a weird looking Hi-C HeatMap and NO reads cross that regiong, I bet you that this is a miss-assembly!! Don't you? =)
+Aha! If we have a weird looking Hi-C HeatMap and NO reads cross that regiong, I bet you that this is a miss-assembly!! Don't you? :wink:
