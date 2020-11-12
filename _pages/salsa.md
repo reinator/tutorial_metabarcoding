@@ -34,9 +34,9 @@ asmstats scaffolds_FINAL.fasta > scaffolds_FINAL.fasta.stats
 
 Also, now I want you to download to your local machine the assembly Hi-C heatmaps for prior and after scaffolding. 
 
-The pre-scaffolding is a file that ends with \*.pretext and it is located in your species folder inside `before_salsa` directory (`~Share/Data/<your_species>/salsa/before_salsa`). 
+The pre-scaffolding is a file that ends with \*.pretext and it is located in your species folder inside `before_salsa` directory (`~Share/Data/<your_species>/salsa/before_salsa`). Also, the assembly pre-scaffolding will be in the same folder and is called ref.fa. 
 
-The post-scaffolding will be in the `out.break.salsa` directory (`~Share/Data/<your_species>/salsa/out.break.salsa`) and it is a file that ends in \*.hic.
+The post-scaffolding will be in the `out.break.salsa` directory (`~Share/Data/<your_species>/salsa/out.break.salsa`) and it is a file that ends in \*.hic. The scaffolded assembly file is in the same folder and is called scaffolds_FINAL.fasta. Recapping: the .hic file and the scaffolds_FINAL.fasta are the same thing: just that the .hic file is the heatmap imaging representation of the multifasta file scaffolds_FINAL.fasta.
 
 Once you download the two files to your local computer, you are going to use the [pretextView](https://github.com/wtsi-hpag/PretextView/releases/tag/0.1.3) program to open the pre-scaffolding (\*.pretext) heatmap, and the [JuiceBox](https://www.aidenlab.org/juicebox/) program to open the post-scaffolding (\*.hic) heatmap.   
 
