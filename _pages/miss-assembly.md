@@ -3,3 +3,39 @@ title: "Hands On"
 layout: archive
 permalink: /miss-assembly/
 ---  
+
+
+Ok, so you have learned a lot of things today aabout Hi-C scaffolding, polishing and genome curation. I want to show you a very likely example of a miss-assembly that we can identify in the Hi-C HeatMap.
+
+The name of the guy you are going to be working with is *Eristalis pertinax* (who am I? Check me online and get a picture of me). In the folder ~/Share/Data/Eristalis_pertinax you are going to find:
+
+- salsa_scaffolds.hic - ths is the Hi-C HeatMap you are going to load to JuiceBox
+- scaffold_1.fa       - this is the fasta sequence for scaffold_1 that we are going to look at IGV
+- scaffold_1.fa.fai   - This is the index of scaffold_1
+- scaffold_1.bam      - This is the bam file of scaffold_1, it contains information of PacBio reads mapped back to it
+- scaffold_1.bai     - This is the bam index for the file above
+
+
+
+You don't have the multifasta file that represents the genome that you will look in the HeatMap, but I can give you the statistics for it:
+
+scaff/out.break.salsa/scaffolds_FINAL.fasta
+A = 138801847 (28.8%), C = 102274073 (21.2%), G = 102205971 (21.2%), T = 138718687 (28.8%), N = 95500 (0.0%), CpG = 40188878 (8.3%)
+SCAFFOLD        sum = 482096078, n = 381, ave = 1265344.03674541, largest = 107625594, smallest = 9583
+SCAFFOLD        N50 = 27154744, L50 = 5
+SCAFFOLD        N60 = 10826200, L60 = 9
+SCAFFOLD        N70 = 4796154, L70 = 16
+SCAFFOLD        N80 = 2626642, L80 = 30
+SCAFFOLD        N90 = 1036242, L90 = 56
+SCAFFOLD        N100 = 9583, L100 = 381
+CONTIG  sum = 482000578, n = 572, ave = 842658.353146853, largest = 21349867, smallest = 9583
+CONTIG  N50 = 3749504, L50 = 29
+CONTIG  N60 = 2545817, L60 = 46
+CONTIG  N70 = 1729515, L70 = 68
+CONTIG  N80 = 958119, L80 = 108
+CONTIG  N90 = 437266, L90 = 182
+CONTIG  N100 = 9583, L100 = 572
+GAP     sum = 95500, n = 191, ave = 500, largest = 500, smallest = 500
+
+
+Now, I want you to open 
