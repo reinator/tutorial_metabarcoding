@@ -19,6 +19,7 @@ The name of the guy you are going to be working with is *Eristalis pertinax* (wh
 
 You don't have the multifasta file that represents the genome that you will look in the HeatMap, but I can give you the statistics for it:
 
+```console 
 scaff/out.break.salsa/scaffolds_FINAL.fasta
 A = 138801847 (28.8%), C = 102274073 (21.2%), G = 102205971 (21.2%), T = 138718687 (28.8%), N = 95500 (0.0%), CpG = 40188878 (8.3%)
 SCAFFOLD        sum = 482096078, n = 381, ave = 1265344.03674541, largest = 107625594, smallest = 9583
@@ -36,6 +37,6 @@ CONTIG  N80 = 958119, L80 = 108
 CONTIG  N90 = 437266, L90 = 182
 CONTIG  N100 = 9583, L100 = 572
 GAP     sum = 95500, n = 191, ave = 500, largest = 500, smallest = 500
-
+```
 
 Now, I want you to open 
