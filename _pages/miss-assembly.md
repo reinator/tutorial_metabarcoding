@@ -39,4 +39,19 @@ CONTIG  N100 = 9583, L100 = 572
 GAP     sum = 95500, n = 191, ave = 500, largest = 500, smallest = 500
 ```
 
-Now, I want you to open 
+Now, I want you to open the Hi-C heat map on Juice-Box and have a look.
+
+The whole plot is not amazing. But do you think you see a miss-assembly on scaffold 1?
+
+Well, I have taken the PacBio reads, have mapped then back to all your genome and have extracted scaffold_1 for you, so you can have a look at it on IGV.
+
+Have all scaffold files (.fa, fa.fai, .bam, .bai) in the same folder. Then open IGV and load the .fa in 'Genomes' and and the .bam in 'File'.
+Have a at the mapping. Zoom in to see reads mapped. Play a little. 
+
+Then, go to this position: 
+
+scaffold_1:56,972,207-56,977,386
+
+Do you see a gap in Pacbio coverage?
+
+Aha! If we have a weird looking Hi-C HeatMap and NO reads cross that regiong, I bet you that this is a miss-assembly!! Don't you? =)
