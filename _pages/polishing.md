@@ -9,28 +9,25 @@ permalink: /polishing/
 Ok, so today you learned about the need to polish genomes, specially if they are produced with PacBio CLR reads, that can have up to 15% of errors. Now, you are going to investigate the impacts of polishing on the *H. fuciforms* genome, that was assembled with PacBio CLR reads.  
 
 
-For such, you are going to compare the (i) general statistics, (ii) BUSCO, (iii) merqury completeness and QV and the (iv) Hi-C heatmap of *H. fuciforms* before polishing, after polishing and after manual curation done by the [GRIT](https://www.sanger.ac.uk/group/genome-reference-informatics-team/) Team at the Sanger Institute. All these results are inside `~/Share/Data/h_fuciforms/polishing`. Within this folder you are going to find the folders for pre-polishing, after-polishing and curation with all the results you need.
+For such, you are going to compare some statistics for *H. fuciforms* before polishing, after polishing and after manual curation done by the [GRIT](https://www.sanger.ac.uk/group/genome-reference-informatics-team/) Team at the Sanger Institute. The stats I want you to compare are: 
 
-The name of the *H. fuciforms* assemblies prior to polishing are:
-
-iHemFuc1.PB.asm1.purge2.scaff1_HiC.fasta - this is the primary assembly
-
-purged.htigs.fa - this is the haplotigs assembly 
-
-The name of the *H. fuciforms* assemblies after polishing are as bellow, and the are inside the folder polishing/merqury_after_polishing
-
-iHemFuc1.PB.asm1.purge2.scaff2.polish3.fa - this is the primary
-
-iHemFuc1.PB.asm1.purge2.scaff2.polish3.haplotigs.fa - this is the haplotigs 
-
-
-The name of the *H. fuciforms* assemblies after manual curation is as bellow, and its inside the folder polishing/merquryq_after_manual_curation/
-
-
-iHemFuc1_1.20200728.curated_primary.fa - (we only manually curated the primary)
+i. Merqury completeness and QV  
+    * Those files are located in the `merqury_before_polishing`, `after_polishing` and `after_manual_curation` directories, at `~/Share/Data/h_fuciforms/polishing/`
+ii. general statistics  
+    * For that you will need to run the `asmstats` script for the FASTA (\*.fasta or \*.fa) files located at each of the three directories mentioned in the previous step (`merqury_before_polishing`, `after_polishing` and `after_manual_curation`)
+    * For before polishing, you should have two FASTAs:  
+        * iHemFuc1.PB.asm1.purge2.scaff1_HiC.fasta - this is the primary assembly 
+        * purged.htigs.fa - this is the haplotigs assembly  
+    * For after polishing, you should also have two FASTAs:  
+        * iHemFuc1.PB.asm1.purge2.scaff2.polish3.fa - this is the primary  
+        * iHemFuc1.PB.asm1.purge2.scaff2.polish3.haplotigs.fa - this is the haplotigs  
+    * Finally, for the manually curated, you should have only one FASTA file, because only the primary assembly has been curated:  
+        * iHemFuc1_1.20200728.curated_primary.fa
+iii. BUSCO  
+    * BUSCO's results can be found at `~/Share/Data/h_fuciforms/BUSCO`, in the folders `run_before_polishing.busco`, `run_after_polishing.busco` and `run_manually_curated.busco` 
 
 
-Look at all the results and answer:
+Not look at all the results and answer:
 
 1. What were the general statistics (number of scaffolds, total assembled size, N50) for pre, post polishing and after curation?
 
