@@ -11,19 +11,19 @@ Ok, so today you learned about the need to polish genomes, specially if they are
 
 For such, you are going to compare some statistics for *H. fuciforms* before polishing, after polishing and after manual curation done by the [GRIT](https://www.sanger.ac.uk/group/genome-reference-informatics-team/) Team at the Sanger Institute. The stats I want you to compare are: 
 
-i. Merqury completeness and QV  
+* Merqury completeness and QV    
     * Those files are located in the `merqury_before_polishing`, `after_polishing` and `after_manual_curation` directories, at `~/Share/Data/h_fuciforms/polishing/`
-ii. general statistics  
-    * For that you will need to run the `asmstats` script for the FASTA (\*.fasta or \*.fa) files located at each of the three directories mentioned in the previous step (`merqury_before_polishing`, `after_polishing` and `after_manual_curation`)
-    * For before polishing, you should have two FASTAs:  
-        * iHemFuc1.PB.asm1.purge2.scaff1_HiC.fasta - this is the primary assembly 
-        * purged.htigs.fa - this is the haplotigs assembly  
-    * For after polishing, you should also have two FASTAs:  
+* General statistics  
+    * For that you will need to run the `asmstats` script for the FASTA (\*.fasta or \*.fa) files located at each of the three directories mentioned in the previous step (`merqury_before_polishing`, `after_polishing` and `after_manual_curation`)  
+    * For before polishing, you should have two FASTAs:    
+        * iHemFuc1.PB.asm1.purge2.scaff1_HiC.fasta - this is the primary assembly   
+        * purged.htigs.fa - this is the haplotigs assembly    
+    * For after polishing, you should also have two FASTAs:    
         * iHemFuc1.PB.asm1.purge2.scaff2.polish3.fa - this is the primary  
         * iHemFuc1.PB.asm1.purge2.scaff2.polish3.haplotigs.fa - this is the haplotigs  
     * Finally, for the manually curated, you should have only one FASTA file, because only the primary assembly has been curated:  
         * iHemFuc1_1.20200728.curated_primary.fa
-iii. BUSCO  
+* BUSCO  
     * BUSCO's results can be found at `~/Share/Data/h_fuciforms/BUSCO`, in the folders `run_before_polishing.busco`, `run_after_polishing.busco` and `run_manually_curated.busco` 
 
 
