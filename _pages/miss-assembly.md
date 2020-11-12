@@ -51,7 +51,7 @@ Have a look at the mapping. Zoom in to see reads mapped. Play a little.
 
 Then, using the 'Go' search bar (like in the image below), go to the position: `scaffold_1:56,972,207-56,977,386`  
 
-![](/images/IGV_go_to_2.png)
+![](/images/IGV_go_to_3.png)
 
 Do you see a gap in the Pacbio coverage?
 
