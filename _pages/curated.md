@@ -42,11 +42,11 @@ It's time for you and your team to gather all the results and make a final prese
 
 Now, let's go to the scaffolding part. One note: in the official Darwin Tree of Life Pipeline, we have ran one round of Illumina polishing after purging the assembly and before running salsa on it. This is why maybe you are going to find a slightly different number of bases in the statistics of the assembly after purging, and just before salsa (which is file ref.fa).
 
-     6\. What is the primary genone statistics just before salsa scaffolding? How does the Hi-C heat map looks like?
+     6\. What is the primary genome statistics just before salsa scaffolding? How does the Hi-C heat map looks like?
 
-     7\. What is the primary genone statistics after salsa scaffolding? How does the Hi-C heat map looks like?
+     7\. What is the primary genome statistics after salsa scaffolding? How does the Hi-C heat map looks like?
 
-     8\. What is the primary genone statistics after manual curation? How does the Hi-C heat map looks like? Has BUSCO changed at all?
+     8\. What is the primary genome statistics after manual curation? How does the Hi-C heat map looks like? Has BUSCO changed at all?
 
      9\. What is the QV diference of the primary genome after purging and the version just before salsa scaffolding?
 
