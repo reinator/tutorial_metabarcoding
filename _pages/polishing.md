@@ -14,15 +14,18 @@ For such, you are going to compare the (i) general statistics, (ii) BUSCO, (iii)
 The name of the *H. fuciforms* assemblies prior to polishing are:
 
 iHemFuc1.PB.asm1.purge2.scaff1_HiC.fasta - this is the primary assembly
+
 purged.htigs.fa - this is the haplotigs assembly 
 
 The name of the *H. fuciforms* assemblies after polishing are as bellow, and the are inside the folder polishing/merqury_after_polishing
 
 iHemFuc1.PB.asm1.purge2.scaff2.polish3.fa - this is the primary
+
 iHemFuc1.PB.asm1.purge2.scaff2.polish3.haplotigs.fa - this is the haplotigs 
 
 
 The name of the *H. fuciforms* assemblies after manual curation is as bellow, and its inside the folder polishing/merquryq_after_manual_curation/
+
 
 iHemFuc1_1.20200728.curated_primary.fa - (we only manually curated the primary)
 
