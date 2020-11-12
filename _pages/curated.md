@@ -8,19 +8,19 @@ permalink: /curated/
 
 Right guys, so here we are. I don't know if you realize you have come a long way this week. You have learned:
 
-1. How to count and plot Kmers to understand genome composition (heterozygosity, genome size, repeat content)
+i) How to count and plot Kmers to understand genome composition (heterozygosity, genome size, repeat content)
 
-2. You have assembled your genome with 2 different softwares
+ii) You have assembled your genome with 2 different softwares
 
-3. You have learned about purging genomes to (i) separated haplotypes or (ii) exclude retained haplotypes
+iii) You have learned about purging genomes to (i) separated haplotypes or (ii) exclude retained haplotypes
 
-4. You have learned how to evaluate genome quality with (i) kmers (Merqury, (ii) mapping (samtools, IGV) , (iii) general statistics and (iv) busco
+iv) You have learned how to evaluate genome quality with (i) kmers (Merqury, (ii) mapping (samtools, IGV) , (iii) general statistics and (iv) busco
 
-5. You have learned how to scaffold genomes with Hi-C data and SALSA2
+v) You have learned how to scaffold genomes with Hi-C data and SALSA2
 
-6. You have heard of genome polishing and curation
+vi) You have heard of genome polishing and curation
 
-7. You have learned how to run stand alone BLAST
+vii) You have learned how to run stand alone BLAST
 
 Look at that? Thats is A LOT! WELL DONE! :clap: 
 
