@@ -36,6 +36,11 @@ First let's add the folder that contains `asmstats` script to our `PATH`:
 export PATH=$PATH:/home/ubuntu/softwares/scripts
 ```
 
+And make sure our conda environment is activated:  
+```  
+conda activate eukaryotic_genome_assembly  
+```
+
 Then copy the file from the genome after Hi-C scaffolding to your working directory:  
 ```bash  
 cp ~/Share/Data/<your_species>/salsa/out.break.salsa/scaffolds_FINAL.fasta .
