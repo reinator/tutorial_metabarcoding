@@ -19,7 +19,7 @@ run_pipeline.py -h
 See the help message? Nice! To run SALSA2 you need to copy 2 files to your working directory first. Both files will be inside your species folder, in a folder called `salsa` (`~/Share/Data/<your_species>/salsa`). The files are `ref.fa` and `ref.fa.fai`. Once you have copied the files over, run:
 
 ```console  
-run_pipeline.py -a ref.fa -l ref.fa.fai -b ~/Share/Data/<your_species>/merge.mkdup.bed -e GATC,GANTC -i 5 -p yes -o out
+run_pipeline.py -a ref.fa -l ref.fa.fai -b ~/Share/Data/<your_species>/salsa/merge.mkdup.bed -e GATC,GANTC -i 5 -p yes -o out
 ``` 
 
 Attention :exclamation:  
