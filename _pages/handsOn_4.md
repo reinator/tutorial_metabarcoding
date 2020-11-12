@@ -66,7 +66,7 @@ This will print to the screen the names of all your assembled contigs. Choose on
 ```
 
 Attention :exclamation:  
-Remember from our FASTA class: the contig ID will be everything that comes before the first whitespace in the description of the sequence. For instance, given a contig whose description is `>ContigX Some Other Info`, the contig ID will be just `ContigX`. 
+> Remember from our FASTA class: the contig ID will be everything that comes before the first whitespace in the description of the sequence. For instance, given a contig whose description is `>ContigX Some Other Info`, the contig ID will be just `ContigX`. 
 
 So for this example I’ll choose ‘Contig1’ (although it does **not** necessarily exist in your assembly file: choose any contig that does exist there). To create a text file that contains this ID we can use nano. We need a text file with the ID because the next script we are going to use to extract the contig needs it as an input. 
 
