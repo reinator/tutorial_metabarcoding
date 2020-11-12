@@ -6,9 +6,28 @@ permalink: /polishing/
 
 # Polishing and last checks
 
-Ok, so today you learned about the need of polishing genomes, specially if they are produced with PacBio CLR reads, that can have up to 15% of errors. Now, you are going to investigate the impacts of polishing on the *H. fuciforms* genome, that was assembled with PacBio CLR reads.  
+Ok, so today you learned about the need to polish genomes, specially if they are produced with PacBio CLR reads, that can have up to 15% of errors. Now, you are going to investigate the impacts of polishing on the *H. fuciforms* genome, that was assembled with PacBio CLR reads.  
 
-For such, you are going to compare the (i) general statistics, (ii) BUSCO, (iii) merqury completeness, qv and plots and the (iv) Hi-C heatmap of *H. fuciforms* before polishing, after polishing and after manual curation done by the [GRIT](https://www.sanger.ac.uk/group/genome-reference-informatics-team/) Team at the Sanger Institute. All these results are inside `~/Share/Data/H_fuciforms/polishing`. Within this folder you are going to find the folders for pre-polishing, after-polishing and curation with all the results you need. Look at all the results and answer:
+
+For such, you are going to compare the (i) general statistics, (ii) BUSCO, (iii) merqury completeness and QV and the (iv) Hi-C heatmap of *H. fuciforms* before polishing, after polishing and after manual curation done by the [GRIT](https://www.sanger.ac.uk/group/genome-reference-informatics-team/) Team at the Sanger Institute. All these results are inside `~/Share/Data/H_fuciforms/polishing`. Within this folder you are going to find the folders for pre-polishing, after-polishing and curation with all the results you need.
+
+The name of the *H. fuciforms* assemblies prior to polishing are:
+
+iHemFuc1.PB.asm1.purge2.scaff1_HiC.fasta - this is the primary assembly
+purged.htigs.fa - this is the haplotigs assembly 
+
+The name of the *H. fuciforms* assemblies after polishing are as bellow, and the are inside the folder polishing/merqury_after_polishing
+
+iHemFuc1.PB.asm1.purge2.scaff2.polish3.fa - this is the primary
+iHemFuc1.PB.asm1.purge2.scaff2.polish3.haplotigs.fa - this is the haplotigs 
+
+
+The name of the *H. fuciforms* assemblies after manual curation is as bellow, and its inside the folder polishing/merquryq_after_manual_curation/
+
+iHemFuc1_1.20200728.curated_primary.fa - (we only manually curated the primary)
+
+
+Look at all the results and answer:
 
 1. What were the general statistics (number of scaffolds, total assembled size, N50) for pre, post polishing and after curation?
 
