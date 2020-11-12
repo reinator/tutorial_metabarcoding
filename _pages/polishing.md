@@ -12,9 +12,9 @@ Ok, so today you learned about the need to polish genomes, specially if they are
 For such, you are going to compare some statistics for *H. fuciforms* before polishing, after polishing and after manual curation done by the [GRIT](https://www.sanger.ac.uk/group/genome-reference-informatics-team/) Team at the Sanger Institute. The stats I want you to compare are: 
 
 * Merqury completeness and QV    
-    * Those files are located in the `merqury_before_polishing`, `after_polishing` and `after_manual_curation` directories, at `~/Share/Data/h_fuciforms/polishing/`
+    * Those files are located in the `merqury_before_polishing`, `merqury_after_polishing` and `merqury_after_manual_curation` directories, at `~/Share/Data/h_fuciforms/polishing/`
 * General statistics  
-    * For that you will need to run the `asmstats` script for the FASTA (\*.fasta or \*.fa) files located at each of the three directories mentioned in the previous step (`merqury_before_polishing`, `after_polishing` and `after_manual_curation`)  
+    * For that you will need to run the `asmstats` script for the FASTA (\*.fasta or \*.fa) files located at each of the three merqury directories (`merqury_before_polishing`, `after_polishing` and `after_manual_curation`)  
     * For before polishing, you should have two FASTAs:    
         * iHemFuc1.PB.asm1.purge2.scaff1_HiC.fasta - this is the primary assembly   
         * purged.htigs.fa - this is the haplotigs assembly    
