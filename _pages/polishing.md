@@ -6,7 +6,7 @@ permalink: /polishing/
 
 # Polishing and last checks
 
-Ok, so today you learned about the necessity of polishing genomes, specially if they are produced with PacBio CLR reads, that can have up to 15% of errors. Now, you are going to investigate the impacts of polishing on the *H. fuciforms* genome, that was assembled with PacBio CLR reads.  
+Ok, so today you learned about the need of polishing genomes, specially if they are produced with PacBio CLR reads, that can have up to 15% of errors. Now, you are going to investigate the impacts of polishing on the *H. fuciforms* genome, that was assembled with PacBio CLR reads.  
 
 For such, you are going to compare the (i) general statistics, (ii) BUSCO, (iii) merqury completeness, qv and plots and the (iv) Hi-C heatmap of *H. fuciforms* before polishing, after polishing and after manual curation done by the [GRIT](https://www.sanger.ac.uk/group/genome-reference-informatics-team/) Team at the Sanger Institute. All these results are inside `~/Share/Data/H_fuciforms/polishing`. Within this folder you are going to find the folders for pre-polishing, after-polishing and curation with all the results you need. Look at all the results and answer:
 
