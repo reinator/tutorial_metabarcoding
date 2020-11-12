@@ -60,9 +60,10 @@ grep “>” <your_contigs.here>.fasta
 
 This will print to the screen the names of all your assembled contigs. Choose one and create a file with it's ID. Let’s say my grep result looks like this:
 
-\>Contig1
-
-\>Contig2
+```
+>Contig1
+>Contig2
+```
 
 Attention :exclamation:  
 Remember from our FASTA class: the contig ID will be everything that comes before the first whitespace in the description of the sequence. For instance, given a contig whose description is `>ContigX Some Other Info`, the contig ID will be just `ContigX`. 
