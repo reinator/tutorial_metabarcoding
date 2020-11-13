@@ -5,19 +5,19 @@ permalink: /miss-assembly/
 ---  
 
 
-Ok, so you have learned a lot of things today about Hi-C scaffolding, polishing and genome curation. I want to show you a very likely example of a miss-assembly that we can identify in the Hi-C HeatMap.
+Ok, so you have learned a lot of things yesterday about Hi-C scaffolding, polishing and (a bit on) genome curation. I want to show you a very likely example of a miss-assembly that we can identify in the Hi-C HeatMap.
 
 The name of the guy you are going to be working with is *Eristalis pertinax* (who am I? Check me online and get a picture of me). In the folder `~/Share/Data/Eristalis_pertinax` you are going to find:
 
-- salsa_scaffolds.hic - ths is the Hi-C HeatMap you are going to load to JuiceBox
-- scaffold_1.fa       - this is the fasta sequence for scaffold_1 that we are going to look at IGV
+- salsa_scaffolds.hic - ths is the Hi-C HeatMap you are going to load on JuiceBox
+- scaffold_1.fa       - this is the fasta sequence for scaffold_1 that you are going to look at in IGV
 - scaffold_1.fa.fai   - This is the index of scaffold_1
 - scaffold_1.bam      - This is the bam file of scaffold_1, it contains information of PacBio reads mapped back to it
 - scaffold_1.bai     - This is the bam index for the file above
 
 I want you to download all those files to your local machine.
 
-Notice that you don't have the multifasta file that represents the complete genome that you will look in the HeatMap, but I can give you the statistics for it:
+Notice that you don't have the multifasta file that represents the complete genome that you will be looking in JuiceBox, but I can give you the statistics for it:
 
 ```console 
 scaff/out.break.salsa/scaffolds_FINAL.fasta
@@ -39,7 +39,7 @@ CONTIG  N100 = 9583, L100 = 572
 GAP     sum = 95500, n = 191, ave = 500, largest = 500, smallest = 500
 ```
 
-Now, I want you to open the Hi-C heat map (`salsa_scaffolds.hic`) for the complete genome on Juice-Box and have a look.
+Now, I want you to open the Hi-C heat map (`salsa_scaffolds.hic`) for the complete genome on Juice-Box and have a look a it.
 
 The whole plot is not amazing. But do you think you see a miss-assembly on scaffold 1?
 
@@ -47,7 +47,7 @@ Well, I have taken the PacBio reads, mapped them back to the complete genome and
 
 Make sure you have all scaffold_1 files (\*.fa, \*fa.fai, \*.bam, \*.bai) in the same folder. Then open IGV and load the \*.fa in 'Genomes > Load Genome from File', and load the \*.bam in 'File > Load from File'.
 
-Have a look at the mapping. Zoom in to see reads mapped. Play a little. 
+Have a look at the mapping. Zoom in to see reads mapped. Play around IGV a little. 
 
 Then, using the 'Go' search bar (like in the image below), go to the position: `scaffold_1:56,972,207-56,977,386`  
 
@@ -55,4 +55,4 @@ Then, using the 'Go' search bar (like in the image below), go to the position: `
 
 Do you see a gap in the Pacbio coverage?
 
-Aha! If we have a weird looking Hi-C HeatMap and NO reads cross that regiong, I bet you that this is a miss-assembly!! Don't you? :wink:
+Aha! If you have a weird looking Hi-C HeatMap and NO reads crossing that regiong, I bet you that this is a miss-assembly!! Don't you? :wink:
