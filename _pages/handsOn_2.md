@@ -39,7 +39,6 @@ This will print you all the parameters that one can use to run canu. So have a l
 cd hicanu
 ln -s Data/<species>.fasta
 canu -d <species_subset> -p <species_id> genomeSize=16000 -pacbio-hifi <species>.fasta useGrid=false
-
 ```  
   
 ### Attention :grey_exclamation: 
@@ -54,7 +53,6 @@ In a second tab, let’s change to the hifiasm folder and copy our data there:
 ```console  
 cd hifiasm
 cp Data/<species>.fasta .
-
 ```
 
 Note: because we have a small dataset, you can copy the reads file to different folders. But if you had a large file, it would be better to create a [symbolic link](https://kb.iu.edu/d/abbe) or give the assemblers the whole PATH to the files.
@@ -64,14 +62,12 @@ Now let’s call hifiasm and have a look at the parameters it prints:
 
 ```console  
 hifiasm
-
 ```
 And this is the line you will run:
 
 
 ```console  
-hifiasm -t1 -o <species>.hifiasm <species.fasta>
-
+hifiasm -f0 -t 1 -o <species>.hifiasm <species.fasta>
 ```
 
 Let’s wait a few minutes for both assemblers to run.
@@ -97,7 +93,6 @@ Among the results hifiasm produce, you will find the **.p_ctg.gfa** file. This i
 
 ```console  
 gfa2fa *.p_ctg.gfa > p_ctg.fa
-
 ```
 
 Right. So now, what to do with the assembly file?
@@ -105,7 +100,6 @@ Well, first you should have a look at the statistics for this assembly. Let’s 
 
 ```console  
 asmstats p_ctg.fa > p_ctg.fa.stats
-
 ```
 
 2-) Hicanu
@@ -116,15 +110,12 @@ Now, let’s move to the hicanu folder and let’s have a look at the results.
 ```console  
 pwd
 ls -ltrh
-
 ```
 
 Differently than Hifiasm, Hicanu is going to give you a fasta file at the end. It’s called * *.contigs.fasta.* So, go on and generate the statistics for this result:
 
 ```console  
-
 asmstats *.contigs.fasta > *.contigs.fasta.stats
-
 ```
 
 ## WELL DONE!
