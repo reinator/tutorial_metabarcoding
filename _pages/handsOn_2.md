@@ -37,7 +37,7 @@ This will print you all the parameters that one can use to run canu. So have a l
 
 ```console  
 cd hicanu
-cp Data/<species>.fasta .
+ln -s Data/<species>.fasta
 canu -d <species_subset> -p <species_id> genomeSize=16000 -pacbio-hifi <species>.fasta useGrid=false
 
 ```  
