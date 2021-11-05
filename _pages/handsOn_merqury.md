@@ -44,7 +44,10 @@ merqury.sh <your_species>.21.meryl <your_species>.hicanu.total.contigs.fasta out
 
 Great!!
 
-This will take a while to run, so we will go back to the wider group, run another Hands On first, and then you will come back here to finish analysing your merqury outputs.
+This will take a while to run. During this time, we 
+
+
+so we will go back to the wider group, run another Hands On first, and then you will come back here to finish analysing your merqury outputs.
 
 .... Go back to the group! :) Say "Merqury is running for me!!"
 
