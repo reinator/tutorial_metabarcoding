@@ -8,7 +8,7 @@ permalink: /handsOn_merqury/
 
 Ok, today you leanerd about Purge Dups and purging assemblies. You also learned that Hicanu outputs an assembly that is the double of the expected haploid genome size, and that you have to use a tool such as Purge Dups to separate the haplotypes of the assembly. Later, you learned how to evaluate assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads kmers, such as Illumina or Hifi. Now you are going to run merqury to evaluate assemblies for your species!
 
-All right, earlier today you have assembled a subset of reads for your species, but you have generated statistics for a total-assembly run I have generated previously. This total assembly is the file you are going to work on: the total assembly of Hicanu for your species, this is called  <your_species>.hicanu.total.contigs.fasta inside <your_species>/assembly/hicanu.total/. So I would like you to create a folder called merqury_hicanu_eval and copy or sym link your \*.hicanu.total.contigs.fasta there. Such as:
+All right, earlier today you have assembled a subset of reads for your species, but you have generated statistics for a total-assembly run I have generated previously. This total assembly is the file you are going to work on: the total assembly of Hicanu for your species, this is called  <your_species>.hicanu.total.contigs.fasta inside <your_species>/assembly/hicanu.total/. So I would like you to create a folder called merqury_hicanu_eval and  sym link your \*.hicanu.total.contigs.fasta there. Such as:
 
 ```console  
 mkdir merqury_hicanu_eval
@@ -20,7 +20,7 @@ PS: Remember to replace `<your_species>` with the ID of your species! :)
 Right, so in order to run merqury, you need a meryl datase of the reads you want to compare kmers with the kmers in your assembly. In our case, I have created meryl databases for 10X reads (illumina linked-reads) for your species, and you just need to symlink the meryl db folder to your execution folder. So you do:
 
 ```console  
-ln -s ~/Share/Data/<your_species>/merqury/OUTPUT.21.meryl merqury_hicanu_eval
+ln -s ~/Share/Data/<your_species>/merqury/<species_ID>.10X.21.meryl merqury_hicanu_eval
 ```  
 
 
@@ -39,7 +39,7 @@ merqury.sh
 The help message should show you that in order to run merqury, you need (i) the meryl database (ii) your assembly (one or two, if you have primary and haplotigs. In our case its only one) and (iii) an output name. So inside your merqury_hicanu_eval directory, you will do:
 
 ```console  
-merqury.sh OUTPUT.21.meryl <your_species>.hicanu.total.contigs.fasta outHicanu
+merqury.sh <your_species>.21.meryl <your_species>.hicanu.total.contigs.fasta outHicanu
 ```  
 
 Great!!
