@@ -24,26 +24,39 @@ mkdir hicanu
 mkdir hifiasm
 ```  
 
-Now let’s change to the hicanu folder, let’s copy our data there and run our assembly. 
+Make sure the conda environment is activated:
+
+```console
+conda activate eukaryotic_genome_assembly
+```
+
+Now let’s change to the hicanu folder and create a symlink to the canu script:
+
+```console
+cd hicanu
+ln -s /home/ubuntu/softwares/canu-2.2/bin/canu
+```
+
+let’s copy our data there and run our assembly. 
 But… before you run these 3 steps, let’s just call canu in your command line:
 
+Once you create the symbolic link, test if you can call canu:
 
 ```console  
-canu
+./canu
 ```  
 
 This will print you all the parameters that one can use to run canu. So have a look at the parameters in your screen and compare with the ones below on the command you will run:
 
 
 ```console  
-cd hicanu
-ln -s Data/<species>.fasta
-canu -d <species_subset> -p <species_id> genomeSize=16000 -pacbio-hifi <species>.fasta useGrid=false
+ln -s ~/Share/<species_id>_data/<species_id>.600.fasta
+./canu -d <species_subset> -p <species_id> genomeSize=16000 -pacbio-hifi <species_id>.fasta useGrid=false corThreads=2
 ```  
   
 ### Attention :grey_exclamation: 
 
-For the copy line you need to give the whole path to the ‘Data’ folder. I just wrote *Data/\<species>\.fasta* to make it short. If you are unsure about the whole PATH to 'data', go back to ‘data’ and run **pwd** on your commandline. This will print you the whole path for the folder you are currently at. Then copy this PATH and go back to the folder ‘hicanu’. And now type your command: *cp whole_path_of_data/\<species>\.fasta .* This line basically means: I’m copying the \<species>\.fasta file all the way from the data folder to here (here is represented by the dot).
+Remember whenever you see `<>` it means you should replace it with some information. For instance, <species_id> should be replaced by the ID of your species. For *Notodonta dromedarius* that would be ilNotDrom1. In that case, `<species_id>_data` should be replaced by `ilNotDrom1_data` 
 
 
 Right, so let’s wait for Hicanu to run. While we do that, let’s put hifiasm to run!
