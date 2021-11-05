@@ -44,17 +44,21 @@ merqury.sh <your_species>.21.meryl <your_species>.hicanu.total.contigs.fasta out
 
 Great!!
 
-This will take a while to run. During this time, we are going to gather results and evaluate the purged version of your species assembly. We don't have time to run Purge_dups here, but the most important thing is to learn how to interprete the results after purge_dups is done. So, we have generated 
+This will take a while to run. During this time, we are going to gather results and evaluate the purged version of your species Hicanu assembly. We don't have time to run Purge_dups here, but the most important thing is to learn how to interprete the results after purge_dups is done. So, Joao and I have generated for you the purged results, the merqury and the BUSCO results.
+
+1-) First thing you need to do is to copy (or symlink) the purged assemblies and generate the general statistics for the p and hitgs files. 
 
 
+```console  
+./asmstats purged.fa.gz > purged.fa.gz.stats
+./asmstats purged.htigs.fa.gz > purged.htigs.fa.gz.stats
 
-so we will go back to the wider group, run another Hands On first, and then you will come back here to finish analysing your merqury outputs.
+```  
 
-.... Go back to the group! :) Say "Merqury is running for me!!"
+GREAT!
 
-(...) One hour later...
+Now, I want you to take a look and take notes of the BUSCO results before and after purging for the Hicanu assembly.
 
-Hello back here!
 
 
 Right, once you are back here merqury should have finished. If merqury finished succesfully, you should have a variety of files produced in your folder: (i) different plot (.png) files, (ii) a <outname>.completeness.stats file and (iii) a <outputname>.qv file.  
