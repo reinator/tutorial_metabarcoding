@@ -44,7 +44,8 @@ merqury.sh <your_species>.21.meryl <your_species>.hicanu.total.contigs.fasta out
 
 Great!!
 
-This will take a while to run. During this time, we 
+This will take a while to run. During this time, we are going to gather results and evaluate the purged version of your species assembly. We don't have time to run Purge_dups here, but the most important thing is to learn how to interprete the results after purge_dups is done. So, we have generated 
+
 
 
 so we will go back to the wider group, run another Hands On first, and then you will come back here to finish analysing your merqury outputs.
