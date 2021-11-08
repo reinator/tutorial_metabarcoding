@@ -128,86 +128,19 @@ Right, now let's have a look at the merqury results. If the one your group is ru
   
   # NOW
   
-  I don't know if you realize, but you have for now (i) ran kmer analysis to understand the DNA composition of your reads, (ii) you have run two genome assemblers and you are learning how to (iii) interprete the BUSCO run results and how to run (iv) and interprete kmer assembly evaluation results with merqury! THIS IS A LOT FOR THREE DAYS! Really well done! Now its time to gather all of the results and answer the following questions with your team and later on we will go through them together as a group.
+  I don't know if you realised, but you have for now (i) ran kmer analyses to understand the DNA composition of your reads, (ii) you have ran two genome assemblers and you are learning how to (iii) interprete the BUSCO run results and how to run (iv) and interprete (v) kmer assembly evaluation results with merqury! THIS IS A LOT FOR THREE DAYS! Really well done! Now its time to gather all of the results and answer the following questions with your team and later on we will go through them together as a group.
+  
+  
+  a-) What has happened with the assembly general statistics after it was purged?
+  b-) Why the hicanu statistics before purging shows a larger than estimated genome size?
+  c-) After purging, what files purged and htigs mean?
+  d-) How is the BUSCO duplication before purging?
+  e-) How is the busco duplication in the purged assembly after purging? Why has it changed?
+  f-) What are all the QVs of the assemblies? Are they good QVs? 
+  h-) What a QV of 50 means?
   
   
   
-  
-  
-  
-  
-  
-  
+  Well done! Let's come back to the group all together now!
  
-     1\. in your hicanu total merqury evaluation, in the plot \*spectra-asm.st.png, point in the presentation: (i) where are the assembly erroneous kmers, (ii) what is the heterozygous peak, (iii) what is the homozygoys peak.
-
-     2\. Have a look at the completeness file and write down in your presentation the kmer completeness of this assembly. 
-
-     3\. Have a look at the .qv file and write down in your presentation what is the QV for this assembly.
-
-# Now
-
-Let's have a look at another merqury folder where I have ran a merqury evaluation for your species after I had ran purge_dups on it. This means you are going to have plot files for the purged primary assembly, as well as for the haplotigs assembly. The results files of this run should be in `~/Share/Data/<your_species>/merqury/merqury_purged`.
-
-Take your time and have a look at it all. Then dicuss with your team and answer in your presentation:
-
-     4\. Open the \*.fl.png files (you can also open the \*.st.png or \*ln.png - they are the same result in diferent types of plots) for the purged, the haplotigs and the total hicanu you have produced. What is the biggest difference between those three plots?
-
-     5\. Point on \*.fl.png for the purged and hapltoigs where the kmer errors are.
-
-     6\. Point on \*.fl.png for the purged and hapltoigs where the heterozygous peak is, and where the homozygous peak is?
-
-     7\. If you look at \*.fl.png you have generated for the total Hicanu output, in the heterozygous peak you don't see any kmers only present on the reads. On the other hand, if you look at \*.st.png for the purged results, the primary or the haplotigs, you see kmers present only on the reads and absent from the heterozygous peak. Why is that?
-
-     8\. Look at the completeness file for the purged run I have produced: why is the completeness there different from the one you have generated for total hicanu?
-
-     9\. Look at the .qv file for the purged run I have produced: why do you think the qvs are different from the one you have generated for the total hicanu?
-
-Finally, we have discussed that another way of evaluating assemblies is at looking at BUSCO runs for the assemblies. I have generated BUSCO rans for the total Hicanu output, the primary purged assembly and the haplotigs purged assembly. You will find the BUSCO result folders in `~/Share/Data/<your_species>/BUSCO/`. You don't need to copy the whole busco folders, but I want you to go inside each BUSCO run and analyse the short_output*.txt file for each and answer:
-
-     10\. Against which set of protein ortologs have I ran the BUSCO analysis? How many single copy ortholog genes were searched?
-
-     11\. What is the general statistics for the total Hicanu BUSCO ran?
-
-     12\. What is the general statistics for the total primary purged BUSCO ran?
-
-     13\. What is the general statistics for the total haplotigs purged Hicanu BUSCO ran?
-
-     14\. What is the biggest BUSCO difference between the total Hicanu run and the purged assembly?
-
-Discuss all of this with your colleagues and make your presentation.
-
-# Then
-
-Finally, now we are going to look into merqury outpus for *Hemaris fuciformis* CLR assembly with FALCON and FALCON-Unzip. Remember that we have discussed that - unlike Hicanu - Falcon and Falcon Unzip will produce straigh away a primary and an alternate assembly. The primary is the most contiguous haplotype, while the haplotigs are only the phased blocks that differ in the second haplotype of the diploid species. I have also produced a merqury evaluation for the purged Falcon/Falcon-Unzip assembly of *H. fuciformis* and BUSCO runs for the Falcon/Falcon Unzip output, as well as the purged outputs. You will find all the files in `~/Shared/Data/h_fuciformis/`.
-
-Look at all the files (take your time), discuss with your team and write down on your presentation:
-
-- First plot a Illumina kmer profile distribution for your species. I have prepared the .histo file for you (OUTPUT.21.histo). Remember that with PacBio CLR reads you cannot plot kmer distributions because of the high error rate of the reads. But we have some linked chromium 10X reads (illumina) and I have produced the histogram file from them. What is the expected genome size, heterozygosity and repeat content? Analyse this plot and correlate it with the results you will look into in the next questions.
-
-Also remember: the merqury analysis was done comparing kmers in the CLR assemblies with kmers in the Illumina reads (Chromium 10X).
-
-Generate the asmstats for the Falcon/Falcon Unzip output assemblies. Primary and haplotigs are within the merqury_falcon folder and are called cns_p_ctg.fasta cns_h_ctg.fasta. Also, generate the asmstats for both after purging. The assemblies are within merqury_purged and are called purged.fa and purged.htigs.fa. Compare the statistics of the assemblies: what happened after purging? Present these results together with the following questions.
-
-     15\. in the Falcon and Falcon Unzip merqury evaluation, look at the cns.p and cns.h \*.st.png plots. Point in the presentation: (i) where are the assembly erroneous kmers, (ii) what is the heterozygous peak, (iii) what is the homozygoys peak.
-
-     16\. Have a look at the completeness file and write down in your presentation the kmer completness of the primary and alternate assemblies.
-
-     17\. Have a look at the .qv file and write down in your presentation what is the QV for the primary and alternate assemblies.
-
-Now, open the merqury run for the purged versions of *H. fuciformis* and answer the same questions as above.
-
-Then, have a look at the BUSCO results for the Falcon and Falcon Unzip and the purging results and answer the same questions 10, 11, 12, 13 and 14 comparing the Falcon/Falcon Unzip BUSCO run with the purged BUSCO run.
-
-## Finally
-
-Now, I would like you to evaluate the difference in the merqury results for the Hicanu purged run for your species, and for the merqury run for the purged *H. fuciforms*. Of course they are different species, and therefore results will be different. But there is more. Evaluate kmer completeness, QVs, erroneous kmer levels, BUSCO outpus and answer:
-
-     18\. Which assemblies seem to be better taking into consideration the different metrics? Explain.
-
-     19\. Why error rates, QVs and completeness vary between these species assemblies?
-
-
-# Well done.
-
-You've got to the end of your 'Purging and assembly evaluation' Hands On. Now go back to the wider group with your presentation and let's discuss all the results together. 
+  
