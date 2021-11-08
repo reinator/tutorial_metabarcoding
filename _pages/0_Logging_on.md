@@ -65,43 +65,14 @@ If you are logging in and copying from a cluster regularly, it is sometimes good
 
 #### Logging on
 
-If you are using a Windows machine, you will need to log on using [PuTTY](https://www.putty.org/) since there is no native `ssh` client. PuTTY does not natively support the private key format (.pem) needed to login to our Amazon cloud instance. You first need to convert the private key that we gave to you to a key that PuTTY can read. PuTTY has a tool named PuTTYgen, which can convert keys to the required PuTTY format (.ppk). When you installed PuTTY, it will also have installed PuTTYgen.
+If you are using a Windows machine, you will need to log on using [MobaXterm](http://mobaxterm.mobatek.net) since there is no native `ssh` client. After installing it, open MobaXterm and:
 
-First, start PuTTYgen (for example, from the Start menu, choose All Programs > PuTTY > PuTTYgen). Then select RSA and click on Load:
+1. Start a new SSH terminal (1&2).
+2. Add the host address (3) - which is the daily IP address - and your username (4) 
+3. On advanced SSH settings, select "Use private key" and add the downloaded pem file (5)
+4. After adding the previous informations, press "OK" to connect to the server.
 
-![](/images/putty/fig1.png)
-
-In the new window that pops up, Change "PuTTY Private Key Files" to "All Files" to allow you to find your pem file.
-
-![](/images/putty/fig2.png)
-
-Then save your key and click on YES to dismiss the Warning as shown below.
-
-![](/images/putty/fig3.png)
-
-Great, now your key file is ready and we can start Putty. In Putty, enter your user name and the IP address in the format \<user_name\>@\<IP adress\>. Make sure that 22 is given as Port and that SSH is selected.
-
-![](/images/putty/fig4.png)
-
-Next, on the menu on the left, expand the "SSH" panel by clicking on the + and select "Auth". Then, select your new putty format key file (.ppk) with Browse. Do NOT click on Open yet.
-
-![](/images/putty/fig5.png)
-
-To make sure that you will not get logged out if you are inactive for a while, you can configure PuTTY to automatically send 'keepalive' signals at regular intervals to keep the session active. Click on Connection, then insert 180 to send keepalive signals every 3 minutes. Do NOT click on Open yet.
-
-![](/images/putty/fig6.png)
-
-To avoid having to change the settings each time you log in, you can save the PuTTY session. Click on Session to get back to the basic options window. Once you are happy with all settings, give the session a name and click Save. Now you are ready to start the session with "Open". The first time PuTTY will display a security alert dialog box that asks whether you trust the host you are connecting to. Click yes.
-
-![](/images/putty/fig7.png)
-
-When you log in the next time, you can just click on the saved session and click load. If the IP address changed in the mean time (e.g. because we stopped the Amazon instance over night), you will need to replace the IP address by the new one. I would then recommend to Save the changed settings. Then simply click Open to start the session.
-
-![](/images/putty/fig8.png)
-
-If the IP address did not change and you just want to login again, you can also right-click on the putty symbol in the taskbar (provided that you have pinned it to the taskbar) and select the session.
-
-![](/images/putty/fig9.png)
+![](/images/mobaxterm_tutorial.PNG)
 
 #### Downloading and uploading files with Filezilla
 
