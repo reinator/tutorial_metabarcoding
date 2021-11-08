@@ -68,7 +68,7 @@ If you are logging in and copying from a cluster regularly, it is sometimes good
 If you are using a Windows machine, you will need to log on using [MobaXterm](http://mobaxterm.mobatek.net) since there is no native `ssh` client. After installing it, open MobaXterm and:
 
 1. Start a new SSH terminal (1&2).
-2. Add the host address (3) - which is the daily IP address - and your username (4) 
+2. Add the host address (3) - which is the daily IP address - and your username (4) - e.g. `user2`
 3. On advanced SSH settings, select "Use private key" and add the downloaded pem file (5)
 4. After adding the previous informations, press "OK" to connect to the server.
 
