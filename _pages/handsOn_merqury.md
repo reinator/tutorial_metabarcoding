@@ -62,20 +62,23 @@ Great!
 Jao, uma vez que as pastas do BUSCO estao copiadas, colocar aqui o caminha e um less 
 
 
-Right, now let's have a look at the merqury results. If the one your group is running for thr Hicanu assembly is not done, we can start having a look at the purged results. Merqury is going to create a lot of different files:  (i) different plot (.png) files, (ii) a <outname>.completeness.stats file and (iii) a <outputname>.qv file.  
+Right, now let's have a look at the merqury results. If the one your group is running for the Hicanu assembly is not done yet, we can start having a look at the purged results. Merqury is going to create a lot of different files:  (i) different plot (.png) files, (ii) a <outname>.completeness.stats file and (iii) a <outputname>.qv file.  
   
   
   The merqury results for the purged assembleis are here:
   
   
+  
   joao.....
   
   
-
-
-
-
-Right, once you are back here merqury should have finished. If merqury finished succesfully, you should have a variety of files produced in your folder: (i) different plot (.png) files, (ii) a <outname>.completeness.stats file and (iii) a <outputname>.qv file.  
+  Attention!
+  For the plot files, you will have 3 types: st (stacked), ln (line) and ln (filled). For each spectra these three graphs will represent the same data, the just present a different way to plot the data.
+  
+ I recommned oppening the folder, taking a dep breath and having a look at the manual here: https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation
+  
+  
+  
 
 I want you to analyse all these files and discuss with your partners. We have seen the theory of merqury kmer analysis in our class today. But it can be a lot to take at the first time. So, in order to investigate your results and answer the exercise questions, have a look here on points 1, 2 and 3 of the reference free QV estimation https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation.
   
