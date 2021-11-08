@@ -72,19 +72,33 @@ Right, now let's have a look at the merqury results. If the one your group is ru
   joao.....
   
   
-  Attention!
-  For the plot files, you will have 3 types: st (stacked), ln (line) and ln (filled). For each spectra these three graphs will represent the same data, the just present a different way to plot the data.
-  
- I recommned oppening the folder, taking a dep breath and having a look at the manual here: https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation
+ #  Attention!
   
   
+  For the plot files, you will have 3 types: st (stacked), fn (line) and ln (filled). For each spectra these three graphs will represent the same data, they just present a different way to plot the data.
   
-
-I want you to analyse all these files and discuss with your partners. We have seen the theory of merqury kmer analysis in our class today. But it can be a lot to take at the first time. So, in order to investigate your results and answer the exercise questions, have a look here on points 1, 2 and 3 of the reference free QV estimation https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation.
+ I recommned oppening the merqury folder, taking a deep breath and having a look at the manual here: https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation
+  
+  What you need to do in the purging merqury results is:
+  
+  3-) Gather the spetrac plots for the primary purged assembly. They will be called purged.out.purged.spectra-cn*.png 
+  4-) Gather the spetrac plots for the haplotigs purged assembly. It will be called purged.out.purged.htigs.spectra-cn*.png 
+  5-) Gather the completeness results for the run. The file is called completeness.stats
+  6-) Gather the QV results for the run. The file is called purged.out.qv
   
   
-Take your time and then produce a presentation with your team showing and explaning: 
  
+  By the time you finish gathering all of these results, its very likely that the merqury run for the Hicanu has finish. Please go and have a look at the same 3,4,5 and 6 for the total Hicnau run.
+  
+  Now that you have all the results organized, let's interprete them and discuss with your group while you make your collective presentation.
+  
+  - show the statistics for the total Hicanu assembly
+  - show the busco short summary for the total Hicanu assembly
+  - show the spectra plot for the total Hicanu assembly (one of the files st, ln or fn.
+  
+  
+  
+  
  
      1\. in your hicanu total merqury evaluation, in the plot \*spectra-asm.st.png, point in the presentation: (i) where are the assembly erroneous kmers, (ii) what is the heterozygous peak, (iii) what is the homozygoys peak.
 
