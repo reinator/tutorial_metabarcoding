@@ -132,11 +132,17 @@ Right, now let's have a look at the merqury results. If the one your group is ru
   
   
   a-) What has happened with the assembly general statistics after it was purged?
+  
   b-) Why the hicanu statistics before purging shows a larger than estimated genome size?
+  
   c-) After purging, what files purged and htigs mean?
+  
   d-) How is the BUSCO duplication before purging?
+  
   e-) How is the busco duplication in the purged assembly after purging? Why has it changed?
+  
   f-) What are all the QVs of the assemblies? Are they good QVs? 
+  
   h-) What a QV of 50 means?
   
   
