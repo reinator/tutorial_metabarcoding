@@ -55,9 +55,23 @@ This will take a while to run. During this time, we are going to gather results 
 
 ```  
 
-GREAT!
+Great!
 
-Now, I want you to take a look and take notes of the BUSCO results before and after purging for the Hicanu assembly.
+2-) Now, I want you to take a look and take notes of the BUSCO results before and after purging for the Hicanu assembly.
+
+Jao, uma vez que as pastas do BUSCO estao copiadas, colocar aqui o caminha e um less 
+
+
+Right, now let's have a look at the merqury results. If the one your group is running for thr Hicanu assembly is not done, we can start having a look at the purged results. Merqury is going to create a lot of different files:  (i) different plot (.png) files, (ii) a <outname>.completeness.stats file and (iii) a <outputname>.qv file.  
+  
+  
+  The merqury results for the purged assembleis are here:
+  
+  
+  joao.....
+  
+  
+
 
 
 
