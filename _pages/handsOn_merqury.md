@@ -77,6 +77,14 @@ Right, now let's have a look at the merqury results. If the one your group is ru
   
   For the plot files, you will have 3 types: st (stacked), fn (line) and ln (filled). For each spectra these three graphs will represent the same data, they just present a different way to plot the data.
   
+  
+  # Attention - number 2!
+  
+  Apart from having st, fn and ln, merqury is going to output 2 types of files, *asm* and *cn*. If the file contains *cn* its going to show you everything in terms of kmer counts, if it contains *asm* it is going to show you each kmer belonging to each assembly in the plot. Deep breath. You are going to get it! (Just takes time!).
+  
+  
+  
+  The *spectra* ones will show you only the kmers in that assembly. Example: 
  I recommned oppening the merqury folder, taking a deep breath and having a look at the manual here: https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation
   
   What you need to do in the purging merqury results is:
