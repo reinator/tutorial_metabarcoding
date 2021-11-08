@@ -77,17 +77,15 @@ Right, now let's have a look at the merqury results. If the one your group is ru
   
   For the plot files, you will have 3 types: st (stacked), fn (line) and ln (filled). For each spectra these three graphs will represent the same data, they just present a different way to plot the data.
   
+  I recommned oppening the merqury folder, taking a deep breath and having a look at the manual here: https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation
+  
   
   # Attention - number 2!
   
-  Apart from having st, fn and ln, merqury is going to output 2 types of files, *asm* and *cn*. If the file contains *cn* its going to show you everything in terms of kmer counts, if it contains *asm* it is going to show you each kmer belonging to each assembly in the plot. Deep breath. You are going to get it! (Just takes time!).
+  Apart from having st, fn and ln, merqury is going to output 2 types of files, *asm* and *cn*. If the file contains *cn* its going to show you everything in terms of kmer counts without accounting for which kmer is present in which assembly, if it contains *asm* it is going to show you each kmer belonging to each assembly in the plot. Deep breath. You are going to get it! (Just takes time!). Didn't understand, discuss this with your group on zoom!
+   
   
-  
-  
-  The *spectra* ones will show you only the kmers in that assembly. Example: 
- I recommned oppening the merqury folder, taking a deep breath and having a look at the manual here: https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation
-  
-  What you need to do in the purging merqury results is:
+  What you need to do with the purging merqury results is:
   
   3-) Gather the spetrac plots for the primary purged assembly. They will be called purged.out.purged.spectra-cn*.png 
   4-) Gather the spetrac plots for the haplotigs purged assembly. It will be called purged.out.purged.htigs.spectra-cn*.png 
@@ -96,13 +94,46 @@ Right, now let's have a look at the merqury results. If the one your group is ru
   
   
  
-  By the time you finish gathering all of these results, its very likely that the merqury run for the Hicanu has finish. Please go and have a look at the same 3,4,5 and 6 for the total Hicnau run.
+  By the time you finish gathering all of these results, its very likely that the merqury run for the Hicanu has finish. Please go and have a look at the same 3,4,5 and 6 questions for the total Hicnau run.
   
   Now that you have all the results organized, let's interprete them and discuss with your group while you make your collective presentation.
   
   - show the statistics for the total Hicanu assembly
   - show the busco short summary for the total Hicanu assembly
-  - show the spectra plot for the total Hicanu assembly (one of the files st, ln or fn.
+  - show the spectra plot for the total Hicanu assembly (one of the files st, ln or fn)
+  - show the completeness for the total assembly
+  - show the QV for the total assembly.
+  
+  Go and to the same for the primary purged assembly:
+  
+   - show the statistics for the purged assembly
+  - show the busco short summary for the purged assembly
+  - show the spectra plot for the purged assembly (one of the files st, ln or fn)
+  - show the completeness for the purged assembly
+  - show the QV for the purged assembly.
+  
+  
+  Go and to the same for the htigs purged assembly:
+  
+   - show the statistics for the purged.htigs assembly
+  - show the busco short summary for the purged.htigs assembly
+  - show the spectra plot for the purged.htigs assembly (one of the files st, ln or fn)
+  - show the completeness for the purged.htigs assembly
+  - show the QV for the purged.htigs assembly.
+  
+  
+  # Attention - number 3!
+  
+  For the purged run, the qv and completeness result for the purged and htigs assembly will be in the same files. Understand what each column of the files qv and completeness mean by reading the manual again:  https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation
+  
+  # NOW
+  
+  I don't know if you realize, but you have for now (i) ran kmer analysis to understand the DNA composition of your reads, (ii) you have run two genome assemblers and you are learning how to (iii) interprete the BUSCO run results and how to run (iv) and interprete kmer assembly evaluation results with merqury! THIS IS A LOT FOR THREE DAYS! Really well done! Now its time to gather all of the results and answer the following questions with your team and later on we will go through them together as a group.
+  
+  
+  
+  
+  
   
   
   
