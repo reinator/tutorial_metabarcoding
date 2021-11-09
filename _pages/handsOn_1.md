@@ -7,7 +7,7 @@ permalink: /handsOn_1/
 # Kmer analysis: running jellyfish <a name="where-are-we?"></a> 
 
 Right, so today you have heard about how to analyse kmer composition of your genome sequenced reads! Now you are going to put your 'Hands On' data and will, yourself, count and analyse kmers.
-You have to chose between the species: (i) *Vanessa atalanta*, (ii) *Pieris rapae* and (iii) *Notonda dromedarius* to work on until the end of the week. Once you have chosen it, create a folder where you will run your analysis. My suggestion would be to create a folder with your species name and inside it, a series of other folders to structure your analysis. For example:
+You have to chose between the species: (i) *Vanessa atalanta*, (ii) *Pieris rapae* and (iii) *Notonda dromedarius* to work on until the end of the week. Once you have chosen it, create a folder where you will run your analysis. My suggestion would be to create a folder with your species name and inside it, a series of other folders to structure your analyses. For example:
 
 v_atalanta/
 
