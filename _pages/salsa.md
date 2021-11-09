@@ -49,13 +49,17 @@ cp ~/Share/Data/<your_species>/salsa/out.break.salsa/scaffolds_FINAL.fasta .
 Now we can run `asmstats` for both the genome prior Hi-C scaffolding (`ref.fa`) and after Hi-C scaffolding (`scaffolds_FINAL.fasta`):
 
 ```console  
-asmstats ref.fa > ref.fa.stats
+asmstats <species_id>_hicanu.purged.polish.fa > <species_id>_hicanu.purged.polish.fa.stats
 asmstats scaffolds_FINAL.fasta > scaffolds_FINAL.fasta.stats
 ``` 
 
-Now I want you to download to your local machine the assembly Hi-C heatmaps for prior and after scaffolding. 
+Now I want you to download to your local machine the assembly Hi-C heatmaps for (i) prior and (ii) after scaffolding. 
 
-The pre-scaffolding is a file that ends with \*.pretext and it is located in your species folder inside `before_salsa` directory (`~/Share/Data/<your_species>/salsa/before_salsa`). Also, the assembly pre-scaffolding will be in the same folder and is called ref.fa. 
+1-) Opening the Hi-C heatmap at pretextview of your species contigs before they were scaffolded with Salsa2
+
+The pre-scaffolding is a file that ends with \*.pretext and it is located in your species folder inside `before_salsa` directory (`~/Share/Data/<your_species>/salsa/before_salsa`). Also, the assembly pre-scaffolding will be in the same folder and is called <species_id>_hicanu.purged.polish.fa. 
+
+2-) Opening the Hi-C heatmap with Juicebox of your species scaffolds after the contigs were scaffolded with Salsa2
 
 The post-scaffolding will be in the `out.break.salsa` directory (`~/Share/Data/<your_species>/salsa/out.break.salsa`) and it is a file that ends in \*.hic. The scaffolded assembly file is in the same folder and is called `scaffolds_FINAL.fasta`. Recapping: the .hic file and the `scaffolds_FINAL.fasta` are the same thing: just that the .hic file is the heatmap imaging representation of the multifasta file `scaffolds_FINAL.fasta`.
 
