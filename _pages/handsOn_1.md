@@ -170,7 +170,7 @@ Once the command finishes to run, have a look at the output:
 less <species>.total.fasta.stats
 ```
 
-Also: use this tutorial to plot your reads length distribution: [Plot reads](https://github.com/eukaryotic-genome-assembly/eukaryotic-genome-assembly.github.io/blob/master/_pages/handsOn_plotReadLength.md)
+Also: use this tutorial to plot your reads length distribution: [Plot reads](https://eukaryotic-genome-assembly.github.io/handsOn_plotReadLength/)
 
 You have now generated the kmer plot, reads statistics and reads plot distribution for your complete PacBio HiFi read set. Which conclusions can you now draw from these results?
 
