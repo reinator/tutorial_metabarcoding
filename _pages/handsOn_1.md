@@ -115,7 +115,11 @@ Note in the command above we have used the symbol “>” before the output. Thi
 
 Note that the input for your command **jellyfish histo** is the output from your previous command, that was **jellyfish count**. Now you have the necessary result to plot a histogram on genomescope and have a look at the distribution of your genome kmers. 
 
+
+
 # BUT STOP!
+
+# STOP STOP! 
 
 ...
 
@@ -134,9 +138,11 @@ Save the image of both versions of the plot - normal and log scale - somewhere i
 
 Cool, you have plotted the kmer distribution of the \<species\>.total.histo file, and genomescope has calculated for your (i) the estimated genome size, (ii) the heterozygosity and (iii) the percentage of repeats of your species genome. 
 
-The histogram you have just plotted is for a jellyfish count of the total PacBio HiFi reads sequenced to assemble your species. I have generated it for you because it takes time (but to generate it outside this course you would run the same commands you ran for the subsample set).
+The histogram you have just plotted is for a jellyfish count of the **total** PacBio HiFi reads sequenced to assemble your species. We have generated it for you because it takes time. However, when you are back to real life and need to run it for your sample, you will run the same commands ran for the subsample as you just did! =) Yeah!! o/
 
-Now, I would like to you generate statistics for the \*.total.fasta reads. I have a script for you to do that. It's called asmstats.
+#Now
+
+I would like to you generate the general statistics for the \*.total.fasta reads. I have a script for you to do that. It's called asmstats. 
 
 Before running asmstats, you need to add the directory where the script is located (`/home/ubuntu/softwares/scripts`) to your environment variable:  
 
@@ -175,12 +181,14 @@ b- What is the estimated heterozygosity?
 
 c- What is the estimated repeat content?
 
-d- Taking into consideration the estimated genome size, and the statistics of the total reads you have just generated, how much reads coverage you have to assemble this genome?
+d- Taking into consideration the estimated genome size, and the statistics of the total reads you have just generated, how much read coverage you have to assemble this genome?
 
 
-Now, 
+# Now,
 
-I want you to go back to the *.histo* file you have generated today, download it to your local machine and plot it on genomescope. Also, I want you to run asmstats on the fasta file (the 600 subset) you imputed to jellyfish. 
+
+
+I want you to go back to the *.histo* file you have generated today (for your subsample), download it to your local machine and plot it on genomescope. Also, I want you to run asmstats on the fasta file (the 600 subset) you imputed to jellyfish. 
 
 e- What genomescope tells you when you try to plot a kmer histogram for just a handful of sequences? 
 
