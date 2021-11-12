@@ -42,17 +42,17 @@ pages:
         url: /handsOn_1/
       - title: "Part 1 - Plot Reads Length"
         url: /handsOn_plotReadLength/        
-      - title: "Part 2 - Assembly"
+      - title: "Part 2 - Genome Assembly"
         url: /handsOn_2/
-      - title: "Part 3 - BLAST"
+      - title: "Extra - BLAST"
         url: /handsOn_3/
-      - title: "Part 4 - Mapping"
+      - title: "Extra - Mapping"
         url: /handsOn_4/
-      - title: "Part 5 - Merqury"
+      - title: "Part 3 - Purging and Merqury"
         url: /handsOn_merqury/
-      - title: "Part 6 - SALSA2 scaffolding"
+      - title: "Part 4 - SALSA2 scaffolding"
         url: /salsa/
-      - title: "Part 7 - Polishing and final checks"
+      - title: "Part 5 - Manual curation and final checks"
         url: /polishing/
       - title: "Part 8 - Curated assembly evaluation"
         url: /curated/
