@@ -32,7 +32,9 @@ Not look at all the results and answer:
 
 2. Has the QVs improved with polishing?
 
-3. Has BUSCO changed before and after-polishing?
+3. Putting one of each spectra plots for before and after polishing side by side in a slide, where can you see in the plot the evidence for the change in QV? (Look at kmers around 0).
+
+4. Has BUSCO changed before and after-polishing?
 
 Make one slide with all the information you have analysed here.
 
