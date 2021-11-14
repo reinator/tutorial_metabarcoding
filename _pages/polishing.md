@@ -6,7 +6,7 @@ permalink: /polishing/
 
 # Polishing and last checks
 
-Ok, so today you learned about the need to polish genomes, specially if they are produced with PacBio CLR reads, that can have up to 15% of errors. Now, you are going to investigate the impacts of polishing on the *H. fuciforms* genome, that was assembled with PacBio CLR reads.  
+Ok, we have talked a little about polishing and how much it is still vital if you are working with PacBio CLR reads, that can have up to 15% of errors. Now, you are going to investigate the impacts of polishing on the *H. fuciforms* genome, that was assembled with PacBio CLR reads.  
 
 
 For such, you are going to compare some statistics for *H. fuciforms* before polishing, after polishing and after manual curation done by the [GRIT](https://www.sanger.ac.uk/group/genome-reference-informatics-team/) Team at the Sanger Institute. The stats I want you to compare are: 
