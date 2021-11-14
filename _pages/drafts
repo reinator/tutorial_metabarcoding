@@ -90,3 +90,49 @@ You've got to the end of your 'Purging and assembly evaluation' Hands On. Now go
 # Right, 
 
 So during this week you have also evaluated a genome what was assembled with Pacbio CLR reads. We also have a curated version of this assembly, a merqury, a BUSCO run and a Hi-C heat map for it. Produce a presentation with all these results - including the final curated results - answering all the questions abobe also for *H. fuciforms*. You have a lot of these results already done from the previous hands on.
+
+
+
+polishing stuff
+
+
+# Finally
+
+Considering the curated assembly, I would like you to count the size of each scaffold. You can use my python script for such.
+
+First, copy both the script and the curated assembly to your working directory:  
+
+```bash  
+cp /home/ubuntu/softwares/scripts/fastaLength_1.py .  
+cp ~/Share/Data/h_fuciforms/polishing/merqury_after_manual_curation/iHemFuc1_1.20200728.curated_primary.fa .
+```
+
+Now run the script:
+
+```console  
+python fastaLength_1.py iHemFuc1_1.20200728.curated_primary.fa iHemFuc1_1.20200728.curated_primary.sizes
+```  
+
+This script is going to output a 2 columns file, where the first column indicates the scaffold name, and the second column indicates the total size of that scaffold in base pairs. Now, sort this file by the second column to present scaffolds from the largest to the smallest:
+
+```console  
+sort -n -k2 -r iHemFuc1_1.20200728.curated_primary.sizes > iHemFuc1_1.20200728.curated_primary.sizes.sorted
+```  
+
+You can try the command bellow to have a look at what you have just ran above (what do `-r`, `-k2` and `-n` mean?)
+```console  
+sort --help
+```
+
+
+Ok, so now that you have the \*sizes file sorted, I would like you to calculate how much of the base pairs in this assembly are in the expected karyotype of the species. How to do that?
+
+- search online to see if you find any research that has described the karyotype of *H. fuciforms*. If you find it, what is the expected karyotype?
+
+Now, sum up the bases in the first largest scaffolds that correspod to the karyotype:   
+
+     5\. How many assembled bases are inside the expected karyotype?      
+    
+     6\. How many bases were not asigned to chromosomes? 
+
+     7\. Do you have any large scaffolds outside the expected number of chromosomes?
