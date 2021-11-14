@@ -4,9 +4,9 @@ layout: archive
 permalink: /polishing/
 ---  
 
-# Polishing and last checks
+# Polishing CLR assembly
 
-Ok, we have talked a little about polishing and how much it is still vital if you are working with PacBio CLR reads, that can have up to 15% of errors. Now, you are going to investigate the impacts of polishing on the *H. fuciforms* genome, that was assembled with PacBio CLR reads.  
+Ok, we have talked a little about polishing and how much polishing is still vital if you are working with PacBio CLR reads, that can have up to 15% of errors. Now, you are going to investigate the impacts of polishing on the *H. fuciforms* genome, that was assembled with PacBio CLR reads as part of the [25 Genomes Project of the Sanger Institute](https://www.sanger.ac.uk/collaboration/25-genomes-for-25-years/)  
 
 
 For such, you are going to compare some statistics for *H. fuciforms* before polishing, after polishing and after manual curation done by the [GRIT](https://www.sanger.ac.uk/group/genome-reference-informatics-team/) Team at the Sanger Institute. The stats I want you to compare are: 
@@ -16,11 +16,11 @@ For such, you are going to compare some statistics for *H. fuciforms* before pol
 * General statistics  
     * For that you will need to run the `asmstats` script for the FASTA (\*.fasta or \*.fa) files located at each of the three merqury directories (`merqury_before_polishing`, `after_polishing` and `after_manual_curation`)  
     * For before polishing, you should have two FASTAs:    
-        * iHemFuc1.PB.asm1.purge2.scaff1_HiC.fasta - this is the primary assembly   
-        * purged.htigs.fa - this is the haplotigs assembly    
+        * iHemFuc1.primary.BF.fa.gz - this is the primary assembly before polishing (BF)
+        * iHemFuc1.htigs.BF.fa.gz - this is the haplotigs assembly before polishing (BF)
     * For after polishing, you should also have two FASTAs:    
-        * iHemFuc1.PB.asm1.purge2.scaff2.polish3.fa - this is the primary  
-        * iHemFuc1.PB.asm1.purge2.scaff2.polish3.haplotigs.fa - this is the haplotigs  
+        * iHemFuc1.prim.polished.fa.gz - this is the primary  
+        * iHemFuc1.htigs.polished.fa.gz - this is the haplotigs  
     * Finally, for the manually curated, you should have only one FASTA file, because only the primary assembly has been curated:  
         * iHemFuc1_1.20200728.curated_primary.fa
 * BUSCO  
