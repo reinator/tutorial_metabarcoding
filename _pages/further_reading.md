@@ -54,5 +54,5 @@ First human genome
 
 # Curation with Hi-C
 
-* Grit Team video on Pretext and Hi-C [Grit Hi-C](https://youtu.be/3IL2Q4f3k3I)
-* Hi-C for Dummies [here](https://docs.google.com/presentation/d/1g9Ubjjjpl4Vxvw-HSOlodJUDJBaicBbU/edit#slide=id.p1) 
+* Grit Team video on Pretext and Hi-C [https://youtu.be/3IL2Q4f3k3I](https://youtu.be/3IL2Q4f3k3I) 
+* Hi-C for Dummies [https://docs.google.com/presentation/d/1g9Ubjjjpl4Vxvw-HSOlodJUDJBaicBbU/edit#slide=id.p1]((https://docs.google.com/presentation/d/1g9Ubjjjpl4Vxvw-HSOlodJUDJBaicBbU/edit#slide=id.p1)
