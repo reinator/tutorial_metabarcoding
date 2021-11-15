@@ -51,3 +51,8 @@ First human genome
 * More on chromatin structure [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040307/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040307/)
 * 3C versus DNA FISH [https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1081-2](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1081-2)
 * FISH and Hi-C [https://www.nature.com/articles/s41467-019-10005-6](https://www.nature.com/articles/s41467-019-10005-6)
+
+# Curation with Hi-C
+
+* Grit Team video on Pretext and Hi-C [Grit Hi-C] (https://youtu.be/3IL2Q4f3k3I)
+* Hi-C for Dummies [here] (https://docs.google.com/presentation/d/1g9Ubjjjpl4Vxvw-HSOlodJUDJBaicBbU/edit#slide=id.p1) 
