@@ -8,7 +8,7 @@ main:
     url: https://eukaryotic-genome-assembly.github.io/logging_on/
 
 pages:
-  - title: "Linux Tutorial"
+  - title: "Unix Tutorial"
     children:
       - title: "- Basic concepts"
         url: /linux_basics/  
