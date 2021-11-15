@@ -24,23 +24,24 @@ mkdir kmers
 mkdir assembly
 ```  
  
-Great, now you need to go and copy the working data for your species. The data will be inside /home/ubuntu/Share/Data
+Great, now you need to go and copy the working data for your species. The data will be inside `/home/ubuntu/Share/`
 
 ```console  
-cd /home/ubuntu/Share/Data
+cd /home/ubuntu/Share/
 ls -ltr
 ```  
-Do you see the 3 species folders? If you do, then go inside your species folder and inside 'kmers' and copy the file that contains \*600.fasta on its name to your kmer folder. One example:
+Do you see the 3 species folders? If you do, then copy the file <species-code>.600.fasta (see bellow the Attention note, which explains about the species codes) to the `kmers` directory you have created and move back to the `kmers` directory. One example:
 
 
 ```console  
-cp /home/ubuntu/Share/Data/v_atalanta/kmers/ilVanAtal1.600.fasta <Path_to_your_folders>/v_atalanta/kmer/
+cp ilVanAtal1_data/ilVanAtal1.600.fasta <Path_to_your_folder>/v_atalanta/kmers/
+cd <Path_to_your_folder>/v_atalanta/kmers/ 
 ls -ltr
 ```  
 
 ### Attention :grey_exclamation: 
 
-Each species data will have a code on it's name representing each of the 4 species we will work on during this week, this is the code they have at the Darwin Tree of Life Project. The codes are:
+Each species data will have a code on its name representing each of the 4 species we will work on during this week, this is the code they have at the Darwin Tree of Life Project. The codes are:
 
 ilVanAtal1 - *Vanessa atalanta*
 
@@ -125,7 +126,7 @@ Note that the input for your command **jellyfish histo** is the output from your
 
 Before you plot this result, I want you to plot a genomescope plot for another file FIRST!! 
 
-Inside the 'assembly' folder for your species, you are going to find two files called:
+Inside the shared directory for your species (`~/Share/<species-Code>_data/`), you are going to find two files called:
 
 ```console  
 <species>.ccs.total.fasta.gz
@@ -138,16 +139,29 @@ Save the image of both versions of the plot - normal and log scale - somewhere i
 
 Cool, you have plotted the kmer distribution of the \<species\>.total.histo file, and genomescope has calculated for your (i) the estimated genome size, (ii) the heterozygosity and (iii) the percentage of repeats of your species genome. 
 
-The histogram you have just plotted is for a jellyfish count of the **total** PacBio HiFi reads sequenced to assemble your species. We have generated it for you because it takes time. However, when you are back to real life and need to run it for your sample, you will run the same commands ran for the subsample as you just did! =) Yeah!! o/
+The histogram you have just plotted is for a jellyfish count of the **total** PacBio HiFi reads sequenced to assemble your species. We have generated it for you because it takes time. However, when you are back to real life and need to run it for your sample, you will run the same commands ran for the subsample as you just did! =) Yeah!! 
 
-#Now
+## Now
 
-I would like to you generate the general statistics for the \*.total.fasta reads. I have a script for you to do that. It's called asmstats. 
+I would like to you generate some general statistics for the \*.ccs.total.fasta.gz reads. I have a script for you to do that. It's called `asmstats`. 
 
-Before running asmstats, you need to add the directory where the script is located (`/home/ubuntu/softwares/scripts`) to your environment variable:  
+Before running asmstats, move to your species directory and create a soft link for the \*.ccs.total.fasta.gz file:
+
+```bash
+cd ~/<species_folder>/
+ln -s ~/Share/<species-Code>_data/<species-Code>.ccs.total.fasta.gz
+``` 
+
+You can check if the soft link is working by print the first two lines of the file. If the first two lines are returned the link has been successfully created:
+
+```bash
+zcat <species-Code>.ccs.total.fasta.gz | head -2
+```
+ 
+Now you need to add the directory where the `asmstats` script is located (`~/Share/scripts/asmstats`) to your environment variable:  
 
 ```bash  
-export PATH=$PATH:/home/ubuntu/softwares/scripts
+export PATH=$PATH:~/Share/scripts/
 ```  
 
 Then check if the directory has been added to your environment variable:  
@@ -156,7 +170,7 @@ Then check if the directory has been added to your environment variable:
 echo $PATH
 ```
 
-If you can see the `/home/ubuntu/softwares/scripts` in the output of the previous command, you should be ready to run the asmstats script:
+If you can see the `/home/<username>/Share/scripts/` in the output of the previous command, you should be ready to run the asmstats script:
 
 ```console  
 asmstats <species>.ccs.total.fasta.gz > <species>.total.fasta.stats
