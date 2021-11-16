@@ -10,14 +10,14 @@ Right, so here we are! Let’s assemble the species you have chosen. You are goi
 
 Have a look at their websites:
 
-
 [Hicanu](https://github.com/marbl/canu/releases/tag/v2.1)
 
 [Hifiasm](https://github.com/chhylp123/hifiasm)
 
-Now let’s run the assembly on our subsamples:
+Now let’s run the assembly on our subsamples.
 
-Let’s create a folder for each assembly we are going to run, as both assemblers create a lot of different outputs:
+
+First, make sure you are in your species directory that you created at your home directory in our first hands-on tutorial (`~/<species_folder>/`, e.g. `~/v_atalanta/`). Then let’s create a directory for each assembly we are going to run, as both assemblers create a lot of different outputs:
 
 ```console  
 mkdir hicanu
@@ -37,17 +37,15 @@ cd hicanu
 ln -s /home/ubuntu/softwares/canu-2.2/bin/canu
 ```
 
-let’s copy our data there and run our assembly. 
-But… before you run these 3 steps, let’s just call canu in your command line:
-
 Once you create the symbolic link, test if you can call canu:
 
 ```console  
 ./canu
 ```  
 
-This will print you all the parameters that one can use to run canu. So have a look at the parameters in your screen and compare with the ones below on the command you will run:
+This will print you all the parameters that one can use to run canu. 
 
+Then, create a symlink to the subsample read dataset and run canu:
 
 ```console  
 ln -s ~/Share/<species_id>_data/<species_id>.600.fasta
@@ -58,7 +56,7 @@ The files created by `canu` will be saved on the `run1` directory. They will all
   
 ### Attention :grey_exclamation: 
 
-Remember whenever you see `<>` it means you should replace it with some information. For instance, <species_id> should be replaced by the ID of your species. For *Notodonta dromedarius* that would be ilNotDrom1. In that case, `<species_id>_data` should be replaced by `ilNotDrom1_data` 
+Remember whenever you see `<>` it means you should replace it with some information. For instance, <species_id> should be replaced by the ID of your species. For *Notodonta dromedarius* that would be ilNotDrom1. In that case, \`<species_id>_data\` should be replaced by `ilNotDrom1_data` 
 
 Right, so let’s wait for Hicanu to run. While we do that, let’s put hifiasm to run!
 
