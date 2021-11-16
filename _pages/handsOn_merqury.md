@@ -24,7 +24,7 @@ Right, so in order to run merqury, you need a meryl datase of the reads you want
 ln -s ~/Share/<species_id>_data/<species_ID>.10X.21.meryl/
 ```  
 
-Now, let's run merqury! For that, you need to start our conda enviroment (if not yet started):
+Now, let's run merqury! For that, you need to activate our conda enviroment (if not yet activated):
 
 ```console  
 conda activate eukaryotic_genome_assembly
@@ -46,7 +46,7 @@ Great!!
 
 This will take a while to run. During this time, we are going to gather results and evaluate the purged version of your species Hicanu assembly. We don't have time to run Purge_dups here, but the most important thing is to learn how to interpret the results after purge_dups is done. So, Joao and I have generated for you the purged results, the merqury and the BUSCO results.
 
-1-) First thing you need to do is to symlink the purged assemblies and generate the general statistics for the p and hitgs files. Let's create a new directory to save the purged results and create the symlinks from there:
+1-) First thing you need to do is to symlink the purged assemblies and calculate the general statistics for the primary and haplotigs files. Let's create a new directory to save the purged results and create the symlinks there:
 
 ```console  
 mkdir ~/<your_species>/purged/
@@ -72,7 +72,8 @@ before purging:
 less ~/Share/<species_id>_data/run_<species_id>.contigs.insecta.busco/short_summary_<species_id>.contigs.insecta.busco.txt
 ```
 
-after purging:
+after purging:  
+
 primary:
 ```
 less ~/Share/<species_id>_data/run_purged.insecta.busco/short_summary_purged.insecta.busco.txt
@@ -143,7 +144,7 @@ For the purged run, the qv and completeness result for the purged and htigs asse
   
   b-) Why the hicanu statistics before purging shows a larger than estimated genome size?
   
-  c-) After purging, what files purged and htigs mean?
+  c-) After purging, what the files purged and htigs mean?
   
   d-) How is the BUSCO duplication before purging?
   
