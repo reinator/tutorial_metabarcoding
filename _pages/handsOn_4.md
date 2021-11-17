@@ -137,20 +137,5 @@ samtools flagstat <contig_ID>.fasta.bam
 
 # GOOD!
 
-
-Now that you know all about how to open bam files on IGV, I would like you to open another contig. This is a bam file for the mitogenome of another Lepidoptera, the moth *H. fuciforms*. But it was produced with PacBio CLR data. Download to your local computer:
-
-* iHemFuc1_MT_16012020.fa
-
-* iHemFuc1_MT_16012020.fa.fai
-
-* iHemFuc1_MT.sorted.bam
-
-* iHemFuc1_MT.sorted.bam.bai
-
-Now open it on IGV.
-
-What do you see? What is the main difference in the IGV plots of your PacBio HiFi assembled contig and the CLR assembled contig?
-
-Let’s discuss it!
+Let’s discuss the results!
 
