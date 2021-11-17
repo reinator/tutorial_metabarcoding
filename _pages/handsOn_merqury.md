@@ -8,12 +8,12 @@ permalink: /handsOn_merqury/
 
 Ok, today you leanerd about Purge Dups and purging assemblies. You also learned that Hicanu outputs an assembly that is the double of the expected haploid genome size, and that you have to use a tool such as Purge Dups to separate the haplotypes of the assembly. Later, you learned how to evaluate assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads kmers, such as Illumina or Hifi. Now you are going to run merqury to evaluate assemblies for your species!
 
-All right, earlier today you have assembled a subset of reads for your species, but you have generated statistics for a total-assembly run I have generated previously. This total assembly is the file you are going to work on: the total assembly of Hicanu for your species, this is called  `<your_species>.hicanu.total.contigs.fasta.gz`. So I would like you to create a directory called `merqury_hicanu_eval`, move to there and create a symlink to the Hicanu assembly file: `<your_species>.hicanu.total.contigs.fasta.gz` there:
+All right, earlier today you have assembled a subset of reads for your species, but you have generated statistics for a total-assembly run I have generated previously. This total assembly is the file you are going to work on: the total assembly of Hicanu for your species, this is called  `<your_species>.hicanu.total.contigs.fasta.gz`. So I would like you to create a directory called `merqury_hicanu_eval` inside your home species directory (`~/<species_folder>/`), move to there and create a symlink to the Hicanu assembly file: `<your_species>.hicanu.total.contigs.fasta.gz` there:
 
 ```console  
-mkdir merqury_hicanu_eval
-cd merqury_hicanu_eval/
-ln -s ~/Share/<species_id>_data/ilVanAtal1.hicanu.total.contigs.fasta.gz
+mkdir ~/<species_folder>/merqury_hicanu_eval/
+cd ~/<species_folder>/merqury_hicanu_eval/
+ln -s ~/Share/<species_id>_data/<species_id>.hicanu.total.contigs.fasta.gz
 ```  
 
 PS: Remember to replace `<species_id>` with the ID of your species! :)
@@ -21,7 +21,7 @@ PS: Remember to replace `<species_id>` with the ID of your species! :)
 Right, so in order to run merqury, you need a meryl datase of the reads you want to compare kmers with the kmers in your assembly. In our case, I have created meryl databases for 10X reads (illumina linked-reads) for your species, and you just need to symlink the meryl db folder to your execution folder. So you do:
 
 ```console  
-ln -s ~/Share/<species_id>_data/<species_ID>.10X.21.meryl/
+ln -s ~/Share/<species_id>_data/<species_id>.10X.21.meryl/
 ```  
 
 Now, let's run merqury! For that, you need to activate our conda enviroment (if not yet activated):
@@ -39,12 +39,12 @@ merqury.sh
 The help message should show you that in order to run merqury, you need (i) the meryl database (ii) your assembly (one or two, if you have primary and haplotigs. In our case its only one) and (iii) an output name. So inside your merqury_hicanu_eval directory, you will do:
 
 ```console  
-merqury.sh <your_species>.21.meryl <your_species>.hicanu.total.contigs.fasta.gz outHicanu
+merqury.sh <your_species>.10X.21.meryl <your_species>.hicanu.total.contigs.fasta.gz outHicanu
 ```  
 
 Great!! 
 
-This will take a while to run. During this time, we are going to gather results and evaluate the purged version of your species Hicanu assembly. We don't have time to run Purge_dups here, but the most important thing is to learn how to interpret the results after purge_dups is done. So, Joao and I have generated for you the purged results, the merqury and the BUSCO results.
+This will take a while to run. During this time, we are going to gather results and evaluate the purged version of your species Hicanu assembly. We don't have time to run Purge_dups here, but the most important thing is to learn how to interpret the results after purge_dups is done. So, João and I have generated for you the purged results, the merqury and the BUSCO results.
 
 1-) First thing you need to do is to symlink the purged assemblies and calculate the general statistics for the primary and haplotigs files. Let's create a new directory to save the purged results and create the symlinks there:
 
@@ -135,7 +135,7 @@ Now that you have all the results organized, let's interpret them and discuss wi
   
 For the purged run, the qv and completeness result for the purged and htigs assembly will be in the same files. Understand what each column of the files qv and completeness mean by reading the manual again:  https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation
   
- # NOW
+ # Now  
   
   I don't know if you realised, but you have for now (i) ran kmer analyses to understand the DNA composition of your reads, (ii) you have ran two genome assemblers and you are learning how to (iii) interprete the BUSCO run results and how to run (iv) and interpret (v) kmer assembly evaluation results with merqury! THIS IS A LOT FOR THREE DAYS! Really well done! Now its time to gather all of the results and answer the following questions with your team and later on we will go through them together as a group.
   
