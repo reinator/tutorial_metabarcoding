@@ -12,22 +12,43 @@ So I have written a pipeline that can finish the assembly of your mitochondria f
 
 For more information on MitoHifi, have a look here: [https://github.com/marcelauliano/MitoHiFi](https://github.com/marcelauliano/MitoHiFi)
 
-## Running MitoHiFi with an example dataset
-
-Let's run MitoHiFi using an example dataset. The first thing you will need to do is activate the MitoHiFi conda environment, which has been set up in advance by your instructors and contains some software dependencies used by MitoHiF:
+## Setting up the environment for running MitoHiFi  
+At your home directory, create a new directory to work on MitoHiFi and move to it:  
 
 ```console  
+mkdir ~/mitohifi_test_01/
+cd ~/mitohifi_test_01/  
+```
+
+After that, activate the `mitohifi_env` conda environment created in advance by your instructors that contains some dependencies needed to run MitoHiFi:  
+
+```console 
 conda activate mitohifi_env  
 ```
 
-Now, create a directory that you'll use to run the MitoHiFi analysis (e.g. `mitohifi_test_01`) and move to it.
+## Finding a related mitogenome  
+To run MitoHiFi, first you need a close-related mitochondria in fasta and genbank format. We have a script that can help you find this input. Giving the name of the species you are assembling, the script is going to look for the closest mitochondria it can find on NCBI. You can give the parameter `-s` to the script if you would like to restrict your mitochondria search for species within your given genus, but this means the script can download partial mitochondrial sequences. Otherwise, without `-s`, the script is going to search for complete mitochondrias only and as close as possible to your species on interest.
 
-```console
-mkdir mitohifi_test_01
-cd mitohifi_test_01/
+Before running the script, you need to export MitoHiFi's directory to the PATH environment variable: 
+
+```console  
+export PATH=$PATH:/home/ubuntu/softwares/MitoHiFi/
 ```
 
-Add MitoFinder to your PATH (this is another software dependency used by MitoHiFi):
+Now you are ready to run the script to find the related mitogenome:
+
+```console  
+findMitoReference.py --species "Phalera bucephala" --email <your@email.for.ncbi.db.query> --outfolder /data/ --min_length 16000
+```
+
+Where `<your@email.for.ncbi.db.query>` should be replaced by an ncbi registered email (if you don't have one yet, please register)
+
+### `findMitoReference.py` output  
+This command will output a fasta (NC_016067.1.fasta) and a genbank (NC_016067.1.gb) file from the closely related mitogenome. When running MitoHiFi, you will use those files as input using, respectively, the `-f` and `-g` options. 
+
+## Running MitoHiFi with an example dataset
+
+Now let's run MitoHiFi using an example dataset. Before that, we need to add MitoFinder (which is used by MitoHiFi to do the annotation step) to your PATH:
 
 ```console
 export PATH=$PATH:/home/ubuntu/softwares/MitoFinder/  
@@ -39,13 +60,7 @@ export PATH=$PATH:/home/ubuntu/softwares/MitoFinder/
 mitofinder -h
 ```
 
-Add a symbolic link (symlink) to the MitoHiFi script in your current diretory:
-
-```console  
-ln -s /home/ubuntu/softwares/MitoHiFi/mitohifi_v2.py  
-```
-
-(Optional) You can test if mitohifi symlink has been successfully set by running the help command:  
+(Optional) You can test if mitohifi has been successfully set by running the help command:  
 
 ```console  
 python mitohifi_v2.py -h
