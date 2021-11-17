@@ -89,7 +89,7 @@ cp ~/Share/scripts/filterfasta.py .
 Then run it:
 
 ```console  
-python filterfasta.py -i contig_id <contigs_fasta> > <contig_ID>.fasta
+python filterfasta.py -i <contig_id> <contigs_fasta> > <contig_ID>.fasta
 ```  
 
 Right. Now give a less to the file `<contig_ID>.fasta`:
