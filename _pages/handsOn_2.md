@@ -56,7 +56,7 @@ The files created by `canu` will be saved on the `run1` directory. They will all
   
 ### Attention :grey_exclamation: 
 
-Remember whenever you see `<>` it means you should replace it with some information. For instance, <species_id> should be replaced by the ID of your species. For *Notodonta dromedarius* that would be ilNotDrom1. In that case, `&lt;species_id&gt;_data` should be replaced by `ilNotDrom1_data`. 
+Remember whenever you see `<>` it means you should replace it with some information. For instance, `&lt;species_id&gt;` should be replaced by the ID of your species. For *Notodonta dromedarius* that would be ilNotDrom1. In that case, `&lt;species_id&gt;_data` should be replaced by `ilNotDrom1_data`. 
 
 Right, so let’s wait for Hicanu to run. While we do that, let’s put hifiasm to run!
 
