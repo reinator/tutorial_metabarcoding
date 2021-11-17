@@ -55,8 +55,10 @@ Let's get the fasta first:
 So let’s select the pattern common to a fasta file “>” and list the name of our contigs
 
 ```console  
-grep “>” <contigs_fasta> 
+grep '>' <contigs_fasta> 
 ```  
+
+PS: for this grep command it is important to use single quotes (`'`), not double quotes.
 
 This will print to the screen the names of all your assembled contigs. Choose one and create a file with it's ID. Let’s say my grep result looks like this:
 
@@ -81,7 +83,7 @@ Now, let’s run our script `filterfasta.py`, that will extract that contig from
 First, copy the script to your working directory:  
 
 ```bash  
-cp /home/ubuntu/softwares/MitoHiFi/scripts/filterfasta.py .
+cp ~/Share/scripts/filterfasta.py .
 ```
 
 Then run it:
@@ -132,7 +134,7 @@ You can also run samtools flagstat.
 
 ```console  
 samtools flagstat <outputname_you_chose>.sorted.bam
-samtools flagstat <contig_ID>.fasta.bam
+samtools flagstat <contig_ID>.bam
 ``` 
 
 # GOOD!
