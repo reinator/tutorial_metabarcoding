@@ -8,11 +8,11 @@ permalink: /handsOn_4/
 
 Mapping and dealing with samtools and IGV.
 
-Right, so yesterday we have generated statistics for our raw data, have assembled it with two different assemblers and have even done a BLAST search to try to identify what we have assembled. Those are all good metrics to check our assembly. 
+Right, so we have already generated statistics for our raw data, assembled it with two different assemblers and even done a BLAST search to try to identify what we have assembled. Those are all good metrics to check our assembly. 
 
 Another metric commonly used is to map all the reads back to our assembly and determine the percentage of mapping. As this was the data we inputted to assemble the contigs, we want that most of the reads mapped back to it, if not, it raises a red flag to us about the sanity of our assembly. So let’s learn how to use two new tools: `minimap2` and `samtools`.
 
-Choose one of your two assembly results (or run for both) and go to your folder. Identify the raw reads you have used to produce that assembly. Identify the assembly file. And let’s run `minimap2`.
+Choose one of your two assembly results (or run for both) and go to its directory (`cd ~/<species_folder>/<hifiasm/hicanu>/`). Identify the raw reads (`<species_id>.600.fasta`) you have used to produce that assembly. Identify the assembly file. And let’s run `minimap2`.
 
 However, before running `minimap2` activate our conda environment:  
 
@@ -29,10 +29,10 @@ minimap2
 See the help message? Then let’s run it:
 
 ```console  
-minimap2 -t 1 --secondary=no -ax map-pb <your_contigs.here>.fasta <raw.reads.here>.fasta -o <outputname_you_chose>.sam
+minimap2 -t 1 --secondary=no -ax map-pb <contigs_fasta> <raw_reads>.fasta -o <outputname_you_chose>.sam
 ```  
 
-Where `<your_contigs.here>.fasta` should be your assembly and `<raw.reads.here>.fasta` the sequencing reads used to build the assembly. 
+Where `<contigs_fasta>` should be your assembly and `<raw_reads>.fasta` the sequencing reads used to build the assembly. 
 
 Right. As soon as it finishes, we are going to use a tool called `samtools` to manipulate the output file:
 
@@ -44,10 +44,10 @@ samtools index <outputname_you_chose>.sorted.bam
 Right. What we did above was to convert the output mapped file from the format sam to bam, then we sorted this file and created an index for it. This will be a standard procedure most of the time that you will be producing and visualizing a mapping: samtools `view`, `sort` and `index`.
 To know more about samtools, go to its [webpage](https://samtools.github.io)
 
-Now, we want to visualize one contig with the reads mapped to back to it. So we need to extract one contig from the \*.sorted.bam file that contains mappings for all contigs assembled. To use IGV we need to visualize one contig at a time. The steps are:
+Now, we want to visualize one contig with the reads mapped to back to it. So we need to extract one contig from the `<outputname_you_chose>.sorted.bam` file (which contains mappings for all contigs assembled). Extracting the mapping information from a specific contig will make it easier/faster to load that information on IGV, which is the software we'll use to inspect our contig. The steps for doing the extraction are:
 
-     1\. Extract a bam file for one contig from `<outputname_you_chose>.sorted.bam` and make a `samtools index` for it;
-     2\. Extract the fasta file for the contig you have chosen and make a `samtools faidx` for it
+     1\. Extract a bam file for one contig from `<outputname_you_chose>.sorted.bam` and create an index for it (`samtools index`);
+     2\. Extract the fasta file for the contig you have chosen and make an index for it (`samtools faidx`);
 
 Bellow you see the steps detailed:
 
@@ -55,7 +55,7 @@ Let's get the fasta first:
 So let’s select the pattern common to a fasta file “>” and list the name of our contigs
 
 ```console  
-grep “>” <your_contigs.here>.fasta 
+grep “>” <contigs_fasta> 
 ```  
 
 This will print to the screen the names of all your assembled contigs. Choose one and create a file with it's ID. Let’s say my grep result looks like this:
@@ -87,7 +87,7 @@ cp /home/ubuntu/softwares/MitoHiFi/scripts/filterfasta.py .
 Then run it:
 
 ```console  
-python filterfasta.py -i contig_id <your_contigs.here>.fasta > <contig_ID>.fasta
+python filterfasta.py -i contig_id <contigs_fasta> > <contig_ID>.fasta
 ```  
 
 Right. Now give a less to the file `<contig_ID>.fasta`:
