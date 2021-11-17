@@ -9,31 +9,44 @@ permalink: /salsa/
 
 Right, so now you have learned about Chromosome conformation capture and scaffolding genomes with the Hi-C technology. Today you will start one of the softwares that is used to scaffold genomes with Hi-C that is called SALSA2. You can have a look [here](https://github.com/marbl/SALSA) on what we will be running. 
 
-First try:
+First you need to activate our SALSA environment:
 
+```console
+conda activate salsa_env  
+```
+
+Then run:
 
 ```console  
 run_pipeline.py -h
 ``` 
 
-See the help message? Nice! To run SALSA2 you need to copy 2 files to your working directory first. Both files will be inside your species folder, in a folder called `salsa` (`~/Share/Data/<your_species>/salsa`). The files are `<species_id>_hicanu.purged.polish.fa` and `<species_id>_hicanu.purged.polish.fa.fai`. Once you have copied the files over, run:
+See the help message? Nice! 
+
+Now let's create a `scaff` subdirectory in your species home directory so that we can work on scaffolding from there:
 
 ```console  
-run_pipeline.py -a <species_id>_hicanu.purged.polish.fa -l <species_id>_hicanu.purged.polish.fa.fai -b ~/Share/Data/<your_species>/salsa/merge.mkdup.bed -e GATC,GANTC -i 5 -p yes -o out
+mkdir ~/<species_folder>/scaff/
+cd ~/<species_folder>/scaff/  
+```
+
+To run SALSA2 you need first to symlink 3 files to your working directory. All files will be inside the shared species directory, in a subdirectory called `HiC` (`~/Share/Data/<species_id>_data/HiC/`). The files are `<species_id>_hicanu.purged.polish.fa`, `<species_id>_hicanu.purged.polish.fa.fai` and `merge.mkdup.bed`. Once you have symlinked all files, run:
+
+```console  
+run_pipeline.py -a <species_id>_hicanu.purged.polish.fa -l <species_id>_hicanu.purged.polish.fa.fai -b merge.mkdup.bed -e GATC,GANTC -i 5 -p yes -o out
 ``` 
 
 Attention :exclamation:  
-Remember to replace `<your_species>` with the name of your species. For instance, for *Vanessa atalanta* that would be `v_atalanta`. Otherwise the command will fail to find the `merge.mkdup.bed` file.
+Remember to replace `<species_id>` with the ID of your species. For instance, for *Vanessa atalanta* that would be `ilVanAtal1`.
 
-Right, SALSA2 will start running. However, since SALSA2 run should take a long time, we'll **stop SALSA2 run** now with `Ctr+C`. From this point on we'll be using SALSA2 results generated in advance by your instructors. Those files can be found under `~/Share/Data/<your_species>/salsa/out.break.salsa` directory. 
-
+Right, SALSA2 will start running. However, since SALSA2 run should take a long time, we'll **stop SALSA2 run** now with `Ctr+C`. From this point on we'll be using SALSA2 results generated in advance by your instructors. Those files can be found under `~/Share/Data/<species_id>_data/HiC/out.break.salsa/` directory. 
 
 Now let's generate assembly statistics for the genome prior Hi-C scaffolding, and after Hi-C scaffolding. 
 
 First let's add the folder that contains `asmstats` script to our `PATH`:  
 
 ```bash  
-export PATH=$PATH:/home/ubuntu/softwares/scripts
+export PATH=$PATH:~/Share/scripts
 ```
 
 And make sure our conda environment is activated:  
@@ -41,12 +54,12 @@ And make sure our conda environment is activated:
 conda activate eukaryotic_genome_assembly  
 ```
 
-Then copy the file from the genome after Hi-C scaffolding to your working directory:  
+Then symlink the file from the genome after Hi-C scaffolding to your working directory:  
 ```bash  
-cp ~/Share/Data/<your_species>/salsa/out.break.salsa/scaffolds_FINAL.fasta .
+ln -s ~/Share/<species_id>_data/HiC/out.break.salsa/scaffolds_FINAL.fasta .
 ```
 
-Now we can run `asmstats` for both the genome prior Hi-C scaffolding (`ref.fa`) and after Hi-C scaffolding (`scaffolds_FINAL.fasta`):
+Now we can run `asmstats` for both the genome prior Hi-C scaffolding (`<species_id>_hicanu.purged.polish.fa`) and after Hi-C scaffolding (`scaffolds_FINAL.fasta`):
 
 ```console  
 asmstats <species_id>_hicanu.purged.polish.fa > <species_id>_hicanu.purged.polish.fa.stats
@@ -55,13 +68,13 @@ asmstats scaffolds_FINAL.fasta > scaffolds_FINAL.fasta.stats
 
 Now I want you to download to your local machine the assembly Hi-C heatmaps for (i) prior and (ii) after scaffolding. 
 
-1-) Opening the Hi-C heatmap at pretextview of your species contigs before they were scaffolded with Salsa2
+1-) Opening the Hi-C heatmap at pretextview of your species contigs **before** they were scaffolded with Salsa2
 
-The pre-scaffolding is a file that ends with \*.pretext and it is located in your species folder inside `before_salsa` directory (`~/Share/Data/<your_species>/salsa/before_salsa`). Also, the assembly pre-scaffolding will be in the same folder and is called <species_id>_hicanu.purged.polish.fa. 
+The pre-scaffolding is a file that ends with \*.pretext and it is located in your species shared directory at `~/Share/<species_id>_data/HiC/<species_id>.preScaf.pretext`. Also, the assembly pre-scaffolding will be in the same folder and is called <species_id>_hicanu.purged.polish.fa. 
 
-2-) Opening the Hi-C heatmap with Juicebox of your species scaffolds after the contigs were scaffolded with Salsa2
+2-) Opening the Hi-C heatmap with Juicebox of your species scaffolds **after** the contigs were scaffolded with Salsa2
 
-The post-scaffolding will be in the `out.break.salsa` directory (`~/Share/Data/<your_species>/salsa/out.break.salsa`) and it is a file that ends in \*.hic. The scaffolded assembly file is in the same folder and is called `scaffolds_FINAL.fasta`. Recapping: the .hic file and the `scaffolds_FINAL.fasta` are the same thing: just that the .hic file is the heatmap imaging representation of the multifasta file `scaffolds_FINAL.fasta`.
+The post-scaffolding will be in the `out.break.salsa` directory (`~/Share/<species_id>_data/HiC/out.break.salsa/`) and it is a file that ends in \*.hic. The scaffolded assembly file is in the same folder and is called `scaffolds_FINAL.fasta`. Recapping: the .hic file and the `scaffolds_FINAL.fasta` are the same thing: just that the .hic file is the heatmap imaging representation of the multifasta file `scaffolds_FINAL.fasta`.
 
 Once you download the two files to your local computer, you are going to use the [pretextView](https://github.com/wtsi-hpag/PretextView/releases/tag/0.1.3) program to open the pre-scaffolding (\*.pretext) heatmap, and the [JuiceBox](https://www.aidenlab.org/juicebox/) program to open the post-scaffolding (\*.hic) heatmap.   
 
