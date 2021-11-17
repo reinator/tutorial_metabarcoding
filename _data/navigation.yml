@@ -52,13 +52,13 @@ pages:
         url: /handsOn_merqury/
       - title: "Part 4 - SALSA2 scaffolding"
         url: /salsa/
-      - title: "Part 5 - Polishing CLR"
-        url: /polishing/
-      - title: "Part 8 - Curated assembly and final report"
-        url: /curated/
-      - title: "Part 9 - Mis-assembly evaluation"
+      - title: "Part 5 - Mis-assembly evaluation"
         url: /miss-assembly/
-      - title: "Part 10 - MitoHifi"
+      - title: "Part 6 - Curated assembly and final report"
+        url: /curated/ 
+      - title: "Part 7 - Polishing CLR"
+        url: /polishing/
+      - title: "Part 8 - MitoHifi"
         url: /mitohifi/
   
   - title: "References"
