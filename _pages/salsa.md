@@ -76,9 +76,13 @@ The pre-scaffolding is a file that ends with \*.pretext and it is located in you
 
 The post-scaffolding will be in the `out.break.salsa` directory (`~/Share/<species_id>_data/HiC/out.break.salsa/`) and it is a file that ends in \*.hic. The scaffolded assembly FASTA file is in the same folder and is called `scaffolds_FINAL.fasta`. Recapping: the `.hic` file and the `scaffolds_FINAL.fasta` are the same thing: just that the `.hic` file is the heatmap imaging representation of the multifasta file `scaffolds_FINAL.fasta`.
 
-Once you download the two files to your local computer, you are going to use the PretextView program to open the pre-scaffolding (\*.pretext) heatmap, and the JuiceBox program to open the post-scaffolding (\*.hic) heatmap. You should already have those programs installed in your local computer. If not, follow [this link](https://eukaryotic-genome-assembly.github.io/pretextView_installation/) to install PretextView and [this link](https://github.com/aidenlab/Juicebox/wiki/Download) to download the executable for Juicebox compatible with your operating system (after you download it, just double click on the executable file and Juicebox should open).
+Once you download the two files to your local computer, you are going to use the PretextView program to open the pre-scaffolding (\*.pretext) heatmap, and the JuiceBox program to open the post-scaffolding (\*.hic) heatmap. You should already have PretextView installed in your local computer. If not, follow [this link](https://eukaryotic-genome-assembly.github.io/pretextView_installation/) to install it. You can run Juicebox using its [website](https://www.aidenlab.org/juicebox/) or (optionally) you can also run it locally. If you choose to run Juicebox locally, you will need to access [this link](https://github.com/aidenlab/Juicebox/wiki/Download) to download the executable for Juicebox compatible with your operating system, and after you download it, just double click on the executable file to open Juicebox.
 
 #### Using Juicebox  
+##### Using the webserver
+Go do the Juicebox's [website](https://www.aidenlab.org/juicebox/). Click on `Load Map > Local File` and locate your downloaded \*.hic file.
+
+##### Using locally installed Juicebox (optional)
 Once you open Juicebox, click on `File > Open`. A new window will open, then you should click on the `Local...` button. Now you are ready to select the downloaded \*.hic file. Once you do it, the heatmap should be plotted. 
 
 ### Using PretextView
