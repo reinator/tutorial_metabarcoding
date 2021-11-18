@@ -78,7 +78,14 @@ The post-scaffolding will be in the `out.break.salsa` directory (`~/Share/<speci
 
 Once you download the two files to your local computer, you are going to use the PretextView program to open the pre-scaffolding (\*.pretext) heatmap, and the JuiceBox program to open the post-scaffolding (\*.hic) heatmap. You should already have those programs installed in your local computer. If not, follow [this link](https://eukaryotic-genome-assembly.github.io/pretextView_installation/) to install PretextView and [this link](https://github.com/aidenlab/Juicebox/wiki/Download) to download the executable for Juicebox compatible with your operating system (after you download it, just double click on the executable file and Juicebox should open).
 
-Now, analyze all the results, discuss with your team and answer the questions in your presentation:
+#### Using Juicebox  
+Once you open Juicebox, click on `File > Open`. A new window will open, then you should click on the `Local...` button. Now you are ready to select the downloaded \*.hic file. Once you do it, the heatmap should be plotted. 
+
+### Using PretextView
+After opening PretextView, click on the `Load Map` button and then select the downloaded \*.pretext file.
+
+## Now 
+Analyze all the results, discuss with your team and answer the questions in your presentation:
 
 1. What are the assembly statistics before scaffolding?
 2. What are the assembly statistics after scaffolding?
