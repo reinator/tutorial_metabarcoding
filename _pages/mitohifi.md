@@ -38,15 +38,15 @@ export PATH=$PATH:/home/ubuntu/softwares/MitoHiFi/
 Now you are ready to run the script to find the related mitogenome:
 
 ```console  
-findMitoReference.py --species "Phalera bucephala" --email <your@email.for.ncbi.db.query> --outfolder /data/ --min_length 16000
+findMitoReference.py --species "Phalera bucephala" --email <your_email> --outfolder refData --min_length 15000
 ```
 
-Where `<your@email.for.ncbi.db.query>` should be replaced by an ncbi registered email (if you don't have one yet, please register)
+Where `<your_email>` should be replaced by your email (your personal/work email should work just fine)
 
 ### `findMitoReference.py` output  
 This command will output a fasta (NC_016067.1.fasta) and a genbank (NC_016067.1.gb) file from the closely related mitogenome. When running MitoHiFi, you will use those files as input using, respectively, the `-f` and `-g` options. 
 
-## Running MitoHiFi with an example dataset
+## Running MitoHiFi
 
 Now let's run MitoHiFi using an example dataset. Before that, we need to add MitoFinder (which is used by MitoHiFi to do the annotation step) to your PATH:
 
@@ -60,22 +60,30 @@ export PATH=$PATH:/home/ubuntu/softwares/MitoFinder/
 mitofinder -h
 ```
 
+Now you need to create a symlink to the mitohifi script:  
+
+```console  
+ln -s /home/ubuntu/softwares/MitoHiFi/mitohifi_v2.py  
+```
+
 (Optional) You can test if mitohifi has been successfully set by running the help command:  
 
 ```console  
 python mitohifi_v2.py -h
 ```  
 
-Copy the `exampleFiles` directory to your current directory. `exampleFiles` contains all input files you'll need to run MitoHiFi.
+Copy the the `test.fa` file to your current directory. The `test.fa` is a multifasta file that contains 3 assembled contigs. It's been generated in advance by your instructors. 
+
+PS: of course in the real world you assembly file will have a much higher number of contigs, but here we are working with a limited number for computational and time constraints.
 
 ```console  
-cp -r /home/ubuntu/softwares/MitoHiFi/exampleFiles/ .
+cp /home/ubuntu/softwares/MitoHiFi/exampleFiles/test.fa .
 ```
 
-Finally, run MitoHiFi: 
+Finally, run MitoHiFi for the contigs test dataset: 
 
 ```console  
-python mitohifi_v2.py -c exampleFiles/test.fa -f exampleFiles/NC_016067.1.fasta -g exampleFiles/NC_016067.1.gb -t 1 -o 5
+python mitohifi_v2.py -c test.fa -f refData/NC_016067.1.fasta -g refData/NC_016067.1.gb -t 1 -o 5
 ```
 
 The pipeline will probably take a few minutes to run. Once it's done, it will output a message saying `Pipeline finished!`.
