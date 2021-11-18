@@ -39,17 +39,17 @@ CONTIG  N100 = 9583, L100 = 572
 GAP     sum = 95500, n = 191, ave = 500, largest = 500, smallest = 500
 ```
 
-Now, I want you to open the Hi-C heat map (`salsa_scaffolds.hic`) for the complete genome on Juice-Box and have a look a it.
+Now, I want you to open the Hi-C heat map (`salsa_scaffolds.hic`) for the complete genome on Juicebox and have a look a it.
 
 The whole plot is not amazing. But do you think you see a miss-assembly on scaffold 1?
 
 Well, I have taken the PacBio reads, mapped them back to the complete genome and extracted only the scaffold_1 for you, so you can have a look at it on IGV.
 
-Make sure you have all scaffold_1 files (\*.fa, \*fa.fai, \*.bam, \*.bai) in the same folder. Then open IGV and load the \*.fa in 'Genomes > Load Genome from File', and load the \*.bam in 'File > Load from File'.
+Make sure you have all scaffold_1 files (\*.fa, \*fa.fai, \*.bam, \*.bai) in the same folder. Then open IGV and load the \*.fa in `Genomes > Load Genome from File`, and load the \*.bam in `File > Load from File`.
 
 Have a look at the mapping. Zoom in to see reads mapped. Play around IGV a little. 
 
-Then, using the 'Go' search bar (like in the image below), go to the position: `scaffold_1:56,972,207-56,977,386`  
+Then, using the `Go` search bar (like in the image below), go to the position: `scaffold_1:56,972,207-56,977,386`  
 
 ![](/images/IGV_go_to_3.png)
 
