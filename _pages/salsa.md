@@ -68,21 +68,21 @@ asmstats scaffolds_FINAL.fasta > scaffolds_FINAL.fasta.stats
 
 Now I want you to download to your local machine the assembly Hi-C heatmaps for (i) prior and (ii) after scaffolding. 
 
-1-) Opening the Hi-C heatmap at pretextview of your species contigs **before** they were scaffolded with Salsa2
+1-) Hi-C heatmap of your species contigs **before** they were scaffolded with SALSA2
 
-The pre-scaffolding is a file that ends with \*.pretext and it is located in your species shared directory at `~/Share/<species_id>_data/HiC/<species_id>.preScaf.pretext`. Also, the assembly pre-scaffolding will be in the same folder and is called <species_id>_hicanu.purged.polish.fa. 
+The pre-scaffolding is a file that ends with \*.pretext and it is located in your species shared directory (`~/Share/<species_id>_data/HiC/<species_id>.preScaf.pretext`). 
 
-2-) Opening the Hi-C heatmap with Juicebox of your species scaffolds **after** the contigs were scaffolded with Salsa2
+2-) Hi-C heatmap of your species scaffolds **after** the contigs were scaffolded with SALSA2
 
-The post-scaffolding will be in the `out.break.salsa` directory (`~/Share/<species_id>_data/HiC/out.break.salsa/`) and it is a file that ends in \*.hic. The scaffolded assembly file is in the same folder and is called `scaffolds_FINAL.fasta`. Recapping: the .hic file and the `scaffolds_FINAL.fasta` are the same thing: just that the .hic file is the heatmap imaging representation of the multifasta file `scaffolds_FINAL.fasta`.
+The post-scaffolding will be in the `out.break.salsa` directory (`~/Share/<species_id>_data/HiC/out.break.salsa/`) and it is a file that ends in \*.hic. The scaffolded assembly FASTA file is in the same folder and is called `scaffolds_FINAL.fasta`. Recapping: the `.hic` file and the `scaffolds_FINAL.fasta` are the same thing: just that the `.hic` file is the heatmap imaging representation of the multifasta file `scaffolds_FINAL.fasta`.
 
-Once you download the two files to your local computer, you are going to use the [pretextView](https://github.com/wtsi-hpag/PretextView/releases/tag/0.1.3) program to open the pre-scaffolding (\*.pretext) heatmap, and the [JuiceBox](https://www.aidenlab.org/juicebox/) program to open the post-scaffolding (\*.hic) heatmap.   
+Once you download the two files to your local computer, you are going to use the PretextView program to open the pre-scaffolding (\*.pretext) heatmap, and the JuiceBox program to open the post-scaffolding (\*.hic) heatmap. You should already have those programs installed in your local computer. If not, follow [this link](https://eukaryotic-genome-assembly.github.io/pretextView_installation/) to install PretextView and [this link](https://github.com/aidenlab/Juicebox/wiki/Download) to download the executable for Juicebox compatible with your operating system (after you download it, just double click on the executable file and Juicebox should open).
 
 Now, analyze all the results, discuss with your team and answer the questions in your presentation:
 
 1. What are the assembly statistics before scaffolding?
 2. What are the assembly statistics after scaffolding?
-3. Looking at the final agp file (maybe you wan to read a little about the AGP format [here](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/)): what scaffolds were scaffolded with more than one component (a contig of a piece of a contig)? And what scaffolds are unchanged in relation to the contigs?
+3. Looking at the final agp file (maybe you want to read a little about the AGP format [here](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/)): what scaffolds were scaffolded with more than one component (a contig of a piece of a contig)? And what scaffolds are unchanged in relation to the contigs?
 4. How do the Hi-C maps look prior and after scaffolding?
 5. Do you think you see a sex chromosome on the Hi-C heatmap? If so, point to it in your presentation.
 
