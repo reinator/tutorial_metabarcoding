@@ -78,7 +78,7 @@ The post-scaffolding will be in the `out.break.salsa` directory (`~/Share/<speci
 
 Once you download the two files to your local computer, you are going to use the PretextView program to open the pre-scaffolding (\*.pretext) heatmap, and the JuiceBox program to open the post-scaffolding (\*.hic) heatmap. You should already have PretextView installed in your local computer. If not, follow [this link](https://eukaryotic-genome-assembly.github.io/pretextView_installation/) to install it. You can run Juicebox using its [website](https://www.aidenlab.org/juicebox/) or (optionally) you can also run it locally. If you choose to run Juicebox locally, you will need to access [this link](https://github.com/aidenlab/Juicebox/wiki/Download) to download the executable for Juicebox compatible with your operating system, and after you download it, just double click on the executable file to open Juicebox.
 
-#### Using Juicebox  
+### Using Juicebox  
 ##### Using the webserver
 Go do the Juicebox's [website](https://www.aidenlab.org/juicebox/). Click on `Load Map > Local File` and locate your downloaded \*.hic file.
 
