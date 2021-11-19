@@ -6,9 +6,9 @@ permalink: /polishing/
 
 # Polishing CLR assembly
 
-Ok, we have talked a little about polishing and how much polishing is still vital if you are working with PacBio CLR reads, that can have up to 15% of errors. Now, you are going to investigate the impacts of polishing on the *H. fuciforms* genome, that was assembled with PacBio CLR reads as part of the [25 Genomes Project of the Sanger Institute](https://www.sanger.ac.uk/collaboration/25-genomes-for-25-years/)  
+Ok, we have talked a little about polishing and how much polishing is still vital if you are working with PacBio CLR reads, that can have up to 15% of errors. Now, you are going to investigate the impacts of polishing on the *Hemaris fuciformis* genome, that was assembled with PacBio CLR reads as part of the [25 Genomes Project of the Sanger Institute](https://www.sanger.ac.uk/collaboration/25-genomes-for-25-years/)  
 
-For such, you are going to compare some statistics for *H. fuciforms* before and after polishing after polishing, which has been done by the [GRIT](https://www.sanger.ac.uk/group/genome-reference-informatics-team/) Team at the Sanger Institute. All the files you will need are in `~/Share/iHemFuc1_data` subdirectories. The stats I want you to compare are: 
+For such, you are going to compare some statistics for *H. fuciforms* **before** and **after polishing** after polishing, which has been done by the [GRIT](https://www.sanger.ac.uk/group/genome-reference-informatics-team/) Team at the Sanger Institute. All the files you will need are in `~/Share/iHemFuc1_data` subdirectories. The stats I want you to compare are: 
 
 * Merqury completeness and QV    
     * Those files are located in the `before_polishing/merqury_before/` and `after_polishing/merqury_after/` subdirectories (remember that the parent directory is `~/Share/iHemFuc1_data`, so the complete path is, e.g., `~/Share/iHemFuc1_data/before_polishing/merqury_before/`)
