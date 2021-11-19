@@ -92,7 +92,7 @@ Questions:
 1) What's the meaning of each parameter used to run MitoHiFi? Hint: if in doubt, run `python mitohifi_v2.py -h` and/or check the official MitoHiFi documentation at [github](https://github.com/marcelauliano/MitoHiFi).    
 2) Has MitoHiFi succeded creating final mitogenome fasta/genbank files? What are the names of those files?  
 3) Open the final mitogenome genbank file and answer: i) what's the total length of the mitogenome?; ii) what's the first gene in that mitogenome?
-4) Go to BLAST webserver and do a blastn of the final mitogenome fasta file (`final_mitogenome.fasta`) against the Nucleotide collection (nr/nt). What's the first hit you get from the alignment? What species does that hit come from? Click on the hit accession number hyperlink. You should be redirected to a new page. Go to the `COMMENT` section and answer: how was this sequence assembled?    
+4) Go to BLAST [webserver](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and do a blastn of the final mitogenome fasta file (`final_mitogenome.fasta`) against the Nucleotide collection (nr/nt). What's the first hit you get from the alignment? What species does that hit come from? Click on the hit accession number hyperlink. You should be redirected to a new page. Go to the `COMMENT` section and answer: how was this sequence assembled?    
 5) Open the `contigs_stats.tsv` file and answer: is there another mitogenome assembly besides the final_mitogenome? What's its ID?  
 6) Open the other(s) mitogenome assembled and compare it with the final_mitogenome: i) what's its size? ii) what's its first gene?   
  
