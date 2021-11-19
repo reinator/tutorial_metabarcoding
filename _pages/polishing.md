@@ -28,8 +28,7 @@ For such, you are going to compare some statistics for *H. fuciforms* **before**
     * For after polishing, you should also have two FASTAs:    
         * iHemFuc1.prim.polished.fa.gz - this is the primary  
         * iHemFuc1.htigs.polished.fa.gz - this is the haplotigs 
-
-PS: Remember that when running `asmstats`, you will produce an output file. Because that output file cannot be saved on the `~/Share/iHemFuc1_data/` directory, you will need to save the output file on your home directory. Then before running `asmstats` I recommend that you i) create a new directory in your home directory named `~/polishing/`; ii) move to that directory (`cd ~/polishing/`); iii) create symlinks for the four requested FASTA files (e.g. `ln -s ~/Share/iHemFuc1_data/before_polishing/iHemFuc1.primary.BF.fa.gz`); and finally iv) run `asmstats` (e.g. `asmstats iHemFuc1.primary.BF.fa.gz > iHemFuc1.primary.BF.fa.stats`)
+    * PS: Remember that when running `asmstats`, you will produce an output file. Because that output file cannot be saved on the `~/Share/iHemFuc1_data/` directory, you will need to save the output file on your home directory. Then before running `asmstats` I recommend that you i) create a new directory in your home directory named `~/polishing/`; ii) move to that directory (`cd ~/polishing/`); iii) create symlinks for the four requested FASTA files (e.g. `ln -s ~/Share/iHemFuc1_data/before_polishing/iHemFuc1.primary.BF.fa.gz`); and finally iv) run `asmstats` (e.g. `asmstats iHemFuc1.primary.BF.fa.gz > iHemFuc1.primary.BF.fa.stats`)
 
 * BUSCO
     * Just like Merqury, BUSCO analysis has been run by your instructors, so your job here is to collect the results.   
