@@ -17,7 +17,8 @@ Ok, we have talked a little about polishing and how much polishing is still vita
 
 For such, you are going to compare some statistics for *H. fuciforms* **before** and **after polishing** after polishing, which has been done by the [GRIT](https://www.sanger.ac.uk/group/genome-reference-informatics-team/) Team at the Sanger Institute. All the files you will need are in `~/Share/iHemFuc1_data` subdirectories. The stats I want you to compare are: 
 
-* Merqury completeness and QV    
+* Merqury completeness and QV
+    * Merqury has been run in advance by your instructors, so here you just need to collect the data.    
     * Those files are located in the `before_polishing/merqury_before/` and `after_polishing/merqury_after/` subdirectories (remember that the parent directory is `~/Share/iHemFuc1_data`, so the complete path is, e.g., `~/Share/iHemFuc1_data/before_polishing/merqury_before/`)
 * General statistics  
     * For that you will need to run the `asmstats` script for the FASTA (\*.fasta or \*.fa) files located at `before_polishing` and `after_polishing`: 
@@ -30,7 +31,8 @@ For such, you are going to compare some statistics for *H. fuciforms* **before**
 
 PS: Remember that when running `asmstats`, you will produce an output file. Because that output file cannot be saved on the `~/Share/iHemFuc1_data/` directory, you will need to save the output file on your home directory. Then before running `asmstats` I recommend that you i) create a new directory in your home directory named `~/polishing/`; ii) move to that directory (`cd ~/polishing/`); iii) create symlinks for the four requested FASTA files (e.g. `ln -s ~/Share/iHemFuc1_data/before_polishing/iHemFuc1.primary.BF.fa.gz`); and finally iv) run `asmstats` (e.g. `asmstats iHemFuc1.primary.BF.fa.gz > iHemFuc1.primary.BF.fa.stats`)
 
-* BUSCO  
+* BUSCO
+    * Just like Merqury, BUSCO analysis has been run by your instructors, so your job here is to collect the results.   
     * BUSCO's results can also be found at `~/Share/iHemFuc1_data`, in the subdirectories `before_polishing/busco/` and `after_polishing/busco/` 
 
 Not look at all the results and answer:
