@@ -4,6 +4,13 @@ layout: archive
 permalink: /polishing/
 ---  
 
+# Activating conda env  
+Before starting the tutorial, make sure you have activated the conda environment: 
+
+```console 
+conda activate eukaryotic_genome_assembly  
+```
+
 # Polishing CLR assembly
 
 Ok, we have talked a little about polishing and how much polishing is still vital if you are working with PacBio CLR reads, that can have up to 15% of errors. Now, you are going to investigate the impacts of polishing on the *Hemaris fuciformis* genome, that was assembled with PacBio CLR reads as part of the [25 Genomes Project of the Sanger Institute](https://www.sanger.ac.uk/collaboration/25-genomes-for-25-years/)  
