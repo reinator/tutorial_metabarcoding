@@ -33,7 +33,7 @@ First human genome
 # Assemblers
 
 * Hicanu [https://genome.cshlp.org/content/early/2020/08/14/gr.263566.120](https://genome.cshlp.org/content/early/2020/08/14/gr.263566.120)
-* Hifiasm [[https://arxiv.org/pdf/2008.01237.pdf](https://www.nature.com/articles/s41592-020-01056-5)](https://www.nature.com/articles/s41592-020-01056-5)
+* Hifiasm [[https://arxiv.org/pdf/2008.01237.pdf](https://www.nature.com/articles/s41592-020-01056-5](https://www.nature.com/articles/s41592-020-01056-5)
 * Trio Binning [https://www.nature.com/articles/nbt.4277](https://www.nature.com/articles/nbt.4277)
 * Falcon and Falcon-Unzip [https://www.nature.com/articles/nmeth.4035](https://www.nature.com/articles/nmeth.4035) 
 * HiFi Reads [https://www.nature.com/articles/s41587-019-0217-9](https://www.nature.com/articles/s41587-019-0217-9) 
