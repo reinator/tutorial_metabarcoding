@@ -143,7 +143,7 @@ The histogram you have just plotted is for a jellyfish count of the **total** Pa
 
 ## Now
 
-I would like to you generate some general statistics for the \*.ccs.total.fasta.gz reads. I have a script for you to do that. It's called `asmstats`. 
+I would like you to generate some general statistics for the \*.ccs.total.fasta.gz reads. I have a script for you to do that. It's called `asmstats`. 
 
 Before running asmstats, move to your species directory and create a soft link for the \*.ccs.total.fasta.gz file:
 
