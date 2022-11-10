@@ -39,6 +39,11 @@ run_pipeline.py -a <species_id>_hicanu.purged.polish.fa -l <species_id>_hicanu.p
 Attention :exclamation:  
 Remember to replace `<species_id>` with the ID of your species. For instance, for *Vanessa atalanta* that would be `ilVanAtal1`.
 
+
+Attention2 :exclamation:
+
+You will notice that the contigs you are scaffolding are called *polish*. In fact, if/when you run a sumary statistics for them
+
 Right, SALSA2 will start running. However, since SALSA2 run should take a long time, we'll **stop SALSA2 run** now with `Ctr+C`. From this point on we'll be using SALSA2 results generated in advance by your instructors. Those files can be found under `~/Share/<species_id>_data/HiC/out.break.salsa/` directory. 
 
 Now let's generate assembly statistics for the genome prior Hi-C scaffolding, and after Hi-C scaffolding. 
