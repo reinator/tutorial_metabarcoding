@@ -44,7 +44,9 @@ merqury.sh <your_species>.10X.21.meryl <your_species>.hicanu.total.contigs.fasta
 
 Great!! 
 
-This will take a while to run. During this time, we are going to gather results and evaluate the purged version of your species Hicanu assembly. We don't have time to run Purge_dups here, but the most important thing is to learn how to interpret the results after purge_dups is done. So, João and I have generated for you the purged results, the merqury and the BUSCO results.
+## This will take a while to run. During this time...
+
+You are going to gather the results and evaluate the purged version of your species Hicanu assembly. We don't have time to run Purge_dups here, but the most important thing is to learn how to interpret the results after purge_dups is done. So, João and I have generated for you the purged results, the merqury and the BUSCO results.
 
 1-) First thing you need to do is to symlink the purged assemblies and calculate the general statistics for the primary and haplotigs files. Let's create a new directory to save the purged results and create the symlinks there:
 
