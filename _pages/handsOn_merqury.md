@@ -94,10 +94,10 @@ The merqury results for the purged assemblies are located in this directory: `~/
  
 For the plot files, you will have 3 types: st (stacked), ln (line) and fl (filled). 
 ### These three graphs will represent the same data
-they are just a different way to plot the (same) data. For further information I recommend having a look at the manual [here](https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation).
+they are just a different way of plotting the (same) data. For further information I recommend having a look at the manual [here](https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation).
    
 # Attention
-Apart from having st, fn and ln, merqury is going to output 2 types of files, *asm* and *cn*. If the file contains *cn* it's going to show you everything in terms of kmer counts without accounting for which kmer is present in which assembly, if it contains *asm* it is going to show you each kmer belonging to each assembly in the plot. Deep breath. You are going to get it! (Just takes time!). Didn't understand, discuss this with your group on zoom!
+Apart from having st, fn and ln, merqury is going to output 2 types of files, *asm* and *cn*. If the file contains *cn* it's going to show you all kmer counts of primary + haplotigs, if it contains *asm* it is going to show you each kmer belonging to each assembly in separated plots. Deep breath. You are going to get it! (It just takes time!). Didn't get it yet? Discuss it with your group on zoom!
      
 What you need to do with the purging merqury results is:
 Now I want you to take a look at some relevant Merqury files. The text files can be open with the `less` command, while you will need to download the plot files (*.png) to your local machine in order to actually open them. 
