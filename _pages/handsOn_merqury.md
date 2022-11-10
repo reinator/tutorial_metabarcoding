@@ -6,7 +6,7 @@ permalink: /handsOn_merqury/
 
 # Part 3 - Purging and Merqury evaluation
 
-Ok, today you leanerd about Purge Dups and purging assemblies. You also learned that Hicanu outputs an assembly that is the double of the expected haploid genome size, and that you have to use a tool such as Purge Dups to separate the haplotypes of the assembly. Later, you learned how to evaluate assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads kmers, such as Illumina or Hifi. Now you are going to run merqury to evaluate assemblies for your species!
+Ok, today you learned about Purge Dups and purging assemblies. You also learned that Hicanu outputs an assembly that is the double of the expected haploid genome size, and that you have to use a tool such as Purge Dups to separate the haplotypes of the assembly. Later, you learned how to evaluate assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads kmers, such as Illumina or Hifi. Now you are going to run merqury to evaluate assemblies for your species!
 
 All right, earlier today you have assembled a subset of reads for your species, but you have generated statistics for a total-assembly run I have generated previously. This total assembly is the file you are going to work on: the total assembly of Hicanu for your species, this is called  `<your_species>.hicanu.total.contigs.fasta.gz`. So I would like you to create a directory called `merqury_hicanu_eval` inside your home species directory (`~/<species_folder>/`), move to there and create a symlink to the Hicanu assembly file: `<your_species>.hicanu.total.contigs.fasta.gz` there:
 
