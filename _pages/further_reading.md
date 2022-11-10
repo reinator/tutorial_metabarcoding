@@ -47,6 +47,7 @@ First human genome
 
 * Hi-C is invented [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2858594/pdf/nihms-194459.pdf](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2858594/pdf/nihms-194459.pdf)
 * SALSA2 [https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007273](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007273)
+* YaHS [https://www.biorxiv.org/content/10.1101/2022.06.09.495093v1](https://www.biorxiv.org/content/10.1101/2022.06.09.495093v1) 
 * Hi-C [https://pubmed.ncbi.nlm.nih.gov/22652625/](https://pubmed.ncbi.nlm.nih.gov/22652625/)
 * More on chromatin structure [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040307/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3040307/)
 * 3C versus DNA FISH [https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1081-2](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1081-2)
