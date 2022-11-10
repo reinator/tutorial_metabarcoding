@@ -42,7 +42,7 @@ Remember to replace `<species_id>` with the ID of your species. For instance, fo
 
 Attention2 :exclamation:
 
-You will notice that the contigs you are scaffolding are called *polish*. In fact, if/when you run a sumary statistics for them
+You will notice that the contigs you are scaffolding are called polish. In fact, if/when you run a sumary statistics for them you will see that they have a different number of bases compared with the purged assembly you analyzed. Why is that? That is because at Darwin Tree of Life we used to polish the purged genomes before scaffolding (remember I showed you this in the lecture?). We have dropped polishing now, but you are working with data that was polished. :) 
 
 Right, SALSA2 will start running. However, since SALSA2 run should take a long time, we'll **stop SALSA2 run** now with `Ctr+C`. From this point on we'll be using SALSA2 results generated in advance by your instructors. Those files can be found under `~/Share/<species_id>_data/HiC/out.break.salsa/` directory. 
 
