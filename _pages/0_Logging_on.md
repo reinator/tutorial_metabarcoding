@@ -6,7 +6,6 @@ permalink: /logging_on/
 
 Typically when working in bioinformatics we would log into a computing cluster such as the one we have prepared for this course. Those clusters provide computational resources  much more powerful than the average personal computers, allowing us to run highly complex computational tasks required by some bioinformatics analyses. When you are back in your home institutions, you can also likely use a similar method to log into the computing nodes there. How do we log in for this course? 
 
-
 ### Mac OS X and Linux users
 
 #### Logging on
@@ -15,25 +14,30 @@ If you are using a Mac or Linux machine, you will need to open a `terminal` wind
 
 `ssh` stands for [secure shell](https://en.wikipedia.org/wiki/Secure_Shell) and is a way of interacting with remote servers. You will need to log in to the cluster using both `ssh` and a keyfile that has been generated for you.
 
-Firstly, download the keyfile and open a terminal window. Then copy it into your home directory like so:
+Firstly, download the keyfile and open a terminal window. Then copy it into your home directory (represented by the `~` shortcut) like so:
 
 ```shell
-cp mark.pem ~
+cp <user.pem> ~/
 ```  
+
+PS: remember to replace <user.pem> with your user key. If you are `user2`, that should be `c2.pem`
 
 Give your user permission to read and write to the keyfile:  
 
 ```shell
-chmod 600 mark.pem 
+chmod 600 <user.pem> 
 ``` 
 
 Then you should be able to log in with `ssh` whatever your working directory is. You need to provide `ssh` with the path to your key, which you can do with the `-i` flag. This basically points to your identity file or keyfile. For example:
 
 ```shell
-ssh -i "~/mark.pem" mark@54.245.175.86
+ssh -i ~/<user.pem> <user>@<ip.adress> 
 ```
 
-Of course you will need to change the log in credentials shown here (i.e. the username and keyfile name) with your own. **Also be aware that the cluster IP address will change everyday**. We will update you on this each day.
+Of course you will need to update the log in credentials shown. For `user2`:
+    - replace <user.pem> by `c2.pem`
+    - replace <user> by `user2`
+    - replace <ip.adress> by the daily IP adress, shared with you in the Slack channel (e.g. `54.245.175.86`)
 
 You might be prompted to accept an RSA key - if so just type yes and you will log in to the cluster!
 
@@ -45,17 +49,16 @@ Occassionally, we will need to shift files between the cluster and our local mac
 # make a file
 touch test_file
 # upload to cluster
-scp -i "~/mark.pem" test_file mark@54.245.175.86:~/
+scp -i ~/<user.pem> test_file <user>@<ip.adress>:~/
 ```
-Just to break this down a little we are simply copying a file, `test_file` in this case to the cluster. After the `:` symbol, we are specifying where on the cluster we are placing the file, here we use `~/` to specify the home directory.
+Just to break this down a little we are simply copying a file (`test_file`) to the cluster. After the `:` symbol, we are specifying where on the cluster we are placing the file, here we use `~/` to specify the home directory.
 
-Copying files back on to our local machine is just as straightforward. You can do that like so:
+Copying files back on to our local machine is just as straightforward. If we want to copy the file we just uploaded to the server back to our local machine, we need to run the same `scp` command but now switching the order of the server and local directories:
 
 ```shell
-# download to local
-scp -i "~/mark.pem" mark@54.245.175.86:~/test_file ./
+# download `test_file` from server to local current working directory (.)
+scp -i ~/<user.pem> <user>@<ip.adress>:~/test_file ./
 ```
-Where here all we did was use `scp` with cluster address first and the location (our working directory) second - i.e. `./`
 
 #### Making life a bit easier
 
