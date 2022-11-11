@@ -20,7 +20,7 @@ Firstly, download the keyfile and open a terminal window. Then copy it into your
 cp <user.pem> ~/
 ```  
 
-PS: remember to replace <user.pem> with your user key. If you are `user2`, that should be `c2.pem`
+PS: remember to replace `<user.pem>` with your user key. If you are `user2`, that should be `c2.pem`.
 
 Give your user permission to read and write to the keyfile:  
 
