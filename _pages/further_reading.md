@@ -12,6 +12,8 @@ First human genome
 * Science - 2001 [https://www.nature.com/scitable/content/Initial-sequencing-and-analysis-of-the-human-16729/](https://www.nature.com/scitable/content/Initial-sequencing-and-analysis-of-the-human-16729/)
 * T2T Human chromosome X [https://www.nature.com/articles/s41586-020-2547-7](https://www.nature.com/articles/s41586-020-2547-7)
 * The (near) complete sequence of a human genome [https://genomeinformatics.github.io](https://genomeinformatics.github.io)
+* The complete sequence of a human genome [https://www.science.org/doi/10.1126/science.abj6987](https://www.science.org/doi/10.1126/science.abj6987) 
+* Semi-automated assembly of high-quality diploid human reference genomes [https://www.nature.com/articles/s41586-022-05325-5](https://www.nature.com/articles/s41586-022-05325-5) 
 
 # Repeats
 
