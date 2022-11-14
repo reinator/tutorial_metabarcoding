@@ -35,9 +35,9 @@ ssh -i ~/<user.pem> <user>@<ip.adress>
 ```
 
 Of course you will need to update the log in credentials shown. For `user2`:  
-    - replace `<user.pem>` by `c2.pem`  
-    - replace `<user>` by `user2`  
-    - replace `<ip.adress>` by the daily IP adress, shared with you in the Slack channel (e.g. `54.245.175.86`)  
+    * replace `<user.pem>` by `c2.pem`  
+    * replace `<user>` by `user2`  
+    * replace `<ip.adress>` by the daily IP adress, shared with you in the Slack channel (e.g. `54.245.175.86`)  
 
 You might be prompted to accept an RSA key - if so just type yes and you will log in to the cluster!
 
