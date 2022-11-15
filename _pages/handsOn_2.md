@@ -30,17 +30,16 @@ Make sure the conda environment is activated:
 conda activate eukaryotic_genome_assembly
 ```
 
-Now let’s change to the hicanu folder and create a symlink to the canu script:
+Now let’s change to the hicanu folder and add HiCanu executable to the path:
 
 ```console
 cd hicanu
-ln -s /home/ubuntu/softwares/canu-2.2/bin/canu
-```
+export PATH=/home/ubuntu/softwares/canu-2.2/bin:$PATH```
 
-Once you create the symbolic link, test if you can call canu:
+Test if you can run canu:
 
 ```console  
-./canu
+canu
 ```  
 
 This will print you all the parameters that one can use to run canu. 
@@ -49,7 +48,7 @@ Then, create a symlink to the subsample read dataset and run canu:
 
 ```console  
 ln -s ~/Share/<species_id>_data/<species_id>.600.fasta
-./canu -d run1 -p <species_id> genomeSize=16000 -pacbio-hifi <species_id>.600.fasta useGrid=false corThreads=2
+canu -d run1 -p <species_id> genomeSize=16000 -pacbio-hifi <species_id>.600.fasta useGrid=false corThreads=2
 ```  
 
 The files created by `canu` will be saved on the `run1` directory. They will all be named using the *prefix* defined by the `-p` option. 
