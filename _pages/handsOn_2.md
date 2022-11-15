@@ -10,7 +10,7 @@ Right, so here we are! Let’s assemble the species you have chosen. You are goi
 
 Have a look at their websites:
 
-[Hicanu](https://github.com/marbl/canu/releases/tag/v2.1)
+[Hicanu](https://github.com/marbl/canu/releases/tag/v2.2)
 
 [Hifiasm](https://github.com/chhylp123/hifiasm)
 
