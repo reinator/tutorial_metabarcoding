@@ -7,15 +7,15 @@ permalink: /handsOn_1/
 # Kmer analysis: running jellyfish <a name="where-are-we?"></a> 
 
 Right, so today you have heard about how to analyse kmer composition of your genome sequenced reads! Now you are going to put your 'Hands On' data and will, yourself, count and analyse kmers.
-You have to chose between the species: (i) *Vanessa atalanta*, (ii) *Pieris rapae* and (iii) *Notonda dromedarius* to work on until the end of the week. Once you have chosen it, create a folder where you will run your analysis. My suggestion would be to create a folder with your species name and inside it, a series of other folders to structure your analyses. For example:
+You have to chose between the species: (i) *Vanessa atalanta*, (ii) *Pieris rapae* and (iii) *Notonda dromedarius* to work on until the end of the week. Once you have chosen it, create a folder where you will run your analysis. My suggestion would be to create a folder with your species name in your home directory (`~/<species_name>/`) and inside it, a series of other folders to structure your analyses. For example:
 
 v_atalanta/
 
- v_atalanta/kmers/
+v_atalanta/kmers/
   
- v_atalanta/assembly/
+v_atalanta/assembly/
   
- The above basically means you have created a folder called 'v_atalanta' (if you choose vanessa atalanta as your working species) and inside it you have created two other folders side by side called 'kmers' and 'assembly'. If you would like to do that, then do:
+The above basically means you have created a folder called 'v_atalanta' (if you choose vanessa atalanta as your working species) and inside it you have created two other folders side by side called 'kmers' and 'assembly'. If you would like to do that, then do:
  
  ```console  
 mkdir <species_folder>
@@ -37,7 +37,9 @@ Do you see the 3 species folders? If you do, then copy the file <species-code>.6
 cp ilVanAtal1_data/ilVanAtal1.600.fasta <Path_to_your_folder>/v_atalanta/kmers/
 cd <Path_to_your_folder>/v_atalanta/kmers/ 
 ls -ltr
-```  
+```
+
+PS: if you followed our recommendation and created the species folder in the home directory, `<Path_to_your_folder>` should be your home directory, so `user2` should now be located in the `/home/user2/<species_name>/kmers/` directory (remember you can double check your current working directory with the `pwd` command). 
 
 ### Attention :grey_exclamation: 
 
@@ -133,13 +135,13 @@ Inside the shared directory for your species (`~/Share/<species-Code>_data/`), y
 <species>.total.histo
 ```
 
-Download the file \<species\>.total.histo to your local machine (as you learned yesterday), go to the [Genomescope](http://qb.cshl.edu/genomescope/) page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot.
+Download the file \<species\>.total.histo to your local machine (if you need to help for that, we have instructions on downloading/uploading files in [this](https://eukaryotic-genome-assembly.github.io/logging_on/) tutorial), go to the [Genomescope](http://qb.cshl.edu/genomescope/) page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot.
 
 Save the image of both versions of the plot - normal and log scale - somewhere in your computer.
 
 Cool, you have plotted the kmer distribution of the \<species\>.total.histo file, and genomescope has calculated for your (i) the estimated genome size, (ii) the heterozygosity and (iii) the percentage of repeats of your species genome. 
 
-The histogram you have just plotted is for a jellyfish count of the **total** PacBio HiFi reads sequenced to assemble your species. We have generated it for you because it takes time. However, when you are back to real life and need to run it for your sample, you will run the same commands ran for the subsample as you just did! =) Yeah!! 
+The histogram you have just plotted is for a jellyfish count of the **total** PacBio HiFi reads sequenced to assemble your species. We have generated it for you because it takes time. However, when you are back to real life and need to run it for your sample, you will run the same commands ran for the subsample (`*600.fasta`) as you just did! =) Yeah!! 
 
 ## Now
 
@@ -148,7 +150,7 @@ I would like you to generate some general statistics for the \*.ccs.total.fasta.
 Before running asmstats, move to your species directory and create a soft link for the \*.ccs.total.fasta.gz file:
 
 ```bash
-cd ~/<species_folder>/
+cd <Path_to_your_species_folder>/
 ln -s ~/Share/<species-Code>_data/<species-Code>.ccs.total.fasta.gz
 ``` 
 
@@ -178,7 +180,7 @@ asmstats <species>.ccs.total.fasta.gz > <species>.total.fasta.stats
 
 Note: We are calling your output file \<species\>.total.fasta.stats
 
-Once the command finishes to run, have a look at the output:
+Once the command finishes to run (it could take a few minutes), have a look at the output:
 
 ```console  
 less <species>.total.fasta.stats
