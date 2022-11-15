@@ -35,6 +35,7 @@ Now let’s change to the hicanu folder and add HiCanu executable to the path:
 ```console
 cd hicanu
 export PATH=/home/ubuntu/softwares/canu-2.2/bin:$PATH```
+```
 
 Test if you can run canu:
 
