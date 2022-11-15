@@ -34,6 +34,7 @@ First human genome
 
 # Assemblers
 
+* HiFiAdapterFilt [https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-022-08375-1](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-022-08375-1) 
 * Hicanu [https://genome.cshlp.org/content/early/2020/08/14/gr.263566.120](https://genome.cshlp.org/content/early/2020/08/14/gr.263566.120)
 * Hifiasm [[https://arxiv.org/pdf/2008.01237.pdf](https://www.nature.com/articles/s41592-020-01056-5](https://www.nature.com/articles/s41592-020-01056-5)
 * Trio Binning [https://www.nature.com/articles/nbt.4277](https://www.nature.com/articles/nbt.4277)
