@@ -46,7 +46,7 @@ To know more about samtools, go to its [webpage](https://samtools.github.io)
 
 Now, we want to visualize one contig with the reads mapped to back to it. So we need to extract one contig from the `<outputname_you_chose>.sorted.bam` file (which contains mappings for all contigs assembled). Extracting the mapping information from a specific contig will make it easier/faster to load that information on IGV, which is the software we'll use to inspect our contig. The steps for doing the extraction are:
 
-     1\. Extract the fasta file for the contig you have chosen and make an index for it (`samtools faidx`);
+     1\. Extract the fasta file for the contig you have chosen and make an index for it (`samtools faidx`);  
      2\. Extract a bam file for one contig from `<outputname_you_chose>.sorted.bam` and create an index for it (`samtools index`);  
      
 Bellow you see the steps detailed:
