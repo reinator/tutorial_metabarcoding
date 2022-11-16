@@ -105,10 +105,13 @@ If not, then I need to change there. Now, list the contents of `hifiasm` directo
 ls -ltrh  
 ```
 
-Among the results hifiasm produce, you will find the `<prefix>.p_ctg.gfa` file (remember that the prefix has been defined using the `-o` option when running Hifiasm). This is our assembly output file. Hifiasm gives us the [assembly graph](http://gfa-spec.github.io/GFA-spec/GFA1.html) as an output. This means you need to convert the graph into a fasta file. For that, we have an awk script:
+Among the results hifiasm produce, you will find the `<prefix>.p_ctg.gfa` file (remember that the prefix has been defined using the `-o` option when running Hifiasm). This is our assembly output file. Hifiasm gives us the [assembly graph](http://gfa-spec.github.io/GFA-spec/GFA1.html) as an output. This means you need to convert the graph into a fasta file. For that, we have an awk script named `gfa2fa`.
+
+Add the directory containing that script to the PATH and run it:
 
 
-```console  
+```console 
+export PATH=~/Share/scripts/:$PATH
 gfa2fa <prefix>.p_ctg.gfa > p_ctg.fa
 ```
 
