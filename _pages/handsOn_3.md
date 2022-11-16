@@ -51,7 +51,7 @@ Now that we have formated our database, let’s run blast. Blast has many parame
 blastn -query <contigs_fasta> -db DB.fasta -out <contigs_fasta>.DB.blastn -evalue 1e-05
 ```  
 
-PS: here you should replace <contigs_fasta> by the assembly you've generated at the `Part 2 - Genome Assembly` tutorial. If you are blasting the hifiasm assembly, this file should be named `p_ctg.fa`. If you are blasting the canu assembly, this file should be named <species_id>.contigs.fasta (but remember that the canu output has been saved on the `run1/` subdirectory).
+PS: here you should replace `<contigs_fasta>` by the assembly you've generated at the `Part 2 - Genome Assembly` tutorial. If you are blasting the hifiasm assembly, this file should be named `p_ctg.fa`. If you are blasting the canu assembly, this file should be named `<species_id>.contigs.fasta` (but remember that the canu output has been saved on the `run1/` subdirectory).
 
 Now run it with a output format 6:
 
@@ -73,7 +73,7 @@ So now let’s have a look at our outputs!
 
 2-) Let’s inspect the differences between the two outputs
 
-3-) What each column on the output <contigs_fasta>.DB.blastn6 mean?
+3-) What each column on the output `<contigs_fasta>.DB.blastn6` mean?  
     Here you can either google it or (even better) run `blastn -help` to see what the default columns for the `-outfmt` are. By exploring the `blast -help` output you can even discover some non-default options that you may find interesting to include in your future blast alignments outputs. 
 
 Discuss this with your colleages and then let's discuss this as a group!
