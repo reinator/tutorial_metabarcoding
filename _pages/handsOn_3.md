@@ -24,6 +24,7 @@ If `eukaryotic_genome_assembly` is activated, try:
 blastn -h
 ```  
 
+Has `blastn` returned some USAGE information with a list of accepted parameters? If yes, great.
 Next thing will be to make sure you are in your assembly directory, which can be either the hifiasm or canu:
 
 ```console
