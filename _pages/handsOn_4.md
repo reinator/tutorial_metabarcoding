@@ -76,6 +76,12 @@ nano contig_id
 
 Nano will open a empty file for you. Inside it type the ID of the contig you have chosen, in my case this will be `Contig1`. Then to close and save the file in a Mac you do `Ctrl+O` and then `Ctrl+X`. 
 
+For the `Contig1` example, the content of the `contig_id` file should look like:  
+
+```console
+Contig1
+```
+
 Now, let’s run our script `filterfasta.py`, that will extract that contig from our assembly result. 
 
 First, copy the script to your working directory:  
@@ -90,12 +96,15 @@ Then run it:
 python filterfasta.py -i <contig_id> <contigs_fasta> > <contig_ID>.fasta
 ```  
 
-Right. Now give a less to the file `<contig_ID>.fasta`:
+Right. Now use the `less` command to inspect the file `<contig_ID>.fasta`.
 
 ```console  
 less <contig_ID>.fasta
 ``` 
-And let's create an index for our fasta as well:
+
+`less` you allow you to browse through the lines using the up/down keys. Once you are happy navigating through the file, you can quit from `less` by pressing the `q` key. 
+
+Now let's create an index for our contig fasta file:
 
 ```console  
 samtools faidx <contig_ID>.fasta
@@ -119,7 +128,7 @@ Now you have four files you must download to your local machine to open them on 
 
 Take your time…
 
-On IGV, on the top, click on ‘Genomes > Load Genome from File’ and add your fasta file. Then click on ‘File > Load from File’ to include your bam file. And… you are done!!! 
+On IGV, on the top, click on `Genomes > Load Genome from File` and add your fasta file. Then click on `File > Load from File` to include your bam file. And… you are done!!! 
 
 Let's play with IGV a bit (alone and as a group).
 
@@ -127,7 +136,7 @@ Let's play with IGV a bit (alone and as a group).
 
 But, how can I see how many reads have mapped to all my contigs? 
 A few ways.
-Minimap2 would have printed you some log files containing that info.
+Minimap2 would have printed you some log files while it was running.
 You can also run samtools flagstat.
 
 ```console  
