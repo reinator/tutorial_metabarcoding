@@ -58,7 +58,7 @@ First let's list the descriptions of all our contigs by grepping the lines that 
 grep ">" <contigs_fasta> 
 ```
 
-> Attention :exclamation:
+> Attention :exclamation:  
 > Quoting the `>` character is needed here since an unquoted `>` would be interpreted as the redirection mechanism by the shell. Quoting the patterns to be searched by grep is actually a good practice. 
 
 The output of the `grep` command will print to the screen the names of all your assembled contigs. Choose one and create a file with it's ID. Let’s say my grep result looks like this:
