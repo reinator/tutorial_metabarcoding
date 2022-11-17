@@ -56,3 +56,8 @@ Then, using the `Go` search bar (like in the image below), go to the position: `
 Do you see a gap in the Pacbio coverage?
 
 Aha! If you have a weird looking Hi-C HeatMap and NO reads crossing that regiong, I bet you that this is a miss-assembly!! Don't you? :wink:
+
+#### (optional) Saving regions of interest
+IGV allows us to highlight regions of interest through the `Region Navigator` tool. To save the region that has no coverage, you first need to make sure that IGV is displaying that region (you can type the position `scaffold_1:56,972,207-56,977,386` in the search bar again). Then, on the top panel of IGV click on `Regions > Region Navigator...`. All you need to do now is to click on the `Add` button and your region will be added to the Region Navigator list. You can even give a description to your region (e.g. `drop in coverage`).
+
+After saving your region(s) of interest(s), you can zoom-out and browse through the whole sequence in IGV and your region will always be highlighted (in red). 
