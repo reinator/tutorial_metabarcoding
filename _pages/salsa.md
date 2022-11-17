@@ -36,13 +36,12 @@ To run SALSA2 you need first to symlink 3 files to your working directory. All f
 run_pipeline.py -a <species_id>_hicanu.purged.polish.fa -l <species_id>_hicanu.purged.polish.fa.fai -b merge.mkdup.bed -e GATC,GANTC -i 5 -p yes -o out
 ``` 
 
-Attention :exclamation:  
-Remember to replace `<species_id>` with the ID of your species. For instance, for *Vanessa atalanta* that would be `ilVanAtal1`.
+> Attention :exclamation:  
+> Remember to replace `<species_id>` with the ID of your species. For instance, for *Vanessa atalanta* that would be `ilVanAtal1`.
 
 
-Attention2 :exclamation:
-
-You will notice that the contigs you are scaffolding are called polish. In fact, if/when you run a sumary statistics for them you will see that they have a different number of bases compared with the purged assembly you analyzed. Why is that? That is because at Darwin Tree of Life we used to polish the purged genomes before scaffolding (remember I showed you this in the lecture?). We have dropped polishing now, but you are working with data that was polished. :) 
+> **What exactly are you scaffolding?**
+> You will notice that the contigs you are scaffolding are called polish. In fact, if/when you run a summary statistics for them you will see that they have a different number of bases compared with the purged assembly you analyzed. Why is that? That is because at Darwin Tree of Life we used to polish the purged genomes before scaffolding (remember I showed you this in the lecture?). We have dropped polishing now, but you are working with data that was polished. :) 
 
 Right, SALSA2 will start running. However, since SALSA2 run should take a long time, we'll **stop SALSA2 run** now with `Ctr+C`. From this point on we'll be using SALSA2 results generated in advance by your instructors. Those files can be found under `~/Share/<species_id>_data/HiC/out.break.salsa/` directory. 
 
@@ -98,7 +97,7 @@ Analyze all the results, discuss with your team and answer the questions in your
 
 1. What are the assembly statistics before scaffolding?
 2. What are the assembly statistics after scaffolding?
-3. Looking at the final agp file (maybe you want to read a little about the AGP format [here](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/)): what scaffolds were scaffolded with more than one component (a contig of a piece of a contig)? And what scaffolds are unchanged in relation to the contigs?
+3. Looking at the final agp file (`~/Share/<species_id>_data/HiC/out.break.salsa/scaffolds_FINAL.agp`) (maybe you want to read a little about the AGP format [here](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/)): what scaffolds were scaffolded with more than one component (a contig of a piece of a contig)? And what scaffolds are unchanged in relation to the contigs?
 4. How do the Hi-C maps look prior and after scaffolding?
 5. Do you think you see a sex chromosome on the Hi-C heatmap? If so, point to it in your presentation.
 
