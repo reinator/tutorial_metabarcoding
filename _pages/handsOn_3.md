@@ -8,7 +8,7 @@ permalink: /handsOn_3/
 
 Last but not least!
 
-I know you have chosen a specific species and you have assembled a partial set of Pacbio HiFi reads for it. Do you think you have just assembled some portions of your species nuclear genome? Or something special? Aren’t you curious? Well, the parameter ‘genomeSize=’ you have used for Hicanu already gives you a hint about what you have assembled. 
+I know you have chosen a specific species and you have assembled a partial set of Pacbio HiFi reads for it. Do you think you have just assembled some portions of your species nuclear genome? Or something special? Aren’t you curious? Well, the parameter `genomeSize=` you have used for Hicanu already gives you a hint about what you have assembled. 
 
 But we will do something even more fun to find out. Let’s do a stand-alone BLAST of our assembled contigs (choose one or run for both, as you wish!).
 
@@ -54,13 +54,17 @@ blastn -query <contigs_fasta> -db DB.fasta -out <contigs_fasta>.DB.blastn -evalu
 
 PS: here you should replace `<contigs_fasta>` by the assembly you've generated at the `Part 2 - Genome Assembly` tutorial. If you are blasting the hifiasm assembly, this file should be named `p_ctg.fa`. If you are blasting the canu assembly, this file should be named `<species_id>.contigs.fasta` (but remember that the canu output has been saved on the `run1/` subdirectory).
 
-Now run it with a output format 6:
+Now run it with an output format 6:
 
 ```console  
 blastn -query <contigs_fasta> -db DB.fasta -out <contigs_fasta>.DB.blastn6 -evalue 1e-05 -outfmt 6
-``` 
+```
 
+The command above will tell you the accession number of the subject sequences (i.e. the sequences in the database), then you can check on NCBI what those sequences are. Alternatively, you may change the `blastn` command to direcly print the title of the subject sequences in the output file (by replacing `-outfmt 6` by `-outfmt "6 std stitle"`):  
 
+```
+blastn -query <contigs_fasta> -db DB.fasta -out <contigs_fasta>.DB.blastn6 -evalue 1e-05 -outfmt "6 std stitle"
+```
 
 ### Attention :grey_exclamation: 
 
