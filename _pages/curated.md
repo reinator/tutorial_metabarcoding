@@ -27,7 +27,13 @@ This material will always be here for you to come back to it and consolidate you
 
 # Now,
 
-It's time for you and your team to gather all the results and make a final presentation. **I have some extra results for your species**: it's the final curated primary assembly (haplotigs are not curated at the moment). So you have the curated results,a BUSCO run for it and the final curated Hi-C heatmap. So I want you to gather ALL the results for your species and make a final presentation answering all the questions bellow:
+It's time for you and your team to gather all the results and make a final presentation. **I have some extra results for your species**: it's the final curated primary assembly (haplotigs are not curated at the moment). For the curated assembly you have available the following files:
+
+* The statistics general statistics: `~/Share/<species_id>_data/HiC/curated/*.curated_primary.fa.stats`
+* The file to be open with PretextView to see the HiC heatmap: `~/Share/<species_id>_data/HiC/curated/*.pretext`
+* The BUSCO results: `~/Share/<species_id>_data/HiC/curated/BUSCO/short_summary.specific..BUSCO.txt`
+
+So you have the curated statistics, a BUSCO run for it and the final curated Hi-C heatmap. So I want you to gather ALL the results for your species and make a final presentation answering all the questions bellow:
 
      1\. What is the name of your species? And what else have you learned online for it (do a small search to find a picture and maybe some interesting evolutionary facts about it)?
 
