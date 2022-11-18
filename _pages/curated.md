@@ -29,7 +29,8 @@ This material will always be here for you to come back to it and consolidate you
 
 It's time for you and your team to gather all the results and make a final presentation. **I have some extra results for your species**: it's the final curated primary assembly (haplotigs are not curated at the moment). For the curated assembly you have available the following files:
 
-* The statistics general statistics: `~/Share/<species_id>_data/HiC/curated/*.curated_primary.fa.stats`
+* The general statistics: `~/Share/<species_id>_data/HiC/curated/*.curated_primary.fa.stats`  
+  * e.g. for `Pieris rapae` that would be: `~/Share/<species_id>_data/HiC/curated/ilPieRapa1_1.20200820.curated_primary.fa.stats` 
 * The file to be open with PretextView to see the HiC heatmap: `~/Share/<species_id>_data/HiC/curated/*.pretext`
 * The BUSCO results: `~/Share/<species_id>_data/HiC/curated/BUSCO/short_summary.specific..BUSCO.txt`
 
