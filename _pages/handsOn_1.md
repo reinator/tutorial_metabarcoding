@@ -47,7 +47,7 @@ Each species data will have a code on its name representing each of the 4 specie
 
 ilVanAtal1 - *Vanessa atalanta*
 
-ilPieRapa1 - *Pieris rapae*
+drUrtUren1 - *Urtica urens*
 
 ilNotDrom1 - *Notodonta dromedarius*
 
