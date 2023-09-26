@@ -103,19 +103,22 @@ What you need to do with the purging merqury results is:
 Now I want you to take a look at some relevant Merqury files. The text files can be open with the `less` command, while you will need to download the plot files (*.png) to your local machine in order to actually open them. 
   
   3-) Gather the spectra plots for the primary purged assembly. They will be called `purged.out.purged.spectra-cn*.png` (notice that the `*` represents the different files we have: `st`, `ln` and `st`)
+  
   4-) Gather the spectra plots for the haplotigs purged assembly. It will be called `purged.out.purged.htigs.spectra-cn*.png`
+  
   5-) Gather the completeness results for the run. The file is called `completeness.stats`
+  
   6-) Gather the QV results for the run. The file is called `purged.out.qv`
   
-By the time you finish gathering all of these results, it's very likely that the merqury run for the Hicanu has finished. Please go and have a look at the same 3,4,5 and 6 questions for the total Hicnau run.
+By the time you finish gathering all of these results, it's very likely that the merqury run for the Hifiasm has finished. Please go and have a look at the same 3,4,5 and 6 questions for the Hifiasm run.
   
 Now that you have all the results organized, let's interpret them and discuss with your group while you make your group presentation.
   
-  - show the statistics for the total Hicanu assembly
-  - show the busco short summary for the total Hicanu assembly
-  - show the spectra plot for the total Hicanu assembly (one of the files st, ln or fn)
-  - show the completeness for the total assembly
-  - show the QV for the total assembly.
+  - show the statistics for the Hifiasm p and a assemblies
+  - show the busco short summary for the Hifiasm assemblies
+  - show the spectra plot for the Hifiasm assemblies (one of the files st, ln or fn)
+  - show the completeness for the Hifiasm assemblies
+  - show the QV for the Hifiasm assemblies.
   
   Go and do the same for the primary purged assembly:
   
@@ -146,17 +149,15 @@ For the purged run, the qv and completeness result for the purged and htigs asse
   
   a-) What has happened with the assembly general statistics after it was purged?
   
-  b-) Why the hicanu statistics before purging shows a larger than estimated genome size?
+  b-) After purging, what the files purged and htigs mean?
   
-  c-) After purging, what the files purged and htigs mean?
+  c-) How is the BUSCO duplication before purging?
   
-  d-) How is the BUSCO duplication before purging?
+  d-) How is the busco duplication in the purged assembly after purging? Why has it changed?
   
-  e-) How is the busco duplication in the purged assembly after purging? Why has it changed?
+  e-) What are all the QVs of the assemblies? Are they good QVs? 
   
-  f-) What are all the QVs of the assemblies? Are they good QVs? 
-  
-  h-) What a QV of 50 means?
+  f-) What a QV of 50 means?
   
   Well done! Let's come back to the group all together now!
  
