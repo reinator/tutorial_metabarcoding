@@ -6,22 +6,22 @@ permalink: /handsOn_merqury/
 
 # Part 3 - Purging and Merqury evaluation
 
-Ok, today you learned about Purge Dups and purging assemblies. You also learned that Hifiasm and other assemblers, even though the aim to have perfect phased assemblies and even have internal parameters for it, many times the primary assembly retains haplotypes, and that this redanduncy is not real and must be removed before assemblies are scaffolded. Later, you learned how to evaluate assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads kmers, such as Illumina or PacBio HiFi. Now you are going to run merqury to evaluate assemblies for your species!
+Ok, today you learned about Purge Dups and purging assemblies. You also learned that Hifiasm and other assemblers are not perfect in separating haplotypes of diploid species, and then many times the primary assembly retains haplotypes, and that this redanduncy is not real and must be removed before assemblies are scaffolded. Later, you learned how to evaluate assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads kmers, such as Illumina or PacBio HiFi. Now you are going to run merqury to evaluate assemblies for your species!
 
-All right, earlier today you have assembled a subset of reads for your species, but you have generated statistics for a total-assembly run I have generated previously. This total assembly is the file you are going to work on: the total assembly of Hifiasm for your species, this is called  `<your_species>.hicanu.total.contigs.fasta.gz`. So I would like you to create a directory called `merqury_hicanu_eval` inside your home species directory (`~/<species_folder>/`), move to there and create a symlink to the Hicanu assembly file: `<your_species>.hicanu.total.contigs.fasta.gz` there:
+All right, earlier today you have assembled a subset of reads for your species, but you have generated statistics for hifiasm drUrtUren1.p_ctg.fa.gz and drUrtUren1.a_ctg.fa.gz assemblies that I have generated previously. These assembly are the files you are going to work on right now. So I would like you to create a directory called `merqury_hifiasm_eval` inside your home species directory (`~/<species_folder>/`), move there and create a symlink to the Hifiasm assembly files: 
 
 ```console  
-mkdir ~/<species_folder>/merqury_hicanu_eval/
-cd ~/<species_folder>/merqury_hicanu_eval/
-ln -s ~/Share/<species_id>_data/<species_id>.hicanu.total.contigs.fasta.gz
+mkdir ~/<species_folder>/merqury_hifiasm_eval/
+cd ~/<species_folder>/merqury_hifiasm_eval/
+ln -s ~/Share/<species_id>_data/drUrtUren1.p_ctg.fa.gz
+ln -s ~/Share/<species_id>_data/drUrtUren1.a_ctg.fa.gz
 ```  
 
-PS: Remember to replace `<species_id>` with the ID of your species! :)
 
-Right, so in order to run merqury, you need a meryl datase of the reads you want to compare kmers with the kmers in your assembly. In our case, I have created meryl databases for 10X reads (illumina linked-reads) for your species, and you just need to symlink the meryl db folder to your execution folder. So you do:
+Right, so in order to run merqury, you need a meryl datase of the reads you want to compare kmers with the kmers in your assembly. In our case, I have created meryl databases for Pacbio HiFi reads for your species, and you just need to symlink the meryl db folder to your execution folder. So you do:
 
 ```console  
-ln -s ~/Share/<species_id>_data/<species_id>.10X.21.meryl/
+ln -s ~/Share/<species_id>_data/drUrtUren1.pacbio.k21.meryl/
 ```  
 
 Now, let's run merqury! For that, you need to activate our conda enviroment (if not yet activated):
@@ -39,14 +39,14 @@ merqury.sh
 The help message should show you that in order to run merqury, you need (i) the meryl database (ii) your assembly (one or two, if you have primary and haplotigs. In our case its only one) and (iii) an output name. So inside your merqury_hicanu_eval directory, you will do:
 
 ```console  
-merqury.sh <your_species>.10X.21.meryl <your_species>.hicanu.total.contigs.fasta.gz outHicanu
+merqury.sh drUrtUren1.pacbio.k21.meryl drUrtUren1.p_ctg.fa.gz drUrtUren1.a_ctg.fa.gz hifiasm
 ```  
 
 Great!! 
 
 ## This will take a while to run. During this time...
 
-You are going to gather the results and evaluate the purged version of your species Hicanu assembly. We don't have time to run Purge_dups here, but the most important thing is to learn how to interpret the results after purge_dups is done. So, João and I have generated for you the purged results, the merqury and the BUSCO results.
+You are going to gather the results and evaluate the purged version of your species Hifiasm assembly. We don't have time to run Purge_dups here, but the most important thing is to learn how to interpret the results after purge_dups is done. So, João and I have generated for you the purged results, the merqury and the BUSCO results.
 
 1-) First thing you need to do is to symlink the purged assemblies and calculate the general statistics for the primary and haplotigs files. Let's create a new directory to save the purged results and create the symlinks there:
 
@@ -67,23 +67,23 @@ asmstats purged.htigs.fa.gz > purged.htigs.fa.gz.stats
 
 Great!
 
-2-) Now, I want you to take a look and take notes of the BUSCO results before and after purging for the Hicanu assembly. The short summaries are the files you should look at. You can do that by using the `less` command:
+2-) Now, I want you to take a look and take notes of the BUSCO results before and after purging for the Hifiasm drUrtUren1.p_ctg.fa.gz assembly. The short summaries are the files you should look at. You can do that by using the `less` command:
 
 before purging:
 ```
-less ~/Share/<species_id>_data/run_<species_id>.contigs.insecta.busco/short_summary_<species_id>.contigs.insecta.busco.txt
+less ~/Share/<species_id>_data/run_hifiasm_eudicots_busco/short_summary_drUrtUren1.p_contigs.busco.txt
 ```
 
 after purging:  
 
 primary:
 ```
-less ~/Share/<species_id>_data/run_purged.insecta.busco/short_summary_purged.insecta.busco.txt
+less ~/Share/<species_id>_data/run_hifiasm.purged_eudicots_busco/short_summary_drUrtUren1.purged.busco.txt
 ```
 
 htigs:
 ```
-less ~/Share/<species_id>_data/run_purged.htigs.insecta.busco/short_summary_purged.htigs.insecta.busco.txt
+less ~/Share/<species_id>_data/run_eudicots_odb10/short_summary_drUrtUren1.purged_htigs.busco.txt
 ```
 
 Right, now let's have a look at the merqury results. If the one your group is running for the Hicanu assembly is not done yet, we can start having a look at the purged results. Merqury is going to create a lot of different files: (i) different plot (.png) files, (ii) a <outname>.completeness.stats file and (iii) a <outputname>.qv file.  
