@@ -50,7 +50,7 @@ pages:
         url: /handsOn_4/
       - title: "Part 3 - Purging and Merqury"
         url: /handsOn_merqury/
-        - title: "Part 3 - Purging and Merqury"
+        - title: "Part 3_2 - Purging and Merqury_2"
         url: /handsOn_merqury2/
       - title: "Part 4 - SALSA2 scaffolding"
         url: /salsa/
