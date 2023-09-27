@@ -47,11 +47,20 @@ canu
 
 This will print you all the parameters that one can use to run canu. 
 
-Then, create a symlink to the subsample read dataset and run canu:
+Then, create a symlink to the subsample read dataset and 
+
+1-) run the bellow for ilVanAtal1 and ilNotDrom1:
 
 ```console  
 ln -s ~/Share/<species_id>_data/<species_id>.600.fasta
 canu -d run1 -p <species_id> genomeSize=16000 -pacbio-hifi <species_id>.600.fasta useGrid=false corThreads=2
+```  
+
+2-) run the bellow for drUrtUren1:
+
+```console  
+ln -s ~/Share/<species_id>_data/<species_id>.600.fasta
+canu -d run1 -p <species_id> genomeSize=300000 -pacbio-hifi <species_id>.600.fasta useGrid=false corThreads=2
 ```  
 
 The files created by `canu` will be saved on the `run1` directory. They will all be named using the *prefix* defined by the `-p` option. 
@@ -112,14 +121,14 @@ Add the directory containing that script to the PATH and run it:
 
 ```console 
 export PATH=~/Share/scripts/:$PATH
-gfa2fa <prefix>.p_ctg.gfa > p_ctg.fa
+gfa2fa <prefix>.p_ctg.gfa > <prefix>.p_ctg.fa
 ```
 
 Right. So now, what to do with the assembly file?
 Well, first you should have a look at the statistics for this assembly. Let’s run our asmstats script on it
 
 ```console  
-asmstats p_ctg.fa > p_ctg.fa.stats
+asmstats <prefix>.p_ctg.fa > <prefix>.p_ctg.fa.stats
 ```
 
 2-) Hicanu
@@ -140,7 +149,7 @@ asmstats <prefix>.contigs.fasta > <prefix>.contigs.fasta.stats
 ## WELL DONE!
 You have just done eukaryotic genome assembly using PacBio HiFi reads and two different assemblers! **That is fantastic!**
 
-Before you go back to the group, I want you to gather the statistics results of different files:
+I want you to gather the statistics results of different files:
 
 1-) The statistics of the raw reads you have used as input for your assembly.
 
@@ -168,6 +177,3 @@ As you know, because of time and computer resources, we have assembled only a su
   2-) Hifiasm generates two files. Why? What are the assembly metrics for these two files?
   
 Now gather all these results, let’s go to the larger group and let’s discuss them together!
-
-
-
