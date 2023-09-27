@@ -1,7 +1,7 @@
 ---
 title: "Hands On"
 layout: archive
-permalink: /handsOn_merqury/
+permalink: /handsOn_merqury1/
 ---  
 
 # Part 3 - Purging and Merqury evaluation
