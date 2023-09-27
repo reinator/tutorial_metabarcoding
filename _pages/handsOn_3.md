@@ -28,16 +28,16 @@ Has `blastn` returned some USAGE information with a list of accepted parameters?
 Next thing will be to make sure you are in your assembly directory, which can be either the hifiasm or canu:
 
 ```console
-cd ~/<species_folder>/<hifiasm/hicanu>/
+cd ~/<species_folder>/<hifiasm>/
+cd ~/<species_folder>/<hicanu>/
+
 ```
 
-PS: `<hifiasm/hicanu>` should be replaced by either `hifasm` or `hicanu`
-
-Right. So now we want to BLAST our contigs to find out what they are. This means we need to blast them against a database of sequences we must think are present in our assembly. I have already created a database for you. It’s called `DB.fasta`. So all you have to do to use it is to create this database in the format blast understands and uses it. So you do:
+Right. So now we want to BLAST our contigs to find out what they are. This means we need to blast them against a database of sequences we must think are present in our assembly. I have already created a database for you. It’s called `database.fasta`. So all you have to do to use it is to create this database in the format blast understands and uses it. So you do:
 
 ```console  
-cp ~/Share/blast_DB/DB.fasta .
-makeblastdb -in DB.fasta -dbtype nucl
+cp ~/Share/blast_DB/database.fasta .
+makeblastdb -in database.fasta -dbtype nucl
 ```  
 
 Now, list your directory. Have a look. Do you see different files with the database name but with specific blast file extensions (e.g. `*.nsq`, `*.nhr`)?
@@ -49,7 +49,7 @@ ls -ltrh
 Now that we have formated our database, let’s run blast. Blast has many parameters. We are going to run it twice to produce two types of output files. First run to generate a standard output:
 
 ```console  
-blastn -query <contigs_fasta> -db DB.fasta -out <contigs_fasta>.DB.blastn -evalue 1e-05
+blastn -query <contigs_fasta> -db database.fasta -out <contigs_fasta>.DB.blastn -evalue 1e-05
 ```  
 
 PS: here you should replace `<contigs_fasta>` by the assembly you've generated at the `Part 2 - Genome Assembly` tutorial. If you are blasting the hifiasm assembly, this file should be named `p_ctg.fa`. If you are blasting the canu assembly, this file should be named `<species_id>.contigs.fasta` (but remember that the canu output has been saved on the `run1/` subdirectory).
@@ -57,13 +57,13 @@ PS: here you should replace `<contigs_fasta>` by the assembly you've generated a
 Now run it with an output format 6:
 
 ```console  
-blastn -query <contigs_fasta> -db DB.fasta -out <contigs_fasta>.DB.blastn6 -evalue 1e-05 -outfmt 6
+blastn -query <contigs_fasta> -db database.fasta -out <contigs_fasta>.DB.blastn6 -evalue 1e-05 -outfmt 6
 ```
 
 The command above will tell you the accession number of the subject sequences (i.e. the sequences in the database), then you can check on NCBI what those sequences are. Alternatively, you may change the `blastn` command to direcly print the title of the subject sequences in the output file (by replacing `-outfmt 6` by `-outfmt "6 std stitle"`):  
 
 ```
-blastn -query <contigs_fasta> -db DB.fasta -out <contigs_fasta>.DB.blastn6 -evalue 1e-05 -outfmt "6 std stitle"
+blastn -query <contigs_fasta> -db database.fasta -out <contigs_fasta>.DB.blastn6_2 -evalue 1e-05 -outfmt "6 std stitle"
 ```
 
 ### Attention :grey_exclamation: 
