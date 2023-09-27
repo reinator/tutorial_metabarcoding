@@ -6,15 +6,15 @@ permalink: /handsOn_purging2/
 
 # Part 3.2 - Purging and Merqury drUrtUren1
 
-Ok, today you learned about Purge Dups and purging assemblies. You also learned that Hifiasm and other assemblers are not perfect in separating haplotypes of diploid species, and then many times the primary assembly retains haplotypes, and that this redanduncy is not real and must be removed before assemblies are scaffolded. Later, you learned how to evaluate assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads kmers, such as Illumina or PacBio HiFi. Now you are going to run merqury to evaluate assemblies for your species!
+Ok, today you learned about Purge Dups and purging assemblies. You also learned that Hifiasm and other assemblers are not perfect in separating haplotypes of diploid species, and then many times the primary assembly retains haplotigs, and that this redanduncy is not real and must be removed before assemblies are scaffolded. Later, you learned how to evaluate assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads kmers, such as Illumina or PacBio HiFi. Now you are going to run merqury to evaluate assemblies for your species!
 
-All right, earlier today you have assembled a subset of reads for your species, but you have generated statistics for hifiasm drUrtUren1.p_ctg.fa.gz and drUrtUren1.a_ctg.fa.gz assemblies that I have generated previously. These assembly are the files you are going to work on right now. So I would like you to create a directory called `merqury_hifiasm_eval` inside your home species directory (`~/<species_folder>/`), move there and create a symlink to the Hifiasm assembly files: 
+All right, earlier today you have assembled a subset of reads for your species, but you have generated statistics for hifiasm drUrtUren1.hifiasm.total.p_ctg.fa.gz and drUrtUren1.hifiasm.total.a_ctg.fa.gz assemblies that I have generated previously. These assemblies are the files you are going to work on right now. So I would like you to create a directory called `merqury_hifiasm_eval` inside your home species directory (`~/<species_folder>/`), move there and create a symlink to the Hifiasm assembly files: 
 
 ```console  
 mkdir ~/<species_folder>/merqury_hifiasm_eval/
 cd ~/<species_folder>/merqury_hifiasm_eval/
-ln -s ~/Share/<species_id>_data/drUrtUren1.p_ctg.fa.gz
-ln -s ~/Share/<species_id>_data/drUrtUren1.a_ctg.fa.gz
+ln -s ~/Share/<species_id>_data/drUrtUren1.hifiasm.total.p_ctg.fa.gz
+ln -s ~/Share/<species_id>_data/drUrtUren1.hifiasm.total.a_ctg.fa.gz
 ```  
 
 
@@ -36,25 +36,25 @@ Right, as soon as you see it's activated, try:
 merqury.sh
 ```  
 
-The help message should show you that in order to run merqury, you need (i) the meryl database (ii) your assembly (one or two, if you have primary and haplotigs. In our case its only one) and (iii) an output name. So inside your merqury_hicanu_eval directory, you will do:
+The help message should show you that in order to run merqury, you need (i) the meryl database (ii) your assembly (one or two, if you have primary and haplotigs. In our case you have two) and (iii) an output name. So inside your merqury_hicanu_eval directory, you will do:
 
 ```console  
-merqury.sh drUrtUren1.pacbio.k21.meryl drUrtUren1.p_ctg.fa.gz drUrtUren1.a_ctg.fa.gz hifiasm
+merqury.sh drUrtUren1.pacbio.k21.meryl drUrtUren1.hifiasm.total.p_ctg.fa.gz drUrtUren1.hifiasm.total.a_ctg.fa.gz hifiasm
 ```  
 
 Great!! 
 
 ## This will take a while to run. During this time...
 
-You are going to gather the results and evaluate the purged version of your species Hifiasm assembly. We don't have time to run Purge_dups here, but the most important thing is to learn how to interpret the results after purge_dups is done. So, João and I have generated for you the purged results, the merqury and the BUSCO results.
+You are going to gather the results and evaluate the purged version of your species Hifiasm assembly. We don't have time to run [Purge_dups](https://github.com/dfguan/purge_dups) here, but the **most important** thing is to learn how to interpret the results after purge_dups is done. So, João and I have generated for you the (i) purged assebmlies, (ii) the merqury and the (iii) BUSCO results.
 
 1-) First thing you need to do is to symlink the purged assemblies and calculate the general statistics for the primary and haplotigs files. Let's create a new directory to save the purged results and create the symlinks there:
 
 ```console  
 mkdir ~/<your_species>/purged/
 cd ~/<your_species>/purged/
-ln -s ~/Share/<species_id>_data/purged/purged.fa.gz
-ln -s ~/Share/<species_id>_data/purged/purged.htigs.fa.gz
+ln -s ~/Share/drUrtUren1_data/purged/purged.fa.gz
+ln -s ~/Share/drUrtUren1_data/purged/purged.htigs.fa.gz
 ```  
 
 And now export our scripts directory and run the `asmstats` script for each of them:
@@ -67,23 +67,29 @@ asmstats purged.htigs.fa.gz > purged.htigs.fa.gz.stats
 
 Great!
 
-2-) Now, I want you to take a look and take notes of the BUSCO results before and after purging for the Hifiasm drUrtUren1.p_ctg.fa.gz assembly. The short summaries are the files you should look at. You can do that by using the `less` command:
+2-) Now, I want you to take a look and take notes of the BUSCO results **before** and **after** purging for the Hifiasm drUrtUren1.hifiasm.total.p_ctg.fa.gz and drUrtUren1.hifiasm.total.a_ctg.fa.gz assembly. The short short_summary.txt is the file you should look at. You can do that by using the `less` command:
 
 before purging:
+
+Prinary:
 ```
-less ~/Share/<species_id>_data/run_hifiasm_eudicots_busco/short_summary_drUrtUren1.p_contigs.busco.txt
+less ~/Share/<species_id>_data/run_drUrtUren1.hifiasm.p.busco_odb10/short_summary.txt
 ```
 
+haplotigs:
+```
+less ~/Share/<species_id>_data/run_drUrtUren1.hifiasm.a.busco_odb10/short_summary.txt (running, copy when done)
+```
 after purging:  
 
-primary:
+Primary:
 ```
-less ~/Share/<species_id>_data/run_hifiasm.purged_eudicots_busco/short_summary_drUrtUren1.purged.busco.txt
+less ~/Share/<species_id>_data/run_drUrtUren1.hifiasm.a.busco_odb10/short_summary.txt
 ```
 
 htigs:
 ```
-less ~/Share/<species_id>_data/run_eudicots_odb10/short_summary_drUrtUren1.purged_htigs.busco.txt
+less ~/Share/<species_id>_data/run_drUrtUren1.purged_htigs.busco_odb10/short_summary.txt
 ```
 
 Right, now let's have a look at the merqury results. If the one your group is running for the Hicanu assembly is not done yet, we can start having a look at the purged results. Merqury is going to create a lot of different files: (i) different plot (.png) files, (ii) a <outname>.completeness.stats file and (iii) a <outputname>.qv file.  
