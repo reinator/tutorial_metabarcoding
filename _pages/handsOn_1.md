@@ -6,7 +6,7 @@ permalink: /handsOn_1/
 
 # Kmer analysis: running jellyfish <a name="where-are-we?"></a> 
 
-Right, so today you have heard about how to analyse kmer composition of your genome sequenced reads! Now you are going to put your 'Hands On' data and will, yourself, count and analyse kmers.
+Right, so today you learned about how to analyse kmer composition of your genome sequenced reads! Now you are going to put your 'Hands On' data and will, yourself, count and analyse kmers.
 You have to chose between the species: (i) *Vanessa atalanta*, (ii) *Urtica urens* and (iii) *Notonda dromedarius* to work on until the end of the week. Once you have chosen it, create a folder where you will run your analysis. My suggestion would be to create a folder with your species name in your home directory (`~/<species_name>/`) and inside it, a series of other folders to structure your analyses. For example:
 
 v_atalanta/
@@ -135,7 +135,7 @@ Inside the shared directory for your species (`~/Share/<species-Code>_data/`), y
 <species>.total.histo
 ```
 
-Download the file \<species\>.total.histo to your local machine (if you need to help for that, we have instructions on downloading/uploading files in [this](https://eukaryotic-genome-assembly.github.io/logging_on/) tutorial), go to the [Genomescope](http://qb.cshl.edu/genomescope/) page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot.
+Download the file \<species\>.total.histo to your local machine (if you need to help for that, we have instructions on downloading/uploading files in [this](https://eukaryotic-genome-assembly.github.io/logging_on/) tutorial), go to the [Genomescope](http://qb.cshl.edu/genomescope/) page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot. People working with drUrtUren1 also need to set the kmer max count to 10000.
 
 Save the image of both versions of the plot - normal and log scale - somewhere in your computer.
 
