@@ -4,7 +4,7 @@ layout: archive
 permalink: /handsOn_purging2/
 ---  
 
-# Part 3 - Purging and Merqury evaluation
+# Part 3.2 - Purging and Merqury drUrtUren1
 
 Ok, today you learned about Purge Dups and purging assemblies. You also learned that Hifiasm and other assemblers are not perfect in separating haplotypes of diploid species, and then many times the primary assembly retains haplotypes, and that this redanduncy is not real and must be removed before assemblies are scaffolded. Later, you learned how to evaluate assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads kmers, such as Illumina or PacBio HiFi. Now you are going to run merqury to evaluate assemblies for your species!
 
