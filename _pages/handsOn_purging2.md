@@ -75,7 +75,6 @@ Prinary:
 ```
 less ~/Share/<species_id>_data/run_drUrtUren1.hifiasm.p.busco_odb10/short_summary.txt
 ```
-
 haplotigs:
 ```
 less ~/Share/<species_id>_data/run_drUrtUren1.hifiasm.a.busco_odb10/short_summary.txt (running, copy when done)
@@ -84,9 +83,8 @@ after purging:
 
 Primary:
 ```
-less ~/Share/<species_id>_data/run_drUrtUren1.hifiasm.a.busco_odb10/short_summary.txt
+less ~/Share/<species_id>_data/run_drUrtUren1.purged.busco_odb10/short_summary.txt
 ```
-
 htigs:
 ```
 less ~/Share/<species_id>_data/run_drUrtUren1.purged_htigs.busco_odb10/short_summary.txt
@@ -94,7 +92,7 @@ less ~/Share/<species_id>_data/run_drUrtUren1.purged_htigs.busco_odb10/short_sum
 
 Right, now let's have a look at the merqury results. If the one your group is running for the Hicanu assembly is not done yet, we can start having a look at the purged results. Merqury is going to create a lot of different files: (i) different plot (.png) files, (ii) a <outname>.completeness.stats file and (iii) a <outputname>.qv file.  
     
-The merqury results for the purged assemblies are located in this directory: `~/Share/<species_id>_data/purged/` (you don't need to copy anything yet). 
+The merqury results for the purged assemblies are located in this directory: `~/Share/<species_id>_data/purged/merqury_purged_eval` (you don't need to copy anything yet). 
   
 # About the Merqury output files
  
@@ -103,18 +101,24 @@ For the plot files, you will have 3 types: st (stacked), ln (line) and fl (fille
 they are just a different way of plotting the (same) data. For further information I recommend having a look at the manual [here](https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation).
    
 # Attention
-Apart from having st, fn and ln, merqury is going to output 2 types of files, *asm* and *cn*. If the file contains *cn* it's going to show you all kmer counts of primary + haplotigs in the plot, without descriminating them. Ff it contains *asm* it is going to show you kmers belonging to each assembly in different colours. Deep breath. You are going to get it! (It just takes time!). Didn't get it yet? Discuss it with your group on zoom!
+Apart from having st, fn and ln, merqury is going to output 2 types of files, *asm* and *cn*. If the file contains *cn* it's going to show you all kmer counts of primary + haplotigs in the plot, without descriminating them. Ff it contains *asm* it is going to show you kmers belonging to each assembly in different colours. 
+
+DEEP BREATH.
+
+You are going to get it! (It just takes time!). 
+
+Didn't get it yet? Discuss it with your group on zoom!
      
 What you need to do with the purging merqury results is:
 Now I want you to take a look at some relevant Merqury files. The text files can be open with the `less` command, while you will need to download the plot files (*.png) to your local machine in order to actually open them. 
   
-  3-) Gather the spectra plots for the primary purged assembly. They will be called `purged.out.purged.spectra-cn*.png` (notice that the `*` represents the different files we have: `st`, `ln` and `st`)
+  3-) Gather the spectra plots for the primary purged assembly. They will be called `purged.purged.spectra-cn*.png` (notice that the `*` represents the different files we have: `st`, `ln` and `st`)
   
-  4-) Gather the spectra plots for the haplotigs purged assembly. It will be called `purged.out.purged.htigs.spectra-cn*.png`
+  4-) Gather the spectra plots for the haplotigs purged assembly. It will be called `purged.purged.htigs.spectra-cn*.png`
   
-  5-) Gather the completeness results for the run. The file is called `completeness.stats`
+  5-) Gather the completeness results for the run. The file ends in `completeness.stats`
   
-  6-) Gather the QV results for the run. The file is called `purged.out.qv`
+  6-) Gather the QV results for the run. The file is called `purged.qv`
   
 By the time you finish gathering all of these results, it's very likely that the merqury run for the Hifiasm has finished. Please go and have a look at the same 3,4,5 and 6 questions for the Hifiasm run.
   
