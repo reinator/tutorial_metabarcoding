@@ -30,10 +30,10 @@ mkdir ~/<species_folder>/scaff/
 cd ~/<species_folder>/scaff/  
 ```
 
-To run SALSA2 you need first to symlink 3 files to your working directory. All files will be inside the shared species directory, in a subdirectory called `HiC` (`~/Share/<species_id>_data/HiC/`). The files are `<species_id>_hicanu.purged.polish.fa`, `<species_id>_hicanu.purged.polish.fa.fai` and `merge.mkdup.bed`. Once you have symlinked all files, run:
+To run SALSA2 you need first to symlink 3 files to your working directory. All files will be inside the shared species directory, in a subdirectory called `HiC` (`~/Share/<species_id>_data/HiC/`). The files are `<species_id>_*purged.polish.fa`, `<species_id>_*purged.polish.fa.fai` and `merge.mkdup.bed`. Once you have symlinked all files, run:
 
 ```console  
-run_pipeline.py -a <species_id>_hicanu.purged.polish.fa -l <species_id>_hicanu.purged.polish.fa.fai -b merge.mkdup.bed -e GATC,GANTC -i 5 -p yes -o out
+run_pipeline.py -a <species_id>_*purged.polish.fa -l <species_id>_*purged.polish.fa.fai -b merge.mkdup.bed -e GATC,GANTC -i 5 -p yes -o out
 ``` 
 
 > Attention :exclamation:  
@@ -66,7 +66,7 @@ ln -s ~/Share/<species_id>_data/HiC/out.break.salsa/scaffolds_FINAL.fasta .
 Now we can run `asmstats` for both the genome prior Hi-C scaffolding (`<species_id>_hicanu.purged.polish.fa`) and after Hi-C scaffolding (`scaffolds_FINAL.fasta`):
 
 ```console  
-asmstats <species_id>_hicanu.purged.polish.fa > <species_id>_hicanu.purged.polish.fa.stats
+asmstats <species_id>*.purged.polish.fa > <species_id>*.purged.polish.fa.stats
 asmstats scaffolds_FINAL.fasta > scaffolds_FINAL.fasta.stats
 ``` 
 
