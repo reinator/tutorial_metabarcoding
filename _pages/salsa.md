@@ -74,7 +74,9 @@ Now I want you to download to your local machine the assembly Hi-C heatmaps for 
 
 1-) Hi-C heatmap of your species contigs **before** they were scaffolded with SALSA2
 
-The pre-scaffolding is a file that ends with \*.pretext and it is located in your species shared directory (`~/Share/<species_id>_data/HiC/<species_id>.preScaf.pretext`). 
+The pre-scaffolding is a file that ends with \*.pretext (not for drUrtUren1, see next sentence!) and it is located in your species shared directory (`~/Share/<species_id>_data/HiC/<species_id>.preScaf.pretext`). 
+
+The pre-scaffolding file for drUrtUren1 ends with \*.hic and it is located in your species shared directory (`~/Share/<species_id>_data/HiC/drUrtUren1.preScaf.hic`). This is to be open at Juicer.
 
 2-) Hi-C heatmap of your species scaffolds **after** the contigs were scaffolded with SALSA2
 
