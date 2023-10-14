@@ -14,6 +14,7 @@ First human genome
 * The (near) complete sequence of a human genome [https://genomeinformatics.github.io](https://genomeinformatics.github.io)
 * The complete sequence of a human genome [https://www.science.org/doi/10.1126/science.abj6987](https://www.science.org/doi/10.1126/science.abj6987) 
 * Semi-automated assembly of high-quality diploid human reference genomes [https://www.nature.com/articles/s41586-022-05325-5](https://www.nature.com/articles/s41586-022-05325-5)
+* Telomere-to-telomere assembly of a complete human X chromosome [https://www.nature.com/articles/s41586-020-2547-7](https://www.nature.com/articles/s41586-020-2547-7)
 * The complete sequence of a human Y chromosome [https://www.nature.com/articles/s41586-023-06457-y](https://www.nature.com/articles/s41586-023-06457-y)
 * Telomere-to-telomere assembly of diploid chromosomes with Verkko [https://www.nature.com/articles/s41587-023-01662-6](https://www.nature.com/articles/s41587-023-01662-6) 
 
