@@ -13,7 +13,9 @@ First human genome
 * T2T Human chromosome X [https://www.nature.com/articles/s41586-020-2547-7](https://www.nature.com/articles/s41586-020-2547-7)
 * The (near) complete sequence of a human genome [https://genomeinformatics.github.io](https://genomeinformatics.github.io)
 * The complete sequence of a human genome [https://www.science.org/doi/10.1126/science.abj6987](https://www.science.org/doi/10.1126/science.abj6987) 
-* Semi-automated assembly of high-quality diploid human reference genomes [https://www.nature.com/articles/s41586-022-05325-5](https://www.nature.com/articles/s41586-022-05325-5) 
+* Semi-automated assembly of high-quality diploid human reference genomes [https://www.nature.com/articles/s41586-022-05325-5](https://www.nature.com/articles/s41586-022-05325-5)
+* The complete sequence of a human Y chromosome [https://www.nature.com/articles/s41586-023-06457-y](https://www.nature.com/articles/s41586-023-06457-y)
+* Telomere-to-telomere assembly of diploid chromosomes with Verkko [https://www.nature.com/articles/s41587-023-01662-6](https://www.nature.com/articles/s41587-023-01662-6) 
 
 # Repeats
 
@@ -45,7 +47,7 @@ First human genome
 
 * Purge Haplotigs [https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2485-7](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2485-7)
 * Purge Dups [https://academic.oup.com/bioinformatics/article/36/9/2896/5714742](https://academic.oup.com/bioinformatics/article/36/9/2896/5714742)
-
+* Widespread false gene gains caused by duplication errors in genome assemblies [https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02764-1](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02764-1)
 # Hi-C
 
 * Hi-C is invented [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2858594/pdf/nihms-194459.pdf](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2858594/pdf/nihms-194459.pdf)
