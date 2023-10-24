@@ -75,7 +75,7 @@ you just need to run `conda activate eukaryotic_genome_assembly`. Otherwise (i.e
 With the `eukaryotic_genome_assembly`environment active, try calling Jellyfish:
 
 ```console  
-jellyfish
+jellyfish --help
 ``` 
 
 Do you see the help message? Great! (If not, call Joāo!)
@@ -114,7 +114,6 @@ Now that you have counted your 31-letters kmers, we want to transform it to a hi
 
 ```console  
 jellyfish histo <species>.jf > <species>.histo
-
 ```
 
 ### Attention :grey_exclamation: 
@@ -175,7 +174,7 @@ Then check if the directory has been added to your environment variable:
 echo $PATH
 ```
 
-If you can see the `/home/<username>/Share/scripts/` in the output of the previous command, you should be ready to run the asmstats script (but first double-check that the conda environment `eukaryotic_genome_assembly` is active):
+If you can see the `/home/ubuntu/Share/scripts/` in the output of the previous command, you should be ready to run the asmstats script (but first double-check that the conda environment `eukaryotic_genome_assembly` is active):
 
 ```console  
 asmstats <species>.ccs.total.fasta.gz > <species>.total.fasta.stats
