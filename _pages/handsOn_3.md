@@ -36,7 +36,7 @@ cd ~/<species_folder>/<hicanu>/
 Right. So now we want to BLAST our contigs to find out what they are. This means we need to blast them against a database of sequences we must think are present in our assembly. I have already created a database for you. It’s called `database.fasta`. So all you have to do to use it is to create this database in the format blast understands and uses it. So you do:
 
 ```console  
-cp ~/Share/blast_DB/database.fasta .
+cp /home/ubuntu/Share/database.fasta .
 makeblastdb -in database.fasta -dbtype nucl
 ```  
 
@@ -52,7 +52,7 @@ Now that we have formated our database, let’s run blast. Blast has many parame
 blastn -query <contigs_fasta> -db database.fasta -out <contigs_fasta>.DB.blastn -evalue 1e-05
 ```  
 
-PS: here you should replace `<contigs_fasta>` by the assembly you've generated at the `Part 2 - Genome Assembly` tutorial. If you are blasting the hifiasm assembly, this file should be named `p_ctg.fa`. If you are blasting the canu assembly, this file should be named `<species_id>.contigs.fasta` (but remember that the canu output has been saved on the `run1/` subdirectory).
+PS: here you should replace `<contigs_fasta>` by the assembly you've generated at the `Part 2 - Genome Assembly` tutorial. If you are blasting the hifiasm assembly, this file should be named `<species_id>.hifiasm.p_ctg.fa`. If you are blasting the canu assembly, this file should be named `<species_id>.contigs.fasta` (but remember that the canu output has been saved on the `run1/` subdirectory).
 
 Now run it with an output format 6:
 
