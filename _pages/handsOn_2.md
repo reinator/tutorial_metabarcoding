@@ -10,9 +10,11 @@ Right, so here we are! Let’s assemble the species you have chosen. You are goi
 
 Have a look at their websites:
 
-[Hicanu](https://github.com/marbl/canu/releases/tag/v2.2)
+* [Hicanu github repository](https://github.com/marbl/canu)
+* [Hicanu documentation](https://canu.readthedocs.io/en/latest/)
 
-[Hifiasm](https://github.com/chhylp123/hifiasm)
+* [Hifiasm github repository](https://github.com/chhylp123/hifiasm)
+* [Hifiasm documentation](https://hifiasm.readthedocs.io/en/latest/)
 
 Now let’s run the assembly on our subsamples.
 
@@ -34,7 +36,7 @@ Now let’s change to the hicanu folder and add HiCanu executable to the path:
 
 ```console
 cd hicanu
-export PATH=/home/ubuntu/softwares/canu-2.2/bin:$PATH 
+export PATH=/home/ubuntu/Share/softwares/canu-2.2/bin:$PATH 
 ```
 
 In the `export` command, what you are doing is adding the directory where the HiCanu software is installed to an environment variable named PATH. The PATH variable defines a set of directories where the operating system will search for executable files in order to run the softwares. Since we've added HiCanu directory to the PATH, now we should be able to run it by directly calling the HiCanu executable (`canu`), with no need to type the whole path to the executable file (`/home/ubuntu/softwares/canu-2.2/bin/canu`). 
@@ -52,14 +54,14 @@ Then, create a symlink to the subsample read dataset and
 1-) run the bellow for ilVanAtal1 and ilNotDrom1:
 
 ```console  
-ln -s ~/Share/<species_id>_data/<species_id>.600.fasta
+ln -s /home/ubuntu/Share/<species_id>_data/<species_id>.600.fasta
 canu -d run1 -p <species_id> genomeSize=16000 -pacbio-hifi <species_id>.600.fasta useGrid=false corThreads=2
 ```  
 
 2-) run the bellow for drUrtUren1:
 
 ```console  
-ln -s ~/Share/<species_id>_data/<species_id>.600.fasta
+ln -s /home/ubuntu/Share/<species_id>_data/<species_id>.600.fasta
 canu -d run1 -p <species_id> genomeSize=300000 -pacbio-hifi <species_id>.600.fasta useGrid=false corThreads=2
 ```  
 
@@ -75,7 +77,7 @@ In a second tab/window, let’s change to the hifiasm folder and create a symlin
 
 ```console  
 cd ~/<species_folder>/hifiasm/
-ln -s ~/Share/<species_id>_data/<species_id>.600.fasta
+ln -s /home/ubuntu/Share/<species_id>_data/<species_id>.600.fasta
 ```
 
 Now let’s call hifiasm and have a look at the parameters it prints:
@@ -120,7 +122,7 @@ Add the directory containing that script to the PATH and run it:
 
 
 ```console 
-export PATH=~/Share/scripts/:$PATH
+export PATH=/home/ubuntu/Share/scripts/:$PATH
 gfa2fa <prefix>.p_ctg.gfa > <prefix>.p_ctg.fa
 ```
 
@@ -168,7 +170,7 @@ b-) What are the assembly statistics: N50, total assembled size, contig counts .
 
 # BEFORE YOU GO BACK TO THE GROUP
 
-As you know, because of time and computer resources, we have assembled only a subset of reads (`<species_id>.600.fasta`) for the species you have chosen. But I have generated previous assemblies for the complete set of reads, and I would like you to generate assembly statistics for those assemblies. The files will be on the shared species folder (`~/Share/<species_id>_data/`) and will be named `<species_id>.hicanu.total.contigs.fasta.gz` and `<species_id>.hifiasm.total.[a/p]_ctg.fa.gz` (Hifiasm produces two different files, one with suffix `a_ctg.fa.gz` and another one with the suffix `p_ctg.fa.gz`). In your species home directory (`~/<species>/`), create a symlink for those files (with the `ln -s` command) and run `asmstats` on them (e.g. `asmstats <species_id>.hicanu.total.contigs.fasta.gz > <species_id>.hicanu.total.contigs.fasta.stats`). Then answer:
+As you know, because of time and computer resources, we have assembled only a subset of reads (`<species_id>.600.fasta`) for the species you have chosen. But I have generated previous assemblies for the complete set of reads, and I would like you to generate assembly statistics for those assemblies. The files will be on the shared species folder (`/home/ubuntu/Share/<species_id>_data/`) and will be named `<species_id>.hicanu.total.contigs.fasta.gz` and `<species_id>.hifiasm.total.[a/p]_ctg.fa.gz` (Hifiasm produces two different files, one with suffix `a_ctg.fa.gz` and another one with the suffix `p_ctg.fa.gz`). In your species home directory (`~/<species>/`), create a symlink for those files (with the `ln -s` command) and run `asmstats` on them (e.g. `asmstats <species_id>.hicanu.total.contigs.fasta.gz > <species_id>.hicanu.total.contigs.fasta.stats`). Then answer:
   
   1-) What is the assembled size, number of contigs and N50 for the hicanu assembly? 
   
