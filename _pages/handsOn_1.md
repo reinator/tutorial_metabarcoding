@@ -58,18 +58,24 @@ Keep these codes in mind as the files will most likely to be named after them.
 
 Now you need to set up `conda` for your user. Follow [this tutorial](https://eukaryotic-genome-assembly.github.io/conda_setup/) to do that. 
 
-Now that you have the reads in place and conda set up, we need to activate the conda environment `eukaryotic_genome_assembly`, where most of the softwares that we'll use over this workshop have already been installed by your instructors.    
+Now that you have the reads in place and conda set up, double check that the conda environment `eukaryotic_genome_assembly` is active. Your prompt should look like:  
 
-```bash  
-conda activate eukaryotic_genome_assembly
-```
-
-If the activation has worked, your should see a `(eukaryotic_genome_assembly)` before your prompt. Something like this:  
 ```bash  
 (eukaryotic_genome_assembly) userX@IP-address:working_directory$
 ```
 
-After activating the conda environment, try calling Jellyfish:
+If your prompt looks like: 
+
+```bash  
+(eukaryotic_genome_assembly) userX@IP-address:working_directory$
+```
+
+you just need to run `conda activate eukaryotic_genome_assembly`. Otherwise (i.e. if there is neither `(base)` nor `(eukaryotic_genome_assembly)`, then you probably haven't set up conda properly. Go back to the tutorial or ask for João's help.
+ 
+
+
+
+With the `eukaryotic_genome_assembly`environment active, try calling Jellyfish:
 
 ```console  
 jellyfish
