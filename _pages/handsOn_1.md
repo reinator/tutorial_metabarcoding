@@ -56,7 +56,9 @@ Each species data will have a code on its name representing each of the 4 specie
 
 Keep these codes in mind as the files will most likely to be named after them.
 
-Now that you have the reads in place, let's activate the conda environment `eukaryotic_genome_assembly`, where most of the softwares that we'll use over this workshop have already been installed by your instructors:  
+Now you need to set up `conda` for your user. Follow [this tutorial](https://eukaryotic-genome-assembly.github.io/conda_setup/) to do that. 
+
+Now that you have the reads in place and conda set up, we need to activate the conda environment `eukaryotic_genome_assembly`, where most of the softwares that we'll use over this workshop have already been installed by your instructors.    
 
 ```bash  
 conda activate eukaryotic_genome_assembly
