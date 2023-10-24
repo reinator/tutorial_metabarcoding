@@ -6,14 +6,14 @@ permalink: /handsOn_merqury1/
 
 # Part 3 - Purging and Merqury evaluation
 
-Ok, today you learned about Purge Dups and purging assemblies. You also learned that Hicanu outputs an assembly that is the double of the expected haploid genome size, and that you have to use a tool such as Purge Dups to separate the haplotypes of the assembly. Later, you learned how to evaluate assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads kmers, such as Illumina or Hifi. Now you are going to run merqury to evaluate assemblies for your species!
+Ok, today you learned about [Purge Dups](https://github.com/dfguan/purge_dups) and purging assemblies. You also learned that Hicanu outputs an assembly that is the double of the expected haploid genome size, and that you have to use a tool such as Purge Dups to separate the haplotypes of the assembly. Later, you learned how to evaluate assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads kmers, such as Illumina or Hifi. Now you are going to run merqury to evaluate assemblies for your species!
 
 All right, earlier today you have assembled a subset of reads for your species, but you have generated statistics for a total-assembly run I have generated previously. This total assembly is the file you are going to work on: the total assembly of Hicanu for your species, this is called  `<your_species>.hicanu.total.contigs.fasta.gz`. So I would like you to create a directory called `merqury_hicanu_eval` inside your home species directory (`~/<species_folder>/`), move to there and create a symlink to the Hicanu assembly file: `<your_species>.hicanu.total.contigs.fasta.gz` there:
 
 ```console  
 mkdir ~/<species_folder>/merqury_hicanu_eval/
 cd ~/<species_folder>/merqury_hicanu_eval/
-ln -s ~/Share/<species_id>_data/<species_id>.hicanu.total.contigs.fasta.gz
+ln -s /home/ubuntu/Share/<species_id>_data/<species_id>.hicanu.total.contigs.fasta.gz
 ```  
 
 PS: Remember to replace `<species_id>` with the ID of your species! :)
@@ -21,13 +21,13 @@ PS: Remember to replace `<species_id>` with the ID of your species! :)
 Right, so in order to run merqury, you need a meryl datase of the reads you want to compare kmers with the kmers in your assembly. In our case, I have created meryl databases for 10X reads (illumina linked-reads) for your species, and you just need to symlink the meryl db folder to your execution folder. So you do:
 
 ```console  
-ln -s ~/Share/<species_id>_data/<species_id>.10X.21.meryl/
+ln -s /home/ubuntu/Share/<species_id>_data/<species_id>.10X.21.meryl/
 ```  
 
-Now, let's run merqury! For that, you need to activate our conda enviroment (if not yet activated):
+Now, let's run merqury! For that, you need to activate the merqury enviroment:
 
 ```console  
-conda activate eukaryotic_genome_assembly
+conda activate merqury_env
 ```  
 
 Right, as soon as you see it's activated, try:
@@ -53,14 +53,20 @@ You are going to gather the results and evaluate the purged version of your spec
 ```console  
 mkdir ~/<your_species>/purged/
 cd ~/<your_species>/purged/
-ln -s ~/Share/<species_id>_data/purged/purged.fa.gz
-ln -s ~/Share/<species_id>_data/purged/purged.htigs.fa.gz
+ln -s /home/ubuntu/Share/<species_id>_data/purged/purged.fa.gz
+ln -s /home/ubuntu/Share/<species_id>_data/purged/purged.htigs.fa.gz
 ```  
 
-And now export our scripts directory and run the `asmstats` script for each of them:
+Now export our scripts directory and activate our main conda environment:
 
 ```console
-export PATH=$PATH:~/Share/scripts/
+export PATH=$PATH:/home/ubuntu/Share/scripts/
+conda activate eukaryotic_genome_assembly
+```
+
+And then run the `asmstats` script for each file:
+
+```console
 asmstats purged.fa.gz > purged.fa.gz.stats
 asmstats purged.htigs.fa.gz > purged.htigs.fa.gz.stats
 ```
@@ -71,24 +77,24 @@ Great!
 
 before purging:
 ```
-less ~/Share/<species_id>_data/run_<species_id>.contigs.insecta.busco/short_summary_<species_id>.contigs.insecta.busco.txt
+less /home/ubuntu/Share/<species_id>_data/run_<species_id>.contigs.insecta.busco/short_summary_<species_id>.contigs.insecta.busco.txt
 ```
 
 after purging:  
 
 primary:
 ```
-less ~/Share/<species_id>_data/run_purged.insecta.busco/short_summary_purged.insecta.busco.txt
+less /home/ubuntu/Share/<species_id>_data/run_purged.insecta.busco/short_summary_purged.insecta.busco.txt
 ```
 
 htigs:
 ```
-less ~/Share/<species_id>_data/run_purged.htigs.insecta.busco/short_summary_purged.htigs.insecta.busco.txt
+less /home/ubuntu/Share/<species_id>_data/run_purged.htigs.insecta.busco/short_summary_purged.htigs.insecta.busco.txt
 ```
 
 Right, now let's have a look at the merqury results. If the one your group is running for the Hicanu assembly is not done yet, we can start having a look at the purged results. Merqury is going to create a lot of different files: (i) different plot (.png) files, (ii) a <outname>.completeness.stats file and (iii) a <outputname>.qv file.  
     
-The merqury results for the purged assemblies are located in this directory: `~/Share/<species_id>_data/purged/` (you don't need to copy anything yet). 
+The merqury results for the purged assemblies are located in this directory: `/home/ubuntu/Share/<species_id>_data/purged/` (you don't need to copy anything yet). 
   
 # About the Merqury output files
  
