@@ -13,21 +13,21 @@ All right, earlier today you have assembled a subset of reads for your species, 
 ```console  
 mkdir ~/<species_folder>/merqury_hifiasm_eval/
 cd ~/<species_folder>/merqury_hifiasm_eval/
-ln -s ~/Share/<species_id>_data/drUrtUren1.hifiasm.total.p_ctg.fa.gz
-ln -s ~/Share/<species_id>_data/drUrtUren1.hifiasm.total.a_ctg.fa.gz
+ln -s /home/ubuntu/Share/<species_id>_data/drUrtUren1.hifiasm.total.p_ctg.fa.gz
+ln -s /home/ubuntu/Share/<species_id>_data/drUrtUren1.hifiasm.total.a_ctg.fa.gz
 ```  
 
 
 Right, so in order to run merqury, you need a meryl datase of the reads you want to compare kmers with the kmers in your assembly. In our case, I have created meryl databases for Pacbio HiFi reads for your species, and you just need to symlink the meryl db folder to your execution folder. So you do:
 
 ```console  
-ln -s ~/Share/<species_id>_data/drUrtUren1.pacbio.k21.meryl/
+ln -s /home/ubuntu/Share/<species_id>_data/drUrtUren1.pacbio.k21.meryl/
 ```  
 
-Now, let's run merqury! For that, you need to activate our conda enviroment (if not yet activated):
+Now, let’s run merqury! For that, you need to activate the merqury enviroment:
 
 ```console  
-conda activate eukaryotic_genome_assembly
+conda activate merqury_env
 ```  
 
 Right, as soon as you see it's activated, try:
@@ -53,14 +53,20 @@ You are going to gather the results and evaluate the purged version of your spec
 ```console  
 mkdir ~/<your_species>/purged/
 cd ~/<your_species>/purged/
-ln -s ~/Share/drUrtUren1_data/purged/purged.fa.gz
-ln -s ~/Share/drUrtUren1_data/purged/purged.htigs.fa.gz
+ln -s /home/ubuntu/Share/drUrtUren1_data/purged/purged.fa.gz
+ln -s /home/ubuntu/Share/drUrtUren1_data/purged/purged.htigs.fa.gz
 ```  
 
-And now export our scripts directory and run the `asmstats` script for each of them:
+Now export our scripts directory and activate our main conda environment:
 
 ```console
-export PATH=$PATH:~/Share/scripts/
+export PATH=$PATH:/home/ubuntu/Share/scripts/
+conda activate eukaryotic_genome_assembly
+```
+
+And then run the `asmstats` script for each file:
+
+```console
 asmstats purged.fa.gz > purged.fa.gz.stats
 asmstats purged.htigs.fa.gz > purged.htigs.fa.gz.stats
 ```
@@ -71,28 +77,28 @@ Great!
 
 before purging:
 
-Prinary:
+Primary:
 ```
-less ~/Share/<species_id>_data/run_drUrtUren1.hifiasm.p.busco_odb10/short_summary.txt
+less /home/ubuntu/Share/<species_id>_data/run_drUrtUren1.hifiasm.p.busco_odb10/short_summary.txt
 ```
 haplotigs:
 ```
-less ~/Share/<species_id>_data/run_drUrtUren1.hifiasm.a.busco_odb10/short_summary.txt (running, copy when done)
+less /home/ubuntu/Share/<species_id>_data/run_drUrtUren1.hifiasm.a.busco_odb10/short_summary.txt (running, copy when done)
 ```
 after purging:  
 
 Primary:
 ```
-less ~/Share/<species_id>_data/run_drUrtUren1.purged.busco_odb10/short_summary.txt
+less /home/ubuntu/Share/<species_id>_data/run_drUrtUren1.purged.busco_odb10/short_summary.txt
 ```
 htigs:
 ```
-less ~/Share/<species_id>_data/run_drUrtUren1.purged_htigs.busco_odb10/short_summary.txt
+less /home/ubuntu/Share/<species_id>_data/run_drUrtUren1.purged_htigs.busco_odb10/short_summary.txt
 ```
 
 Right, now let's have a look at the merqury results. If the one your group is running for the Hicanu assembly is not done yet, we can start having a look at the purged results. Merqury is going to create a lot of different files: (i) different plot (.png) files, (ii) a <outname>.completeness.stats file and (iii) a <outputname>.qv file.  
     
-The merqury results for the purged assemblies are located in this directory: `~/Share/<species_id>_data/purged/merqury_purged_eval` (you don't need to copy anything yet). 
+The merqury results for the purged assemblies are located in this directory: `/home/ubuntu/Share/<species_id>_data/purged/merqury_purged_eval` (you don't need to copy anything yet). 
   
 # About the Merqury output files
  
