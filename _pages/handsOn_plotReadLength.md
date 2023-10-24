@@ -13,7 +13,7 @@ Well, it would be nice to check one more thing: the size distribution of our rea
 So let’s plot the size distribution of our <species>.total.fasta file using a python script named `plot_fasta_length.py`. First, let's copy the script to our working directory:  
   
 ```bash  
-cp ~/Share/scripts/plot_fasta_length.py .
+cp /home/ubuntu/Share/scripts/plot_fasta_length.py .
 ```
 
 Now we can run the script:
