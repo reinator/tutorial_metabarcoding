@@ -45,13 +45,13 @@ PS: if you followed our recommendation and created the species folder in the hom
 
 Each species data will have a code on its name representing each of the 4 species we will work on during this week, this is the code they have at the Darwin Tree of Life Project. The codes are:
 
-ilVanAtal1 - *Vanessa atalanta*
+* ilVanAtal1 - *Vanessa atalanta*
 
-drUrtUren1 - *Urtica urens*
+* drUrtUren1 - *Urtica urens*
 
-ilNotDrom1 - *Notodonta dromedarius*
+* ilNotDrom1 - *Notodonta dromedarius*
 
-iHemFuc1 - *Hemaris fuciformis* (we are not going to use this species in the current analysis)
+* iHemFuc1 - *Hemaris fuciformis* (we are not going to use this species in the current analysis)
 
 
 Keep these codes in mind as the files will most likely to be named after them.
@@ -82,13 +82,13 @@ Jellyfish has many steps. The first one we want to run is the *count* to count o
 So here comes the command:
 
 ```console  
-jellyfish count -C -m 31 -s 1000 -t 1 -o <species>.jf <species>.fasta
+jellyfish count -C -m 31 -s 1000 -t 1 -o <species>.jf <species>.600.fasta
 ``` 
 
 
 ### Attention :grey_exclamation: 
 
-In the command line above you see \<species\>.fasta. This needs to be replaced by the fasta file of the species you have chosen. This is just a generic way to point out that a fasta file must be imputed in that position in the command line above. The same with the \<species\>.jf. If your species is Vanessa atalanta, you can choose to have the output (-o) called v_atalanta.jf and this will be your output name.
+In the command line above you see \<species\>.600.fasta. This needs to be replaced by the fasta file of the species you have chosen. This is just a generic way to point out that a fasta file must be imputed in that position in the command line above. The same with the \<species\>.jf. If your species is Vanessa atalanta, you can choose to have the output (-o) called v_atalanta.jf and this will be your output name.
 
 ### More
 
@@ -118,8 +118,6 @@ Note in the command above we have used the symbol “>” before the output. Thi
 
 Note that the input for your command **jellyfish histo** is the output from your previous command, that was **jellyfish count**. Now you have the necessary result to plot a histogram on genomescope and have a look at the distribution of your genome kmers. 
 
-
-
 # BUT STOP!
 
 # STOP STOP! 
@@ -128,14 +126,14 @@ Note that the input for your command **jellyfish histo** is the output from your
 
 Before you plot this result, I want you to plot a genomescope plot for another file FIRST!! 
 
-Inside the shared directory for your species (`~/Share/<species-Code>_data/`), you are going to find two files called:
+Inside the shared directory for your species (`/home/ubuntu/Share/<species-Code>_data/`), you are going to find two files called:
 
 ```console  
 <species>.ccs.total.fasta.gz
 <species>.total.histo
 ```
 
-Download the file \<species\>.total.histo to your local machine (if you need to help for that, we have instructions on downloading/uploading files in [this](https://eukaryotic-genome-assembly.github.io/logging_on/) tutorial), go to the [Genomescope](http://qb.cshl.edu/genomescope/) page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot. People working with drUrtUren1 also need to set the kmer max count to 10000.
+Download the file \<species\>.total.histo to your local machine (if you need help for that, we have instructions on downloading/uploading files in [this](https://eukaryotic-genome-assembly.github.io/logging_on/) tutorial), go to the [Genomescope](http://qb.cshl.edu/genomescope/) page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot. People working with drUrtUren1 also need to set the kmer max count to 10000.
 
 Save the image of both versions of the plot - normal and log scale - somewhere in your computer.
 
@@ -151,7 +149,7 @@ Before running asmstats, move to your species directory and create a soft link f
 
 ```bash
 cd <Path_to_your_species_folder>/
-ln -s ~/Share/<species-Code>_data/<species-Code>.ccs.total.fasta.gz
+ln -s /home/ubuntu/Share/<species-Code>_data/<species-Code>.ccs.total.fasta.gz
 ``` 
 
 You can check if the soft link is working by print the first two lines of the file. If the first two lines are returned the link has been successfully created:
@@ -160,10 +158,10 @@ You can check if the soft link is working by print the first two lines of the fi
 zcat <species-Code>.ccs.total.fasta.gz | head -2
 ```
  
-Now you need to add the directory where the `asmstats` script is located (`~/Share/scripts/asmstats`) to your environment variable:  
+Now you need to add the directory where the `asmstats` script is located (`/home/ubuntu/Share/scripts/asmstats`) to your environment variable:  
 
 ```bash  
-export PATH=$PATH:~/Share/scripts/
+export PATH=$PATH:/home/ubuntu/Share/scripts/
 ```  
 
 Then check if the directory has been added to your environment variable:  
@@ -172,7 +170,7 @@ Then check if the directory has been added to your environment variable:
 echo $PATH
 ```
 
-If you can see the `/home/<username>/Share/scripts/` in the output of the previous command, you should be ready to run the asmstats script:
+If you can see the `/home/<username>/Share/scripts/` in the output of the previous command, you should be ready to run the asmstats script (but first double-check that the conda environment `eukaryotic_genome_assembly` is active):
 
 ```console  
 asmstats <species>.ccs.total.fasta.gz > <species>.total.fasta.stats
@@ -199,10 +197,7 @@ c- What is the estimated repeat content?
 
 d- Taking into consideration the estimated genome size, and the statistics of the total reads you have just generated, how much read coverage you have to assemble this genome?
 
-
 # Now,
-
-
 
 I want you to go back to the *.histo* file you have generated today (for your subsample), download it to your local machine and plot it on genomescope. Also, I want you to run asmstats on the fasta file (the 600 subset) you imputed to jellyfish. 
 
