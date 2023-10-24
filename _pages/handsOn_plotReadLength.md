@@ -21,7 +21,7 @@ Now we can run the script:
 ```console  
 python plot_fasta_length.py <species>.ccs.total.fasta.gz <species>.ccs.total.fasta.length.png
 ```
-This might take a bit of time…
+This might take a bit of time. So if you prefer, you can use tools such as `nohup` or `screen` to run the process in the background (e.g. `nohup <command> &`).
 
 > Note: 
 > My script `plot_fasta_length.py` and also Shane’s script `asmstats` are two of many options you can use to plot fasta lengths and generate statistics. Remember, internet is on your side in this journey. While you wait the script to run, have a look at other options: [like this one](https://bioinformatics.stackexchange.com/questions/45/read-length-distribution-from-fasta-file) or the stats from [BBMap](https://github.com/BioInfoTools/BBMap)  
