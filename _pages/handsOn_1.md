@@ -67,14 +67,11 @@ Now that you have the reads in place and conda set up, double check that the con
 If your prompt looks like: 
 
 ```bash  
-(eukaryotic_genome_assembly) userX@IP-address:working_directory$
+(base) userX@IP-address:working_directory$
 ```
 
 you just need to run `conda activate eukaryotic_genome_assembly`. Otherwise (i.e. if there is neither `(base)` nor `(eukaryotic_genome_assembly)`, then you probably haven't set up conda properly. Go back to the tutorial or ask for João's help.
  
-
-
-
 With the `eukaryotic_genome_assembly`environment active, try calling Jellyfish:
 
 ```console  
