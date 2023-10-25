@@ -29,10 +29,10 @@ This material will always be here for you to come back to it and consolidate you
 
 It's time for you and your team to gather all the results and make a final presentation. **I have some extra results for your species**: it's the final curated primary assembly (haplotigs are not curated at the moment). For the curated assembly you have available the following files:
 
-* The general statistics: `~/Share/<species_id>_data/HiC/curated/*.curated_primary.fa.stats`  
-  * e.g. for `Urtica urens` that would be: `~/Share/drUrtUren1_data/HiC/curated/drUrtUren1.curated_primary.fa.stats` 
-* The file to be open with PretextView to see the HiC heatmap: `~/Share/<species_id>_data/HiC/curated/*.pretext`
-* The BUSCO results: `~/Share/<species_id>_data/HiC/curated/BUSCO/short_summary.specific.BUSCO..txt`
+* The general statistics: `/home/ubuntu/Share/<species_id>_data/HiC/curated/*.curated_primary.fa.stats`  
+  * e.g. for `Urtica urens` that would be: `/home/ubuntu/Share/drUrtUren1_data/HiC/curated/drUrtUren1.curated_primary.fa.stats` 
+* The file to be open with PretextView to see the HiC heatmap: `/home/ubuntu/Share/<species_id>_data/HiC/curated/*.pretext`
+* The BUSCO results: `/home/ubuntu/Share/<species_id>_data/HiC/curated/BUSCO/short_summary.specific..BUSCO.txt`
 
 So you have the curated statistics, a BUSCO run for it and the final curated Hi-C heatmap. So I want you to gather ALL the results for your species and make a final presentation answering all the questions bellow:
 
