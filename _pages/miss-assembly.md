@@ -7,7 +7,7 @@ permalink: /miss-assembly/
 
 Ok, so you have learned a lot of things about Hi-C scaffolding and (a bit on) genome curation. I want to show you a very likely example of a miss-assembly that we can identify in the Hi-C HeatMap.
 
-The name of the guy you are going to be working with is *Eristalis pertinax* (who am I? Check me online and get a picture of me). In the folder `~/Share/idEriPert2/` you are going to find:
+The name of the guy you are going to be working with is *Eristalis pertinax* (who am I? Check me online and get a picture of me). In the folder `/home/ubuntu/Share/idEriPert2/` you are going to find:
 
 - salsa_scaffolds.hic - ths is the Hi-C HeatMap you are going to load on JuiceBox
 - scaffold_1.fa       - this is the fasta sequence for scaffold_1 that you are going to look at in IGV
