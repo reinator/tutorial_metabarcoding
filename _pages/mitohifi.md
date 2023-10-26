@@ -32,7 +32,7 @@ To run MitoHiFi, first you need a close-related mitochondria in fasta and genban
 Before running the script, you need to export MitoHiFi's directory to the PATH environment variable: 
 
 ```console  
-export PATH=$PATH:/home/ubuntu/softwares/MitoHiFi/
+export PATH=$PATH:/home/ubuntu/Share/softwares/MitoHiFi/src/
 ```
 
 Now you are ready to run the script to find the related mitogenome:
@@ -44,14 +44,14 @@ findMitoReference.py --species "Phalera bucephala" --email <your_email> --outfol
 Where `<your_email>` should be replaced by your email (your personal/work email should work just fine)
 
 ### `findMitoReference.py` output  
-This command will output a fasta (NC_016067.1.fasta) and a genbank (NC_016067.1.gb) file from the closely related mitogenome. When running MitoHiFi, you will use those files as input using, respectively, the `-f` and `-g` options. 
+This command will output a fasta (OQ830676.1.fasta) and a genbank (OQ830676.1.gb) file from the closely related mitogenome. When running MitoHiFi, you will use those files as input using, respectively, the `-f` and `-g` options. 
 
 ## Running MitoHiFi
 
 Now let's run MitoHiFi using an example dataset. Before that, we need to add MitoFinder (which is used by MitoHiFi to do the annotation step) to your PATH:
 
 ```console
-export PATH=$PATH:/home/ubuntu/softwares/MitoFinder/  
+export PATH=$PATH:/home/ubuntu/Share/softwares/MitoFinder/  
 ```
 
 (Optional) You can test if `mitofinder` has been successfully added to your PATH by running the following command and checking if it returns a help message explaining how the mitofinder program is supposed to be run:  
@@ -63,7 +63,7 @@ mitofinder -h
 Now you need to create a symlink to the mitohifi script:  
 
 ```console  
-ln -s /home/ubuntu/softwares/MitoHiFi/mitohifi.py  
+ln -s /home/ubuntu/Share/softwares/MitoHiFi/src/mitohifi.py  
 ```
 
 (Optional) You can test if mitohifi has been successfully set by running the help command:  
@@ -77,13 +77,13 @@ Copy the the `test.fa` file to your current directory. The `test.fa` is a multif
 PS: of course in the real world you assembly file will have a much higher number of contigs, but here we are working with a limited number for computational and time constraints.
 
 ```console  
-cp /home/ubuntu/softwares/MitoHiFi/exampleFiles/test.fa .
+cp /home/ubuntu/Share/MitoHiFi_data/test.fa .
 ```
 
 Finally, run MitoHiFi for the contigs test dataset: 
 
 ```console  
-python mitohifi.py -c test.fa -f refData/NC_016067.1.fasta -g refData/NC_016067.1.gb -t 1 -o 5
+python mitohifi.py -c test.fa -f refData/OQ830676.1.fasta -g refData/OQ830676.1.gb -t 1 -o 5
 ```
 
 The pipeline will probably take a few minutes to run. Once it's done, it will output a message saying `Pipeline finished!`.
@@ -93,7 +93,6 @@ Questions:
 2) Has MitoHiFi succeded creating final mitogenome fasta/genbank files? What are the names of those files?  
 3) Open the final mitogenome genbank file and answer: i) what's the total length of the mitogenome?; ii) what's the first gene in that mitogenome?  
 4) Go to BLAST [webserver](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and do a blastn of the final mitogenome fasta file (`final_mitogenome.fasta`) against the Nucleotide collection (nr/nt). What's the first hit you get from the alignment? What species does that hit come from? Click on the hit accession number hyperlink. You should be redirected to a new page. Go to the `COMMENT` section and answer: how was this sequence assembled?    
-5) Open the `contigs_stats.tsv` file and answer: is there another mitogenome assembly besides the final_mitogenome? What's its ID?  
-6) Open the other(s) mitogenome assembled and compare it with the final_mitogenome: i) what's its size? ii) what's its first gene?   
+5) Open the `contigs_stats.tsv` file and answer: is there another mitogenome assembly besides the final_mitogenome? 
  
-We can discuss the intermediate results together. =)
+We can discuss the results together. =)
