@@ -20,9 +20,9 @@ title                    : "Eukaryotic Genome Assembly Using PacBio and Hi-C"
 title_separator          : "|"
 name                     : "Marcela Uliano & João Ferreira"
 description              : "Physalia course, November 2020"
-url                      : https://gbb_montagem_workshop.github.io
+url                      : #https://gbb_montagem_workshop.github.io
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : itvgenomics/gbb_montagem_workshop.github.io
+repository               : itvgenomics/gbb_montagem_workshop
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
