@@ -20,7 +20,7 @@ title                    : "Eukaryotic Genome Assembly Using PacBio and Hi-C"
 title_separator          : "|"
 name                     : "Marcela Uliano & João Ferreira"
 description              : "Physalia course, November 2020"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://gbb_montagem_workshop.github.io
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : itvgenomics/gbb_montagem_workshop.github.io
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
