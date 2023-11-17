@@ -4,96 +4,68 @@ layout: archive
 permalink: /logging_on/
 ---
 
-Normalmente, ao trabalhar com bioinformática,nós nos conectamos a um cluster computacional, como o que preparamos para este curso. Esses clusters fornecem recursos computacionais muito mais poderosos do que os computadores pessoais médios, permitindo-nos executar tarefas computacionais altamente complexas exigidas por algumas análises de bioinformática. Como podemos fazer o login no cluster disponibilizado para este curso?
+Normalmente, ao trabalhar com bioinformática, nós nos conectamos a um cluster computacional, como o que preparamos para este curso. Esses clusters fornecem recursos computacionais muito mais poderosos do que os computadores pessoais médios, permitindo-nos executar tarefas computacionais altamente complexas exigidas por algumas análises de bioinformática. Como podemos fazer o login no cluster disponibilizado para este curso?
+
+### Cluster computacional Superdome Flex
+
+O Cluster computacional que iremos utilizar para o curso será o Superdome Flex. Ele apresenta 1 Blade com 768 Núcleos Intel(R) Xeon(R) Gold 6252 CPU @ 2.10GHz e 3 TB RAM. O endereço IP do cluster é `172.16.111.35` e deverá ser utilizado ao se fazer o login.
+
+![](/gbb_montagem_workshop/images/superdome.svg)
 
 ### Usuários de Mac OS X e Linux
 
 #### Fazendo o login
 
-If you are using a Mac or Linux machine, you will need to open a `terminal` window and then type `ssh`.
+Se você estiver usando Mac OS ou Linux, você vai precisar primeiramente abrir um `terminal` e então digite `ssh`.
 
-`ssh` stands for [secure shell](https://en.wikipedia.org/wiki/Secure_Shell) and is a way of interacting with remote servers. You will need to log in to the cluster using both `ssh` and a keyfile that has been generated for you.
-
-Firstly, download the keyfile and open a terminal window. Then copy it into your home directory (represented by the `~` shortcut) like so:
+`ssh` significa [secure shell](https://en.wikipedia.org/wiki/Secure_Shell) e é o comando que permite interagir com servidores e computadores de forma remota. Você também deve ter recebido o seu nome de usuário no cluster `nome_de_usuario`
+Você vai logar no cluster usando o seguinte comando:
 
 ```shell
-cp <user.pem> ~/
+ssh nome_de_usuario@172.16.111.35
 ```  
 
-PS: remember to replace `<user.pem>` with your user key. If you are `user2`, that should be `c2.pem`.
+Após isso, você precisará digitar sua senha (também fornecida via email).
+Talvez você também preciso aceitar uma chave RSA, para fins de segurança. Nesse caso, apenas digite `yes` e você terá logado no nosso cluster Superdome Flex!
 
-Give your user permission to read and write to the keyfile:  
+#### Baixando e subindo arquivos para o cluster com o comando scp
 
-```shell
-chmod 600 <user.pem> 
-``` 
-
-Then you should be able to log in with `ssh` whatever your working directory is. You need to provide `ssh` with the path to your key, which you can do with the `-i` flag. This basically points to your identity file or keyfile. For example:
+Ocasionalmente, precisaremos transferir arquivos entre o cluster e nossos computadores locais. Para fazer isso, podemos usar um comando chamado `scp` ou [secure copy](https://en.wikipedia.org/wiki/Secure_copy). Ele funciona de forma semelhante ao `ssh`. Vamos tentar criar um arquivo fictício em nosso diretório pessoal local e, em seguida, carregá-lo em nosso diretório pessoal no cluster.
 
 ```shell
-ssh -i ~/<user.pem> <user>@<ip.adress> 
+# crie um arquivo fictício
+touch arquivo_teste
+# faça o upload para o custer
+scp arquivo_teste <nome_de_usuario>@<172.16.111.35>:~/
 ```
 
-Of course you will need to update the log in credentials shown. For `user2`:  
-* replace `<user.pem>` by `c2.pem`  
-* replace `<user>` by `user2`  
-* replace `<ip.adress>` by the daily IP adress, shared with you in the Slack channel (e.g. `54.245.175.86`)  
+No comando acima, nós simplesmente estamos copiando um arquivo (`arquivo_teste`) para o cluster. Após o símbolo `:`, estamos especificando para onde no cluster estamos copiando o arquivo. No comando nós utililzamos `~/` para especificar o diretório `home` do usuário.
 
-You might be prompted to accept an RSA key - if so just type yes and you will log in to the cluster!
-
-#### Downloading and uploading files
-
-Occassionally, we will need to shift files between the cluster and our local machines. To do this, we can use a command utility called `scp` or [secure copy](https://en.wikipedia.org/wiki/Secure_copy). It works in a similar way to `ssh`. Let's try making a dummyfile in our local home directory and then uploading it to our home directory on the cluster.
-
-```shell
-# make a file
-touch test_file
-# upload to cluster
-scp -i ~/<user.pem> test_file <user>@<ip.adress>:~/
-```
-Just to break this down a little we are simply copying a file (`test_file`) to the cluster. After the `:` symbol, we are specifying where on the cluster we are placing the file, here we use `~/` to specify the home directory.
-
-Copying files back on to our local machine is just as straightforward. If we want to copy the file we just uploaded to the server back to our local machine, we need to run the same `scp` command but now switching the order of the server and local directories:
+A cópia de arquivos de volta para o computador local também é simples. Se quisermos copiar o arquivo que acabamos de carregar no servidor de volta para o computador local, precisaremos executar o mesmo comando `scp`, mas agora trocando a ordem dos diretórios local e do servidor:
 
 ```shell
 # download `test_file` from server to local current working directory (.)
-scp -i ~/<user.pem> <user>@<ip.adress>:~/test_file ./
+scp <nome_de_usuario>@<172.16.111.35>:~/arquivo_teste ./
 ```
 
-#### Making life a bit easier
+### Usuários Windows
 
-If you are logging in and copying from a cluster regularly, it is sometimes good to use an `ssh` alias. Because the cluster IP address changes everyday, we will not be using these during the course. However, if you would like some information on how to set them up, see [here](https://markravinet.github.io/CEES_tips_&_tricks.html)
+#### Fazendo o login
 
-### Windows users
+Se estiver usando um computador Windows, será necessário fazer login usando o [MobaXterm](http://mobaxterm.mobatek.net), pois ainda não há um cliente `ssh` nativo. Depois de instalá-lo, abra o MobaXterm e:
 
-#### Logging on
+1. Inicie um novo terminal SSH (1 e 2);
+2. Adicione o endereço do host (3) - que é o endereço IP `172.16.111.35` - e seu nome de usuário (4);
+3. Depois de adicionar as informações anteriores, pressione "OK" para se conectar ao servidor.
 
-If you are using a Windows machine, you will need to log on using [MobaXterm](http://mobaxterm.mobatek.net) since there is no native `ssh` client. After installing it, open MobaXterm and:
+![](/gbb_montagem_workshop/images/mobaxterm_tutorial.PNG)
 
-1. Start a new SSH terminal (1&2).
-2. Add the host address (3) - which is the daily IP address - and your username (4) - e.g. `user2`
-3. On advanced SSH settings, select "Use private key" and add the downloaded pem file (5)
-4. After adding the previous informations, press "OK" to connect to the server.
+#### Baixando e subindo arquivos para o cluster com o Filezilla
 
-![](/images/mobaxterm_tutorial.PNG)
+O [Filezilla](https://filezilla-project.org/) é um software útil para mover arquivos de um servidor remoto.
 
-#### Downloading and uploading files with Filezilla
+Abra o Filezilla, digite o endereço IP `172.16.111.35` e o nome de usuário. Quando você pressionar Enter, ele deverá conectá-lo. Da próxima vez, você poderá usar o menu suspenso "Conexão rápida", desde que o endereço IP não tenha sido alterado nesse meio tempo.
 
-Filezilla is a handy software to move files from a remote server such as the Amazon cloud or a cluster of your university.
+![](/gbb_montagem_workshop/images/putty/fig12.png)
 
-Open Filezilla and choose Edit -> Settings.
-
-![](/images/putty/fig10.png)
-
-Next, choose SFTP and Add the .pem key file as indicated below and click OK.
-
-![](/images/putty/fig11.png)
-
-Finally, enter the IP address and the user name and when you hit enter, it should connect you. Next, time, you can use the Quickconnect dropdown menu, provided the IP address has not changed in the meantime.
-
-![](/images/putty/fig12.png)
-
-Now you will see the file directory system (folders) on your local computer on the left and your folders on the amazon cloud on the right. You can now just drag and drop files from one side to the other.  
-
-#### Acknowledgements  
-Although we have made some small adjustments, this *log in* tutorial was mainly prepared by Dr. Mark Ravinet and Dr. Joana I. Meier for their Physalia course on Speciation Genomics (https://www.physalia-courses.org/courses-workshops/course37/). We would like to thank both of them for allowing us to use it in this course. 
+Agora você verá o sistema de diretório de arquivos (pastas) no seu computador local à esquerda e as pastas no cluster Superdome à direita. Agora você pode simplesmente arrastar e soltar arquivos de um lado para o outro. 
