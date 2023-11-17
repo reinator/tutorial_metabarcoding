@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Eukaryotic Genome Assembly Using PacBio and Hi-C"
+title                    : "Montagem de Genomas de Referência Usando PacBio and Hi-C"
 title_separator          : "|"
-name                     : "Marcela Uliano & João Ferreira"
+name                     : "Marcela Uliano & Renato Oliveira"
 description              : "Physalia course, November 2020"
 url                      : #https://gbb_montagem_workshop.github.io
 baseurl                  : # the subpath of your site, e.g. "/blog"
