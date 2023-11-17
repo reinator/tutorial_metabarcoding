@@ -2,9 +2,9 @@
 main:
   - title: "Home"
     url: https://itvgenomics.github.io/gbb_montagem_workshop/
-  - title: "About"
+  - title: "Sobre"
     url: https://itvgenomics.github.io/gbb_montagem_workshop/about/
-  - title: "How to log in"
+  - title: "Como logar no cluster"
     url: https://itvgenomics.github.io/gbb_montagem_workshop/logging_on/
 
 pages:

@@ -1,14 +1,14 @@
 ---
-title: "Logging on to the cluster"
+title: "Fazendo login no cluster"
 layout: archive
 permalink: /logging_on/
 ---
 
-Typically when working in bioinformatics we would log into a computing cluster such as the one we have prepared for this course. Those clusters provide computational resources  much more powerful than the average personal computers, allowing us to run highly complex computational tasks required by some bioinformatics analyses. When you are back in your home institutions, you can also likely use a similar method to log into the computing nodes there. How do we log in for this course? 
+Normalmente, ao trabalhar com bioinformática,nós nos conectamos a um cluster computacional, como o que preparamos para este curso. Esses clusters fornecem recursos computacionais muito mais poderosos do que os computadores pessoais médios, permitindo-nos executar tarefas computacionais altamente complexas exigidas por algumas análises de bioinformática. Como podemos fazer o login no cluster disponibilizado para este curso?
 
-### Mac OS X and Linux users
+### Usuários de Mac OS X e Linux
 
-#### Logging on
+#### Fazendo o login
 
 If you are using a Mac or Linux machine, you will need to open a `terminal` window and then type `ssh`.
 
