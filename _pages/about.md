@@ -1,5 +1,5 @@
 ---
-title: "Course teachers"
+title: "Professores"
 layout: archive
 permalink: /about/
 ---
