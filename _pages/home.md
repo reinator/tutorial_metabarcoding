@@ -5,7 +5,7 @@ permalink: /
 
 ![](/images/other/banner_curso.svg)
 
-Bem-vindo(a) ao Workshop de Montagem de Genomas Nucleares do Projeto [GBB] (https://www.itv.org/projeto-genomica-da-biodiversidade-brasileira/) (Genômica da Biodiversidade Brasileira).
+Bem-vindo(a) ao Workshop de Montagem de Genomas Nucleares do Projeto Genômica da Biodiversidade Brasileira ([GBB](https://www.itv.org/projeto-genomica-da-biodiversidade-brasileira/)).
 O curso será ministrado pela Dra. Marcela Uliano e monitorado pelo Dr. Renato Oliveira.
 
 Acesse os links no painel à esquerda para acessar os módulos do curso.
