@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Montagem de Genomas de Referência Usando PacBio and Hi-C"
 title_separator          : "|"
 name                     : "Marcela Uliano & Renato Oliveira"
-description              : "Physalia course, November 2020"
+description              : "Workshop GBB, Dezembro de 2023"
 url                      : #https://gbb_montagem_workshop.github.io
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : itvgenomics/gbb_montagem_workshop
