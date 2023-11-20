@@ -6,16 +6,13 @@ permalink: /handsOn_1/
 
 # Kmer analysis: running jellyfish <a name="where-are-we?"></a> 
 
-Right, so today you learned about how to analyse kmer composition of your genome sequenced reads! Now you are going to put your 'Hands On' data and will, yourself, count and analyse kmers.
-You have to chose between the species: (i) *Vanessa atalanta*, (ii) *Urtica urens* and (iii) *Notonda dromedarius* to work on until the end of the week. Once you have chosen it, create a folder where you will run your analysis. My suggestion would be to create a folder with your species name in your home directory (`~/<species_name>/`) and inside it, a series of other folders to structure your analyses. For example:
+Certo, hoje você aprendeu como analisar a composição kmer das leituras sequenciadas do seu genoma! Agora você vai colocar suas habilidades em prática e irá, você mesmo, contar e analisar kmers. Você deve escolher entre as espécies: (i) Vanessa atalanta, (ii) Urtica urens e (iii) Notonda dromedarius para trabalhar até o final da semana. Depois de escolher, crie uma pasta onde fará suas análises. Minha sugestão é criar uma pasta com o nome da sua espécie em seu diretório home (`/<species_name>/`) e dentro dela, criar uma série de outras pastas para estruturar suas análises. Por exemplo:
 
-v_atalanta/
-
-v_atalanta/kmers/
+u_urens/
+u_urens/kmers/
+u_urens/assembly/
   
-v_atalanta/assembly/
-  
-The above basically means you have created a folder called 'v_atalanta' (if you choose vanessa atalanta as your working species) and inside it you have created two other folders side by side called 'kmers' and 'assembly'. If you would like to do that, then do:
+O exposto acima basicamente significa que você criou uma pasta chamada 'u_urens' (se você escolher U. urens como sua espécie de trabalho) e dentro dela você criou duas outras pastas lado a lado chamadas 'kmers' e 'assembly'. Se você quiser fazer isso, faça:
  
  ```console  
 mkdir <species_folder>
@@ -24,26 +21,25 @@ mkdir kmers
 mkdir assembly
 ```  
  
-Great, now you need to go and copy the working data for your species. The data will be inside `/home/ubuntu/Share/`
+Ótimo, agora você precisa copiar os dados da sua espécie. Os dados estāo dentro de `/mnt/gen/temp/workshop_montagem_gbb/data/`
 
 ```console  
-cd /home/ubuntu/Share/
+cd /mnt/gen/temp/workshop_montagem_gbb/data/
 ls -ltr
 ```  
-Do you see the 3 species folders? If you do, then copy the file <species-code>.600.fasta (see bellow the Attention note, which explains about the species codes) to the `kmers` directory you have created and move back to the `kmers` directory. One example:
-
+Você vê as pastas das 3 espécies? Se sim, copie o arquivo <species-code>.600.fasta (veja abaixo a nota de atenção, que explica sobre os códigos das espécies) para o diretório `kmers` que você criou e volte para o diretório `kmers`. Um exemplo:
 
 ```console  
-cp ilVanAtal1_data/ilVanAtal1.600.fasta <Path_to_your_folder>/v_atalanta/kmers/
-cd <Path_to_your_folder>/v_atalanta/kmers/ 
+cp drUrtUren1_data/drUrtUren1.600.fasta <Path_to_your_folder>/u_urens/kmers/
+cd <Path_to_your_folder>/u_urens/kmers/ 
 ls -ltr
 ```
 
-PS: if you followed our recommendation and created the species folder in the home directory, `<Path_to_your_folder>` should be your home directory, so `user2` should now be located in the `/home/user2/<species_name>/kmers/` directory (remember you can double check your current working directory with the `pwd` command). 
+PS: se você seguiu nossa recomendação e criou a pasta de espécies no diretório inicial, `<Path_to_your_folder>` deve ser seu diretório inicial, então `user2` agora deve estar localizado em `/home/user2/<species_name>/kmers/ ` (lembre-se que você pode verificar seu diretório de trabalho atual com o comando `pwd`). 
 
-### Attention :grey_exclamation: 
+### Atenção: grey_exclamation:
 
-Each species data will have a code on its name representing each of the 4 species we will work on during this week, this is the code they have at the Darwin Tree of Life Project. The codes are:
+Os dados de cada espécie terão um código em seu nome representando cada uma das 4 espécies que trabalharemos durante esta semana, este é o código que eles possuem no Projeto Darwin Tree of Life. Os códigos são:
 
 * ilVanAtal1 - *Vanessa atalanta*
 
@@ -51,164 +47,162 @@ Each species data will have a code on its name representing each of the 4 specie
 
 * ilNotDrom1 - *Notodonta dromedarius*
 
-* iHemFuc1 - *Hemaris fuciformis* (we are not going to use this species in the current analysis)
+* iHemFuc1 - *Hemaris fuciformis* (não vamos usar esta espécie na análise atual)
 
 
-Keep these codes in mind as the files will most likely to be named after them.
+Lembre-se desses códigos, pois os arquivos via de regra vāo possuir esse código.
 
-Now you need to set up `conda` for your user. Follow [this tutorial](https://eukaryotic-genome-assembly.github.io/conda_setup/) to do that. 
+Agora você precisa configurar o `conda` para o seu usuário. Siga [este tutorial](https://eukaryotic-genome-assembly.github.io/conda_setup/) para fazer isso.
 
-Now that you have the reads in place and conda set up, double check that the conda environment `eukaryotic_genome_assembly` is active. Your prompt should look like:  
+Agora, verifique se o ambiente conda `eukaryotic_genome_assembly` está ativo. Seu prompt deve ser semelhante a:
 
-```bash  
+```bash
 (eukaryotic_genome_assembly) userX@IP-address:working_directory$
 ```
 
-If your prompt looks like: 
+Se o seu prompt for semelhante a:
 
-```bash  
-(base) userX@IP-address:working_directory$
+```bash
+(base) userX@endereço IP:working_directory$
 ```
 
-you just need to run `conda activate eukaryotic_genome_assembly`. Otherwise (i.e. if there is neither `(base)` nor `(eukaryotic_genome_assembly)`, then you probably haven't set up conda properly. Go back to the tutorial or ask for João's help.
+você só precisa executar `conda activate eukaryotic_genome_assembly`. Caso contrário (ou seja, se não houver `(base)` nem `(eukaryotic_genome_assembly)`, então provavelmente você não configurou o conda corretamente. Volte ao tutorial ou peça a ajuda do Renato.
  
-With the `eukaryotic_genome_assembly`environment active, try calling Jellyfish:
+Com o ambiente `eukaryotic_genome_assembly` ativo, tente chamar Jellyfish:
 
-```console  
+```console
 jellyfish --help
-``` 
+```
 
-Do you see the help message? Great! (If not, call Joāo!)
+Você vê help message? Ótimo! (Se não, chame o Renato!)
 
-Jellyfish has many steps. The first one we want to run is the *count* to count our genome reads kmers. The kmer size we are going to use is 31. 
+Jellyfish tem muitos passos. O primeiro que queremos executar é o *count* para contar as leituras de kmers do nosso genoma. O tamanho do kmer que usaremos é 31.
 
 1-) Jellyfish count
 
-So here comes the command:
+Então aí vem o comando:
 
-```console  
-jellyfish count -C -m 31 -s 1000 -t 1 -o <species>.jf <species>.600.fasta
-``` 
-
-
-### Attention :grey_exclamation: 
-
-In the command line above you see \<species\>.600.fasta. This needs to be replaced by the fasta file of the species you have chosen. This is just a generic way to point out that a fasta file must be imputed in that position in the command line above. The same with the \<species\>.jf. If your species is Vanessa atalanta, you can choose to have the output (-o) called v_atalanta.jf and this will be your output name.
-
-### More
-
-Please try:
-
-```console  
-jellyfish count --help 
+```console
+jellyfish count -C -m 31 -s 1000 -t 1 -o <espécie>.jf <espécie>.600.fasta
 ```
 
-on your command line to understand what are the parameters you have imputed in the previous line. Help messages are a useful way for you to understand what you are running, and to see if you would like to add any other parameter for your specific analysis case. Also remember that beyond this course, the internet is always on your side. If you google ‘jellyfish user guide’, for example, you will find [JellyfishUserGuide]( http://www.genome.umd.edu/docs/JellyfishUserGuide.pdf)
 
-### Back
+### Atenção: grey_exclamation:
 
-2-) Jellyfish histo
+Na linha de comando acima você vê \<species\>.600.fasta. Este precisa ser substituído pelo arquivo fasta da espécie que você escolheu. Esta é apenas uma forma genérica de apontar que um arquivo fasta deve ser imputado naquela posição na linha de comando acima. O mesmo acontece com \<species\>.jf. Se sua espécie for Vanessa atalanta, você pode optar por ter um output chamado (-o) chamada v_atalanta.jf .
 
-Now that you have counted your 31-letters kmers, we want to transform it to a histogram file so you can plot it. Then you have your second command:
+### Mais
 
+Tente por favor:
 
-```console  
-jellyfish histo <species>.jf > <species>.histo
+```console
+jellyfish count --help
 ```
 
-### Attention :grey_exclamation: 
+na sua linha de comando para entender quais são os parâmetros que você imputou na linha anterior. As mensagens de ajuda são uma forma útil de entender o que você está executando e de ver se gostaria de adicionar algum outro parâmetro para seu caso de análise específico. Lembre-se também que além deste curso a internet estará sempre do seu lado. Se você pesquisar no Google ‘how to use jellyfish’, por exemplo, encontrará [JellyfishUserGuide]( http://www.genome.umd.edu/docs/JellyfishUserGuide.pdf)
 
-Note in the command above we have used the symbol “>” before the output. This is a command line symbol that will redirect your output to a file instead of printing it to the screen.
+### Voltemos!
 
-Note that the input for your command **jellyfish histo** is the output from your previous command, that was **jellyfish count**. Now you have the necessary result to plot a histogram on genomescope and have a look at the distribution of your genome kmers. 
+2-) jellyfish histo
 
-# BUT STOP!
+Agora que você contou seus kmers de 31 letras, queremos transformá-los em um arquivo de histograma para que você possa plotá-los. Então temos o segundo comando:
 
-# STOP STOP! 
+```console
+jellyfish histo <espécie>.jf > <espécie>.histo
+```
+### Atenção: grey_exclamation:
+
+Observe que no comando acima usamos o símbolo “>” antes do outpus. Este é um símbolo de linha de comando que redirecionará sua saída para um arquivo em vez de imprimir o resultado na tela.
+
+Observe que o arquivo de entrada para o seu comando **jellyfish histo** é a saída do seu comando anterior, que era **jellyfish count**. Agora você tem o resultado necessário para plotar um histograma no genomescope e dar uma olhada na distribuição dos seus kmers do genoma.
+
+# MAS PARE!
+
+# PARA PARA!
 
 ...
 
-Before you plot this result, I want you to plot a genomescope plot for another file FIRST!! 
+Antes de plotar este resultado, quero que você plote um gráfico do genomescope para outro arquivo PRIMEIRO!!
 
-Inside the shared directory for your species (`/home/ubuntu/Share/<species-Code>_data/`), you are going to find two files called:
+Dentro do diretório compartilhado para sua espécie (`/mnt/gen/temp/workshop_montagem_gbb/data/<species-Code>_data/`), você encontrará dois arquivos chamados:
 
 ```console  
 <species>.ccs.total.fasta.gz
 <species>.total.histo
 ```
 
-Download the file \<species\>.total.histo to your local machine (if you need help for that, we have instructions on downloading/uploading files in [this](https://eukaryotic-genome-assembly.github.io/logging_on/) tutorial), go to the [Genomescope](http://qb.cshl.edu/genomescope/) page and upload the file there. You should change the **Description** to the name of your species, and the **kmer** to 31. Then plot. People working with drUrtUren1 also need to set the kmer max count to 10000.
+Baixe o arquivo \<species\>.total.histo para sua máquina local (se precisar de ajuda para isso, temos instruções sobre como fazer download/upload de arquivos [neste](https://eukaryotic-genome-assembly.github.io /logging_on/) tutorial), vá para a página [Genomescope](http://qb.cshl.edu/genomescope/) e carregue o arquivo lá. Você deve alterar a **Descrição** para o nome da sua espécie, e o **kmer** para 31. Em seguida, plote. Pessoas que trabalham com drUrtUren1 também precisam definir a contagem máxima de kmer para 10.000.
 
-Save the image of both versions of the plot - normal and log scale - somewhere in your computer.
+Salve a imagem de ambas as versões do gráfico - normal e escala logarítmica - em algum lugar do seu computador.
 
-Cool, you have plotted the kmer distribution of the \<species\>.total.histo file, and genomescope has calculated for your (i) the estimated genome size, (ii) the heterozygosity and (iii) the percentage of repeats of your species genome. 
+Legal, você traçou a distribuição kmer do arquivo \<species\>.total.histo, e o genomascope calculou para (i) o tamanho estimado do genoma, (ii) a heterozigosidade e (iii) a porcentagem de repetições do seu genoma da espécie.
 
-The histogram you have just plotted is for a jellyfish count of the **total** PacBio HiFi reads sequenced to assemble your species. We have generated it for you because it takes time. However, when you are back to real life and need to run it for your sample, you will run the same commands ran for the subsample (`*600.fasta`) as you just did! =) Yeah!! 
+O histograma que você acabou de traçar é para uma contagem de águas-vivas do **total** leituras do PacBio HiFi sequenciadas para montar sua espécie. Nós o geramos para você porque leva tempo. No entanto, quando você voltar à vida real e precisar executá-lo para sua amostra, você executará os mesmos comandos executados para a subamostra (`*600.fasta`) como acabou de fazer! =) Yeah!!
 
-## Now
+## Agora
 
-I would like you to generate some general statistics for the \*.ccs.total.fasta.gz reads. I have a script for you to do that. It's called `asmstats`. 
+Gostaria que você gerasse algumas estatísticas gerais para as leituras de \*.ccs.total.fasta.gz. Eu tenho um script para você fazer isso. É chamado de `asmstats`.
 
-Before running asmstats, move to your species directory and create a soft link for the \*.ccs.total.fasta.gz file:
-
-```bash
-cd <Path_to_your_species_folder>/
-ln -s /home/ubuntu/Share/<species-Code>_data/<species-Code>.ccs.total.fasta.gz
-``` 
-
-You can check if the soft link is working by print the first two lines of the file. If the first two lines are returned the link has been successfully created:
+Antes de executar o asmstats, vá para o diretório de espécies e crie um link virtual para o arquivo \*.ccs.total.fasta.gz:
 
 ```bash
-zcat <species-Code>.ccs.total.fasta.gz | head -2
+cd <Caminho_para_sua_pasta_de_espécie>/
+ln -s /home/ubuntu/Share/<código-espécie>_data/<código-espécie>.ccs.total.fasta.gz
+```
+
+Você pode verificar se o link virtual está funcionando imprimindo as duas primeiras linhas do arquivo. Se as duas primeiras linhas forem retornadas, o link foi criado com sucesso:
+
+```bash
+zcat <código-espécie>.ccs.total.fasta.gz | head -2
 ```
  
-Now you need to add the directory where the `asmstats` script is located (`/home/ubuntu/Share/scripts/asmstats`) to your environment variable:  
+Agora você precisa adicionar o diretório onde o script `asmstats` está localizado (`/home/ubuntu/Share/scripts/asmstats`) à sua variável de ambiente:
 
-```bash  
-export PATH=$PATH:/home/ubuntu/Share/scripts/
-```  
+```bash
+exportar PATH=$PATH:/home/ubuntu/Share/scripts/
+```
 
-Then check if the directory has been added to your environment variable:  
+Em seguida, verifique se o diretório foi adicionado à sua variável de ambiente:
 
-```bash  
+```bash
 echo $PATH
 ```
 
-If you can see the `/home/ubuntu/Share/scripts/` in the output of the previous command, you should be ready to run the asmstats script (but first double-check that the conda environment `eukaryotic_genome_assembly` is active):
+Se você puder ver `/home/ubuntu/Share/scripts/` na saída do comando anterior, você deve estar pronto para executar o script asmstats (mas primeiro verifique se o ambiente conda `eukaryotic_genome_assembly` está ativo):
 
-```console  
-asmstats <species>.ccs.total.fasta.gz > <species>.total.fasta.stats
+```console
+asmstats <espécie>.ccs.total.fasta.gz > <espécie>.total.fasta.stats
 ```
 
-Note: We are calling your output file \<species\>.total.fasta.stats
+Observação: estamos chamando seu arquivo de saída \<species\>.total.fasta.stats
 
-Once the command finishes to run (it could take a few minutes), have a look at the output:
+Assim que a execução do comando terminar (pode levar alguns minutos), dê uma olhada na saída:
 
-```console  
-less <species>.total.fasta.stats
+```console
+menos <espécie>.total.fasta.stats
 ```
 
-Also: use this tutorial to plot your reads length distribution: [Plot reads](https://eukaryotic-genome-assembly.github.io/handsOn_plotReadLength/)
+Além disso: use este tutorial para traçar a distribuição do comprimento de suas leituras: [Plot reads](https://eukaryotic-genome-assembly.github.io/handsOn_plotReadLength/)
 
-You have now generated the kmer plot, reads statistics and reads plot distribution for your complete PacBio HiFi read set. Which conclusions can you now draw from these results?
+Agora você gerou o gráfico kmer, lê as estatísticas e lê a distribuição do gráfico para seu conjunto completo de leitura PacBio HiFi. Que conclusões você pode tirar agora desses resultados?
 
 
-a- What is the expected genome size?
+a- Qual é o tamanho esperado do genoma?
 
-b- What is the estimated heterozygosity?
+b- Qual é a heterozigosidade estimada?
 
-c- What is the estimated repeat content?
+c- Qual é o conteúdo repetido estimado?
 
-d- Taking into consideration the estimated genome size, and the statistics of the total reads you have just generated, how much read coverage you have to assemble this genome?
+d- Levando em consideração o tamanho estimado do genoma e as estatísticas do total de leituras que você acabou de gerar, quanta cobertura de leitura você tem para montar esse genoma?
 
-# Now,
+# Agora,
 
-I want you to go back to the *.histo* file you have generated today (for your subsample), download it to your local machine and plot it on genomescope. Also, I want you to run asmstats on the fasta file (the 600 subset) you imputed to jellyfish. 
+Quero que você volte ao arquivo *.histo* que você gerou hoje (para sua subamostra), baixe-o para sua máquina local e plote-o no genomascópio. Além disso, quero que você execute asmstats no arquivo fasta (o subconjunto 600) que você imputou à água-viva.
 
-e- What genomescope tells you when you try to plot a kmer histogram for just a handful of sequences? 
+e- O que o genomascópio lhe diz quando você tenta traçar um histograma kmer para apenas algumas sequências?
 
-f- Looking at the asmstats result for this smaller file, how much coverage of the genome you have in this file giving the estimated genome size?
+f- Olhando o resultado do asmstats para este arquivo menor, quanta cobertura do genoma você tem neste arquivo, dando o tamanho estimado do genoma?
 
-Great. Now let’s look at it all together: considering the kmer plot of the total file and its statistics, we can have a good look at the kmer composition of the DNA in the genome. How does it look? Discuss with your partners and then later in the big group.  
+Ótimo. Agora vamos analisar tudo juntos: considerando o gráfico kmer do arquivo total e suas estatísticas, podemos dar uma boa olhada na composição kmer do DNA no genoma. Como se parece? Discuta com seus parceiros e depois com o grande grupo.  
 
 
