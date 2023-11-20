@@ -8,8 +8,8 @@ permalink: /handsOn_1/
 
 Certo, hoje você aprendeu como analisar a composição kmer das leituras sequenciadas do seu genoma! Agora você vai colocar suas habilidades em prática e irá, você mesmo, contar e analisar kmers. Você deve escolher entre as espécies: (i) Vanessa atalanta, (ii) Urtica urens e (iii) Notonda dromedarius para trabalhar até o final da semana. Depois de escolher, crie uma pasta onde fará suas análises. Minha sugestão é criar uma pasta com o nome da sua espécie em seu diretório home (`/<species_name>/`) e dentro dela, criar uma série de outras pastas para estruturar suas análises. Por exemplo:
 
-u_urens/
-u_urens/kmers/
+u_urens/ \
+u_urens/kmers/ \
 u_urens/assembly/
   
 O exposto acima basicamente significa que você criou uma pasta chamada 'u_urens' (se você escolher U. urens como sua espécie de trabalho) e dentro dela você criou duas outras pastas lado a lado chamadas 'kmers' e 'assembly'. Se você quiser fazer isso, faça:
@@ -21,7 +21,7 @@ mkdir kmers
 mkdir assembly
 ```  
  
-Ótimo, agora você precisa copiar os dados da sua espécie. Os dados estāo dentro de `/mnt/gen/temp/workshop_montagem_gbb/data/`
+Ótimo, agora você precisa copiar os dados da espécie que você escolheu. Os dados estāo dentro de `/mnt/gen/temp/workshop_montagem_gbb/data/`
 
 ```console  
 cd /mnt/gen/temp/workshop_montagem_gbb/data/
@@ -66,9 +66,13 @@ Se o seu prompt for semelhante a:
 (base) userX@endereço IP:working_directory$
 ```
 
-você só precisa executar `conda activate eukaryotic_genome_assembly`. Caso contrário (ou seja, se não houver `(base)` nem `(eukaryotic_genome_assembly)`, então provavelmente você não configurou o conda corretamente. Volte ao tutorial ou peça a ajuda do Renato.
- 
-Com o ambiente `eukaryotic_genome_assembly` ativo, tente chamar Jellyfish:
+você só precisa executar o comando abaixo:
+```console
+conda activate eukaryotic_genome_assembly
+```
+Caso contrário (ou seja, se não houver `(base)` nem `(eukaryotic_genome_assembly)`, então provavelmente você não configurou o conda corretamente. Volte ao tutorial ou peça a ajuda do Renato.
+
+Com o ambiente `eukaryotic_genome_assembly` ativo, tente executar o comando Jellyfish:
 
 ```console
 jellyfish --help
@@ -131,23 +135,23 @@ Dentro do diretório compartilhado para sua espécie (`/mnt/gen/temp/workshop_mo
 <species>.total.histo
 ```
 
-Baixe o arquivo \<species\>.total.histo para sua máquina local (se precisar de ajuda para isso, temos instruções sobre como fazer download/upload de arquivos [neste](https://eukaryotic-genome-assembly.github.io /logging_on/) tutorial), vá para a página [Genomescope](http://qb.cshl.edu/genomescope/) e carregue o arquivo lá. Você deve alterar a **Descrição** para o nome da sua espécie, e o **kmer** para 31. Em seguida, plote. Pessoas que trabalham com drUrtUren1 também precisam definir a contagem máxima de kmer para 10.000.
+Baixe o arquivo \<species\>.total.histo para sua máquina local (se precisar de ajuda para isso, temos instruções sobre como fazer download/upload de arquivos [neste](https://itvgenomics.github.io/gbb_montagem_workshop/logging_on/) tutorial), vá para a página [Genomescope](http://qb.cshl.edu/genomescope/) e carregue o arquivo \<species\>.total.histo lá. Você deve alterar a **Descrição** para o nome da sua espécie, e o **kmer** para 31. Em seguida, plote. Pessoas que escolheram a espécie drUrtUren1 também precisam definir a contagem máxima de kmer para 10.000.
 
 Salve a imagem de ambas as versões do gráfico - normal e escala logarítmica - em algum lugar do seu computador.
 
-Legal, você traçou a distribuição kmer do arquivo \<species\>.total.histo, e o genomascope calculou para (i) o tamanho estimado do genoma, (ii) a heterozigosidade e (iii) a porcentagem de repetições do seu genoma da espécie.
+Legal, você traçou a distribuição kmer do arquivo `<species>.total.histo`, e o genomascope calculou (i) o tamanho estimado do genoma, (ii) a heterozigosidade e (iii) a porcentagem de repetições do genoma da sua espécie.
 
-O histograma que você acabou de traçar é para uma contagem de águas-vivas do **total** leituras do PacBio HiFi sequenciadas para montar sua espécie. Nós o geramos para você porque leva tempo. No entanto, quando você voltar à vida real e precisar executá-lo para sua amostra, você executará os mesmos comandos executados para a subamostra (`*600.fasta`) como acabou de fazer! =) Yeah!!
+O histograma que você acabou de gerar é para uma contagem de kmers do **total** de leituras do PacBio HiFi sequenciadas para montar sua espécie. Nós o geramos para você porque leva tempo. No entanto, quando você voltar à vida real e precisar executá-lo para sua amostra, você executará os mesmos comandos executados para a subamostra (`*600.fasta`) como acabou de fazer! =) Yeah!!
 
 ## Agora
 
-Gostaria que você gerasse algumas estatísticas gerais para as leituras de \*.ccs.total.fasta.gz. Eu tenho um script para você fazer isso. É chamado de `asmstats`.
+Gostaria que você gerasse algumas estatísticas gerais para as leituras de `<species>.ccs.total.fasta.gz`. Eu tenho um script para você fazer isso. É chamado de `asmstats`.
 
-Antes de executar o asmstats, vá para o diretório de espécies e crie um link virtual para o arquivo \*.ccs.total.fasta.gz:
+Antes de executar o asmstats, vá para o diretório de espécies e crie um link simbólico para o arquivo `<species>.ccs.total.fasta.gz`:
 
 ```bash
 cd <Caminho_para_sua_pasta_de_espécie>/
-ln -s /home/ubuntu/Share/<código-espécie>_data/<código-espécie>.ccs.total.fasta.gz
+ln -s /mnt/gen/temp/workshop_montagem_gbb/<código-espécie>_data/<código-espécie>.ccs.total.fasta.gz
 ```
 
 Você pode verificar se o link virtual está funcionando imprimindo as duas primeiras linhas do arquivo. Se as duas primeiras linhas forem retornadas, o link foi criado com sucesso:
@@ -156,10 +160,10 @@ Você pode verificar se o link virtual está funcionando imprimindo as duas prim
 zcat <código-espécie>.ccs.total.fasta.gz | head -2
 ```
  
-Agora você precisa adicionar o diretório onde o script `asmstats` está localizado (`/home/ubuntu/Share/scripts/asmstats`) à sua variável de ambiente:
+Agora você precisa adicionar o diretório onde o script `asmstats` está localizado (`/mnt/gen/temp/workshop_montagem_gbb/asmstats`) à sua variável de ambiente:
 
 ```bash
-exportar PATH=$PATH:/home/ubuntu/Share/scripts/
+export PATH=$PATH:/mnt/gen/temp/workshop_montagem_gbb/scripts/
 ```
 
 Em seguida, verifique se o diretório foi adicionado à sua variável de ambiente:
@@ -168,7 +172,9 @@ Em seguida, verifique se o diretório foi adicionado à sua variável de ambient
 echo $PATH
 ```
 
-Se você puder ver `/home/ubuntu/Share/scripts/` na saída do comando anterior, você deve estar pronto para executar o script asmstats (mas primeiro verifique se o ambiente conda `eukaryotic_genome_assembly` está ativo):
+Se você puder ver `/mnt/gen/temp/workshop_montagem_gbb/scripts` na saída do comando anterior, você deve estar pronto para executar o script asmstats (mas primeiro verifique se o ambiente conda `eukaryotic_genome_assembly` está ativo):
+
+
 
 ```console
 asmstats <espécie>.ccs.total.fasta.gz > <espécie>.total.fasta.stats
@@ -179,12 +185,13 @@ Observação: estamos chamando seu arquivo de saída \<species\>.total.fasta.sta
 Assim que a execução do comando terminar (pode levar alguns minutos), dê uma olhada na saída:
 
 ```console
-menos <espécie>.total.fasta.stats
+less <espécie>.total.fasta.stats
 ```
 
 Além disso: use este tutorial para traçar a distribuição do comprimento de suas leituras: [Plot reads](https://eukaryotic-genome-assembly.github.io/handsOn_plotReadLength/)
 
-Agora você gerou o gráfico kmer, lê as estatísticas e lê a distribuição do gráfico para seu conjunto completo de leitura PacBio HiFi. Que conclusões você pode tirar agora desses resultados?
+Agora você gerou o gráfico kmer.
+Leia as estatísticas e a distribuição do gráfico para seu conjunto completo de leitura PacBio HiFi. Que conclusões você pode tirar agora desses resultados?
 
 
 a- Qual é o tamanho esperado do genoma?
@@ -197,11 +204,11 @@ d- Levando em consideração o tamanho estimado do genoma e as estatísticas do 
 
 # Agora,
 
-Quero que você volte ao arquivo *.histo* que você gerou hoje (para sua subamostra), baixe-o para sua máquina local e plote-o no genomascópio. Além disso, quero que você execute asmstats no arquivo fasta (o subconjunto 600) que você imputou à água-viva.
+Quero que você volte ao arquivo *.histo* que você gerou hoje (para sua subamostra), baixe-o para sua máquina local e plote-o no GenomeScope. Além disso, quero que você execute asmstats no arquivo fasta (o subconjunto 600) que você usou com o Jellyfish.
 
-e- O que o genomascópio lhe diz quando você tenta traçar um histograma kmer para apenas algumas sequências?
+e- O que o GenomeScope lhe diz quando você tenta traçar um histograma kmer para apenas algumas sequências?
 
-f- Olhando o resultado do asmstats para este arquivo menor, quanta cobertura do genoma você tem neste arquivo, dando o tamanho estimado do genoma?
+f- Olhando o resultado do asmstats para este arquivo menor, quanta cobertura do genoma você tem neste arquivo, dado o tamanho estimado do genoma?
 
 Ótimo. Agora vamos analisar tudo juntos: considerando o gráfico kmer do arquivo total e suas estatísticas, podemos dar uma boa olhada na composição kmer do DNA no genoma. Como se parece? Discuta com seus parceiros e depois com o grande grupo.  
 
