@@ -114,11 +114,12 @@ Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time  S Time
 5753.blmsvfhpc* c0403    op1      fastq2bam* 28126*   1  64    --    --  R 01:58
 ```
 
-No resultado do comando `qstat -a`, podemos ter as seguintes informações:
-`Job ID`: Identificador do job submetido. Esse identificador é importante caso queira deletar um job da fila;
-`Username`: Matrícula do usuário que submeteu o job para a fila. Se você submeteu algum job, sua matrícula deve aparecer associada ao job submetido;
-`Queue`: Fila onde o job está submetido;
-`Jobname`: Nome do job que você configurou no arquivo `.pbs`
+No resultado do comando `qstat -a`, podemos ter as seguintes informações: \
+
+`Job ID`: Identificador do job submetido. Esse identificador é importante caso queira deletar um job da fila; \
+`Username`: Matrícula do usuário que submeteu o job para a fila. Se você submeteu algum job, sua matrícula deve aparecer associada ao job submetido; \
+`Queue`: Fila onde o job está submetido; \
+`Jobname`: Nome do job que você configurou no arquivo `.pbs` \
 
 
 
