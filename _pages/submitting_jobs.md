@@ -10,7 +10,7 @@ Este sistema permite que todos os processos que precisam de recursos de processa
 ### Arquivo PBS
 Todo comando que precise de recursos de processamento e memória não pode ser rodado diretamente do terminal. O comando precisa estar primeiramente dentro de um arquivo `.pbs`, cuja estrutura você pode verificar abaixo:
 
-```shell=
+```shell
 #PBS -l nodes=1:ppn=8
 #PBS -N jellyfish
 #PBS -o jellyfish.log
@@ -40,61 +40,87 @@ printf "Tempo decorrido (min): `expr $(( ($TEND - $TBEGIN)/60 ))`\n";
 ```
 
 No exemplo acima, as primeiras linhas indicam os recursos que serão necessários para rodar o comando que você deseja executar.
-Por exemplo, o programa `jellyfish` será executado usando `8` threads
-
-
-#### Fazendo o login
-
-Se você estiver usando Mac OS ou Linux, você vai precisar primeiramente abrir um `terminal` e então digite `ssh`.
-
-`ssh` significa [secure shell](https://en.wikipedia.org/wiki/Secure_Shell) e é o comando que permite interagir com servidores e computadores de forma remota. Você também deve ter recebido o seu nome de usuário no cluster `nome_de_usuario`
-Você vai logar no cluster usando o seguinte comando:
-
+Por exemplo, o programa `jellyfish` será executado usando `8` threads. Isso é definido na linha abaixo:
 ```shell
-ssh nome_de_usuario@172.16.111.35
-```  
-
-Após isso, você precisará digitar sua senha (também fornecida via email).
-Talvez você também preciso aceitar uma chave RSA, para fins de segurança. Nesse caso, apenas digite `yes` e você terá logado no nosso cluster Superdome Flex!
-
-#### Baixando e subindo arquivos para o cluster com o comando scp
-
-Ocasionalmente, precisaremos transferir arquivos entre o cluster e nossos computadores locais. Para fazer isso, podemos usar um comando chamado `scp` ou [secure copy](https://en.wikipedia.org/wiki/Secure_copy). Ele funciona de forma semelhante ao `ssh`. Vamos tentar criar um arquivo fictício em nosso diretório pessoal local e, em seguida, carregá-lo em nosso diretório pessoal no cluster.
-
-```shell
-# crie um arquivo fictício
-touch arquivo_teste
-# faça o upload para o custer
-scp arquivo_teste <nome_de_usuario>@<172.16.111.35>:~/
+#PBS -l nodes=1:ppn=8
 ```
 
-No comando acima, nós simplesmente estamos copiando um arquivo (`arquivo_teste`) para o cluster. Após o símbolo `:`, estamos especificando para onde no cluster estamos copiando o arquivo. No comando nós utililzamos `~/` para especificar o diretório `home` do usuário.
-
-A cópia de arquivos de volta para o computador local também é simples. Se quisermos copiar o arquivo que acabamos de carregar no servidor de volta para o computador local, precisaremos executar o mesmo comando `scp`, mas agora trocando a ordem dos diretórios local e do servidor:
-
+Nas três linhas seguintes, são definidos o nome do job, onde deverá ser salvo o log do comando e onde deverá ser salvo os erros dados no comando:
 ```shell
-# download `test_file` from server to local current working directory (.)
-scp <nome_de_usuario>@<172.16.111.35>:~/arquivo_teste ./
+#PBS -N jellyfish
+#PBS -o jellyfish.log
+#PBS -e jellyfish.err
 ```
 
-### Usuários Windows
+Toda vez que você for rodar um comando, deverá alterar a linha abaixo (talvez você tenha percebido pela sutil descrição no arquivo):
+```shell
+jellyfish count -C -m 31 -s 1000 -t 1 -o drUrtUren1.jf drUrtUren1.600.fasta
+```
 
-#### Fazendo o login
+As outras linhas são apenas comandos de controle do job e não devem ser alteradas.
 
-Se estiver usando um computador Windows, será necessário fazer login usando o [MobaXterm](http://mobaxterm.mobatek.net), pois ainda não há um cliente `ssh` nativo. Depois de instalá-lo, abra o MobaXterm e:
 
-1. Inicie um novo terminal SSH (1 e 2);
-2. Adicione o endereço do host (3) - que é o endereço IP `172.16.111.35` - e seu nome de usuário (4);
-3. Depois de adicionar as informações anteriores, pressione "OK" para se conectar ao servidor.
+### Editando o arquivo PBS
 
-![](/gbb_montagem_workshop/images/mobaxterm_tutorial.PNG)
+Para editar o arquivo `.pbs`, você pode usar o comando `vim`. Com esse comando, você consegue editar o conteúdo do arquivo. 
+```shell
+vim job_jellyfish.pbs
+```
 
-#### Baixando e subindo arquivos para o cluster com o Filezilla
+Após executar o comando, você precisa apertar a tecla `i` (INSERT) pra poder editar o documento.
+Ao terminar de fazer as edições necessárias, você precisa apertar a tecla `ESC`, para sair do modo de edição.
+Em seguida, digite a tecla de dois pontos `:` e em seguida digite `wq!` para indicar que você deseja salvar o documento e sair da edição.
 
-O [Filezilla](https://filezilla-project.org/) é um software útil para mover arquivos de um servidor remoto.
+Toda vez que você for rodar um comando dos softwares apresentados neste tutorial, você vai precisar submeter o job do comando para a fila de jobs do cluster Superdome com as instruções mostradas anteriormente.
 
-Abra o Filezilla, digite o endereço IP `172.16.111.35` e o nome de usuário. Quando você pressionar Enter, ele deverá conectá-lo. Da próxima vez, você poderá usar o menu suspenso "Conexão rápida", desde que o endereço IP não tenha sido alterado nesse meio tempo.
+### Submetendo o arquivo PBS para a fila de jobs
 
-![](/gbb_montagem_workshop/images/putty/fig12.png)
+Após ter editado o arquivo `.pbs` com o comando que você deseja executar, você precisa submeter o job para uma fila de processamento.
+No total, o cluster Superdome apresenta um total de 768 núcleos, divididos em três filas:
 
-Agora você verá o sistema de diretório de arquivos (pastas) no seu computador local à esquerda e as pastas no cluster Superdome à direita. Agora você pode simplesmente arrastar e soltar arquivos de um lado para o outro. 
+`op1`: com 462 cores disponíveis;
+`op2`: com 236 cores disponíveis;
+`testes`: com 70 cores disponíveis;
+
+Para submeter seu job para uma das filas acima, execute o comando `qsub` abaixo:
+```shell
+qsub -q <fila> <arquivo.pbs>
+```
+
+Onde o parâmetro `-q` indica a fila à qual o `<arquivo.pbs>` deve ser submetido, por exemplo:
+```shell
+qsub -q op1 job_jellyfish.pbs
+```
+
+Recomendamos que durante este curso você utilize a fila `op1`.
+
+### Consultando a fila de jobs submetidos e deletando um job específico
+
+Caso você queira saber quais jobs estão sendo executados, quem está executando, quanto de recurso computacional está sendo utilizado e há quanto tempo o processo está sendoe executado, basta usar o comando `qstat`:
+```shell
+qstat -a
+```
+
+Ao executar o comando acima, você vai ser capaz de verificar a fila de jobs submetidos até o momento e que estão rodando ou em pausa, como demonnstrado abaixo:
+
+```shell
+blmsvfhpc04.itv.local:
+                                                            Req'd  Req'd   Elap
+Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time  S Time
+--------------- -------- -------- ---------- ------ --- --- ------ ----- - -----
+5444.blmsvfhpc* c0403    op1      snpArcher* 21701*   1  32  300gb   --  R 354:3
+5606.blmsvfhpc* 81041448 op2      fst        35108*   1  20    --    --  R 214:5
+5646.blmsvfhpc* c0430    op2      construct  24737*   1  20    --    --  R 117:0
+5753.blmsvfhpc* c0403    op1      fastq2bam* 28126*   1  64    --    --  R 01:58
+```
+
+No resultado do comando `qstat -a`, podemos ter as seguintes informações:
+`Job ID`: Identificador do job submetido. Esse identificador é importante caso queira deletar um job da fila;
+`Username`: Matrícula do usuário que submeteu o job para a fila. Se você submeteu algum job, sua matrícula deve aparecer associada ao job submetido;
+`Queue`: Fila onde o job está submetido;
+`Jobname`: Nome do job que você configurou no arquivo `.pbs`
+
+
+
+
+
