@@ -4,23 +4,23 @@ layout: archive
 permalink: /handsOn_plotReadLength/
 ---  
 
-In our previous tutorial we have generated a k=31 kmer distribution for a subset of reads, and we have analysed the same k=31 kmer distribution for the total reads sequenced for our chosen species. With the genomescope of our total results, we have estimated genome size, heterozygosity and repeat content. Now, we are ready to go and assemble those reads. 
+Em nosso tutorial anterior, geramos uma distribuição de kmer k=31 para um subconjunto de leituras e analisamos a mesma distribuição de kmer k=31 para o total de leituras sequenciadas para a espécie escolhida. Com o GenomeScope de nossos resultados totais, estimamos o tamanho do genoma, a heterozigosidade e o conteúdo de repetição. Agora, estamos prontos para montar essas leituras. 
 
-Well, it would be nice to check one more thing: the size distribution of our reads!
+Antes disso, seria bom verificar mais uma coisa: a distribuição de tamanho de nossas leituras!
 
-**Imagine if we have a good genome coverage but our reads are all small? It would not be very useful to assemble across repeats**
+**Imagine se tivermos uma boa cobertura do genoma, mas nossas leituras forem todas pequenas? Não seria muito útil fazer a montagem entre as repetições**
 
-So let’s plot the size distribution of our <species>.total.fasta file using a python script named `plot_fasta_length.py`. First, let's copy the script to our working directory:  
-  
-```bash  
-cp /home/ubuntu/Share/scripts/plot_fasta_length.py .
-```
-
-Now we can run the script:
-
+Portanto, vamos plotar a distribuição de tamanho do nosso arquivo <species>.css.total.fasta usando um script python chamado `plot_fasta_length.py`. 
+Coloque o comando abaixo em um arquivo `.pbs`, ou copie o seguinte arquivo para o seu diretório `/mnt/gen/temp/workshop_montagem_gbb/pbs/job_plot_fasta_length.pbs`
 ```console  
-python plot_fasta_length.py <species>.ccs.total.fasta.gz <species>.ccs.total.fasta.length.png
+python /mnt/gen/temp/workshop_montagem_gbb/scripts/plot_fasta_length.py <species>.ccs.total.fasta.gz <species>.ccs.total.fasta.length.png
 ```
+
+Em seguida, submeta o arquivo `.pbs` para a fila op1.
+```console  
+qsub -q op1 job_plot_fasta_length.pbs
+```
+
 This might take a bit of time. So if you prefer, you can use tools such as `nohup` or `screen` to run the process in the background (e.g. `nohup <command> &`).
 
 > Note: 
