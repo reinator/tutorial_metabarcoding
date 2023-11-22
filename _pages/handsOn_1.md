@@ -4,7 +4,7 @@ layout: archive
 permalink: /handsOn_1/
 ---  
 
-# Kmer analysis: running jellyfish <a name="where-are-we?"></a> 
+# Análise de Kmers: rodando o programa jellyfish <a name="where-are-we?"></a> 
 
 Certo, hoje você aprendeu como analisar a composição kmer das leituras sequenciadas do seu genoma! Agora você vai colocar suas habilidades em prática e irá, você mesmo, contar e analisar kmers. Você deve escolher entre as espécies: (i) Vanessa atalanta, (ii) Urtica urens e (iii) Notonda dromedarius para trabalhar até o final da semana. Depois de escolher, crie uma pasta onde fará suas análises. Minha sugestão é criar uma pasta com o nome da sua espécie em seu diretório home (`/<species_name>/`) e dentro dela, criar uma série de outras pastas para estruturar suas análises. Por exemplo:
 
