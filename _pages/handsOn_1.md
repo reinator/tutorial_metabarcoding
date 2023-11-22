@@ -193,7 +193,7 @@ Assim que a execução do comando terminar (pode levar alguns minutos), dê uma 
 less <espécie>.total.fasta.stats
 ```
 
-Além disso: use este tutorial para traçar a distribuição do comprimento de suas leituras: [Plot reads](https://eukaryotic-genome-assembly.github.io/handsOn_plotReadLength/)
+Além disso: use este tutorial para traçar a distribuição do comprimento de suas leituras: [Plot reads](https://itvgenomics.github.io/gbb_montagem_workshop/handsOn_plotReadLength/)
 
 Agora você gerou o gráfico kmer.
 Leia as estatísticas e a distribuição do gráfico para seu conjunto completo de leitura PacBio HiFi. Que conclusões você pode tirar agora desses resultados?
