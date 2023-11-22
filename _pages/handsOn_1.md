@@ -9,6 +9,7 @@ permalink: /handsOn_1/
 Certo, hoje você aprendeu como analisar a composição kmer das leituras sequenciadas do seu genoma! Agora você vai colocar suas habilidades em prática e irá, você mesmo, contar e analisar kmers. Você deve escolher entre as espécies: (i) Vanessa atalanta, (ii) Urtica urens e (iii) Notonda dromedarius para trabalhar até o final da semana. Depois de escolher, crie uma pasta onde fará suas análises. Minha sugestão é criar uma pasta com o nome da sua espécie em seu diretório home (`/<species_name>/`) e dentro dela, criar uma série de outras pastas para estruturar suas análises. Por exemplo:
 
 u_urens/ \
+u_urens/rawdata/
 u_urens/kmers/ \
 u_urens/assembly/
   
@@ -17,6 +18,7 @@ O exposto acima basicamente significa que você criou uma pasta chamada 'u_urens
  ```console  
 mkdir <species_folder>
 cd <species_folder>
+mkdir rawdata
 mkdir kmers
 mkdir assembly
 ```  
@@ -35,9 +37,9 @@ cd <Path_to_your_folder>/u_urens/kmers/
 ls -ltr
 ```
 
-PS: se você seguiu nossa recomendação e criou a pasta de espécies no diretório inicial, `<Path_to_your_folder>` deve ser seu diretório inicial, então `user2` agora deve estar localizado em `/home/user2/<species_name>/kmers/ ` (lembre-se que você pode verificar seu diretório de trabalho atual com o comando `pwd`). 
+PS: se você seguiu nossa recomendação e criou a pasta de espécies no diretório inicial, `<Path_to_your_folder>` deve ser seu diretório inicial, então `user2` agora deve estar localizado em `<Path_to_your_folder>/<species_name>/kmers/ ` (lembre-se que você pode verificar seu diretório de trabalho atual com o comando `pwd`). 
 
-### Atenção: grey_exclamation:
+### Atenção ❗
 
 Os dados de cada espécie terão um código em seu nome representando cada uma das 4 espécies que trabalharemos durante esta semana, este é o código que eles possuem no Projeto Darwin Tree of Life. Os códigos são:
 
@@ -89,9 +91,13 @@ Então aí vem o comando:
 ```console
 jellyfish count -C -m 31 -s 1000 -t 1 -o <espécie>.jf <espécie>.600.fasta
 ```
+### Atenção :exclamation:
 
+Como explicado, você não pode executar esse comando diretamente no terminal. Sendo assim, copie o arquivo `job_jellyfish.pbs` que está no diretório `/mnt/gen/temp/workshop_montagem_gbb/pbs/job_jellyfish.pbs` para a pasta onde você vai executar a contagem de kmer.
 
-### Atenção: grey_exclamation:
+Edite o arquivo `job_jellyfish.pbs` colocando os parâmetros necessários e submeta o job para a fila de processamento, conforme explicado [aqui](https://itvgenomics.github.io/gbb_montagem_workshop/submitting_jobs/)
+
+### Atenção de novo :exclamation:
 
 Na linha de comando acima você vê \<species\>.600.fasta. Este precisa ser substituído pelo arquivo fasta da espécie que você escolheu. Esta é apenas uma forma genérica de apontar que um arquivo fasta deve ser imputado naquela posição na linha de comando acima. O mesmo acontece com \<species\>.jf. Se sua espécie for Vanessa atalanta, você pode optar por ter um output chamado (-o) chamada v_atalanta.jf .
 
@@ -114,6 +120,15 @@ Agora que você contou seus kmers de 31 letras, queremos transformá-los em um a
 ```console
 jellyfish histo <espécie>.jf > <espécie>.histo
 ```
+
+Crie um arquivo `.pbs` para executar o comando acima, por exemplo:
+
+```console
+vim job_jellyhisto.pbs
+```
+
+ou adicione o comando no arquivo `job_jellyfish.pbs` que você usou anteriormente.
+
 ### Atenção: grey_exclamation:
 
 Observe que no comando acima usamos o símbolo “>” antes do outpus. Este é um símbolo de linha de comando que redirecionará sua saída para um arquivo em vez de imprimir o resultado na tela.
@@ -147,11 +162,11 @@ O histograma que você acabou de gerar é para uma contagem de kmers do **total*
 
 Gostaria que você gerasse algumas estatísticas gerais para as leituras de `<species>.ccs.total.fasta.gz`. Eu tenho um script para você fazer isso. É chamado de `asmstats`.
 
-Antes de executar o asmstats, vá para o diretório de espécies e crie um link simbólico para o arquivo `<species>.ccs.total.fasta.gz`:
+Antes de executar o asmstats, vá para a pasta rawdata o diretório de espécies e crie um link simbólico para o arquivo `<species>.ccs.total.fasta.gz`:
 
 ```bash
-cd <Caminho_para_sua_pasta_de_espécie>/
-ln -s /mnt/gen/temp/workshop_montagem_gbb/<código-espécie>_data/<código-espécie>.ccs.total.fasta.gz
+cd <Caminho_para_sua_pasta_de_espécie>/rawdata
+ln -s /mnt/gen/temp/workshop_montagem_gbb/data/<código-espécie>_data/<código-espécie>.ccs.total.fasta.gz .
 ```
 
 Você pode verificar se o link virtual está funcionando imprimindo as duas primeiras linhas do arquivo. Se as duas primeiras linhas forem retornadas, o link foi criado com sucesso:
@@ -160,24 +175,14 @@ Você pode verificar se o link virtual está funcionando imprimindo as duas prim
 zcat <código-espécie>.ccs.total.fasta.gz | head -2
 ```
  
-Agora você precisa adicionar o diretório onde o script `asmstats` está localizado (`/mnt/gen/temp/workshop_montagem_gbb/asmstats`) à sua variável de ambiente:
-
-```bash
-export PATH=$PATH:/mnt/gen/temp/workshop_montagem_gbb/scripts/
-```
-
-Em seguida, verifique se o diretório foi adicionado à sua variável de ambiente:
-
-```bash
-echo $PATH
-```
-
-Se você puder ver `/mnt/gen/temp/workshop_montagem_gbb/scripts` na saída do comando anterior, você deve estar pronto para executar o script asmstats (mas primeiro verifique se o ambiente conda `eukaryotic_genome_assembly` está ativo):
-
-
-
+Crie um novo arquivo `.pbs` e coloque o comando abaixo (ou copie o arquivo `/mnt/gen/temp/workshop_montagem_gbb/pbs/job_asmstats.pbs`)
 ```console
-asmstats <espécie>.ccs.total.fasta.gz > <espécie>.total.fasta.stats
+/mnt/gen/temp/workshop_montagem_gbb/scripts/asmstats <espécie>.ccs.total.fasta.gz > <espécie>.total.fasta.stats
+```
+
+Agora é só submeter o arquivo `.pbs`à fila:
+```console
+qsub -q op1 <Arquivo.pbs>
 ```
 
 Observação: estamos chamando seu arquivo de saída \<species\>.total.fasta.stats
