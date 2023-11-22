@@ -94,7 +94,7 @@ qsub -q op1 job_jellyfish.pbs
 
 Recomendamos que durante este curso você utilize a fila `op1`.
 
-### Consultando a fila de jobs submetidos e deletando um job específico
+### Consultando a fila de jobs submetidos
 
 Caso você queira saber quais jobs estão sendo executados, quem está executando, quanto de recurso computacional está sendo utilizado e há quanto tempo o processo está sendoe executado, basta usar o comando `qstat`:
 ```shell
@@ -119,8 +119,19 @@ No resultado do comando `qstat -a`, podemos ter as seguintes informações:
 `Job ID`: Identificador do job submetido. Esse identificador é importante caso queira deletar um job da fila; \
 `Username`: Matrícula do usuário que submeteu o job para a fila. Se você submeteu algum job, sua matrícula deve aparecer associada ao job submetido; \
 `Queue`: Fila onde o job está submetido; \
-`Jobname`: Nome do job que você configurou no arquivo `.pbs` \
+`Jobname`: Nome do job que você configurou no arquivo `.pbs`; \
+`TSK`: Número de threads usadas no job submetido; \
+`Req'd Memory`: Quantidade de memória reservada para o job; \
+`S`: Status do job. Pode ser R (Running), E (error), H (hold) ou Q (queue); \
+`Elap time`: Há quanto tempo em minutos o job está sendo executado.
 
+###  Deletando um job específico
+A numeração presente na coluna `Job ID`pode ser usada para caso você deseje deletar um job da fila, com o comando `qdel`. Para tal, você pode rodar o seguinte comando:
+```shell
+qdel 5753
+```
+
+Neste caso, o job de nome "fastq2bam" presente na fila de jobs seria deletado. Você só pode deletar um job que tenha sido submetido por você.
 
 
 
