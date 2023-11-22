@@ -9,7 +9,7 @@ permalink: /handsOn_1/
 Certo, hoje você aprendeu como analisar a composição kmer das leituras sequenciadas do seu genoma! Agora você vai colocar suas habilidades em prática e irá, você mesmo, contar e analisar kmers. Você deve escolher entre as espécies: (i) Vanessa atalanta, (ii) Urtica urens e (iii) Notonda dromedarius para trabalhar até o final da semana. Depois de escolher, crie uma pasta onde fará suas análises. Minha sugestão é criar uma pasta com o nome da sua espécie em seu diretório home (`/<species_name>/`) e dentro dela, criar uma série de outras pastas para estruturar suas análises. Por exemplo:
 
 u_urens/ \
-u_urens/rawdata/
+u_urens/rawdata/ \
 u_urens/kmers/ \
 u_urens/assembly/
   
