@@ -122,7 +122,7 @@ Observe que o arquivo de entrada para o seu comando **jellyfish histo** √© a sa√
 
 # MAS PARE!
 
-# PARA PARA!
+# SEGURE A ONDA
 
 ...
 
