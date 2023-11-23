@@ -19,7 +19,7 @@ Have a look at their websites:
 Now let’s run the assembly on our subsamples.
 
 
-First, make sure you are in your species directory that you created at your home directory in our first hands-on tutorial (`~/<species_folder>/`, e.g. `~/v_atalanta/`). Then let’s create a directory for each assembly we are going to run, as both assemblers create a lot of different outputs:
+First, make sure you are in your species directory that you created at your home directory in our first hands-on tutorial (`~/<species_folder>/assembly`, e.g. `~/v_atalanta/assembly`). Then let’s create a directory for each assembly we are going to run, as both assemblers create a lot of different outputs:
 
 ```console  
 mkdir hicanu
@@ -32,15 +32,11 @@ Make sure the conda environment is activated:
 conda activate eukaryotic_genome_assembly
 ```
 
-Now let’s change to the hicanu folder and add HiCanu executable to the path:
+Now let’s change to the hicanu folder:
 
 ```console
 cd hicanu
-export PATH=/home/ubuntu/Share/softwares/canu-2.2/bin:$PATH 
 ```
-
-In the `export` command, what you are doing is adding the directory where the HiCanu software is installed to an environment variable named PATH. The PATH variable defines a set of directories where the operating system will search for executable files in order to run the softwares. Since we've added HiCanu directory to the PATH, now we should be able to run it by directly calling the HiCanu executable (`canu`), with no need to type the whole path to the executable file (`/home/ubuntu/Share/softwares/canu-2.2/bin/canu`). 
-
 Now please test if you can run canu:
 
 ```console  
