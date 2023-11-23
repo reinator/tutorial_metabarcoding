@@ -21,13 +21,13 @@ Em seguida, submeta o arquivo `.pbs` para a fila op1.
 qsub -q op1 job_plot_fasta_length.pbs
 ```
 
-This might take a bit of time. So if you prefer, you can use tools such as `nohup` or `screen` to run the process in the background (e.g. `nohup <command> &`).
+Isso pode levar um pouco de tempo. Portanto, se preferir, você pode usar ferramentas como [`nohup`](https://www.ibm.com/docs/en/aix/7.2?topic=n-nohup-command) ou [`tmux`](https://www.redhat.com/sysadmin/introduction-tmux-linux) para executar o processo em segundo plano (por exemplo, `nohup <command> &`).
 
-> Note: 
-> My script `plot_fasta_length.py` and also Shane’s script `asmstats` are two of many options you can use to plot fasta lengths and generate statistics. Remember, internet is on your side in this journey. While you wait the script to run, have a look at other options: [like this one](https://bioinformatics.stackexchange.com/questions/45/read-length-distribution-from-fasta-file) or the stats from [BBMap](https://github.com/BioInfoTools/BBMap)  
+> Obs: 
+> Meu script `plot_fasta_length.py` e também o script `asmstats` do Shane são duas das muitas opções que você pode usar para plotar comprimentos de sequências em arquivos fasta e gerar estatísticas. Lembre-se de que a Internet está ao seu lado nessa jornada. Enquanto espera o script ser executado, dê uma olhada em outras opções: [como esta] (https://bioinformatics.stackexchange.com/questions/45/read-length-distribution-from-fasta-file) ou as estatísticas do [BBMap] (https://github.com/BioInfoTools/BBMap)  
 
-Once you have plotted the reads length distribution, download it to your local computer and have a look.  
-a- How does the reads distribution look like?  
-b- Which length most of the reads have?  
+Depois de obter a distribuição do comprimento das leituras, faça o download para o seu computador local (se não lembrar como fazer isso, siga este [tutorial](https://itvgenomics.github.io/gbb_montagem_workshop/logging_on/)) e dê uma olhada.  
+a- Qual é a aparência da distribuição de leituras?  
+b- Qual é o comprimento da maioria das leituras?  
 
-Now, gather all the results you have so far and let’s discuss them as a group!!
+Agora, reúna todos os resultados que você obteve até agora e vamos discuti-los em grupo!
