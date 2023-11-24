@@ -8,21 +8,29 @@ permalink: /handsOn_merqury1/
 
 Ok, today you learned about [Purge Dups](https://github.com/dfguan/purge_dups) and purging assemblies. You also learned that Hicanu outputs an assembly that is the double of the expected haploid genome size, and that you have to use a tool such as Purge Dups to separate the haplotypes of the assembly. Later, you learned how to evaluate assembly completeness and quality having a look at the shared kmers between the assembly and high-quality reads kmers, such as Illumina or Hifi. Now you are going to run merqury to evaluate assemblies for your species!
 
-All right, earlier today you have assembled a subset of reads for your species, but you have generated statistics for a total-assembly run I have generated previously. This total assembly is the file you are going to work on: the total assembly of Hicanu for your species, this is called  `<your_species>.hicanu.total.contigs.fasta.gz`. So I would like you to create a directory called `merqury_hicanu_eval` inside your home species directory (`~/<species_folder>/`), move to there and create a symlink to the Hicanu assembly file: `<your_species>.hicanu.total.contigs.fasta.gz` there:
+All right, earlier today you have assembled a subset of reads for your species, but you have generated statistics for a total-assembly run I have generated previously. This total assembly is the file you are going to work on: the total assembly of Hicanu for your species, this is called  `<your_species>.hicanu.total.contigs.fasta.gz`. So I would like you to create a directory called `merqury_hicanu_eval` inside your home species directory (`~/<species_folder>/`), go there and create a symlink to the Hicanu assembly file: `<your_species>.hicanu.total.contigs.fasta.gz` there:
 
 ```console  
 mkdir ~/<species_folder>/merqury_hicanu_eval/
 cd ~/<species_folder>/merqury_hicanu_eval/
-ln -s /home/ubuntu/Share/<species_id>_data/<species_id>.hicanu.total.contigs.fasta.gz
+ln -s /mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/<species_id>.hicanu.total.contigs.fasta.gz
 ```  
 
 PS: Remember to replace `<species_id>` with the ID of your species! :)
 
-Right, so in order to run merqury, you need a meryl datase of the reads you want to compare kmers with the kmers in your assembly. In our case, I have created meryl databases for 10X reads (illumina linked-reads) for your species, and you just need to symlink the meryl db folder to your execution folder. So you do:
+Right, so in order to run merqury, you need a meryl datase of the reads you want to compare kmers with the kmers in your assembly. I
+
+1) If you are working with the species ilVanAtal1 or ilNotDrom1, I have created meryl databases for 10X reads (illumina linked-reads) for your species, and you just need to symlink the meryl db folder to your execution folder. So you do:
 
 ```console  
-ln -s /home/ubuntu/Share/<species_id>_data/<species_id>.10X.21.meryl/
-```  
+ln -s /mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/<species_id>.10X.21.meryl/
+```
+
+2) In case you are working with drUrtUren1, you do:
+
+```console  
+ln -s /mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/<species_id>.pacbio.21.meryl/
+```
 
 Now, let's run merqury! For that, you need to activate the merqury enviroment:
 
@@ -36,7 +44,7 @@ Right, as soon as you see it's activated, try:
 merqury.sh
 ```  
 
-The help message should show you that in order to run merqury, you need (i) the meryl database (ii) your assembly (one or two, if you have primary and haplotigs. In our case its only one) and (iii) an output name. So inside your merqury_hicanu_eval directory, you will do:
+The help message should show you that in order to run merqury, you need (i) the meryl database (ii) your assembly (one or two, if you have primary and haplotigs. For HiCanu its only one) and (iii) an output name. So inside your merqury_hicanu_eval directory, you will create a `.pbs` file with the following command (or just copy it from `/mnt/gen/temp/workshop_montagem_gbb/pbs/job_merqury.pbs`:
 
 ```console  
 merqury.sh <your_species>.10X.21.meryl <your_species>.hicanu.total.contigs.fasta.gz outHicanu
@@ -44,9 +52,12 @@ merqury.sh <your_species>.10X.21.meryl <your_species>.hicanu.total.contigs.fasta
 
 Great!! 
 
+### Remember ❗
+You have to run some commands with `.pbs` file. Everytime we mention it in the text, you have to do so.
+
 ## This will take a while to run. During this time...
 
-You are going to gather the results and evaluate the purged version of your species Hicanu assembly. We don't have time to run Purge_dups here, but the most important thing is to learn how to interpret the results after purge_dups is done. So, João and I have generated for you the purged results, the merqury and the BUSCO results.
+You are going to gather the results and evaluate the purged version of your species Hicanu assembly. We don't have time to run Purge_dups here, but the most important thing is to learn how to interpret the results after purge_dups is done. So, I have generated for you the purged results, the merqury and the BUSCO results.
 
 1-) First thing you need to do is to symlink the purged assemblies and calculate the general statistics for the primary and haplotigs files. Let's create a new directory to save the purged results and create the symlinks there:
 
