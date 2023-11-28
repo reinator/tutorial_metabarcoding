@@ -64,22 +64,26 @@ You are going to gather the results and evaluate the purged version of your spec
 ```console  
 mkdir ~/<your_species>/purged/
 cd ~/<your_species>/purged/
-ln -s /home/ubuntu/Share/<species_id>_data/purged/purged.fa.gz
-ln -s /home/ubuntu/Share/<species_id>_data/purged/purged.htigs.fa.gz
+ln -s /mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/purged/purged.fa.gz
+ln -s /mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/purged/purged.htigs.fa.gz
 ```  
 
-Now export our scripts directory and activate our main conda environment:
+Now activate our main conda environment:
 
 ```console
-export PATH=$PATH:/home/ubuntu/Share/scripts/
 conda activate eukaryotic_genome_assembly
 ```
 
-And then run the `asmstats` script for each file:
+And then run the `asmstats` script for each file (put the commands below in a `.pbs` file or copy from `/mnt/gen/temp/workshop_montagem_gbb/pbs/job_asmstats.pbs` and replace the commands:
 
 ```console
 asmstats purged.fa.gz > purged.fa.gz.stats
 asmstats purged.htigs.fa.gz > purged.htigs.fa.gz.stats
+```
+
+Then, submit the job to the op1 queue:
+```console
+qsub -q op1 job_asmstats.pbs
 ```
 
 Great!
@@ -87,42 +91,48 @@ Great!
 2-) Now, I want you to take a look and take notes of the BUSCO results before and after purging for the Hicanu assembly. The short summaries are the files you should look at. You can do that by using the `less` command:
 
 before purging:
+
 ```
-less /home/ubuntu/Share/<species_id>_data/run_<species_id>.contigs.insecta.busco/short_summary_<species_id>.contigs.insecta.busco.txt
+less /mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/run_<species_id>.hifiasm.p.busco_odb10/short_summary.txt
 ```
 
 after purging:  
 
 primary:
 ```
-less /home/ubuntu/Share/<species_id>_data/run_purged.insecta.busco/short_summary_purged.insecta.busco.txt
+less /mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/run_<species_id>.purged.busco_odb10/short_summary.txt
 ```
 
 htigs:
 ```
-less /home/ubuntu/Share/<species_id>_data/run_purged.htigs.insecta.busco/short_summary_purged.htigs.insecta.busco.txt
+less /mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/run_<species_id>.purged_htigs.busco_odb10/short_summary.txt
 ```
 
-Right, now let's have a look at the merqury results. If the one your group is running for the Hicanu assembly is not done yet, we can start having a look at the purged results. Merqury is going to create a lot of different files: (i) different plot (.png) files, (ii) a <outname>.completeness.stats file and (iii) a <outputname>.qv file.  
+Right, now let's have a look at the merqury results.
+If the one your group is running for the Hicanu assembly is not done yet, we can start having a look at the purged results.
+
+The merqury results for the purged assemblies are located in this directory: `/mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/merqury_purged_eval/` (you don't need to copy anything yet). 
+
+Merqury is going to create a lot of different files: (i) different plot (.png) files, (ii) a <outname>.completeness.stats file and (iii) a <outputname>.qv file.  
     
-The merqury results for the purged assemblies are located in this directory: `/home/ubuntu/Share/<species_id>_data/purged/` (you don't need to copy anything yet). 
+
   
 # About the Merqury output files
  
 For the plot files, you will have 3 types: st (stacked), ln (line) and fl (filled). 
 ### These three graphs will represent the same data
-they are just a different way of plotting the (same) data. For further information I recommend having a look at the manual [here](https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation).
+they are just a different way of plotting the (same) data. For further information, I recommend having a look at the manual [here](https://github.com/marbl/merqury/wiki/2.-Overall-k-mer-evaluation).
    
 # Attention
-Apart from having st, fn and ln, merqury is going to output 2 types of files, *asm* and *cn*. If the file contains *cn* it's going to show you all kmer counts of primary + haplotigs in the plot, without descriminating them. Ff it contains *asm* it is going to show you kmers belonging to each assembly in different colours. Deep breath. You are going to get it! (It just takes time!). Didn't get it yet? Discuss it with your group on zoom!
+Apart from having st, fl and ln, merqury is going to output 2 types of files, *asm* and *cn*. If the file contains *cn* it's going to show you all kmer counts of primary + haplotigs in the plot, without descriminating them. If it contains *asm* it is going to show you kmers belonging to each assembly in different colours. Deep breath. You are going to get it! (It just takes time!). Didn't get it yet? Discuss it with your group!
      
-What you need to do with the purging merqury results is:
-Now I want you to take a look at some relevant Merqury files. The text files can be open with the `less` command, while you will need to download the plot files (*.png) to your local machine in order to actually open them. 
+Now I want you to take a look at some relevant Merqury files. The text files can be opened with the `less` command, while you will need to download the plot files (*.png) to your local machine in order to actually open them. 
+(Take a look [here](https://itvgenomics.github.io/gbb_montagem_workshop/logging_on/) to remember how to copy files from Superdome to your local machine)
   
-  3-) Gather the spectra plots for the primary purged assembly. They will be called `purged.out.purged.spectra-cn*.png` (notice that the `*` represents the different files we have: `st`, `ln` and `st`)
-  4-) Gather the spectra plots for the haplotigs purged assembly. It will be called `purged.out.purged.htigs.spectra-cn*.png`
-  5-) Gather the completeness results for the run. The file is called `completeness.stats`
-  6-) Gather the QV results for the run. The file is called `purged.out.qv`
+  3-) Gather the spectra plots for the primary purged assembly. They will be called `purged.purged.spectra-cn*.png` (notice that the `*` represents the different files we have: `st`, `ln` and `fl`)
+  4-) Gather the spectra plots for the haplotigs purged assembly. It will be called `purged.purged.htigs.spectra-cn*.png`
+  5-) Gather the completeness results for the run. The file is called `purge.completeness.stats`
+  6-) Gather the QV results for the run. The file is called `purged.qv`
   
 By the time you finish gathering all of these results, it's very likely that the merqury run for the Hicanu has finished. Please go and have a look at the same 3,4,5 and 6 questions for the total Hicnau run.
   
@@ -130,7 +140,7 @@ Now that you have all the results organized, let's interpret them and discuss wi
   
   - show the statistics for the total Hicanu assembly
   - show the busco short summary for the total Hicanu assembly
-  - show the spectra plot for the total Hicanu assembly (one of the files st, ln or fn)
+  - show the spectra plot for the total Hicanu assembly (one of the files st, ln or fl)
   - show the completeness for the total assembly
   - show the QV for the total assembly.
   
@@ -138,7 +148,7 @@ Now that you have all the results organized, let's interpret them and discuss wi
   
   - show the statistics for the purged assembly
   - show the busco short summary for the purged assembly
-  - show the spectra plot for the purged assembly (one of the files st, ln or fn)
+  - show the spectra plot for the purged assembly (one of the files st, ln or fl)
   - show the completeness for the purged assembly
   - show the QV for the purged assembly.
   
@@ -147,7 +157,7 @@ Now that you have all the results organized, let's interpret them and discuss wi
   
    - show the statistics for the purged.htigs assembly
   - show the busco short summary for the purged.htigs assembly
-  - show the spectra plot for the purged.htigs assembly (one of the files st, ln or fn)
+  - show the spectra plot for the purged.htigs assembly (one of the files st, ln or fl)
   - show the completeness for the purged.htigs assembly
   - show the QV for the purged.htigs assembly.
   
@@ -158,12 +168,12 @@ For the purged run, the qv and completeness result for the purged and htigs asse
   
  # Now  
   
-  I don't know if you realised, but you have for now (i) ran kmer analyses to understand the DNA composition of your reads, (ii) you have ran two genome assemblers and you are learning how to (iii) interprete the BUSCO run results and how to run (iv) and interpret (v) kmer assembly evaluation results with merqury! THIS IS A LOT FOR THREE DAYS! Really well done! Now its time to gather all of the results and answer the following questions with your team and later on we will go through them together as a group.
+  I don't know if you realized, but you have for now (i) ran kmer analyses to understand the DNA composition of your reads, (ii) you have ran two genome assemblers and you are learning how to (iii) interprete the BUSCO run results and how to run (iv) and interpret (v) kmer assembly evaluation results with merqury! THIS IS A LOT FOR THREE DAYS! Really well done! Now its time to gather all of the results and answer the following questions with your team and later on we will go through them together as a group.
   
   
   a-) What has happened with the assembly general statistics after it was purged?
   
-  b-) Why the hicanu statistics before purging shows a larger than estimated genome size?
+  b-) Why the HiCanu statistics before purging shows a larger than estimated genome size?
   
   c-) After purging, what the files purged and htigs mean?
   
