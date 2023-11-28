@@ -1,5 +1,5 @@
 ---
-title: "Part 5 - SALSA2 Scaffolding"
+title: "Part 4 - SALSA2 Scaffolding"
 layout: archive
 permalink: /salsa/
 ---
@@ -12,7 +12,7 @@ Right, so now you have learned about Chromosome conformation capture and scaffol
 First you need to activate our SALSA environment:
 
 ```console
-conda activate salsa_env  
+conda activate salsa  
 ```
 
 Then run:
@@ -30,10 +30,14 @@ mkdir ~/<species_folder>/scaff/
 cd ~/<species_folder>/scaff/  
 ```
 
-To run SALSA2 you need first to symlink 3 files to your working directory. All files will be inside the shared species directory, in a subdirectory called `HiC` (`/home/ubuntu/Share/<species_id>_data/HiC/`). The files are `<species_id>_*purged.polish.fa`, `<species_id>_*purged.polish.fa.fai` and `merge.mkdup.bed`. Once you have symlinked all files, run:
+To run SALSA2 you need first to symlink 3 files to your working directory. All files are inside <species>_data directory, in a subdirectory called `HiC` (`/mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/HiC/`). The files are `<species_id>_*purged.polish.fa`, `<species_id>_*purged.polish.fa.fai` and `<species_id>.merge.mkdup.bed`. 
 
-```console  
-run_pipeline.py -a <species_id>_*purged.polish.fa -l <species_id>_*purged.polish.fa.fai -b merge.mkdup.bed -e GATC,GANTC -i 5 -p yes -o out
+Once you have symlinked all files, put the commands below in a `.pbs` file (or just copy it from `/mnt/gen/temp/workshop_montagem_gbb/pbs/job_salsa.pbs`) :
+
+```console
+source /bio_temp/share_bio/softwares/miniconda3/etc/profile.d/conda.sh
+conda activate salsa
+run_pipeline.py -a <species_id>_*purged.polish.fa -l <species_id>_*purged.polish.fa.fai -b <species_id>.merge.mkdup.bed -e GATC,GANTC -i 5 -p yes -o out
 ``` 
 
 > Attention :exclamation:  
@@ -43,28 +47,23 @@ run_pipeline.py -a <species_id>_*purged.polish.fa -l <species_id>_*purged.polish
 > **What exactly are you scaffolding?**
 > You will notice that the contigs you are scaffolding are called polish. In fact, if/when you run a summary statistics for them you will see that they have a different number of bases compared with the purged assembly you analyzed. Why is that? That is because at Darwin Tree of Life we used to polish the purged genomes before scaffolding (remember I showed you this in the lecture?). We have dropped polishing now, but you are working with data that was polished. :) 
 
-Right, SALSA2 will start running. However, since SALSA2 run should take a long time, we'll **stop SALSA2 run** now with `Ctr+C`. From this point on we'll be using SALSA2 results generated in advance by your instructors. Those files can be found under `/home/ubuntu/Share/<species_id>_data/HiC/out.break.salsa/` directory. 
+Right, SALSA2 will start running. However, since SALSA2 run should take a long time, we'll **stop SALSA2 run** now with `qdel`. From this point on we'll be using SALSA2 results generated in advance by your instructors. Those files can be found under `/mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/HiC/out.break.salsa/` directory. 
 
 Now let's generate assembly statistics for the genome prior Hi-C scaffolding, and after Hi-C scaffolding. 
 
-First let's add the folder that contains `asmstats` script to our `PATH`:  
-
-```bash  
-export PATH=$PATH:/home/ubuntu/Share/scripts
-```
-
-And make sure our conda environment is activated:  
+Make sure our conda environment is activated:  
 ```  
 conda activate eukaryotic_genome_assembly  
 ```
 
 Then symlink the file from the genome after Hi-C scaffolding to your working directory:  
 ```bash  
-ln -s /home/ubuntu/Share/<species_id>_data/HiC/out.break.salsa/scaffolds_FINAL.fasta .
+ln -s /mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/HiC/out.break.salsa/scaffolds_FINAL.fasta.gz .
 ```
 
 Now we can run `asmstats` for both the genome prior Hi-C scaffolding (`<species_id>_hicanu.purged.polish.fa`) and after Hi-C scaffolding (`scaffolds_FINAL.fasta`):
 
+Put the commands below in a `.pbs` file:
 ```console  
 asmstats <species_id>*.purged.polish.fa > <species_id>*.purged.polish.fa.stats
 asmstats scaffolds_FINAL.fasta > scaffolds_FINAL.fasta.stats
