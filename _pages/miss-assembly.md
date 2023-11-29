@@ -7,7 +7,7 @@ permalink: /miss-assembly/
 
 Ok, so you have learned a lot of things about Hi-C scaffolding and (a bit on) genome curation. I want to show you a very likely example of a miss-assembly that we can identify in the Hi-C HeatMap.
 
-> Attention ❗
+> Attention :exclamation: 
 > Before we continue, please install the IGV Genome Browser in your local machine.
 > The instructions on how to install it can be found [here](https://itvgenomics.github.io/gbb_montagem_workshop/igv_installation/)
 
