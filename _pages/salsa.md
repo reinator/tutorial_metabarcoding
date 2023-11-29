@@ -76,17 +76,17 @@ Instructions on how to download files to your local machine can be found [here](
 
 If you are working with ilNotDrom1 or ilVanAtal1, the pre-scaffolding is a file that ends with \*.pretext and it is located in your species shared directory (`/mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/HiC/<species_id>.preScaf.pretext`). 
 
-The pre-scaffolding file for drUrtUren1 ends with \*.hic and it is located in your species shared directory (`/mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/HiC/drUrtUren1.preScaf.hic`). This is to be open at Juicer.
+The pre-scaffolding file for drUrtUren1 ends with \*.hic and it is located in your species' shared directory (`/mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/HiC/drUrtUren1.preScaf.hic`). This is to be open at Juicer.
 
 2-) Hi-C heatmap of your species scaffolds **after** the contigs were scaffolded with SALSA2
 
-The post-scaffolding will be in the `out.break.salsa` directory (`/mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/HiC/out.break.salsa/`) and it is a file that ends in \*.hic. This file is a heatmap image representation of the final scaffolded assembly (`scaffolds_FINAL.fasta`).
+The post-scaffolding will be in the `out.break.salsa` directory (`/mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/HiC/out.break.salsa/`) and it is a file that ends in \*.hic. This file is a heatmap image representing the final scaffolded assembly (`scaffolds_FINAL.fasta`).
 
-Once you download the two files (pre and after scaffolding) to your local computer, you are going to use the PretextView program to open the pre-scaffolding heatmap, and the JuiceBox program to open the post-scaffolding heatmap. You should already have PretextView installed in your local computer. If not, follow [this link](https://itvgenomics.github.io/gbb_montagem_workshop/pretextView_installation/) to install it. You can run Juicebox using its [website](https://www.aidenlab.org/juicebox/) or (optionally) you can also run it locally. If you choose to run Juicebox locally, you will need to access [this link](https://github.com/aidenlab/Juicebox/wiki/Download) to download the executable for Juicebox compatible with your operating system, and after you download it, just double click on the executable file to open Juicebox.
+Once you download the two files (pre and after scaffolding) to your local computer, you are going to use the PretextView program to open the pre-scaffolding heatmap, and the JuiceBox program to open the post-scaffolding heatmap. You should already have PretextView installed on your local computer. If not, follow [this link](https://itvgenomics.github.io/gbb_montagem_workshop/pretextView_installation/) to install it. You can run Juicebox using its [website](https://www.aidenlab.org/juicebox/) or (optionally) you can also run it locally. If you choose to run Juicebox locally, you will need to access [this link](https://github.com/aidenlab/Juicebox/wiki/Download) to download the executable for Juicebox compatible with your operating system, and after you download it, just double click on the executable file to open Juicebox.
 
 ### Using Juicebox  
 ##### Using the webserver
-Go do the Juicebox's [website](https://www.aidenlab.org/juicebox/). Click on `Load Map > Local File` and locate your downloaded \*.hic file.
+Go to the Juicebox's [website](https://www.aidenlab.org/juicebox/). Click on `Load Map > Local File` and locate your downloaded \*.hic file.
 
 ##### Using locally installed Juicebox (optional)
 Once you open Juicebox, click on `File > Open`. A new window will open, then you should click on the `Local...` button. Now you are ready to select the downloaded \*.hic file. Once you do it, the heatmap should be plotted. 
@@ -95,7 +95,7 @@ Once you open Juicebox, click on `File > Open`. A new window will open, then you
 After opening PretextView, click on the `Load Map` button and then select the downloaded \*.pretext file.
 
 ## Now 
-Analyze all the results, discuss with your team and answer the questions in your presentation:
+Analyze all the results, discuss them with your team, and answer the questions in your presentation:
 
 1. What are the assembly statistics before scaffolding?
 2. What are the assembly statistics after scaffolding?
