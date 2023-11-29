@@ -69,19 +69,20 @@ asmstats <species_id>*.purged.polish.fa > <species_id>*.purged.polish.fa.stats
 asmstats scaffolds_FINAL.fasta > scaffolds_FINAL.fasta.stats
 ``` 
 
-Now I want you to download to your local machine the assembly Hi-C heatmaps for (i) prior and (ii) after scaffolding. 
+Now I want you to download to your local machine the assembly Hi-C heatmaps for (i) prior and (ii) after scaffolding.
+Instructions on how to download files to your local machine can be found [here](https://itvgenomics.github.io/gbb_montagem_workshop/logging_on/)
 
 1-) Hi-C heatmap of your species contigs **before** they were scaffolded with SALSA2
 
-The pre-scaffolding is a file that ends with \*.pretext (not for drUrtUren1, see next sentence!) and it is located in your species shared directory (`/home/ubuntu/Share/<species_id>_data/HiC/<species_id>.preScaf.pretext`). 
+If you are working with ilNotDrom1 or ilVanAtal1, the pre-scaffolding is a file that ends with \*.pretext and it is located in your species shared directory (`/mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/HiC/<species_id>.preScaf.pretext`). 
 
-The pre-scaffolding file for drUrtUren1 ends with \*.hic and it is located in your species shared directory (`/home/ubuntu/Share/<species_id>_data/HiC/drUrtUren1.preScaf.hic`). This is to be open at Juicer.
+The pre-scaffolding file for drUrtUren1 ends with \*.hic and it is located in your species shared directory (`/mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/HiC/drUrtUren1.preScaf.hic`). This is to be open at Juicer.
 
 2-) Hi-C heatmap of your species scaffolds **after** the contigs were scaffolded with SALSA2
 
-The post-scaffolding will be in the `out.break.salsa` directory (`/home/ubuntu/Share/<species_id>_data/HiC/out.break.salsa/`) and it is a file that ends in \*.hic. This file is a heatmap image representation of the final scaffolded assembly (`scaffolds_FINAL.fasta`).
+The post-scaffolding will be in the `out.break.salsa` directory (`/mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/HiC/out.break.salsa/`) and it is a file that ends in \*.hic. This file is a heatmap image representation of the final scaffolded assembly (`scaffolds_FINAL.fasta`).
 
-Once you download the two files (pre and after scaffolding) to your local computer, you are going to use the PretextView program to open the pre-scaffolding heatmap, and the JuiceBox program to open the post-scaffolding heatmap. You should already have PretextView installed in your local computer. If not, follow [this link](https://eukaryotic-genome-assembly.github.io/pretextView_installation/) to install it. You can run Juicebox using its [website](https://www.aidenlab.org/juicebox/) or (optionally) you can also run it locally. If you choose to run Juicebox locally, you will need to access [this link](https://github.com/aidenlab/Juicebox/wiki/Download) to download the executable for Juicebox compatible with your operating system, and after you download it, just double click on the executable file to open Juicebox.
+Once you download the two files (pre and after scaffolding) to your local computer, you are going to use the PretextView program to open the pre-scaffolding heatmap, and the JuiceBox program to open the post-scaffolding heatmap. You should already have PretextView installed in your local computer. If not, follow [this link](https://itvgenomics.github.io/gbb_montagem_workshop/pretextView_installation/) to install it. You can run Juicebox using its [website](https://www.aidenlab.org/juicebox/) or (optionally) you can also run it locally. If you choose to run Juicebox locally, you will need to access [this link](https://github.com/aidenlab/Juicebox/wiki/Download) to download the executable for Juicebox compatible with your operating system, and after you download it, just double click on the executable file to open Juicebox.
 
 ### Using Juicebox  
 ##### Using the webserver
@@ -98,8 +99,8 @@ Analyze all the results, discuss with your team and answer the questions in your
 
 1. What are the assembly statistics before scaffolding?
 2. What are the assembly statistics after scaffolding?
-3. Looking at the final agp file (`/home/ubuntu/Share/<species_id>_data/HiC/out.break.salsa/scaffolds_FINAL.agp`) (maybe you want to read a little about the AGP format [here](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/)): what scaffolds were scaffolded with more than one component (a contig of a piece of a contig)? And what scaffolds are unchanged in relation to the contigs?
+3. Looking at the final agp file (`/mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/HiC/out.break.salsa/scaffolds_FINAL.agp`) (maybe you want to read a little about the AGP format [here](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/)): what scaffolds were scaffolded with more than one component (a contig of a piece of a contig)? And what scaffolds are unchanged in relation to the contigs?
 4. How do the Hi-C maps look prior and after scaffolding?
 5. Do you think you see a sex chromosome on the Hi-C heatmap? If so, point to it in your presentation.
 
-After that, come back to the wider group.
+After that, let's discuss the results together!
