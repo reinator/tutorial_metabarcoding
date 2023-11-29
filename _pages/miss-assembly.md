@@ -8,7 +8,7 @@ permalink: /miss-assembly/
 Ok, so you have learned a lot of things about Hi-C scaffolding and (a bit on) genome curation. I want to show you a very likely example of a miss-assembly that we can identify in the Hi-C HeatMap.
 
 > Attention :exclamation: 
-> Before we continue, please install the IGV Genome Browser in your local machine.
+> Before we continue, please install the IGV Genome Browser on your local machine.
 > The instructions on how to install it can be found [here](https://itvgenomics.github.io/gbb_montagem_workshop/igv_installation/)
 
 The name of the guy you are going to be working with is *Eristalis pertinax* (who am I? Check me online and get a picture of me). In the folder `/mnt/gen/temp/workshop_montagem_gbb/data/idEriPert2/` you are going to find:
@@ -55,13 +55,13 @@ Have a look at the mapping. Zoom in to see reads mapped. Play around IGV a littl
 
 Then, using the `Go` search bar (like in the image below), go to the position: `scaffold_1:56,972,207-56,977,386`  
 
-![](images/IGV_go_to_3.png)
+![](/gbb_montagem_workshop/images/IGV_go_to_3.png)
 
 Do you see a gap in the Pacbio coverage?
 
-Aha! If you have a weird looking Hi-C HeatMap and NO reads crossing that region, I bet you that this is a miss-assembly!! Don't you? :wink:
+Aha! If you have a weird-looking Hi-C HeatMap and NO reads crossing that region, I bet you that this is a miss-assembly!! Don't you? :wink:
 
 #### (optional) Saving regions of interest
 IGV allows us to highlight regions of interest through the `Region Navigator` tool. To save the region that has no coverage, you first need to make sure that IGV is displaying that region (you can type the position `scaffold_1:56,972,207-56,977,386` in the search bar again). Then, on the top panel of IGV click on `Regions > Region Navigator...`. All you need to do now is to click on the `Add` button and your region will be added to the Region Navigator list. You can even give a description to your region (e.g. `drop in coverage`).
 
-After saving your region(s) of interest(s), you can zoom-out and browse through the whole sequence in IGV and your region will always be highlighted (in red). 
+After saving your region(s) of interest(s), you can zoom out and browse through the whole sequence in IGV and your region will always be highlighted (in red). 
