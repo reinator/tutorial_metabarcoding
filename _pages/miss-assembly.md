@@ -7,9 +7,13 @@ permalink: /miss-assembly/
 
 Ok, so you have learned a lot of things about Hi-C scaffolding and (a bit on) genome curation. I want to show you a very likely example of a miss-assembly that we can identify in the Hi-C HeatMap.
 
-The name of the guy you are going to be working with is *Eristalis pertinax* (who am I? Check me online and get a picture of me). In the folder `/home/ubuntu/Share/idEriPert2/` you are going to find:
+> Attention ❗
+> Before we continue, please install the IGV Genome Browser in your local machine.
+> The instructions on how to install it can be found [here](https://itvgenomics.github.io/gbb_montagem_workshop/igv_installation/)
 
-- salsa_scaffolds.hic - ths is the Hi-C HeatMap you are going to load on JuiceBox
+The name of the guy you are going to be working with is *Eristalis pertinax* (who am I? Check me online and get a picture of me). In the folder `/mnt/gen/temp/workshop_montagem_gbb/data/idEriPert2/` you are going to find:
+
+- salsa_scaffolds.hic - this is the Hi-C HeatMap you are going to load on JuiceBox
 - scaffold_1.fa       - this is the fasta sequence for scaffold_1 that you are going to look at in IGV
 - scaffold_1.fa.fai   - This is the index of scaffold_1
 - scaffold_1.bam      - This is the bam file of scaffold_1, it contains information of PacBio reads mapped back to it
@@ -17,7 +21,7 @@ The name of the guy you are going to be working with is *Eristalis pertinax* (wh
 
 I want you to download all those files to your local machine.
 
-Notice that you don't have the multifasta file that represents the complete genome that you will be looking in JuiceBox, but I can give you the statistics for it:
+Notice that you don't have the multifasta file that represents the complete genome that you will be looking at in JuiceBox, but I can give you the statistics for it:
 
 ```console 
 scaff/out.break.salsa/scaffolds_FINAL.fasta
