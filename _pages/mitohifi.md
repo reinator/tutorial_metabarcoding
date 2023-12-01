@@ -6,9 +6,9 @@ permalink: /mitohifi/
 
 ## Background
 
-Ok, so on the second day of our course you have assembled the mitogenome of your species with Hifiasm and Hicanu. Well, the contigs are the mitochondria, but they don't represent a final mitochondrial sequences we usually find on databases, right? Firts: for some of you, hifiasm or hicanu is likely to have outputed more than one contig, and second, the contig size if much larger than a mitogenom usually is. True! This happens because of the circular nature of the molecule, and because of how assemblies work! Basically the overlaps of the circular molecule makes the assemblers confused and they end up concatenating the circular molecule many times!
+Ok, so on the second day of our workshop, you have assembled the mitogenome of your species with Hifiasm and Hicanu. Well, the contigs are the mitochondria, but they don't represent the final mitochondrial sequences we usually find on databases, right? First: for some of you, hifiasm or hicanu is likely to have outputed more than one contig, and second, the contig size is much larger than a mitogenome usually is. True! This happens because of the circular nature of the molecule, and because of how assemblies work! Basically, the overlaps of the circular molecule make the assemblers confused and they end up concatenating the circular molecule many times!
 
-So we have written a pipeline that can finish the assembly of your mitochondria for you! It basically blasts your assembled Pacbio HiFi contigs to close-related species mitogenome, it does a series of parsings to be sure you have a contig that is only the mitogenome and not a NUMT, they it will circularise the contig, cut it and anotate it with MitoFinder.
+So we have written a pipeline that can finish the assembly of your mitochondria for you! It blasts your assembled Pacbio HiFi contigs to close-related species mitogenome, it does a series of parsings to be sure you have a contig that is only the mitogenome and not a NUMT, then it will circularise the contig, cut it, and annotate it with MitoFinder.
 
 For more information on MitoHifi, have a look here: [https://github.com/marcelauliano/MitoHiFi](https://github.com/marcelauliano/MitoHiFi)
 
