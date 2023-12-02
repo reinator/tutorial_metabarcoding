@@ -16,15 +16,22 @@ For more information on MitoHifi, have a look here: [https://github.com/marcelau
 At your home directory, create 3 directories to work on MitoHiFi today and move to it:  
 
 ```console  
-mkdir ~/mitohifi_ilDeiPorc1/
-mkdir ~/mitohifi_bCygCol1/
-mkdir ~/mitohifi_cbCliDend2/
+mkdir <your_home_directory>/mitohifi_ilDeiPorc1/
+mkdir <your_home_directory>/mitohifi_bCygCol1/
+mkdir <your_home_directory>/mitohifi_cbCliDend2/
 ```
 Copy specific data to the respective folders. Data is here: ```/mnt/gen/temp/workshop_montagem_gbb/data/MitoHiFi ```
+For example, for ilDeiPorc1 you will do:
+
+```console
+cd mitohifi_ilDeiPorc1/
+cp /mnt/gen/temp/workshop_montagem_gbb/data/MitoHiFi/ilDeiPorc1.reads.100.fa .
+```
 
 We are going to run this session together with Marcela. The commands we are going to run are bellow:
 
-Let's assemble something pink
+Let's assemble something pink!
+Put the commands below in a `pbs` file (or copy a template from `/mnt/gen/temp/workshop_montagem_gbb/data/MitoHiFi/job_mitohifi_ilDeiPorc1.pbs`)
 ```
 findMitoReference.py --species "Deilephila porcellus" --outfolder . --min_length 14000
 
