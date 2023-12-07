@@ -28,6 +28,22 @@ ssh nome_de_usuario@172.16.111.35
 Após isso, você precisará digitar sua senha (também fornecida via email).
 Talvez você também preciso aceitar uma chave RSA, para fins de segurança. Nesse caso, apenas digite `yes` e você terá logado no nosso cluster Superdome Flex!
 
+#### Diretório para a parte prática do Workshop
+Todas as nossas atividades serão feitas no diretório `/mnt/gen/temp/workshop_montagem_gbb/`. Então assim que você fizer o login, vá para o diretório mencionado anteriormente e liste o conteúdo:
+
+```shell
+cd /mnt/gen/temp/workshop_montagem_gbb/
+ls
+```  
+Dê uma olhada nas subpastas presentes. Viu que tem uma pasta chamada `alunos`? Entre nela e em seguida crie uma pasta com o seu nome:
+
+```shell
+cd /mnt/gen/temp/workshop_montagem_gbb/alunos
+mkdir <seu_nome>
+```
+
+Pronto! É nessa pasta que todas as suas análises devem ser feitas. Vamos considerar que essa pasta que você criou seja o seu "home".
+
 #### Baixando e subindo arquivos para o cluster com o comando scp
 
 Ocasionalmente, precisaremos transferir arquivos entre o cluster e nossos computadores locais. Para fazer isso, podemos usar um comando chamado `scp` ou [secure copy](https://en.wikipedia.org/wiki/Secure_copy). Ele funciona de forma semelhante ao `ssh`. Vamos tentar criar um arquivo fictício em nosso diretório pessoal local e, em seguida, carregá-lo em nosso diretório pessoal no cluster.
