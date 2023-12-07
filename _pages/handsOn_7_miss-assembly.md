@@ -1,7 +1,7 @@
 ---
 title: "Hands On"
 layout: archive
-permalink: /miss-assembly/
+permalink: /handsOn_7_miss-assembly/
 ---  
 
 
