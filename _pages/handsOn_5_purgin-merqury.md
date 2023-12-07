@@ -47,7 +47,7 @@ merqury.sh
 The help message should show you that in order to run merqury, you need (i) the meryl database (ii) your assembly (one or two, if you have primary and haplotigs. For HiCanu its only one) and (iii) an output name. So inside your merqury_hicanu_eval directory, you will create a `.pbs` file with the following command (or just copy it from `/mnt/gen/temp/workshop_montagem_gbb/pbs/job_merqury.pbs`:
 
 ```console  
-merqury.sh <your_species>.10X.21.meryl <your_species>.hicanu.total.contigs.fasta.gz outHicanu
+merqury.sh <your_species>.<10X|pacbio>.21.meryl <your_species>.hicanu.total.contigs.fasta.gz outHicanu
 ```  
 
 Great!! 
