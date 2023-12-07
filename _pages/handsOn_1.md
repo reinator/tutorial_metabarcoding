@@ -29,7 +29,7 @@ mkdir assembly
 cd /mnt/gen/temp/workshop_montagem_gbb/data/
 ls -ltr
 ```  
-Você vê as pastas das 3 espécies? Se sim, copie o arquivo <species-code>.600.fasta (veja abaixo a nota de atenção, que explica sobre os códigos das espécies) para o diretório `kmers` que você criou e volte para o diretório `kmers`. Um exemplo:
+Você vê as pastas das 3 espécies? Se sim, copie o arquivo <species_code>.600.fasta (veja abaixo a nota de atenção, que explica sobre os códigos das espécies) para o diretório `kmers` que você criou e volte para o diretório `kmers`. Um exemplo:
 
 ```console  
 cp drUrtUren1_data/drUrtUren1.600.fasta <Path_to_your_folder>/u_urens/kmers/
