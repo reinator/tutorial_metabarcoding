@@ -46,18 +46,20 @@ pages:
         url: /handsOn_plotReadLength/        
       - title: "Part 2 - Genome Assembly"
         url: /handsOn_2/
+      - title: "Extra - BLAST"
+        url: /handsOn_3/
+      - title: "Extra - Mapping"
+        url: /handsOn_4
       - title: "Part 3 - Purging and Merqury"
-        url: /handsOn_merqury1/
-      - title: "Part 3.2 - Purging and Merqury drUrtUren1"
-        url: /handsOn_purging2/
+        url: /handsOn_5_purgin-merqury/
       - title: "Part 4 - SALSA2 scaffolding"
-        url: /salsa/
+        url: /handsOn_6_salsa/
       - title: "Part 5 - Mis-assembly evaluation"
-        url: /miss-assembly/
+        url: /handsOn_7_miss-assembly/
       - title: "Part 6 - Curated assembly and final report"
-        url: /curated/ 
+        url: /handsOn_8_curated/ 
       - title: "Part 7 - MitoHifi"
-        url: /mitohifi/
+        url: /handsOn_9_mitohifi/
   
   - title: "References"
     children:
