@@ -6,7 +6,7 @@ permalink: /handsOn_4/
 
 # Mapping and IGV
 
-Mapping and dealing with samtools and IGV.
+Mapping and dealing with Samtools and IGV.
 
 Right, so we have already generated statistics for our raw data, assembled it with two different assemblers and even done a BLAST search to try to identify what we have assembled. Those are all good metrics to check our assembly. 
 
@@ -26,33 +26,39 @@ Now you should be ready to run `minimap2`. Try:
 minimap2
 ```  
 
-See the help message? Then let’s run it:
+See the help message? Then let’s put the command below into a `.pbs` file and run it (or copy from `/mnt/gen/temp/workshop_montagem_gbb/pbs/job_minimap.pbs`):
 
 ```console  
 minimap2 -t 1 --secondary=no -ax map-pb <contigs_fasta> <raw_reads>.fasta -o <outputname_you_chose>.sam
-```  
+```
 
 Where `<contigs_fasta>` should be your assembly and `<raw_reads>.fasta` the sequencing reads used to build the assembly. 
 
-Right. As soon as it finishes, we are going to use a tool called `samtools` to manipulate the output file:
+Submit the `.pbs` file into the op2 queue:
+
+```console  
+qsub -q op2 job_minimap.pbs
+```
+
+Right. As soon as it finishes, we are going to use a tool called `samtools` to manipulate the output file. Put the commands below in a `.pbs` file and submit it to the op1 queue (or copy it from `/mnt/gen/temp/workshop_montagem_gbb/pbs/job_samtools.pbs`):
 
 ```console  
 samtools view -h -Sb <outputname_you_chose>.sam -o <outputname_you_chose>.bam
 samtools sort <outputname_you_chose>.bam -o <outputname_you_chose>.sorted.bam
 samtools index <outputname_you_chose>.sorted.bam
 ``` 
-Right. What we did above was (i) to convert the output mapped file from the format `sam` to `bam`, then we (ii) sorted this file and (iii) created an index for it. This will be a standard procedure most of the time that you will be producing and visualizing a mapping: samtools `view`, `sort` and `index`. The BAM file is basically a binary representation of the SAM file, holding all of its information but taking a lot less disk space. Having the mapping file sorted and then creating an index for it will allow downstream tools (such as genome browsers, like `IGV`) to read those files much more efficiently, and that's why many downstream softwares will assume your mapping file is sorted and indexed.
+Right. What we did above was (i) convert the output mapped file from the format `sam` to `bam`, then we (ii) sorted this file and (iii) created an index for it. This will be a standard procedure most of the time that you will be producing and visualizing a mapping: samtools `view`, `sort`, and `index`. The BAM file is basically a binary representation of the SAM file, holding all of its information but taking a lot less disk space. Having the mapping file sorted and then creating an index for it will allow downstream tools (such as genome browsers, like `IGV`) to read those files much more efficiently, and that's why many downstream software will assume your mapping file is sorted and indexed.
 To know more about samtools, go to its [webpage](https://samtools.github.io)
 
-Now, we want to visualize one contig with the reads mapped to back to it. So we need to extract one contig from the `<outputname_you_chose>.sorted.bam` file (which contains mappings for all contigs assembled). Extracting the mapping information from a specific contig will make it easier/faster to load that information on IGV, which is the software we'll use to inspect our contig. The steps for doing the extraction are:  
+Now, we want to visualize one contig with the reads mapped back to it. So we need to extract one contig from the `<outputname_you_chose>.sorted.bam` file (which contains mappings for all contigs assembled). Extracting the mapping information from a specific contig will make it easier/faster to load that information on IGV, which is the software we'll use to inspect our contig. The steps for doing the extraction are:  
 
 1. Extract the fasta file for the contig you have chosen and make an index for it (`samtools faidx`);  
 2. Extract a bam file for one contig from `<outputname_you_chose>.sorted.bam` and create an index for it (`samtools index`);  
 
-Bellow you see the steps detailed:
+Below you can see the steps detailed:
 
 Let's get the fasta first:
-First let's list the descriptions of all our contigs by grepping the lines that contain the `>` character:  
+First, let's list the descriptions of all our contigs by grepping the lines that contain the `>` character:  
 
 ```console  
 grep ">" <contigs_fasta> 
@@ -61,7 +67,7 @@ grep ">" <contigs_fasta>
 > Attention :exclamation:  
 > Quoting the `>` character is needed here since an unquoted `>` would be interpreted as the redirection mechanism by the shell. Quoting the patterns to be searched by grep is actually a good practice. 
 
-The output of the `grep` command will print to the screen the names of all your assembled contigs. Choose one and create a file with it's ID. Let’s say my grep result looks like this:
+The output of the `grep` command will print to the screen the names of all your assembled contigs. Choose one and create a file with its ID. Let’s say my grep result looks like this:
 
 ```
 >Contig1
@@ -90,7 +96,7 @@ Now, let’s run our script `filterfasta.py`, that will extract that contig from
 First, copy the script to your working directory:  
 
 ```bash  
-cp ~/Share/scripts/filterfasta.py .
+cp /mnt/gen/temp/workshop_montagem_gbb/scripts/filterfasta.py .
 ```
 
 Then run it:
@@ -105,7 +111,7 @@ Right. Now use the `less` command to inspect the file `<contig_ID>.fasta`.
 less <contig_ID>.fasta
 ``` 
 
-`less` you allow you to browse through the lines using the up/down keys. Once you are happy navigating through the file, you can quit from `less` by pressing the `q` key. 
+`less` allows you to browse through the lines using the up/down keys. Once you are happy navigating through the file, you can quit from `less` by pressing the `q` key. 
 
 Now let's create an index for our contig fasta file. The index file will hold some information about the sequence, such as its ID, length and number of characters per line.
 
@@ -115,7 +121,7 @@ samtools faidx <contig_ID>.fasta
 
 If you list your directory now, do you see a `<contig_ID>.fasta.fai` file there as well? Great!
 
-Then extract a BAM file only for this contig (with the `samtools view` command) and create a index for it:
+Then extract a BAM file only for this contig (with the `samtools view` command) and create a index for it. Put the commands below into a `.pbs` file and submit it to a queue (or copy from `/mnt/gen/temp/workshop_montagem_gbb/pbs/job_samtools2.pbs`) :
 
 ```console  
 samtools view -b -h <outputname_you_chose>.sorted.bam <contig_ID> > <contig_ID>.bam
@@ -130,6 +136,7 @@ Now you have four files you must download to your local machine to open them on 
 * Your contig bam.bai file (`<contig_ID>.bai`)
 
 Take your time…
+Then copy those files to your local machine through Filezilla or scp (tutorial [here](https://itvgenomics.github.io/gbb_montagem_workshop/logging_on/))
 
 On IGV, on the top, click on `Genomes > Load Genome from File` and add your fasta file. Then click on `File > Load from File` to include your bam file. And… you are done!!! 
 
@@ -138,7 +145,7 @@ Let's play with IGV a bit (alone and as a group).
 # Further
 
 But, how can I see how many reads have mapped to all my contigs? 
-A few ways.
+There's a few ways.
 Minimap2 would have printed you some log files while it was running.
 You can also run `samtools flagstat` on the mapping files:
 
