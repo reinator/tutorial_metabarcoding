@@ -1,7 +1,7 @@
 ---
 title: "Hands On"
 layout: archive
-permalink: /curated/
+permalink: /handsOn_8_curated/
 ---
 
 # Final results
