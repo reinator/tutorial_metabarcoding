@@ -22,8 +22,8 @@ Has `blastn` returned some USAGE information with a list of accepted parameters?
 The next thing will be to make sure you are in your assembly directory, which can be either the hifiasm or canu:
 
 ```console
-cd ~/<species_folder>/assembly/<hifiasm>/
-cd ~/<species_folder>/assembly/<hicanu>/
+cd ~/<species_folder>/assembly/hifiasm/
+cd ~/<species_folder>/assembly/hicanu/
 
 ```
 
