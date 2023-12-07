@@ -1,7 +1,7 @@
 ---
 title: "Part 4 - SALSA2 Scaffolding"
 layout: archive
-permalink: /salsa/
+permalink: /handsOn_6_salsa/
 ---
 
 
