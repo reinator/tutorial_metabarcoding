@@ -1,7 +1,7 @@
 ---
 title: "Hands On"
 layout: archive
-permalink: /mitohifi/
+permalink: /handsOn_9_mitohifi/
 ---  
 
 ## Background
