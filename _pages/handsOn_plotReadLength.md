@@ -21,7 +21,7 @@ Em seguida, submeta o arquivo `.pbs` para a fila op1.
 qsub -q op1 job_plot_fasta_length.pbs
 ```
 
-Isso pode levar um pouco de tempo. Portanto, se preferir, você pode usar ferramentas como [`nohup`](https://www.ibm.com/docs/en/aix/7.2?topic=n-nohup-command) ou [`tmux`](https://www.redhat.com/sysadmin/introduction-tmux-linux) para executar o processo em segundo plano (por exemplo, `nohup <command> &`).
+Isso pode levar um pouco de tempo. Portanto, se preferir, você pode usar ferramentas como [`nohup`](https://www.ibm.com/docs/en/aix/7.2?topic=n-nohup-command) ou [`screen`](https://linuxize.com/post/how-to-use-linux-screen/) para executar o processo em segundo plano (por exemplo, `nohup <command> &`).
 
 > Obs: 
 > Meu script `plot_fasta_length.py` e também o script `asmstats` do Shane são duas das muitas opções que você pode usar para plotar comprimentos de sequências em arquivos fasta e gerar estatísticas. Lembre-se de que a Internet está ao seu lado nessa jornada. Enquanto espera o script ser executado, dê uma olhada em outras opções: [como esta] (https://bioinformatics.stackexchange.com/questions/45/read-length-distribution-from-fasta-file) ou as estatísticas do [BBMap] (https://github.com/BioInfoTools/BBMap)  
