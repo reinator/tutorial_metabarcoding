@@ -162,7 +162,7 @@ O histograma que você acabou de gerar é para uma contagem de kmers do **total*
 
 Gostaria que você gerasse algumas estatísticas gerais para as leituras de `<species>.ccs.total.fasta.gz`. Eu tenho um script para você fazer isso. É chamado de `asmstats`.
 
-Antes de executar o asmstats, vá para a pasta rawdata o diretório de espécies e crie um link simbólico para o arquivo `<species>.ccs.total.fasta.gz`:
+Antes de executar o asmstats, vá para a pasta rawdata no diretório de espécies e crie um link simbólico para o arquivo `<species>.ccs.total.fasta.gz`:
 
 ```bash
 cd <Caminho_para_sua_pasta_de_espécie>/rawdata
