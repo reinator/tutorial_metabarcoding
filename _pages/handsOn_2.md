@@ -100,7 +100,7 @@ hifiasm
 
 And this is the command line you will add to a `.pbs` file (or copy from `/mnt/gen/temp/workshop_montagem_gbb/pbs/job_hifiasm.pbs`:
 ```console  
-hifiasm -f0 --primary -t 8 -o <species>.hifiasm <species_id>.600.fasta
+hifiasm -f0 --primary -t 8 -o <species> <species_id>.600.fasta
 ```
 
 Now submit the job to the queue op1:
