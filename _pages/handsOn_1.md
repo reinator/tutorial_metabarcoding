@@ -54,7 +54,7 @@ Os dados de cada espécie terão um código em seu nome representando cada uma d
 
 Lembre-se desses códigos, pois os arquivos via de regra vāo possuir esse código.
 
-Agora você precisa configurar o `conda` para o seu usuário. Siga [este tutorial]((https://itvgenomics.github.io/gbb_montagem_workshop/conda_setup/) para fazer isso.
+Agora você precisa configurar o `conda` para o seu usuário. Siga [este tutorial](https://itvgenomics.github.io/gbb_montagem_workshop/conda_setup/) para fazer isso.
 
 Agora, verifique se o ambiente conda `eukaryotic_genome_assembly` está ativo. Seu prompt deve ser semelhante a:
 
