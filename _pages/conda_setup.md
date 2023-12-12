@@ -5,11 +5,11 @@ permalink: /conda_setup/
 ---
 
 
-![](/images/conda_logo.svg)
+![](/gbb_montagem_workshop/images/conda_logo.svg)
 
 Conda is a package and environment management system. As a package management system, Conda allows us to quickly install, run and update programs and their dependencies. As an environment management, Conda allows us to easily switch and export environments, where one or a set of softwares are installed and ready to be used. 
 
-![](/images/conda_system.png)
+![](/gbb_montagem_workshop/images/conda_system.png)
 
 We encourage you to [read more](https://docs.conda.io/en/latest/) about Conda and use it as a management system for your work besides this course. Here, the only thing you need to know is that the instructors have already set up a Conda environment containing most of the softwares that will be used through this workshop. The job left for you was to initialize conda for your own user and activate the workshop environment.  
 
