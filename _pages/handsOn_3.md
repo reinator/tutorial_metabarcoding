@@ -12,6 +12,11 @@ I know you have chosen a specific species and you have assembled a partial set o
 
 But we will do something even more fun to find out. Let’s do a stand-alone BLAST of our assembled contigs (choose one or run for both, as you wish!).
 
+If you are with some conda environment activated, let's first deactivate it:
+```console  
+conda deactivate
+```
+
 We already have BLAST installed in our cluster. Just try:
 
 ```console  
