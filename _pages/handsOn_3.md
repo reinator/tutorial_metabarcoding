@@ -30,7 +30,7 @@ cd ~/<species_folder>/assembly/hicanu/
 Right. So now we want to BLAST our contigs to find out what they are. This means we need to blast them against a database of sequences we must think are present in our assembly. I have already created a database for you. It’s called `database.fasta`. So all you have to do to use it is to create this database in the format Blast understands and uses it. So you do:
 
 ```console  
-cp /home/ubuntu/Share/database.fasta .
+cp /mnt/gen/temp/workshop_montagem_gbb/data/database.fasta .
 makeblastdb -in database.fasta -dbtype nucl
 ```  
 
