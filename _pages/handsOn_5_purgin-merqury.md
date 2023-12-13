@@ -127,7 +127,7 @@ Didn't get it yet? Discuss it with your group!
 Now I want you to take a look at some relevant Merqury files. The text files can be opened with the `less` command, while you will need to download the plot files (*.png) to your local machine in order to actually open them. 
 (Take a look [here](https://itvgenomics.github.io/gbb_montagem_workshop/logging_on/) to remember how to copy files from Superdome to your local machine)
   
-  3-) Gather the spectra plots for the primary purged assembly. They will be called `purged.purged.spectra-cn*.png` (notice that the `*` represents the different files we have: `st`, `ln` and `fl`)
+  3-) Gather the spectra plots for the primary purged assembly. They will be called `purged.out.purged.spectra-cn*.png` (notice that the `*` represents the different files we have: `st`, `ln` and `fl`)
   
   4-) Gather the spectra plots for the haplotigs purged assembly. It will be called `purged.out.purged.htigs.spectra-cn*.png`
   
