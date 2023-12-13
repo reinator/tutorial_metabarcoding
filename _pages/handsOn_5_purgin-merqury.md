@@ -103,7 +103,7 @@ less /mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/run_purged.htigs
 Right, now let's have a look at the merqury results.
 If the one your group is running for the Hicanu assembly is not done yet, we can start having a look at the purged results.
 
-The merqury results for the purged assemblies are located in this directory: `/mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/merqury_purged_eval/` (you don't need to copy anything yet). 
+The merqury results for the purged assemblies are located in this directory: `/mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/purged/merqury_purged_eval/` (you don't need to copy anything yet). 
 
 Merqury is going to create a lot of different files: (i) different plot (.png) files, (ii) a <outname>.completeness.stats file and (iii) a <outputname>.qv file.  
     
