@@ -32,6 +32,12 @@ cd ~/<species_folder>/scaff/
 
 To run SALSA2 you need first to symlink 3 files to your working directory. All files are inside <species>_data directory, in a subdirectory called `HiC` (`/mnt/gen/temp/workshop_montagem_gbb/data/<species_id>_data/HiC/`). The files are `<species_id>_*purged.polish.fa`, `<species_id>_*purged.polish.fa.fai` and `<species_id>.merge.mkdup.bed`. 
 
+If the file `<species_id>_*purged.polish.fa.fai` does not exist, once you symlink the fasta file, just run the following command in the console:
+```console  
+samtools faidx <species_id>_*purged.polish.fa
+```
+
+
 Once you have symlinked all files, put the commands below in a `.pbs` file (or just copy it from `/mnt/gen/temp/workshop_montagem_gbb/pbs/job_salsa.pbs`) :
 
 ```console
