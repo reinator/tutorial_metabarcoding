@@ -39,7 +39,7 @@ mitohifi.py -r ilDeiPorc1.reads.100.fa -f NC_079697.1.fasta -g NC_079697.1.gb -t
 ```
 
 Let's do a bird
-
+`/mnt/gen/temp/workshop_montagem_gbb/data/MitoHiFi/job_mitohifi_bCygCol1.pbs`
 ```
 findMitoReference.py --species "Cygnus columbianus" --outfolder . --min_length 14000
 
@@ -47,7 +47,7 @@ mitohifi.py -c bCygCol1.hifiasm.contigs.fa -f NC_007691.1.fasta -g NC_007691.1.g
 ```
 
 Let's do a plant
-
+`/mnt/gen/temp/workshop_montagem_gbb/data/MitoHiFi/job_mitohifi_cbCliDend2.pbs`
 ```
 findMitoReference.py --species "Climacium dendroides" --outfolder . --min_length 50000
 
